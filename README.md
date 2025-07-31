@@ -1,14 +1,14 @@
-# Angular Chuck Norris
+<img src="./docs/header.png">
 
 <img src="./docs/logo.png">
 
-Die Angular Chuck Norris Challenge ist ein unterhaltsamer erster Einstieg in die Angular Frontend Entwicklung. Erledige alle Challenges damit Chuck Norris stolz auf dich ist!
+# Start 🚀
 
-Im Rahmen des Projekts, wirst du eine externe Chuck-Norris-Witze API anbinden. Im Anschluss implementierst du einen Favorisieren-Button, damit die Besten Witze zwischen verschiedenen Unterseiten favorisiert und gespeichert werden können.
+Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Frontend Entwicklung. Erledige alle Challenges damit Chuck Norris stolz auf dich ist! Im Rahmen des Projekts, wird eine externe Chuck-Norris-Witze API angebunden. Im Anschluss implementierst du einen Favorisieren-Button, damit die Besten Witze zwischen verschiedenen Unterseiten favorisiert und gespeichert werden können.
 
 # Ⅰ. Challenge 🎖️
 
-## Kennenlernen mit Chuck Norris
+### Kennenlernen mit Chuck Norris
 
 Developer Guide
 
@@ -16,13 +16,13 @@ Projekt aufsetzen
 
 Node Installieren
 
-## Hello World
+### Hello World
 
 Änderungen vornehmen
 
 # Ⅱ. Challenge 🎖️
 
-## Chuck Norris macht keine Fehler!
+### Chuck Norris macht keine Fehler!
 
 Im Gegensatz zu Chuck Norris, dürfen wir Entwickler auch mal Fehler machen.
 
