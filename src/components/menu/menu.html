@@ -1,0 +1,17 @@
+<button class="menu-icon" matIconButton [matMenuTriggerFor]="menu" aria-label="Basic menu">
+  <mat-icon>account_circle</mat-icon>
+</button>
+
+<!-- shows on menu open -->
+<mat-menu #menu="matMenu">
+  <!-- toggle light/darkmode -->
+  <button mat-menu-item>
+    <mat-icon>brightness_5</mat-icon>
+    <span>Modus</span>
+  </button>
+  <!-- logout -->
+  <button mat-menu-item>
+    <mat-icon>logout</mat-icon>
+    <span>Abmelden</span>
+  </button>
+</mat-menu>
