@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "ng serve",
-    "ng": "ng",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "build": "ng build"
   },
   "prettier": {
     "overrides": [
