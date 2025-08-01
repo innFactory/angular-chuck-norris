@@ -1,5 +1,3 @@
-<img src="./docs/header.png">
-
 <img src="./docs/logo.png">
 
 # Start 🚀
