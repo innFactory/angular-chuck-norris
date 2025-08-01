@@ -1,5 +1,9 @@
-@use "./styles/material-init" as *;
+@use './styles/material-init' as *;
 
-@use "./styles/html" as *;
+@use './styles/html' as *;
 
-@use "./styles/responsive" as *;
+@use './styles/material-overrides' as *;
+
+@use './styles/variables' as *;
+
+@use './styles/responsive' as *;
