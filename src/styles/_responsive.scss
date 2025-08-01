@@ -1,0 +1,27 @@
+/* responsiveness */
+$S-screen-max: 767px;
+$M-screen-min: 768px;
+$M-screen-max: 1023px;
+$L-screen-min: 1024px;
+$L-screen-max: 1439px;
+$XL-screen-min: 1440px;
+@mixin mobile {
+  @media (max-width: #{$S-screen-max} ) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$M-screen-min}) and (max-width: #{$M-screen-max}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$L-screen-min}) and (max-width: #{$L-screen-max}) {
+    @content;
+  }
+}
+@mixin desktop-big {
+  @media (min-width: #{$XL-screen-min}) {
+    @content;
+  }
+}
