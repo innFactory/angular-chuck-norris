@@ -1,0 +1,14 @@
+:host {
+  > nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 200px;
+    text-align: center;
+    align-items: center;
+  }
+
+  h1 {
+    color: var(--mat-sys-on-primary-container);
+  }
+}
