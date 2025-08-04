@@ -13,8 +13,13 @@
     padding: var(--var-spacing-2) var(--var-spacing-4);
     background: var(--mat-sys-primary-container);
 
-    > img {
+    > .logo {
+      display: flex;
       height: var(--var-size-15);
+
+      img {
+        height: 100%;
+      }
     }
   }
 }
