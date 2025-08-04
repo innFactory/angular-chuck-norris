@@ -1,4 +1,17 @@
 :host {
-  height: inherit;
-  width: inherit;
+  display: flex;
+
+  img {
+    width: calc(5 * var(--var-size-15));
+  }
+
+  .container-action {
+    display: flex;
+    flex-direction: row;
+    gap: var(--var-spacing-2);
+
+    > button {
+      margin-top: var(--var-spacing-5);
+    }
+  }
 }
