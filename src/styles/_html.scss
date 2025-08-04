@@ -1,4 +1,4 @@
-@use "@angular/material" as mat;
+@use '@angular/material' as mat;
 
 *,
 *::before,
@@ -9,11 +9,16 @@
 * {
   margin: 0;
   font-family: Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
   height: 100%;
+  width: 100%;
+  padding: 0;
 }
 
 p,
