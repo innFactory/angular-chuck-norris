@@ -1,1 +1,25 @@
-<p>favourites works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="identifier">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let element">{{element.identifier}}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="joke">
+    <th mat-header-cell *matHeaderCellDef>Inhalt</th>
+    <td mat-cell *matCellDef="let element">{{element.joke}}</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="creator">
+    <th mat-header-cell *matHeaderCellDef>Ersteller</th>
+    <td mat-cell *matCellDef="let element">{{element.creator}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
