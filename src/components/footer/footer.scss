@@ -1,0 +1,10 @@
+:host {
+  width: 100%;
+  padding: var(--var-spacing-3);
+  background: var(--mat-sys-secondary);
+
+  p {
+    color: var(--mat-sys-on-secondary);
+    font-weight: 400;
+  }
+}
