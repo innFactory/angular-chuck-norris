@@ -1,16 +1,19 @@
 import { Routes } from '@angular/router';
+import { Cats } from '../pages/cats/cats';
+import { Favourites } from '../pages/favourites/favourites';
+import { Home } from '../pages/home/home';
 
 export const routes: Routes = [
   {
-    path: 'home',
-    loadComponent: () => import('../pages/home/home').then((m) => m.Home),
+    path: '',
+    component: Home,
   },
   {
     path: 'favourites',
-    loadComponent: () => import('../pages/favourites/favourites').then((m) => m.Favourites),
+    component: Favourites,
   },
   {
     path: 'cats',
-    loadComponent: () => import('../pages/cats/cats').then((m) => m.Cats),
+    component: Cats,
   },
 ];
