@@ -1,4 +1,11 @@
 :host {
   height: inherit;
   width: inherit;
+
+  table {
+    img {
+      margin: var(--var-spacing-6);
+      height: calc(2 * var(--var-size-15));
+    }
+  }
 }

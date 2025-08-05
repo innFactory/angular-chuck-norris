@@ -1,19 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
-import { FavoritesTableRow } from '../../models/favourites-table-row';
-
-const ELEMENT_DATA: FavoritesTableRow[] = [
-  { identifier: 1, data: 'HydASDFrogen', creator: 'H' },
-  { identifier: 2, data: 'Helium', creator: 'He' },
-  { identifier: 3, data: 'Lithium', creator: 'Li' },
-  { identifier: 4, data: 'Beryllium', creator: 'Be' },
-  { identifier: 5, data: 'Boron', creator: 'B' },
-  { identifier: 6, data: 'Carbon', creator: 'C' },
-  { identifier: 7, data: 'Nitrogen', creator: 'N' },
-  { identifier: 8, data: 'Oxygen', creator: 'O' },
-  { identifier: 9, data: 'Fluorine', creator: 'F' },
-  { identifier: 10, data: 'Neon', creator: 'Ne' },
-];
+import { AllowedDataTypes } from '../../models/favourite-data';
+import { FavouritesTableRow } from '../../models/favourites-table-row';
+import { FavouritesDataService } from '../../shared/services/favourites-data/favourites-data';
 
 @Component({
   selector: 'app-favourites',
@@ -23,9 +12,26 @@ const ELEMENT_DATA: FavoritesTableRow[] = [
 })
 export class Favourites {
   protected displayedColumns: string[] = ['identifier', 'data', 'creator'];
-  protected tableData: FavoritesTableRow[] = [];
+  protected tableData: FavouritesTableRow[] = [];
+  private favouritesDataService = inject(FavouritesDataService);
+  protected AllowedDataTypes = AllowedDataTypes;
+
+  constructor() {
+    effect(() => {
+      const favouritesData = this.favouritesDataService.$data();
+
+      favouritesData.forEach((favourite, index) => {
+        const row: FavouritesTableRow = {
+          identifier: index + 1,
+          data: favourite,
+          creator: 'Chuck',
+        };
+        this.tableData.push(row);
+      });
+    });
+  }
 
   public ngOnInit() {
-    this.tableData = ELEMENT_DATA;
+    // this.tableData = ELEMENT_DATA;
   }
 }
