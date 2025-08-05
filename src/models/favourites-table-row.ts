@@ -1,5 +1,7 @@
-export type FavoritesTableRow = {
+import { FavouriteData } from './favourite-data';
+
+export type FavouritesTableRow = {
   identifier: number;
-  data: string;
+  data: FavouriteData;
   creator: string;
 };
