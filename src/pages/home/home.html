@@ -1,15 +1,17 @@
 <app-generation-card cardTitle="Chuck's Jokes 💬">
   <ng-container generation-card-content>
-    <p>{{longText}}</p>
-    <div class="container-action">
-      <button matButton="filled">
-        <p>NEU</p>
-        <mat-icon>autorenew</mat-icon>
-      </button>
-      <button matButton="filled">
-        <p>FAVORISIEREN</p>
-        <mat-icon>star</mat-icon>
-      </button>
+    <div class="container-content">
+      <p>{{jokeString}}</p>
+      <div class="container-action">
+        <button (click)="fetchNewJoke();" matButton="filled">
+          <p>NEU</p>
+          <mat-icon>autorenew</mat-icon>
+        </button>
+        <button matButton="filled">
+          <p>FAVORISIEREN</p>
+          <mat-icon>star</mat-icon>
+        </button>
+      </div>
     </div>
   </ng-container>
 </app-generation-card>

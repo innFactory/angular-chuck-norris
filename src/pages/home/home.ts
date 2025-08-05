@@ -1,15 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, inject, resource, ResourceRef } from '@angular/core';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { GenerationCard } from '../../components/generation-card/generation-card';
+import { ChuckNorrisJoke } from '../../models/chuck-norris-joke';
+import { JokeFetcher } from '../../shared/services/joke-fetcher/joke-fetcher';
 @Component({
   selector: 'app-home',
-  imports: [MatButtonModule, MatProgressBarModule, MatIconModule, GenerationCard],
+  imports: [MatButtonModule, MatIconModule, GenerationCard],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home {
-  longText = 'Chuck Norris hat einen Grizzlybären Vorleger in seinem Zimmer. Der Bär ist nicht tot, er hat nur Angst sich zu bewegen.';
+  private jokeFetcherService = inject(JokeFetcher);
+  protected jokeResource: ResourceRef<ChuckNorrisJoke | undefined> = resource({ loader: () => this.jokeFetcherService.get() });
+
+  protected get jokeString(): string {
+    const jokeResourceValue = this.jokeResource.value();
+    return jokeResourceValue ? jokeResourceValue.value : 'No jokes available.';
+  }
+
+  protected fetchNewJoke() {
+    this.jokeResource.reload();
+  }
 }
