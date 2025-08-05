@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, resource, ResourceRef } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { GenerationCard } from '../../components/generation-card/generation-card';
+import { Cat } from '../../models/cat';
+import { CatFetcher } from '../../shared/services/cat-fetcher/cat-fetcher';
 
 @Component({
   selector: 'app-cats',
@@ -10,5 +12,15 @@ import { GenerationCard } from '../../components/generation-card/generation-card
   styleUrl: './cats.scss',
 })
 export class Cats {
-  longText = 'Chuck Norris hat einen Grizzlybären Vorleger in seinem Zimmer. Der Bär ist nicht tot, er hat nur Angst sich zu bewegen.';
+  private catFetcherService = inject(CatFetcher);
+  protected catResource: ResourceRef<Cat | undefined> = resource({ loader: () => this.catFetcherService.get() });
+
+  protected get urlCatPicture(): string {
+    const catValue = this.catResource.value();
+    return catValue ? catValue.url : '';
+  }
+
+  protected fetchNewCat() {
+    this.catResource.reload();
+  }
 }
