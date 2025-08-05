@@ -2,16 +2,19 @@
   <ng-container generation-card-content>
     <div class="container-content">
       <p>{{jokeString}}</p>
-      <div class="container-action">
-        <button (click)="fetchNewJoke();" matButton="filled">
-          <p>NEU</p>
-          <mat-icon>autorenew</mat-icon>
-        </button>
-        <button matButton="filled">
-          <p>FAVORISIEREN</p>
-          <mat-icon>star</mat-icon>
-        </button>
-      </div>
+    </div>
+  </ng-container>
+
+  <ng-container generation-card-action>
+    <div class="container-action">
+      <button (click)="fetchNewJoke();" matButton="filled">
+        <p>NEU</p>
+        <mat-icon>autorenew</mat-icon>
+      </button>
+      <button matButton="filled">
+        <p>FAVORISIEREN</p>
+        <mat-icon>star</mat-icon>
+      </button>
     </div>
   </ng-container>
 </app-generation-card>

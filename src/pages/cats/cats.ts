@@ -1,13 +1,14 @@
 import { Component, inject, resource, ResourceRef } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { GenerationCard } from '../../components/generation-card/generation-card';
 import { Cat } from '../../models/cat';
 import { CatFetcher } from '../../shared/services/cat-fetcher/cat-fetcher';
 
 @Component({
   selector: 'app-cats',
-  imports: [MatButtonModule, MatIconModule, GenerationCard],
+  imports: [MatButtonModule, MatIconModule, GenerationCard, MatProgressSpinnerModule],
   templateUrl: './cats.html',
   styleUrl: './cats.scss',
 })

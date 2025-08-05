@@ -2,14 +2,19 @@
   display: flex;
 
   img {
-    width: calc(5 * var(--var-size-15));
+    height: calc(5 * var(--var-size-15));
   }
 
+  .container-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(3 * var(--var-size-15));
+  }
   .container-action {
     display: flex;
     flex-direction: row;
     gap: var(--var-spacing-2);
-
     > button {
       margin-top: var(--var-spacing-5);
     }
