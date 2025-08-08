@@ -26,4 +26,8 @@ export const routes: Routes = [
     path: 'cats',
     component: Cats,
   },
+  // {
+  //   path: '**',
+  //     component: ... , // Add error page
+  // },
 ];
