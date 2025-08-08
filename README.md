@@ -4,31 +4,134 @@
 
 Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Frontend Entwicklung. Erledige alle Challenges damit Chuck Norris stolz auf dich ist! Im Rahmen des Projekts, wird eine externe Chuck-Norris-Witze API angebunden. Im Anschluss implementierst du einen Favorisieren-Button, damit die Besten Witze zwischen verschiedenen Unterseiten favorisiert und gespeichert werden können.
 
-# Ⅰ. Challenge 🎖️
+# Ⅰ. Challenge 🎖️ - Start
 
-### Kennenlernen mit Chuck Norris
+### Ⅰ.1. Template auschecken
 
-Developer Guide
+- Installiere dir [Github-Desktop](https://desktop.github.com/)
+- Melde dich dort mit deinem Github-Account an
+- Falls du noch keinen Account hast, kannst du dir einfach auf https://github.com/ einen erstellen
+- Nun gehe auf https://github.com/innFactory/react-chuck-norris und unter dem grünen "Clone" Button findest du die
+  Funktion "Open with Github Desktop". Alternativ kannst du das Repo auch direkt in Github Desktop oder mit Git clonen.
 
-Projekt aufsetzen
+### Ⅰ.2. Node installieren
 
-Node Installieren
+- Gehe auf https://nodejs.org/en/download/ und installiere dir Nodejs
+- Damit hast du den Packet-Manager NPM
+- Lies dir durch, für was NPM so gut ist: https://docs.npmjs.com/about-npm
 
-### Hello World
+### Ⅰ.3. Template starten
 
-Änderungen vornehmen
+- Gehe mit dem Terminal in deinem Ordner, in dem du das Template gecloned hast z.B.
+  `Documents/Github/react-chuck-norris`
+- nun installiere zunächst die Dependencies mit: `npm install`
+- danach kannst du das Webprojekt starten mit: `npm start`
 
-# Ⅱ. Challenge 🎖️
+### Ⅰ.4. Template im Browser aufrufen
 
-### Chuck Norris macht keine Fehler!
+- nun kannst du unter http://localhost:4200 die WebApp anschauen
+- müsste so aussehen, wie im Screenshot
+  <img src="doc/screenshot_0.png" width="40%">
 
-Im Gegensatz zu Chuck Norris, dürfen wir Entwickler auch mal Fehler machen.
+### Ⅰ.5. Code öffnen mit VS Code
 
-- Estellen einer 404 Fehlerseite
+- Nun schauen uns wir den SourceCode von der WebApp an
+- Installiere dir hierfür [VS-Code](https://code.visualstudio.com/)
+- Öffne in VS-Code den geklonten Ordner /angular-chuck-norris
 
-# Ⅲ. Challenge 🎖️
+### Ⅰ.6 Einstieg in die App
 
-# Ⅳ. Challenge 🎖️
+Jede Angular Komponente besteht aus einem Logik-, einem Struktur- und einem Stylingteil. Das siehst du schon im Dateiaufbau. Sehe dir exemplarisch einmal die Home-Page Komponente genauer an. Navigiere in in den Ordner src -> pages -> home und klicke dich durch die Datein.
+
+| Datei     | Function                |
+| --------- | ----------------------- |
+| home.ts   | Logikteil in TypeScript |
+| home.html | Strukturteil in HTML    |
+| home.scss | Stylingteil in SCSS     |
+
+Fühle dich nicht überfordert von all den verschiedenen Sprachen. Du wirst Schritt für Schritt in die Angular Welt eingefürt 😎.
+
+### Ⅰ.7 Kennenlernen mit Chuck Norris
+
+Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der Markupsprache HTML verfasst.
+Sieh dir die Struktur in der Homepage [home.html](./src/pages/home/home.html) einmal genau an. Der Text "..Ich bin Chuck Norris, ein Kampfsportler und Schauspieler.." ist in einem HTML p Element für Paragraph eingeschlossen bzw. gewrapped.
+
+Recherchiere auf [diesem](https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge) Wikipedia Eintrag über Chuck Norris selbst-erfundenen Kampfkünste und füge in Zeile 19 im p Element bei "..." einen weiteren Fakt über sie hinzu.
+
+# Ⅱ. Challenge 🎖️ - Leseratte
+
+### Ⅱ.1. Offiziell ist am Besten - Angular
+
+Für jedes Framework und jede Sprache gibt es eine offiziele Dokumentation, so auch für Angular.
+
+Bei Angular gibt es sogar ein interaktives Mini-Browser Tutorial. Schließe dieses Tutorial ab [(hier)](https://next.angular.dev/tutorials/learn-angular).
+
+Nun solltest du Folgende Fragen beantworten können:
+
+Lese dir zum Einstieg außderdem folgende Angular-Artikel durch.
+
+- Aufbau der Angular Komponenten: https://next.angular.dev/essentials/components
+- Services
+- Signals
+
+### Ⅱ.2. Schön muss es sein - Angular Material
+
+Angular material
+
+### Ⅱ.3. TypeScript
+
+typescript
+
+### Ⅱ.4. HTML
+
+### Ⅱ.5. CSS und SCSS
+
+### Ⅱ.6. Geschafft! Weiter gehts.
+
+Geschafft! Das war aber eine Menge Input. Jetzt wird programmiert! Mache mit der [Ⅲ. Challenge](#ⅲ-challenge-️) weiter.
+
+# Ⅲ. Challenge 🎖️ - Los geht's!
+
+### Ⅲ.1. Chuck Norris macht keine Fehler!
+
+Im Gegensatz zu Chuck Norris, dürfen wir Entwickler auch mal Fehler machen. Versuche im Browser eine Seite zu öffnen die es in unserer WebApp noch nicht gibt. Z.b. [[http://localhost:4200/diese-seite-gibts-ganz-bestimmt](http://localhost:4200/diese-seite-gibts-ganz-bestimmt)].
+
+Was siehst du?
+
+Eine leere seite mit Header und Footer? Wie langweilig!
+
+In unserem src/pages/ Ordner fehlt noch eine Fehler seite!!
+
+In Angular kannst du ganz leicht aus der Kommandozeile neue Komponenten generieren. Öffne die Commandozeile im Projektordner angular-chuck-norris.
+Führe nun `ng generate component ../pages/error` aus. Im src/pages Ordner sollte nun eine neue Angular-Component erscheinen.
+
+Angular kommt standardmäßig mit einem WebApp Pfadaufbau. Dieser kann in der Datei [app.routes.ts](./src/app/app.routes.ts) angepasst werden. Füge nun in Zeile 26 anstatt `undefined` die Error-Komponente hinzu. Vergesse nicht sie zu importieren.
+
+### Ⅲ.2. Schönheit ist nicht alles - aber auch wichtig.
+
+"Es gibt keinen Schönheitswettbewerb mit Chuck Norris, denn alle wissen, dass er der einzige Gewinner wäre."
+
+Passe nun die error.html Datei an und gestalte Sie ein bisschen. Besuche nochmal die nicht-existierende Seite. Füge auch etwas CSS hinzu. Du kannst es einfach in die SCSS Datei Schreiben. Jedes gültige CSS ist auch SCSS aber nicht andersherum.
+
+# Ⅳ. Challenge 🎖️ - Witze-Wettbewerb
+
+# Ⅳ.1.
+
+Favoriten Service
+
+Sieh dir einmal die Witze Seite an und generiere so viele Chuck Norris Witze wie du willst! Die Besten der Besten kannst du favorisieren.
+
+# Ⅳ.2. Witze-Wettbewerb
+
+Tritt nun in einem Witze-Wettbewerb gegen Chuck Norris an.
+
+# Ⅴ. Challenge 🎖️ - Lieblingswitz
+
+# Ⅵ. Challenge 🎖️ - Nur Bares ist Wahres 💸 aber in der WebApp zählt nur Speicherbares
+
+Speicherung von Witzen zum Benutzer in der Firebase API.
+
+<!-- # Ⅶ. Challenge 🎖️ - # Ⅷ. Challenge 🎖️ - -->
 
 <!-- - Dieses Template dient als Basis für ein paar Aufgaben
 - Im Template befindet sich bereits alles was man so braucht
