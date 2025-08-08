@@ -1,5 +1,7 @@
 :host {
   width: 100%;
+  display: flex;
+  justify-content: center;
   padding: var(--var-spacing-3);
   background: var(--mat-sys-secondary);
 

@@ -2,10 +2,10 @@
   <mat-icon>account_circle</mat-icon>
 </button>
 
-<!-- shows on menu open -->
+<!-- menu options -->
 <mat-menu #menu="matMenu">
   <!-- toggle light/darkmode -->
-  <button mat-menu-item>
+  <button (click)="toggleLightDarkTheme()" mat-menu-item>
     <mat-icon>brightness_5</mat-icon>
     <span>Modus</span>
   </button>

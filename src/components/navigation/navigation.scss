@@ -6,9 +6,12 @@
     gap: 200px;
     text-align: center;
     align-items: center;
-  }
-
-  h1 {
-    color: var(--mat-sys-on-primary-container);
+    a {
+      text-decoration: none;
+      h1 {
+        color: var(--mat-sys-on-primary-container);
+        font-size: var(--var-size-4);
+      }
+    }
   }
 }

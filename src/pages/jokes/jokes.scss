@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--var-spacing-9);
+
+  app-generation-card {
+    .container-content {
+      width: 50vw;
+    }
+    .container-action {
+      display: flex;
+      flex-direction: row;
+      gap: var(--var-spacing-2);
+      > button {
+        margin-top: var(--var-spacing-5);
+      }
+    }
+  }
+}

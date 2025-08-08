@@ -1,20 +1,25 @@
-<app-generation-card cardTitle="Chuck's Jokes 💬">
-  <ng-container generation-card-content>
-    <div class="container-content">
-      <p>{{jokeString}}</p>
-    </div>
-  </ng-container>
+<div class="logo">
+  <a href="/"><img loading="lazy" src="favicon.ico" /></a>
+</div>
 
-  <ng-container generation-card-action>
-    <div class="container-action">
-      <button (click)="fetchNewJoke();" matButton="filled">
-        <p>NEU</p>
-        <mat-icon>autorenew</mat-icon>
-      </button>
-      <button (click)="favouriseJoke()" matButton="filled">
-        <p>FAVORISIEREN</p>
-        <mat-icon>star</mat-icon>
-      </button>
+<article>
+  <div class="triangle"></div>
+  <!-- Section welcome -->
+  <div class="presentation">
+    <h1>Hallo!</h1>
+    <p>und herzlich willkommen in der innFactory! Ich bin Chuck Norris.</p>
+  </div>
+
+  <!-- Section about chuck -->
+  <div class="about-me">
+    <div class="about-me-text">
+      <h1>Über mich</h1>
+      <p>Ich bin Chuck Norris, ein Kampfsportler und Schauspieler, der für meine Rollen in Actionfilmen bekannt ist.</p>
+      <p>Die "Chuck Norris Facts" wurden populär, weil sie meine Actionhelden-Persönlichkeit humorvoll übertrieben und im Internet viral verbreitet wurden.</p>
+      <!-- Add more facts here -->
+      <p>...</p>
+      <p>...</p>
     </div>
-  </ng-container>
-</app-generation-card>
+    <img src="chuck-norris-presentation.png" />
+  </div>
+</article>
