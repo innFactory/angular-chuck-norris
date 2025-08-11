@@ -198,6 +198,9 @@ Die Tabellendaten aktualisieren sich nur bei einem neuen Aufruf der Favoriten Se
 - Implementiere nun das Datenobjekt `tableData` der Favouriten Seite als Signal
 - Du musst auch die bisherigen Methoden updateChucksJokesTableData und updateOwnJokesTableData anpassen
 
+Nun sollten die Daten bei Klick auf den Löschen Button, unmittelbar auch aus der Tabelle verschwinden. Herzlichen Glückwunsch, du hast diese Challenge geschafft!
+Wenn du es nicht erwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der Ⅴ. Challenge weiter.
+
 # Ⅴ. Challenge 🎖️ - Achtung Süße Katzenbilder!
 
 ### Ⅴ.Ⅰ. Ansehen
