@@ -213,7 +213,7 @@ Anbinden der Katzen API
 
 ### Ⅴ.Ⅲ.
 
-Favorisieren der Katzen in Tabelle
+Favorisieren der Katzen in weiterer Tabelle auf der. Favoriten Seite.
 
 FavouriteCats Tabelle erstellen. FavouriteCats Service. Entweder URLs oder Bilder selbst speichern?
 
@@ -221,8 +221,8 @@ FavouriteCats Tabelle erstellen. FavouriteCats Service. Entweder URLs oder Bilde
 
 ### Ⅵ.Ⅰ.
 
-Anbinden des Eigenen Firebase Projekts
+Anbinden des Eigenen Firebase Projekts credentials
 
 ### Ⅵ.Ⅱ.
 
-Speicherung von Witzen zum Benutzer in der Firebase API.
+Speicherung der Tabellendaten zum Benutzer in der Firebase API. ...
