@@ -1,14 +1,11 @@
 <table mat-table [dataSource]="tableData" class="mat-elevation-z8">
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column -->
+  <!-- ID column -->
   <ng-container matColumnDef="identifier">
     <th mat-header-cell *matHeaderCellDef>ID</th>
     <td mat-cell *matCellDef="let element">{{element.identifier}}</td>
   </ng-container>
 
-  <!-- Data Column -->
+  <!-- Joke column -->
   <ng-container matColumnDef="joke">
     <th mat-header-cell *matHeaderCellDef>Inhalt</th>
     <td mat-cell *matCellDef="let element">
@@ -16,10 +13,20 @@
     </td>
   </ng-container>
 
-  <!-- Symbol Column -->
+  <!-- Creator column -->
   <ng-container matColumnDef="creator">
     <th mat-header-cell *matHeaderCellDef>Ersteller</th>
     <td mat-cell *matCellDef="let element">{{element.creator}}</td>
+  </ng-container>
+
+  <!-- Action column -->
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button (click)="deleteRow(element.identifier)" matMiniFab aria-label="Example icon button with a menu icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
