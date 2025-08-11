@@ -186,22 +186,21 @@ Du willst die Daten auf der Seite Witze and die Seite Favoriten weitergeben. Die
 
 ### 4.4. Echt peinlich: Unlustiger Witz
 
-Du hast einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi. In der Tabelle gibt es bereits einen X-Löschen Button. Aber er hat leider keine Funktion.
+Du hast einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi. In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der `deleteRow` Methode leider noch nicht implementiert.
 
-Die löschen Funktion auf der Favoriten seite übergibt den Typ und die ID. Lösche nun den Favouriten wieder je nach Typ aus dem neuen FavouriteOwnJokes oder FavouriteChucksJokes Service Array.
-
-Fällt dir auf, dass die Änderungen der Tabelle nur gültig werden wenn du auf den update Button klickst oder auf eine andere Seite und zurück wechselst?
+- Implementiere die deleteRow Methode und greife auf die remove Methoden deiner Services FavouriteChuckJokesSevice und FavouriteOwnJokesService zu.
+- Merkst du dass, die Löschung in der Tabelle erst aktualisiert wird, wenn du auf eine andere Seite z.B. "Start" und wieder zurück wechselst?
 
 ### 4.5. Die Macht der Signals
 
-Angular wird bewundert wechen der Reaktiven Programmierung. -> Signals
+Die Tabellendaten aktualisieren sich nur bei einem neuen Aufruf der Favoriten Seite. Der Grund dafür ist, dass die Tabellendaten immer nur im Konstruktur einmalig beim Laden der Komponente aktualsiert werden. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
 
-Das Beispiel soeben war NICHT reaktiv, da wir selbst den Update button klicken mussten. Angular Signals. Nochmal Artikel durchlesen. Nun
-auf Seite Favourites this.tableData als signal implementieren und mit effect auslösen.
+- Implementiere nun das Datenobjekt `tableData` der Favouriten Seite als Signal
+- Du musst auch die bisherigen Methoden updateChucksJokesTableData und updateOwnJokesTableData anpassen
 
 # Ⅴ. Challenge 🎖️ - Achtung Süße Katzenbilder!
 
-### Ⅴ.Ⅰ.
+### Ⅴ.Ⅰ. Ansehen
 
 Ansehen & Verstehen der Chuck Norris API
 
