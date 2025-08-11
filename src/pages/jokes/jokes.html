@@ -1,30 +1,17 @@
 <!-- Section chuck's jokes -->
-<app-generation-card cardTitle="Chuck's Witze 💬">
-  <ng-container generation-card-content>
-    <div class="container-content">
-      <p>{{jokeString}}</p>
-    </div>
-  </ng-container>
-  <ng-container generation-card-action>
-    <div class="container-action">
-      <button (click)="fetchNewJoke();" matButton="filled">
-        <p>NEU</p>
-        <mat-icon>autorenew</mat-icon>
-      </button>
-      <button (click)="favouriseChucksJoke()" matButton="filled">
-        <p>FAVORISIEREN</p>
-        <mat-icon>star</mat-icon>
-      </button>
-    </div>
-  </ng-container>
-</app-generation-card>
+<app-chuck-jokes-card />
 
 <!-- Section own jokes -->
 <!-- TODO add section -->
 <!-- <app-generation-card cardTitle="Eigene Witze 💬">
   <ng-container generation-card-content>
     <div class="container-content">
-      <input />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+
     </div>
   </ng-container>
   <ng-container generation-card-action>
