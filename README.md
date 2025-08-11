@@ -150,23 +150,29 @@ Passe nun die error.html Datei an und gestalte Sie ein bisschen. Besuche nochmal
 
 # Ⅳ. Challenge 🎖️ - Lieblingswitz
 
-# Ⅳ.Ⅰ. Ansehen
+### Ⅳ.Ⅰ. Ansehen
 
-Sieh dir die Funktion Lieblingswitz einmal an. Gibst du einen Witz ein und klickst auf favorisieren, dann erscheint er in der Seite Favoriten. Das macht das Global State Management über Services in Angular möglich.
+Sieh dir die Chuck Norris Witz Favorisieren Funktion einmal an. Gibst du einen Witz ein und klickst auf favorisieren, dann erscheint er in der Seite der Favoriten. Das macht das Global State Management über sogenannte Services in Angular möglich.
 
-# Ⅳ.Ⅱ. Witze-Wettbewerb
+  <!--   Tritt nun in einem Witze-Wettbewerb gegen Chuck Norris an.
+  Leider verschwinden Sie wieder und
+  Sieh dir einmal die Witze Seite an und generiere so viele Chuck Norris Witze wie du willst! -->
 
-Leider können die Witze von Chuck Norris bisher nicht gespeichert werden.
+### Ⅳ.Ⅱ. Witze-Wettbewerb
 
-Button Favorisieren Funktion Chuck Norris.
+Damit du mit Chuck Norris in Konkurrez treten kannst, wirst du im Anschluss auch eine Eigene Witze Funktion mit Eingabefeld implementiern. Füge nun einen Angular Mat-Input und einen Favorisieren Angular Mat-Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu. Doku hier.
 
-Neuer Service Chucks Witze
+### 4.3.
 
-In Seite Favoriten einbinden.
+Sieh dir den FavouriteChucksJoke Service einmal an. Implementiere nun auch einen FavouriteOwnJokes Service der bei Klick auf den neuen Button deine eigenen Witze aufnimmt.
 
-Tritt nun in einem Witze-Wettbewerb gegen Chuck Norris an.
-Leider verschwinden Sie wieder und
-Sieh dir einmal die Witze Seite an und generiere so viele Chuck Norris Witze wie du willst!
+Passe die Favoriten Seite so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden.
+
+4.4. Echt peinlich: Unlustiger Witz
+
+Du hast einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi. In der Tabelle gibt es bereits einen X-Löschen Button. Aber er hat leider keine Funktion.
+
+Die löschen Funktion auf der Favoriten seite übergibt den Typ und die ID.
 
 # Ⅴ. Challenge 🎖️ - Achtung Süße Katzenbilder!
 
