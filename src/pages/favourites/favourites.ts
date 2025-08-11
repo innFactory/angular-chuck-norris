@@ -1,8 +1,8 @@
-import { Component, effect, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
-import { AllowedDataTypes } from '../../models/favourite-data';
+import { AllowedDataTypes } from '../../models/favourite-chuck-joke';
 import { FavouritesTableRow } from '../../models/favourites-table-row';
-import { FavouritesDataService } from '../../shared/services/favourites-data/favourites-data';
+import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes';
 
 @Component({
   selector: 'app-favourites',
@@ -11,27 +11,25 @@ import { FavouritesDataService } from '../../shared/services/favourites-data/fav
   styleUrl: './favourites.scss',
 })
 export class Favourites {
-  protected displayedColumns: string[] = ['identifier', 'data', 'creator'];
+  protected displayedColumns: string[] = ['identifier', 'joke', 'creator'];
   protected tableData: FavouritesTableRow[] = [];
-  private favouritesDataService = inject(FavouritesDataService);
+  private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
   protected AllowedDataTypes = AllowedDataTypes;
 
   constructor() {
-    effect(() => {
-      const favouritesData = this.favouritesDataService.$data();
-
-      favouritesData.forEach((favourite, index) => {
-        const row: FavouritesTableRow = {
-          identifier: index + 1,
-          data: favourite,
-          creator: 'Chuck',
-        };
-        this.tableData.push(row);
-      });
-    });
+    this.updateChucksJokesTableData();
   }
 
-  public ngOnInit() {
-    // this.tableData = ELEMENT_DATA;
+  private updateChucksJokesTableData() {
+    const favouriteChuckJokes = this.favouriteChuckJokesSevice.getAllJokes();
+
+    favouriteChuckJokes.forEach((favourite, index) => {
+      const row: FavouritesTableRow = {
+        identifier: index + 1,
+        joke: favourite.text,
+        creator: 'Chuck',
+      };
+      this.tableData.push(row);
+    });
   }
 }
