@@ -152,27 +152,52 @@ Passe nun die error.html Datei an und gestalte Sie ein bisschen. Besuche nochmal
 
 ### Ⅳ.Ⅰ. Ansehen
 
-Sieh dir die Chuck Norris Witz Favorisieren Funktion einmal an. Gibst du einen Witz ein und klickst auf favorisieren, dann erscheint er in der Seite der Favoriten. Das macht das Global State Management über sogenannte Services in Angular möglich.
+In der Folgenden Challenge wirst du Angular Services verstehen und am Beispiel des bereits implementierten favourite-chuck-jokes Services ansehen. Im Anschluss erstellst du einen Komponente in der du neue, eigene Witze eingeben kannst. Dabei kommst du weiter mit dem Design System Angular Materials in Berührung. Später wirst du auch den Verwendungszweck von Angular Signals verstehen indem du wieder Witze aus der Tabelle löschst.
 
-  <!--   Tritt nun in einem Witze-Wettbewerb gegen Chuck Norris an.
-  Leider verschwinden Sie wieder und
-  Sieh dir einmal die Witze Seite an und generiere so viele Chuck Norris Witze wie du willst! -->
+- Sieh dir nun die Chuck Norris Witze Favorisieren Funktion einmal an. Gibst du einen Witz ein und klickst auf favorisieren, dann erscheint er in der Seite der Favoriten.
+- Das macht das Global State Management über sogenannte Services in Angular möglich.
+- Sieh dir den Programmcode zur chuck-jokes-card Komponente, zum favourite-chuck-jokes Service und die updateChucksJokeTableData Methode der page favourites einmal genauer an und versuche ihn zu verstehen.
+
+Die Methode lädt die in favourite-chuck-jokes Service gespeicherten Witze jedes mal bei Öffnen der Favouritesseite in die Tabelle. Probiere es gerne selbst aus und generiere und favorisiere so viele Chuck Norris Witze wie du willst!
 
 ### Ⅳ.Ⅱ. Witze-Wettbewerb
 
-Damit du mit Chuck Norris in Konkurrez treten kannst, wirst du im Anschluss auch eine Eigene Witze Funktion mit Eingabefeld implementiern. Füge nun einen Angular Mat-Input und einen Favorisieren Angular Mat-Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu. Doku hier.
+Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Eigene-Witze Funktion mit Inputfeld implementiern.
 
-### 4.3.
+- Erstelle analog zur Komponente ChuckJokesCardComponent in `src/components/chuck-jokes-card/` eine neue OwnJokesCardComponent.
+- Das kannst du wieder mit `ng generate component (ort)` aus der Konsole machen.
+- Binde die Komponente in die `src/pages/jokes/` Seiten Komponente ein.
+- Kannst du analog zur ChuckJokesCardComponent die GenerationCardComponent im HTML der OwnJokesCardComponent wiederverwenden?
+  Diese Wiederverwenung ist die Angular Content Projection. Diese Techik ist bereits etwas komplexer zu verstehen. Hier die offiziele Dokumentation [Tutorial Content Projection](https://angular.dev/guide/components/content-projection).
+- Füge in die neue OwnJokesCardComponent einen Angular Mat-Input und einen Favorisieren Angular Mat-Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu.
+- Hilfreiche Dokus dazu findest du hier zu [Mat-Input](https://material.angular.dev/components/input/overview) und hier zum [Mat-Button](https://material.angular.dev/components/button/overview).
 
-Sieh dir den FavouriteChucksJoke Service einmal an. Implementiere nun auch einen FavouriteOwnJokes Service der bei Klick auf den neuen Button deine eigenen Witze aufnimmt.
+### 4.3. Services in Angular
 
-Passe die Favoriten Seite so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden.
+Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze. Auf der Mat-Button Doku erfährst du wie du bei Klick auf den Button eine Methode aufrufst.
 
-4.4. Echt peinlich: Unlustiger Witz
+Du willst die Daten auf der Seite Witze and die Seite Favoriten weitergeben. Diese globale Weitergabe nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial](https://angular.dev/tutorials/first-app/09-services) ab.
+
+- Sieh dir den FavouriteChuckJokesSevice und seine Verwendung in ChuckJokesCardComponent und der Favourites Seite genauer an.
+- Implementiere nun auch einen FavouriteOwnJokesService. Das geht auch über den `ng generate` Befehl.
+- Der Service soll auch nur über die öffentlichen add, remove und getAll Methoden verwendbar sein.
+- Füge in der OwnJokesCardComponent eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die add Methode an den Service.
+- Passe die Favoriten Seite so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden. Dazu kannst du eine neue Methode updateOwnJokesTableData erstellen.
+
+### 4.4. Echt peinlich: Unlustiger Witz
 
 Du hast einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi. In der Tabelle gibt es bereits einen X-Löschen Button. Aber er hat leider keine Funktion.
 
-Die löschen Funktion auf der Favoriten seite übergibt den Typ und die ID.
+Die löschen Funktion auf der Favoriten seite übergibt den Typ und die ID. Lösche nun den Favouriten wieder je nach Typ aus dem neuen FavouriteOwnJokes oder FavouriteChucksJokes Service Array.
+
+Fällt dir auf, dass die Änderungen der Tabelle nur gültig werden wenn du auf den update Button klickst oder auf eine andere Seite und zurück wechselst?
+
+### 4.5. Die Macht der Signals
+
+Angular wird bewundert wechen der Reaktiven Programmierung. -> Signals
+
+Das Beispiel soeben war NICHT reaktiv, da wir selbst den Update button klicken mussten. Angular Signals. Nochmal Artikel durchlesen. Nun
+auf Seite Favourites this.tableData als signal implementieren und mit effect auslösen.
 
 # Ⅴ. Challenge 🎖️ - Achtung Süße Katzenbilder!
 
@@ -187,6 +212,8 @@ Anbinden der Katzen API
 ### Ⅴ.Ⅲ.
 
 Favorisieren der Katzen in Tabelle
+
+FavouriteCats Tabelle erstellen. FavouriteCats Service. Entweder URLs oder Bilder selbst speichern?
 
 # Ⅵ. Challenge 🎖️ - Nur `Speicher`bares ist Wahres
 
