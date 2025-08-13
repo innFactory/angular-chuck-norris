@@ -17,7 +17,7 @@ import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck
 export class Favourites {
   private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
   private snackBar = inject(MatSnackBar);
-  protected displayedColumns: string[] = ['identifier', 'joke', 'creator', 'action'];
+  protected displayedColumns: string[] = ['id', 'joke', 'creator', 'action'];
   protected tableData: FavouritesTableRow[] = [];
   protected AllowedDataTypes = AllowedDataTypes;
 
@@ -28,9 +28,9 @@ export class Favourites {
   private updateChucksJokesTableData() {
     const favouriteChuckJokes = this.favouriteChuckJokesSevice.getAllJokes();
 
-    favouriteChuckJokes.forEach((favourite, index) => {
+    favouriteChuckJokes.forEach((favourite) => {
       const row: FavouritesTableRow = {
-        identifier: index + 1,
+        id: `chuck_${favourite.id}`,
         joke: favourite.text,
         creator: 'Chuck',
       };
@@ -38,7 +38,7 @@ export class Favourites {
     });
   }
 
-  protected deleteRow(id: number) {
+  protected deleteRow(index: number) {
     this.snackBar.open('🚨 Löschen noch nicht implementiert', 'X', { duration: 1000, horizontalPosition: 'end' });
   }
 }
