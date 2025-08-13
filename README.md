@@ -1,4 +1,4 @@
-<img src="./docs/logo.png">
+![Project Logo](./docs/logo.png)
 
 # Start 🚀
 
@@ -10,24 +10,24 @@ Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webap
 
 Jeder geschriebene Programmcode muss auch gespeichert und weitergegeben werden können. GitHub ist eine übergreifende Entwicklerplattform die das ermöglicht und auch dieses Projekt speichert.
 
-Erstelle dir, falls du noch keinen hast, zunächst einen eigenen GitHub Account auf [https://github.com/](https://github.com/). Dieser wird dich bei der innFacotory und in deinem späteren Entwickler-Leben noch lange begleiten.
+Erstelle dir, falls du noch keinen hast, zunächst einen eigenen GitHub Account auf [https://github.com/](https://github.com/). Dieser wird dich bei der innFacotory und in deinem späteren Entwickler-Leben noch lange begleiten 🤩.
 
-Du wirst später nicht nur deinen Programmcode mit anderen in Projekten teilen (=Publishen), sondern in sogennanten Code-Reviews gegenseitig mit anderen Entwicklern den Code überprüfen und verbessern.
+Du wirst später nicht nur deinen Programmcode mit Anderen Kollegen in Projekten teilen (=publish), sondern in sogennanten Code-Reviews gegenseitig den Code überprüfen und verbessern. Dies musst du beim Angular Chuck Norris Projekt aber nicht machen.
 
 ### Ⅰ.Ⅱ. Entwickeln aus der Entwicklungsumgebung
 
 Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können.
 
-Dieser Ort ist die sogennante Entwicklungsumgebung, auf englisch Integrated Development Environment, abgekürzt IDE. Für die Angular Chuck Norris App benutzen du am Besten VS Code.
+Dieser Ort ist die sogennante Entwicklungsumgebung, auf englisch Integrated Development Environment, abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am Besten VS Code.
 
 1. Installiere dir [Visual Studio Code](https://code.visualstudio.com/).
 2. Öffne VS Code. Wenn du Lust hast, mache dich mit diesem [Tutorial](https://code.visualstudio.com/docs/getstarted/getting-started) in VS Code etwas vertraut.
 
 ### Ⅰ.Ⅲ. Webapp kopieren
 
-In GitHub online gespeicherte Software muss zum Bearbeiten erst lokal auf deinem PC kopiert werden (=Geklont). Das geht ganz einfach mit VS Code.
+In GitHub online gespeicherte Software muss zum Bearbeiten erst lokal auf deinem PC kopiert (=clone) werden. Das geht ganz einfach mit VS Code.
 
-VS Code kommt standardmäßig mit einer Anbidung für GitHub, dem Source Control Management. Öffne den Tab des Source Control und wähle "Clone Repository". Gebe nun die URL des Repositories `https://github.com/innFactory/angular-chuck-norris` ein und wähle einen beliebigen Speicherort auf deinem PC.
+VS Code kommt standardmäßig mit einer Anbidung für GitHub, dem "Source Control Management". Öffne den Tab des Source Control und wähle "Clone Repository". Gebe nun die URL des Repositories `https://github.com/innFactory/angular-chuck-norris` ein und wähle einen beliebigen Speicherort auf deinem PC.
 
 ![Source Control View](./docs/firstrun-source-control.png)
 
@@ -56,15 +56,15 @@ Die meisten Webapp Projekte haben Abhängigkeiten an andere Bibliotheken in Form
 
 ### Ⅰ.Ⅴ. Abhängigkeiten installieren
 
-Nun installiere ganz einfach die Dependencies aus der Konsole mit dem Befehl `npm install` und warte bis sie heruntergeladen sind.
+Nun musst du dir die Abhängigkeiten bzw. Dependencies nur noch installieren. Keine Sorge, die sind in der Datei `package.json` bereits vollständig aufgelistet und können ohne weiteres über einen Konsolenbefehl installiert werden.
+
+Gebe in die Konsole `npm install` ein und und warte bis alle erfolgreich heruntergeladen sind. Ein neuer Ordner `node_modules`, wird nun im Projekt automatisch erstellt.
 
 ### Ⅰ.Ⅵ. WebApp starten
 
 Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
 
-Öffne den Browser auf [http://localhost:4200](http://localhost:4200) und du solltest die Webapp sehen.
-
-<img src="doc/screenshot_0.png" width="40%">
+Öffne den Browser auf [http://localhost:4200](http://localhost:4200) und du solltest die WebApp sehen.
 
 ### Ⅰ.7. Einstieg in die App
 
@@ -128,10 +128,16 @@ Was siehst du?
 Eine leere seite mit Header und Footer? Wie langweilig! In unserem src/pages/ Ordner fehlt noch eine Not-Found Seite.
 
 1. Sieh dir einmal bekannte Not-Found Seiten im Internet an:
-2. In Angular kannst du ganz leicht aus der Kommandozeile neue Komponenten generieren. Öffne die Commandozeile im Projektordner angular-chuck-norris.
-   Führe nun den Befehl `npx ng generate component ../pages/not-found` aus. Im src/pages Ordner sollte nun eine neue Angular Komponente im Unterordner not-found erscheinen.
 
-Angular kommt standardmäßig mit einem WebApp Pfadaufbau. Dieser kann in der Datei [app.routes.ts](./src/app/app.routes.ts) angepasst werden.
+- https://www.innfactory.de/jkajejsd
+- https://www.youtube.com/awefawe
+- https://www.amazon.com/ajsdsfl/jfasldk
+- https://www.chess.com/kfajes
+
+2. In Angular kannst du ganz leicht aus der Kommandozeile neue Komponenten generieren. Öffne die Commandozeile im Projektordner angular-chuck-norris.
+   Führe nun den Befehl `npx ng generate component ../pages/not-found` aus. Im src/pages Ordner sollte nun eine neue Angular Komponente NotFoundComponent erscheinen.
+
+3. Angular kommt standardmäßig mit einem WebApp Pfadaufbau. Dieser kann in der Datei [app.routes.ts](./src/app/app.routes.ts) angepasst werden.
 
 Füge nun in in der Kommentierten Stelle die Not-Found Komponente hinzu. Vergesse nicht sie wie die anderen Seiten zu importieren.
 
@@ -146,55 +152,57 @@ Füge nun in in der Kommentierten Stelle die Not-Found Komponente hinzu. Vergess
 
 "Es gibt keinen Schönheitswettbewerb mit Chuck Norris, denn alle wissen, dass er der einzige Gewinner wäre."
 
-Passe nun die error.html Datei an und gestalte Sie ein bisschen. Besuche nochmal die nicht-existierende Seite. Füge auch etwas CSS hinzu. Du kannst es einfach in die SCSS Datei Schreiben. Jedes gültige CSS ist auch SCSS aber nicht andersherum.
+Passe nun die error.html Datei an und gestalte Sie ein bisschen. Besuche nochmal die Seite. Füge auch etwas CSS hinzu. Du kannst es einfach in die SCSS Datei Schreiben. Jedes gültige CSS ist auch SCSS aber nicht andersherum.
 
 # Ⅳ. Challenge 🎖️ - Lieblingswitz
 
 ### Ⅳ.Ⅰ. Ansehen
 
-In der Folgenden Challenge wirst du Angular Services verstehen und am Beispiel des bereits implementierten favourite-chuck-jokes Services ansehen. Im Anschluss erstellst du einen Komponente in der du neue, eigene Witze eingeben kannst. Dabei kommst du weiter mit dem Design System Angular Materials in Berührung. Später wirst du auch den Verwendungszweck von Angular Signals verstehen indem du wieder Witze aus der Tabelle löschst.
+In der Folgenden Challenge wirst du das Konzept der Angular Services am Beispiel des bereits implementierten FavouriteChuckJokesSevice kennenlernen. Im Anschluss erstellst du einen Komponente in der du neue, eigene Witze eingeben kannst. Dabei kommst du auch mit dem Design System Angular Materials in Berührung. Später wirst du auch den Verwendungszweck von Angular Signals verstehen indem du wieder Witze aus der Tabelle löschst.
 
-- Sieh dir nun die Chuck Norris Witze Favorisieren Funktion einmal an. Gibst du einen Witz ein und klickst auf favorisieren, dann erscheint er in der Seite der Favoriten.
+- Sieh dir nun die Chuck Norris Witze Favorisieren Funktion einmal an. Gibst du einen Witz ein und klickst auf "FAVORISIEREN", erscheint er in der Favoriten Seite.
 - Das macht das Global State Management über sogenannte Services in Angular möglich.
-- Sieh dir den Programmcode zur chuck-jokes-card Komponente, zum favourite-chuck-jokes Service und die updateChucksJokeTableData Methode der page favourites einmal genauer an und versuche ihn zu verstehen.
+- Sieh dir den Programmcode zur ChuckJokesCard Komponente, zum FavouriteChuckJokesSevice Service und die updateChucksJokeTableData Methode der Favoriten Seite einmal genauer an und versuche ihn zu verstehen.
 
-Die Methode lädt die in favourite-chuck-jokes Service gespeicherten Witze jedes mal bei Öffnen der Favouritesseite in die Tabelle. Probiere es gerne selbst aus und generiere und favorisiere so viele Chuck Norris Witze wie du willst!
+Die Methode lädt die in FavouriteChuckJokesSevice Service gespeicherten Witze jedes mal bei Öffnen der Favouritesseite in die Tabelle. Probiere es gerne selbst aus und generiere und sammle so viele Chuck Norris Witze wie du willst!
 
 ### Ⅳ.Ⅱ. Witze-Wettbewerb
 
 Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Eigene-Witze Funktion mit Inputfeld implementiern.
 
-- Erstelle analog zur Komponente ChuckJokesCardComponent in `src/components/chuck-jokes-card/` eine neue OwnJokesCardComponent.
-- Das kannst du wieder mit `ng generate component (ort)` aus der Konsole machen.
+- Erstelle passend zur Komponente ChuckJokesCardComponent in `src/components/chuck-jokes-card/` eine neue OwnJokesCardComponent.
+- Das kannst du wieder mit `ng generate component ../components/(name)` aus der Konsole machen.
 - Binde die Komponente in die `src/pages/jokes/` Seiten Komponente ein.
 - Kannst du analog zur ChuckJokesCardComponent die GenerationCardComponent im HTML der OwnJokesCardComponent wiederverwenden?
-  Diese Wiederverwenung ist die Angular Content Projection. Diese Techik ist bereits etwas komplexer zu verstehen. Hier die offiziele Dokumentation [Tutorial Content Projection](https://angular.dev/guide/components/content-projection).
+  Diese Wiederverwenung ist die Angular Content Projection. Diese Techik ist bereits etwas komplexer zu verstehen.
+  Hier die offiziele Dokumentation [Tutorial Content Projection](https://angular.dev/guide/components/content-projection).
 - Füge in die neue OwnJokesCardComponent einen Angular Mat-Input und einen Favorisieren Angular Mat-Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu.
 - Hilfreiche Dokus dazu findest du hier zu [Mat-Input](https://material.angular.dev/components/input/overview) und hier zum [Mat-Button](https://material.angular.dev/components/button/overview).
 
 ### 4.3. Services in Angular
 
-Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze. Auf der Mat-Button Doku erfährst du wie du bei Klick auf den Button eine Methode aufrufst.
+Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze.
 
 Du willst die Daten auf der Seite Witze and die Seite Favoriten weitergeben. Diese globale Weitergabe nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial](https://angular.dev/tutorials/first-app/09-services) ab.
 
 - Sieh dir den FavouriteChuckJokesSevice und seine Verwendung in ChuckJokesCardComponent und der Favourites Seite genauer an.
-- Implementiere nun auch einen FavouriteOwnJokesService. Das geht auch über den `ng generate` Befehl.
+- Implementiere nun auch einen FavouriteOwnJokesService. Das geht auch über den `ng generate service` Befehl.
 - Der Service soll auch nur über die öffentlichen add, remove und getAll Methoden verwendbar sein.
 - Füge in der OwnJokesCardComponent eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die add Methode an den Service.
 - Passe die Favoriten Seite so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden. Dazu kannst du eine neue Methode updateOwnJokesTableData erstellen.
 
 ### 4.4. Echt peinlich: Unlustiger Witz
 
-Du hast einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi. In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der `deleteRow` Methode leider noch nicht implementiert.
+Du hast einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi. In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der `deleteRow` Methode in `src/pages/favourites` leider noch nicht implementiert.
 
 - Implementiere die deleteRow Methode und greife auf die remove Methoden deiner Services FavouriteChuckJokesSevice und FavouriteOwnJokesService zu.
-- Merkst du dass, die Löschung in der Tabelle erst aktualisiert wird, wenn du auf eine andere Seite z.B. "Start" und wieder zurück wechselst?
+- Merkst du, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf eine andere Seite z.B. "Start" und wieder zurück wechselst?
 
 ### 4.5. Die Macht der Signals
 
-Die Tabellendaten aktualisieren sich nur bei einem neuen Aufruf der Favoriten Seite. Der Grund dafür ist, dass die Tabellendaten immer nur im Konstruktur einmalig beim Laden der Komponente aktualsiert werden. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
+Die Tabellendaten aktualisieren sich nur bei einem neuen Aufruf der Favoriten Seite. Der Grund dafür ist, dass sich die Tabellendaten im Konstruktur immer nur einmalig beim Laden der Komponente aktualsieren. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
 
+- Lies dich über Signals in Angular ein
 - Implementiere nun das Datenobjekt `tableData` der Favouriten Seite als Signal
 - Du musst auch die bisherigen Methoden updateChucksJokesTableData und updateOwnJokesTableData anpassen
 
