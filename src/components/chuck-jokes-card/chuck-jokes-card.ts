@@ -16,12 +16,20 @@ import { GenerationCard } from '../generation-card/generation-card';
 export class ChuckJokesCard {
   private snackBar = inject(MatSnackBar);
   private jokeFetcherService = inject(JokeFetcher);
-  protected jokeResource: ResourceRef<ChuckNorrisJoke | undefined> = resource({ loader: () => this.jokeFetcherService.get() });
   private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
+  protected jokeResource: ResourceRef<ChuckNorrisJoke | undefined>;
 
-  protected get jokeString(): string {
+  constructor() {
+    this.jokeResource = resource({ loader: () => this.jokeFetcherService.get() });
+  }
+
+  protected get jokeDisplayed(): string {
     const jokeResourceValue = this.jokeResource.value();
-    return jokeResourceValue ? jokeResourceValue.value : 'No jokes available.';
+    if (jokeResourceValue !== undefined) {
+      return jokeResourceValue.value;
+    } else {
+      return '';
+    }
   }
 
   protected fetchNewJoke() {
@@ -32,7 +40,7 @@ export class ChuckJokesCard {
     const jokeResourceValue = this.jokeResource.value();
     if (jokeResourceValue !== undefined) {
       this.favouriteChuckJokesSevice.add(jokeResourceValue.value);
-      this.snackBar.open('⭐️ New joke added', 'X', { horizontalPosition: 'end' });
+      this.snackBar.open('⭐️ New joke added', 'X', { duration: 1000, horizontalPosition: 'end' });
     }
   }
 }
