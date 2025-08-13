@@ -43,6 +43,7 @@ export class Favourites {
   }
 
   protected refreshTable() {
+    this.tableData = [];
     this.updateChucksJokesTableData();
   }
 }
