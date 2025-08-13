@@ -196,13 +196,17 @@ Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst
 Nun werden wir die Favoriten Tabelle erweitern. Du hast versehentlich einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi! In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der `deleteRow` Methode in `src/pages/favourites` leider noch nicht implementiert.
 
 - Implementiere die deleteRow Methode und greife auf die remove Methoden deiner Services FavouriteChuckJokesSevice und FavouriteOwnJokesService zu.
-- Merkst du, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
+- Merkst du, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf den aktualsieren Button klickst, oder auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
 
-### 4.5. Die Macht der Signals
+### Ⅳ.Ⅴ. Die Macht der Signals
 
-Die Tabellendaten aktualisieren sich nur bei einem neuen Aufruf der Favoriten Seite. Der Grund dafür ist, dass sich die Tabellendaten im Konstruktur immer nur einmalig beim Laden der Seitenkomponente aktualsieren. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
+Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass irgendjemand dem Datenobjekt `tableData` mitteilen muss, dass sich die Witze der Services geändert haben. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
 
-- Lies dich in der offiziellen Dokumentation über Signals in Angular ein.
+- Lies dir den Eintrag über Signals in der offiziellen Angular Dokumentation durch.
+- Sieh dir den bisher nicht verwendeten FavouriteChuckJokesSignalSevice an. Bemerkst du die wesentlichen Unterschiede zum FavouriteChuckJokesSevice?
+  Das Datenobjekt `data` ist nun eine Funktion und auf dessen Inhalt wird mit `data()` zugegriffen.
+- Verwende zunächst an allen Stellen statt des bisherigen FavouriteChuckJokesSevice den bisher noch nicht verwendeten FavouriteChuckJokesSignalSevice.
+- Erstelle nun auch einen neuen FavouriteOwnJokesSignalService. Tausche auch den vorherigen Service überall durch den neuen aus.
 - Implementiere nun das Datenobjekt `tableData` der Favouriten Seite als Signal.
 - Du musst auch die bisherigen Methoden updateChucksJokesTableData und updateOwnJokesTableData anpassen.
 
