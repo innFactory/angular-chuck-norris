@@ -4,6 +4,8 @@
 
 Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris stolz auf dich ist! Im Rahmen des Projekts wirst du das Frontend einer 404 Not-Found Seite gestalten, mehr über das Global-State-Management und reaktive Programmierung in Angular erfahren, selbst eine Katzenbild-API anbinden und als Bonus Aufgabe deine Daten in einer selbst aufgesetzen, externen Datenbank speichern.
 
+---
+
 # Ⅰ. Challenge 🎖️ - Start
 
 ### Ⅰ.Ⅰ. GitHub Account
@@ -85,6 +87,8 @@ Sieh dir die Struktur in der Homepage [home.html](./src/pages/home/home.html) ei
 
 Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste](https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge) und füge in der `home.html` Datei weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
 
+---
+
 # Ⅱ. Challenge 🎖️ - Leseratte
 
 ### Ⅱ.Ⅰ. Offiziell ist am Besten - Angular Doku
@@ -117,48 +121,47 @@ CSS und SCSS Guide
 
 Geschafft! Das war aber eine Menge Input. Jetzt wird programmiert! Mache mit der [Ⅲ. Challenge](#ⅲ-challenge-️) weiter.
 
+---
+
 # Ⅲ. Challenge 🎖️ - Los geht's!
 
 ### Ⅲ.Ⅰ. Chuck Norris macht keine Fehler
 
-Im Gegensatz zu Chuck Norris, dürfen wir Entwickler auch mal Fehler machen. Versuche im Browser eine Seite zu öffnen die es in unserer WebApp noch nicht gibt. Z.B. [[http://localhost:4200/diese-seite-gibts-ganz-bestimmt](http://localhost:4200/diese-seite-gibts-ganz-bestimmt)].
+Im Gegensatz zu Chuck Norris, dürfen wir Entwickler auch mal Fehler machen. Versuche im Browser eine Seite zu öffnen die es in unserer Webapp noch nicht gibt z.B. [http://localhost:4200/diese-seite-gibts-ganz-bestimmt](http://localhost:4200/diese-seite-gibts-ganz-bestimmt). Was siehst du? Eine leere Seite nur mit Header und Footer? Wie langweilig! In unserem `src/pages/` Ordner fehlt noch eine Not-Found Seite.
 
-Was siehst du?
+- Sieh dir einmal bekannte Not-Found Seiten aus dem Internet an:
+  - https://www.innfactory.de/jkajejsd
+  - https://www.youtube.com/awefawe
+  - https://www.amazon.com/ajsdsfl/jfasldk
+  - https://www.chess.com/kfajes
+- In Angular erstellst du neue Komponenten am Besten aus der Kommandozeile.
+- Öffne die Konsole und führe nun den Befehl `npx ng generate component ../pages/not-found` aus. Im src/pages Ordner sollte nun eine neue Angular Komponente NotFoundComponent erscheinen.
+- Angular kommt standardmäßig mit einem WebApp Pfadaufbau. Dieser kann in der Datei [app.routes.ts](./src/app/app.routes.ts) angepasst werden.
 
-Eine leere seite mit Header und Footer? Wie langweilig! In unserem src/pages/ Ordner fehlt noch eine Not-Found Seite.
+  Füge nun in in der Kommentierten Stelle die Not-Found Komponente hinzu. Vergesse nicht sie wie die anderen Seiten zu importieren.
 
-1. Sieh dir einmal bekannte Not-Found Seiten im Internet an:
-
-- https://www.innfactory.de/jkajejsd
-- https://www.youtube.com/awefawe
-- https://www.amazon.com/ajsdsfl/jfasldk
-- https://www.chess.com/kfajes
-
-2. In Angular kannst du ganz leicht aus der Kommandozeile neue Komponenten generieren. Öffne die Commandozeile im Projektordner angular-chuck-norris.
-   Führe nun den Befehl `npx ng generate component ../pages/not-found` aus. Im src/pages Ordner sollte nun eine neue Angular Komponente NotFoundComponent erscheinen.
-
-3. Angular kommt standardmäßig mit einem WebApp Pfadaufbau. Dieser kann in der Datei [app.routes.ts](./src/app/app.routes.ts) angepasst werden.
-
-Füge nun in in der Kommentierten Stelle die Not-Found Komponente hinzu. Vergesse nicht sie wie die anderen Seiten zu importieren.
-
-```bash
-  // {
-  //   path: '**',
-  //     component: ... , // Add error page
-  // },
-```
+  ```bash
+    // {
+    //   path: '**',
+    //     component: ... , // Add error page
+    // },
+  ```
 
 ### Ⅲ.Ⅱ. Schönheit ist nicht alles - aber auch wichtig
 
-"Es gibt keinen Schönheitswettbewerb mit Chuck Norris, denn alle wissen, dass er der einzige Gewinner wäre."
+> "Es gibt keinen Schönheitswettbewerb mit Chuck Norris, denn alle wissen, dass er der einzige Gewinner wäre."
 
-Passe nun die error.html Datei an und gestalte Sie ein bisschen. Besuche nochmal die Seite. Füge auch etwas CSS hinzu. Du kannst es einfach in die SCSS Datei Schreiben. Jedes gültige CSS ist auch SCSS aber nicht andersherum.
+Passe nun die Not Found Komponente an und gestalte Sie mit HTML und CSS. Besuche nochmal die Seite. Sei gern kreativ und lasse dir etwas mit Bildern, Text oder sogar CSS Keyframe Animationen einfallen.
+
+Glückwunsch! Du hast soeben deine erste nützliche Komponente in Angular entwickelt. Kannst du Chuck Norris aber auch im Witze-Duell schlagen?
+
+---
 
 # Ⅳ. Challenge 🎖️ - Lieblingswitz
 
 ### Ⅳ.Ⅰ. Ansehen
 
-In der Folgenden Challenge wirst du das Konzept der Angular Services am Beispiel des bereits implementierten FavouriteChuckJokesSevice kennenlernen. Im Anschluss erstellst du einen Komponente in der du neue, eigene Witze eingeben kannst. Dabei kommst du auch mit dem Design System Angular Materials in Berührung. Später wirst du auch den Verwendungszweck von Angular Signals verstehen indem du wieder Witze aus der Tabelle löschst.
+In der Folgenden Challenge wirst du das Konzept der Angular Services am Beispiel des bereits implementierten FavouriteChuckJokesSevice kennenlernen. Im Anschluss erstellst du eine Komponente, mit der du neue, eigene Witze eingeben kannst. Dabei kommst du auch mit der Angular Komponenten Bibliothek "Angular Material" in Berührung. Später wirst du auch den Verwendungszweck von Angular Signals verstehen, indem du wieder Witze aus der Tabelle löschst.
 
 - Sieh dir nun die Chuck Norris Witze Favorisieren Funktion einmal an. Gibst du einen Witz ein und klickst auf "FAVORISIEREN", erscheint er in der Favoriten Seite.
 - Das macht das Global State Management über sogenannte Services in Angular möglich.
@@ -171,7 +174,7 @@ Die Methode lädt die in FavouriteChuckJokesSevice Service gespeicherten Witze j
 Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Eigene-Witze Funktion mit Inputfeld implementiern.
 
 - Erstelle passend zur Komponente ChuckJokesCardComponent eine neue OwnJokesCardComponent.
-- Füge die Komponente der Jokes Seite hinzu.
+- Füge die Komponente dem HTML der Jokes Seite hinzu.
 - Kannst du analog zur ChuckJokesCardComponent die GenerationCardComponent im HTML der OwnJokesCardComponent wiederverwenden?
   Diese Wiederverwenung ist die Angular Content Projection. Dessen Syntax ist bereits etwas komplexer und du musst sie noch nicht ganz verstehen.
   Hier die offiziele Dokumentation [Tutorial Content Projection](https://angular.dev/guide/components/content-projection).
@@ -183,7 +186,7 @@ Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Ei
 Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze, um sie in die Tabelle der Favoriten weiterzugeben. Diese globale Weitergabe nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial](https://angular.dev/tutorials/first-app/09-services) ab.
 
 - Sieh dir den FavouriteChuckJokesSevice und seine Verwendung in ChuckJokesCardComponent und der Favourites Seite genauer an.
-- Implementiere nun auch einen FavouriteOwnJokesService. Das geht auch über den `ng generate service` Befehl.
+- Implementiere nun auch einen FavouriteOwnJokesService. Das geht auch über den `npx ng generate service` Befehl.
 - Der Service soll auch nur über die öffentlichen add, remove und getAll Methoden verwendbar sein.
 - Füge in der OwnJokesCardComponent eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die add Methode an den Service.
 - Passe die Favoriten Seite so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden. Dazu kannst du eine neue Methode updateOwnJokesTableData erstellen.
@@ -206,6 +209,8 @@ Die Tabellendaten aktualisieren sich nur bei einem neuen Aufruf der Favoriten Se
 Nun sollten die Daten bei Klick auf den Löschen Button, unmittelbar auch aus der Tabelle verschwinden. Herzlichen Glückwunsch, du hast diese Challenge geschafft!
 Wenn du es jetzt nicht mehr abwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der Ⅴ. Challenge weiter.
 
+---
+
 # Ⅴ. Challenge 🎖️ - Achtung Süße Katzenbilder!
 
 ### Ⅴ.Ⅰ. Ansehen
@@ -221,6 +226,8 @@ Anbinden der Katzen API
 Favorisieren der Katzen in weiterer Tabelle auf der. Favoriten Seite.
 
 FavouriteCats Tabelle erstellen. FavouriteCats Service. Entweder URLs oder Bilder selbst speichern?
+
+---
 
 # Ⅵ. Challenge 🎖️ - Nur `Speicher`bares ist Wahres
 
