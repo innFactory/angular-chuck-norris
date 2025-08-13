@@ -32,3 +32,8 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<button (click)="refreshTable()" class="button-refresh" matFab extended aria-label="Table refresh button">
+  Refresh Table
+  <mat-icon>refresh</mat-icon>
+</button>
