@@ -170,20 +170,17 @@ Die Methode lädt die in FavouriteChuckJokesSevice Service gespeicherten Witze j
 
 Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Eigene-Witze Funktion mit Inputfeld implementiern.
 
-- Erstelle passend zur Komponente ChuckJokesCardComponent in `src/components/chuck-jokes-card/` eine neue OwnJokesCardComponent.
-- Das kannst du wieder mit `ng generate component ../components/(name)` aus der Konsole machen.
-- Binde die Komponente in die `src/pages/jokes/` Seiten Komponente ein.
+- Erstelle passend zur Komponente ChuckJokesCardComponent eine neue OwnJokesCardComponent.
+- Füge die Komponente der Jokes Seite hinzu.
 - Kannst du analog zur ChuckJokesCardComponent die GenerationCardComponent im HTML der OwnJokesCardComponent wiederverwenden?
-  Diese Wiederverwenung ist die Angular Content Projection. Diese Techik ist bereits etwas komplexer zu verstehen.
+  Diese Wiederverwenung ist die Angular Content Projection. Dessen Syntax ist bereits etwas komplexer und du musst sie noch nicht ganz verstehen.
   Hier die offiziele Dokumentation [Tutorial Content Projection](https://angular.dev/guide/components/content-projection).
-- Füge in die neue OwnJokesCardComponent einen Angular Mat-Input und einen Favorisieren Angular Mat-Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu.
+- Füge in die neue OwnJokesCardComponent einen Material Input und einen Material Favorisieren Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu.
 - Hilfreiche Dokus dazu findest du hier zu [Mat-Input](https://material.angular.dev/components/input/overview) und hier zum [Mat-Button](https://material.angular.dev/components/button/overview).
 
 ### 4.3. Services in Angular
 
-Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze.
-
-Du willst die Daten auf der Seite Witze and die Seite Favoriten weitergeben. Diese globale Weitergabe nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial](https://angular.dev/tutorials/first-app/09-services) ab.
+Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze, um sie in die Tabelle der Favoriten weiterzugeben. Diese globale Weitergabe nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial](https://angular.dev/tutorials/first-app/09-services) ab.
 
 - Sieh dir den FavouriteChuckJokesSevice und seine Verwendung in ChuckJokesCardComponent und der Favourites Seite genauer an.
 - Implementiere nun auch einen FavouriteOwnJokesService. Das geht auch über den `ng generate service` Befehl.
@@ -193,21 +190,21 @@ Du willst die Daten auf der Seite Witze and die Seite Favoriten weitergeben. Die
 
 ### 4.4. Echt peinlich: Unlustiger Witz
 
-Du hast einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi. In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der `deleteRow` Methode in `src/pages/favourites` leider noch nicht implementiert.
+Nun werden wir die Favoriten Tabelle erweitern. Du hast versehentlich einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi! In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der `deleteRow` Methode in `src/pages/favourites` leider noch nicht implementiert.
 
 - Implementiere die deleteRow Methode und greife auf die remove Methoden deiner Services FavouriteChuckJokesSevice und FavouriteOwnJokesService zu.
-- Merkst du, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf eine andere Seite z.B. "Start" und wieder zurück wechselst?
+- Merkst du, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
 
 ### 4.5. Die Macht der Signals
 
-Die Tabellendaten aktualisieren sich nur bei einem neuen Aufruf der Favoriten Seite. Der Grund dafür ist, dass sich die Tabellendaten im Konstruktur immer nur einmalig beim Laden der Komponente aktualsieren. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
+Die Tabellendaten aktualisieren sich nur bei einem neuen Aufruf der Favoriten Seite. Der Grund dafür ist, dass sich die Tabellendaten im Konstruktur immer nur einmalig beim Laden der Seitenkomponente aktualsieren. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
 
-- Lies dich über Signals in Angular ein
-- Implementiere nun das Datenobjekt `tableData` der Favouriten Seite als Signal
-- Du musst auch die bisherigen Methoden updateChucksJokesTableData und updateOwnJokesTableData anpassen
+- Lies dich in der offiziellen Dokumentation über Signals in Angular ein.
+- Implementiere nun das Datenobjekt `tableData` der Favouriten Seite als Signal.
+- Du musst auch die bisherigen Methoden updateChucksJokesTableData und updateOwnJokesTableData anpassen.
 
 Nun sollten die Daten bei Klick auf den Löschen Button, unmittelbar auch aus der Tabelle verschwinden. Herzlichen Glückwunsch, du hast diese Challenge geschafft!
-Wenn du es nicht erwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der Ⅴ. Challenge weiter.
+Wenn du es jetzt nicht mehr abwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der Ⅴ. Challenge weiter.
 
 # Ⅴ. Challenge 🎖️ - Achtung Süße Katzenbilder!
 
