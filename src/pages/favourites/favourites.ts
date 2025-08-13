@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { AllowedDataTypes } from '../../models/favourite-chuck-joke';
 import { FavouritesTableRow } from '../../models/favourites-table-row';
@@ -14,9 +15,10 @@ import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck
   styleUrl: './favourites.scss',
 })
 export class Favourites {
+  private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
+  private snackBar = inject(MatSnackBar);
   protected displayedColumns: string[] = ['identifier', 'joke', 'creator', 'action'];
   protected tableData: FavouritesTableRow[] = [];
-  private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
   protected AllowedDataTypes = AllowedDataTypes;
 
   constructor() {
@@ -37,6 +39,6 @@ export class Favourites {
   }
 
   protected deleteRow(id: number) {
-    console.log('Deletion not yet implemented.');
+    this.snackBar.open('🚨 Löschen noch nicht implementiert', 'X', { duration: 1000, horizontalPosition: 'end' });
   }
 }
