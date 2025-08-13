@@ -1,5 +1,5 @@
 export type FavouritesTableRow = {
-  id: string;
+  id: number;
   joke: string;
   creator: string;
 };

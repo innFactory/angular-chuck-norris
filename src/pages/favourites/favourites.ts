@@ -30,7 +30,7 @@ export class Favourites {
 
     favouriteChuckJokes.forEach((favourite) => {
       const row: FavouritesTableRow = {
-        id: `chuck_${favourite.id}`,
+        id: favourite.id,
         joke: favourite.text,
         creator: 'Chuck',
       };
