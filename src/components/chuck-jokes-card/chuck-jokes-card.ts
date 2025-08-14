@@ -1,4 +1,5 @@
-import { Component, inject, resource, ResourceRef } from '@angular/core';
+import { Component, inject, ResourceRef } from '@angular/core';
+import { rxResource } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -20,7 +21,7 @@ export class ChuckJokesCard {
   protected jokeResource: ResourceRef<ChuckNorrisJoke | undefined>;
 
   constructor() {
-    this.jokeResource = resource({ loader: () => this.jokeFetcherService.get() });
+    this.jokeResource = rxResource({ stream: () => this.jokeFetcherService.get() });
   }
 
   protected get jokeDisplayed(): string {

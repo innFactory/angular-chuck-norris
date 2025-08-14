@@ -1,4 +1,6 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { URL_CHUCK_NORRIS_API } from '../../../app/app.constants';
 import { ChuckNorrisJoke } from '../../../models/chuck-norris-joke';
 
@@ -6,7 +8,9 @@ import { ChuckNorrisJoke } from '../../../models/chuck-norris-joke';
   providedIn: 'root',
 })
 export class JokeFetcher {
-  public async get(): Promise<ChuckNorrisJoke> {
-    return fetch(URL_CHUCK_NORRIS_API).then((res) => res.json());
+  private httpClientService = inject(HttpClient);
+
+  public get(): Observable<ChuckNorrisJoke> {
+    return this.httpClientService.get<ChuckNorrisJoke>(URL_CHUCK_NORRIS_API);
   }
 }
