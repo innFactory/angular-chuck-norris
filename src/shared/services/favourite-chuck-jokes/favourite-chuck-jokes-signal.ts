@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { ChucksJoke } from '../../../models/favourite-chuck-joke';
 
 @Injectable({
@@ -9,6 +9,7 @@ import { ChucksJoke } from '../../../models/favourite-chuck-joke';
  */
 export class FavouriteChuckJokesSignalService {
   private data = signal<ChucksJoke[]>([]);
+  public dataSignal = computed(() => this.data());
   private nextId: number = 1;
 
   public add(jokeText: string) {
@@ -20,11 +21,7 @@ export class FavouriteChuckJokesSignalService {
   }
 
   public remove(id: number) {
-    const index = this.data().findIndex((joke) => joke.id === id);
-    if (index !== -1) {
-      // this.data.splice(index, 1);
-      // TODO Signal remove
-    }
+    this.data.update((actual) => actual.filter((joke) => joke.id !== id));
   }
 
   public getAllJokes(): ChucksJoke[] {
