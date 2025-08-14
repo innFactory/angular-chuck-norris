@@ -1,21 +1,17 @@
-<app-generation-card cardTitle="Süße Katzen 😸">
+<!-- Section chuck's jokes -->
+<app-generation-card cardTitle="Chuck's Witze 💬">
   <ng-container generation-card-content>
     <div class="container-content">
-      @if (catResource.isLoading()){
-      <mat-spinner></mat-spinner>
-      } @else {
-      <img [src]="urlCatPicture" />
-      }
+      <p>{{jokeDisplayed}}</p>
     </div>
   </ng-container>
-
   <ng-container generation-card-action>
     <div class="container-action">
-      <button (click)="fetchNewCat()" matButton="filled">
+      <button (click)="fetchNewJoke();" matButton="filled">
         <p>NEU</p>
         <mat-icon>autorenew</mat-icon>
       </button>
-      <button (click)="favouriseCat()" matButton="filled">
+      <button (click)="favouriseChucksJoke()" matButton="filled">
         <p>FAVORISIEREN</p>
         <mat-icon>star</mat-icon>
       </button>

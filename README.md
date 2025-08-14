@@ -1,185 +1,276 @@
-<img src="./docs/logo.png">
+![Project Logo](./docs/logo.png)
 
 # Start 🚀
 
-Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Frontend Entwicklung. Erledige alle Challenges damit Chuck Norris stolz auf dich ist! Im Rahmen des Projekts, wird eine externe Chuck-Norris-Witze API angebunden. Im Anschluss implementierst du einen Favorisieren-Button, damit die Besten Witze zwischen verschiedenen Unterseiten favorisiert und gespeichert werden können.
+Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris stolz auf dich ist! Im Rahmen des Projekts wirst du das Frontend einer 404 Not-Found Seite gestalten, mehr über das Global-State-Management und reaktive Programmierung in Angular erfahren, selbst eine Katzenbild-API anbinden und als Bonus Aufgabe deine Daten in einer selbst aufgesetzen, externen Datenbank speichern.
 
-# Ⅰ. Challenge 🎖️
+---
 
-### Kennenlernen mit Chuck Norris
+# Ⅰ. Challenge 🎖️ - Start
 
-Developer Guide
+### Ⅰ.Ⅰ. GitHub Account
 
-Projekt aufsetzen
+Jeder geschriebene Programmcode muss auch gespeichert und weitergegeben werden können. GitHub ist eine übergreifende Entwicklerplattform die das ermöglicht und auch dieses Projekt speichert.
 
-Node Installieren
+Erstelle dir, falls du noch keinen hast, zunächst einen eigenen GitHub Account auf [https://github.com/](https://github.com/). Dieser wird dich bei der innFacotory und in deinem späteren Entwickler-Leben noch lange begleiten 🤩.
 
-### Hello World
+Du wirst später nicht nur deinen Programmcode mit Anderen Kollegen in Projekten teilen (=publish), sondern in sogennanten Code-Reviews gegenseitig den Code überprüfen und verbessern. Dies musst du beim Angular Chuck Norris Projekt aber nicht machen.
 
-Änderungen vornehmen
+### Ⅰ.Ⅱ. Entwickeln aus der Entwicklungsumgebung
 
-# Ⅱ. Challenge 🎖️
+Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können.
 
-### Chuck Norris macht keine Fehler!
+Dieser Ort ist die sogennante Entwicklungsumgebung, auf englisch Integrated Development Environment, abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am Besten VS Code.
 
-Im Gegensatz zu Chuck Norris, dürfen wir Entwickler auch mal Fehler machen.
+1. Installiere dir [Visual Studio Code](https://code.visualstudio.com/).
+2. Öffne VS Code. Wenn du Lust hast, mache dich mit diesem [Tutorial](https://code.visualstudio.com/docs/getstarted/getting-started) in VS Code etwas vertraut.
 
-- Estellen einer 404 Fehlerseite
+### Ⅰ.Ⅲ. Webapp kopieren
 
-# Ⅲ. Challenge 🎖️
+In GitHub online gespeicherte Software muss zum Bearbeiten erst lokal auf deinem PC kopiert (=clone) werden. Das geht ganz einfach mit VS Code.
 
-# Ⅳ. Challenge 🎖️
+VS Code kommt standardmäßig mit einer Anbidung für GitHub, dem "Source Control Management". Öffne den Tab des Source Control und wähle "Clone Repository". Gebe nun die URL des Repositories `https://github.com/innFactory/angular-chuck-norris` ein und wähle einen beliebigen Speicherort auf deinem PC.
 
-<!-- - Dieses Template dient als Basis für ein paar Aufgaben
-- Im Template befindet sich bereits alles was man so braucht
-- Als Beispiel wurde die https://api.chucknorris.io/ API angebunden, es wird immer ein zufälliger Witz geladen
+![Source Control View](./docs/firstrun-source-control.png)
 
+### Ⅰ.Ⅳ. Nodejs installieren
 
+Die meisten Webapp Projekte haben Abhängigkeiten an andere Bibliotheken in Form von Paketen. Diese können mit dem Node Package Manager von Nodejs unkompliziert installiert werden. Installiere dir hierfür nun Nodejs und führe Node und NPM zum Test im Terminal in VS Code aus.
 
-## 1. Challenge: Template
-### 1.1. Template auschecken
+1. Installiere die Nodejs über den Installer [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+2. Prüfe ob die Befehle `node`und `npm` in deinem System global funktionieren.
 
-- Installiere dir [Github-Desktop](https://desktop.github.com/)
-- Melde dich dort mit deinem Github-Account an
-- Falls du noch keinen Account hast, kannst du dir einfach auf https://github.com/ einen erstellen
-- Nun gehe auf https://github.com/innFactory/react-chuck-norris und unter dem grünen "Clone" Button findest du die Funktion "Open with Github Desktop". Alternativ kannst du das Repo auch direkt in Github Desktop oder mit Git clonen
+   - Öffne dazu in VS Code das Terminal über die obere Leiste `View -> Terminal`.
+   - Gebe im Terminal die folgenden Befehle ein. Nacheinander solltest du die aktuell installierte Version sehen.
 
+   ```bash
+    node --version
+    # Ausgabe z.B. "v22.18.0".
 
-### 1.2. Node installieren
-- Gehe auf https://nodejs.org/en/download/ und installiere dir Nodejs
-- Damit hast du den Packet-Manager NPM
-- Lies dir durch, für was NPM so gut ist: https://docs.npmjs.com/about-npm
+    npm --version
+    # Ausgabe z.B. "10.9.3".
 
+    npx --version
+    # Ausgabe z.B. "10.9.3".
+   ```
 
-### 1.3. Template starten
-- Gehe mit dem Terminal in deinem Ordner, in dem du das Template gecloned hast z.B. `Documents/Github/react-chuck-norris`
-- nun installiere zunächst die Dependencies mit: `npm install`
-- danach kannst du das Webprojekt starten mit: `npm start`
+3. Mache dich über die weiteren Funktionen von NPM vertraut [https://docs.npmjs.com/about-npm](https://docs.npmjs.com/about-npm).
 
+### Ⅰ.Ⅴ. Abhängigkeiten installieren
 
-### 1.4. Template im Browser aufrufen
-- nun kannst du unter http://localhost:3000 die WebApp anschauen
-- müsste so aussehen, wie im Screenshot
-  <img src="doc/screenshot_0.png" width="40%">
+Nun musst du dir die Abhängigkeiten bzw. Dependencies nur noch installieren. Keine Sorge, die sind in der Datei `package.json` bereits vollständig aufgelistet und können ohne weiteres über einen Konsolenbefehl installiert werden.
 
-### 1.4.1 Account erstellen
-- Geh auf den Link "Create an account" oder http://localhost:3000/signup
-- Wenn du dort einen Account erstellst, wir im Hintergrund ein Benutzer zu dem hinterlegten Firebase Projekt hinzugefügt
-- Du solltest dich nun anmelden können und auf die Home-Page gelangen:
-  <img src="doc/screenshot_1.png" width="50%">
+Gebe in die Konsole `npm install` ein und und warte bis alle erfolgreich heruntergeladen sind. Ein neuer Ordner `node_modules`, wird nun im Projekt automatisch erstellt.
 
+### Ⅰ.Ⅵ. WebApp starten
 
-### 1.5. Code öffnen mit VS Code
-- Nun schauen uns wir den SourceCode von der WebApp an
-- Installiere dir hierfür [VS-Code](https://code.visualstudio.com/)
-- Öffne in VS-Code den geklonten Ordner /react-chuck-norris
+Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
 
-### 1.6. Erste Änderung
-- Öffne in dem Projekt, dass du in VSCode offen hast das File `pages/index.tsx`
-- Ändere die Überschrift "Home" zu irgendwas anderem
-- Nun müsstest du instant die Änderungen im Browser sehen
-- Falls nicht, gehe in ein Terminal und führe in deinem Projektordner `npm start` aus
+Öffne den Browser auf [http://localhost:4200](http://localhost:4200) und du solltest die WebApp sehen.
 
-## 2. Challenge: Hintergrundwissen
+### Ⅰ.7. Einstieg in die App
 
-### 2.1 Was ist React?
-- Beschäftige dich mit der Doku von React: https://reactjs.org/
-- Du solltest danach folgendes wissen:
-  * Was ist JSX?
-  * Was ist eine StatefulComponent?
-  * Was sind Props?
-  * Was sind Hooks?
-- natürlich kannst du neben der offiziellen Doku auch viele andere Quellen nutzen
+Jede Angular Komponente in deiner WebApp besteht aus einem Logik-, einem Struktur- und einem Stylingteil. Sehe dir exemplarisch einmal die Home-Page Komponente genauer an. Navigiere in in den Pfad `src -> pages -> home` und sehe dir die Datein an.
 
-### 2.2 Komponenten Library Material-UI
-- Material-UI ist ein Design von Google
-- Dieses Design wurde von einem Typen namens
-Olivier Tassinari in React nach implementiert
-- Dadurch können wir diese OpenSource Komponenten nutzen und müssen nicht jeden Button etc. neu erfinden, sondern können direkt auf etliche fertige und ziemlich schöne Komponenten zugreifen
-- diese kann man sich hier anschauen: https://mui.com/material-ui
-- Du kannst ruhig mal alle durchklicken, um ein Gefühl dafür zu bekommen
+| Datei     | Function                |
+| --------- | ----------------------- |
+| home.ts   | Logikteil in TypeScript |
+| home.html | Strukturteil in HTML    |
+| home.scss | Stylingteil in SCSS     |
 
-### 2.3 Typescript
-- Wir nutzen statt Javascript eine sehr ähnliche "Variante" und zwar [Typescript](https://www.typescriptlang.org/)
-- Lies dir mal die erste Seite der Doku durch
-- Du solltest nach einer (längeren) Recherche folgendes Wissen:
-  * Was ist eine typisierte Sprache?
-  * Welche typisierten Sprachen gibt es noch?
-  * Welche untypisierten Sprachen gibt es noch?
-  * Welche Vorteile hat Typescript?
-  * Wie sehr unterscheidet sich Typescript von Javascript?
-  * Kann ein Browser Typescript interpretieren? Bzw. kann Typescript direkt im Browser ausgeführt werden?
+Fühle dich nicht überfordert von all den verschiedenen Sprachen und Frameworks. Du bekommst eine Schritt für Schritt Einführung in die Angular Welt.
 
+### Ⅰ.8. Kennenlernen mit Chuck Norris
 
-## 3. Challenge: Styling
+Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der Markupsprache HTML verfasst.
+Sieh dir die Struktur in der Homepage [home.html](./src/pages/home/home.html) einmal genauer an. Der Text `..Ich bin Chuck Norris, ein Kampfsportler und Schauspieler..` ist in einem HTML `<p>` Paragraph Element eingeschlossen bzw. gewrapped.
 
-### 3.1 CSS
-- Das Styling im Web basiert letztendlich immer auf CSS
-- Was CSS ist kannst dir z.B. [hier](https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web/CSS_basics) anschauen
-- Mit der Material-UI Library kommen ein paar Erleichterungen mit, sodass man z.B. CSS direkt im Typescript-File schreiben kann: https://mui.com/styles/basics/
+Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste](https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge) und füge in der `home.html` Datei weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
 
-### 3.2 Eine coole 404 Seite gestalten
-- Gehe in das File `404.tsx`
-- Diese Seite wird immer angezeigt, falls die Route nicht existiert. z.B. wenn du http://localhost:3000/asdf aufrufst (wenn du angemeldet bist)
-- Die Seite ist nicht besonders schick, darum würde ihr ein Redesign gut stehen
-- Es gibt ein paar 404 Seiten, die den Benutzer auf eine "nettere" Art sagen, dass die Seite nicht gefunden wurde hier ein paar Beispiele:
-  * https://www.amazon.de/asdf
-  * https://laura.vb-rb-baufinanzierung.de/asdf
-  * https://9gag.com/asdf
-  * https://www.netflix.com/asdf
+---
 
+# Ⅱ. Challenge 🎖️ - Leseratte
 
-## 4. Challenge: Favoriten
+### Ⅱ.Ⅰ. Offiziell ist am Besten - Angular Doku
 
-- Wenn man im Template einen Witz gut findet, soll man ihn zu seinen Favoriten hinzufügen können
-- Erstelle dazu eine neue Page, um dort die Liste anzuzeigen: `pages/favorites.tsx`
-- Ziel: Liste anzeigen mit Favoriten
+Für jedes Framework und jede Sprache gibt es eine offiziele Dokumentation, so auch für Angular.
 
-### 4.1 Globales State Management
-- Jede Component kann ihren eigenen State haben. Der State kann in Form von Props auch an den Kindern übergeben werden. Muss aber der State von einem Ast auf den nächsten wird diese Methode schnell aufwendig und unübersichtlich. Darum brauchen wir für manche Daten ein "globales Statemanagement"
-- In diesen Template verwenden wir hierfür [recoil](https://recoiljs.org/)
-- Da gibt's ein gutes Video, indem die Funktionsweise erklärt wird: https://youtu.be/_ISAA_Jt9kI
-- In dem Projekt ist hierfür ein Demo mit eingebaut. Du hast dich sicher schon gefragt für was die "Colors" sind. Unter Colors kannst du eine zufällige Farbe erstellen und sie mit "Add color to list" zur Tabelle hinzufügen. Im Hintergrund wird hierbei die Farbe zu einem Recoil-State-Atom hinzugefügt. Das findest du unter `src/randomColor/state/`
-- Auf den State selbst wird dann mit einem Hook (`const [colorList, setColorList] = useRecoilState(colorsState);`) z.B. in der Komponente `src/randomColor/components/RandomColorGenerator.tsx` zugegriffen.
+Bei Angular gibt es sogar ein interaktives Mini-Browser Tutorial. Schließe dieses [Tutorial](https://next.angular.dev/tutorials/learn-angular) ab.
 
+Lese dir zum Einstieg außderdem folgende Angular-Artikel durch.
 
-### 4.2 Favoriten im State
-- Zu nächst brauchen wir noch einen Button, damit ein Joke favorisiert werden kann. Ähnlich wie bei den Colors kannst du neben den Button "New Joke" einfach noch einen Favoriten-Button hinzufügen
-- Nun brauchen wir eine Liste mit Jokes als Favoriten im State
-- Immer wenn man auf den Favoriten-Button auf der HomePage drückt, soll der entsprechende Witz zu dieser Liste hinzugefügt werden
-- Die Liste wird dann in der `page/favorites.tsx` gelesen und angezeigt
-- Dafür brauchen wir keinen Request in /api und damit auch keinen selector. Recoil-Atoms werden vollkommen ausreichen.
+- Aufbau der Angular Komponenten: https://next.angular.dev/essentials/components
+- Services
+- Signals
 
+### Ⅱ.Ⅱ. Schön muss es sein - Angular Material
 
-## 5. Challenge: Random Cat
+Angular Material Guide
 
-Neben Chucknorris Witzen wäre das Prinzip auch für Katzen Fotos cool. Dazu gibt es auch eine public API: https://cataas.com/cat mit folgendem Queryparameter bekommt man ein JSON zurück:
- https://cataas.com/cat?json=true
+### Ⅱ.Ⅲ. TypeScript
 
-### 5.1 Neue Seite mit zufälligem Katzenbild
-- Lege eine neue Seite in `/pages` an, die zufällige Katzenbilder laden kann
-- Unter `/src` kannst du einen neuen Bereich anlegen, der dann alle nötigen Unterordner für diese fachliche Domäne zusammenhält. z.B. `/src/RandomCatPic` in diesem Ordner soll es dann wie in den anderen auch z.B. den `/components` Ordner geben.
-- Im `/model` brauchen wir einen Datentyp `CatPic`, der das JSON von  https://cataas.com/cat?json=true abbilden kann
+TypeScript Guide
 
+### Ⅱ.Ⅳ. HTML
 
-### 5.2 Favorisierte Katzen
-- Auf der existierenden `favorites.tsx` soll es einen Tab (oder irgendwas ähnliches geben), damit man auch Katzenbilder-Favoriten sehen kann
-- Ähnlich wie in Challenge 4 brauchen wir hier auch wieder eine State Liste mit Katzenbildern
+HTML Guide
 
+### Ⅱ.Ⅴ. CSS und SCSS
 
+CSS und SCSS Guide
 
-## 6. Challenge: Eigene Witze
-- Neben den Witzen von Chucknorris, wäre es ganz gut, wenn man auch eigene Witze über ein Textfeld eingeben könnte
-- Diese können entweder gleich zu den Favoriten, oder auch in einen separaten State gespeichert werden
-- Die eignen Witze können auch in der Favoriten-Liste angezeigt werden, sollen aber gekennzeichnet sein, bzw. sich durch z.b. ein Icon unterscheiden
+Geschafft! Das war aber eine Menge Input. Jetzt wird programmiert! Mache mit der [Ⅲ. Challenge](#ⅲ-challenge-️) weiter.
 
+---
 
-## 7. Eigenes Firebase Projekt erstellen
-- Firebase ist eine Teilmenge der Google-Cloud, extra aufbereitet um eine einfachere Cloudumgebung maßgeschneidert für App- und Webprojekte zu haben.
-- Lies dich einfach mal ein, damit du eine Übersicht bekommt, was Firebase alles so kann: https://firebase.google.com/
-- Anschließend kannst du dir ein Projekt erstellen
-- Beim erstellen bekommst du die Credentials für das Web diese solltest du dir kopieren, die brauchen wir später (sind aber auch in den Projekteinstellungen einsehbar)
-- Unter "Authentication" kannst du die Authentifizierung mit Email/Password aktivieren
-- Unter `src/firebase` werden die Firebase Parameter über Environment Variablen geladen. Diese Variablen kannst du in `.env.test` ändern. Falls du bei dir ein `.env.local` hast, ändere auch hier die Variablen auf dein neues Projekt.
-- In der `.firebaserc` musst du noch die Projekt-Id tauschen
-- Das Ergebnis sollte sein, dass wenn du das Projekt wieder startest und einen neuen Chuck-Norris-Account erstellt, dass dieser dann unter "Authentication" in deinem Firebase-Projekt erscheint -->
+# Ⅲ. Challenge 🎖️ - Los geht's!
+
+### Ⅲ.Ⅰ. Chuck Norris macht keine Fehler
+
+Im Gegensatz zu Chuck Norris, dürfen wir Entwickler auch mal Fehler machen. Versuche im Browser eine Seite zu öffnen die es in unserer Webapp noch nicht gibt z.B. [http://localhost:4200/diese-seite-gibts-ganz-bestimmt](http://localhost:4200/diese-seite-gibts-ganz-bestimmt). Was siehst du? Eine leere Seite nur mit Header und Footer? Wie langweilig! In unserem `src/pages/` Ordner fehlt noch eine Not-Found Seite.
+
+- Sieh dir einmal bekannte Not-Found Seiten aus dem Internet an:
+  - https://www.innfactory.de/jkajejsd
+  - https://www.youtube.com/awefawe
+  - https://www.amazon.com/ajsdsfl/jfasldk
+  - https://www.chess.com/kfajes
+- In Angular erstellst du neue Komponenten am Besten aus der Kommandozeile.
+- Öffne die Konsole und führe nun den Befehl `npx ng generate component ../pages/not-found` aus. Im src/pages Ordner sollte nun eine neue Angular Komponente NotFoundComponent erscheinen.
+- Angular kommt standardmäßig mit einem WebApp Pfadaufbau. Dieser kann in der Datei [app.routes.ts](./src/app/app.routes.ts) angepasst werden.
+
+  Füge nun in in der Kommentierten Stelle die Not-Found Komponente hinzu. Vergesse nicht sie wie die anderen Seiten zu importieren.
+
+  ```bash
+    // {
+    //   path: '**',
+    //     component: ... , // Add error page
+    // },
+  ```
+
+### Ⅲ.Ⅱ. Schönheit ist nicht alles - aber auch wichtig
+
+> "Es gibt keinen Schönheitswettbewerb mit Chuck Norris, denn alle wissen, dass er der einzige Gewinner wäre."
+
+Passe nun die Not Found Komponente an und gestalte Sie mit HTML und CSS. Besuche nochmal die Seite. Sei gern kreativ und lasse dir etwas mit Bildern, Text oder sogar CSS Keyframe Animationen einfallen.
+
+Glückwunsch! Du hast soeben deine erste nützliche Komponente in Angular entwickelt. Kannst du Chuck Norris aber auch im Witze-Duell schlagen?
+
+---
+
+# Ⅳ. Challenge 🎖️ - Lieblingswitz
+
+### Ⅳ.Ⅰ. Ansehen
+
+In der Folgenden Challenge wirst du das Konzept der Angular Services am Beispiel des bereits implementierten FavouriteChuckJokesSevice kennenlernen. Im Anschluss erstellst du eine Komponente, mit der du neue, eigene Witze eingeben kannst. Dabei kommst du auch mit der Angular Komponenten Bibliothek "Angular Material" in Berührung. Später wirst du auch den Verwendungszweck von Angular Signals verstehen, indem du wieder Witze aus der Tabelle löschst.
+
+- Sieh dir nun die Chuck Norris Witze Favorisieren Funktion einmal an. Gibst du einen Witz ein und klickst auf "FAVORISIEREN", erscheint er in der Favoriten Seite.
+- Das macht das Global State Management über sogenannte Services in Angular möglich.
+- Sieh dir den Programmcode zur ChuckJokesCard Komponente, zum FavouriteChuckJokesSevice Service und die updateChucksJokeTableData Methode der Favoriten Seite einmal genauer an und versuche ihn zu verstehen.
+
+Die Methode lädt die in FavouriteChuckJokesSevice Service gespeicherten Witze jedes mal bei Öffnen der Favouritesseite in die Tabelle. Probiere es gerne selbst aus und generiere und sammle so viele Chuck Norris Witze wie du willst!
+
+### Ⅳ.Ⅱ. Witze-Wettbewerb
+
+Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Eigene-Witze Funktion mit Inputfeld implementiern.
+
+- Erstelle passend zur Komponente ChuckJokesCardComponent eine neue OwnJokesCardComponent.
+- Füge die Komponente dem HTML der Jokes Seite hinzu.
+- Kannst du analog zur ChuckJokesCardComponent die GenerationCardComponent im HTML der OwnJokesCardComponent wiederverwenden?
+  Diese Wiederverwenung ist die Angular Content Projection. Dessen Syntax ist bereits etwas komplexer und du musst sie noch nicht ganz verstehen.
+  Hier die offiziele Dokumentation [Tutorial Content Projection](https://angular.dev/guide/components/content-projection).
+- Füge in die neue OwnJokesCardComponent einen Material Input und einen Material Favorisieren Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu.
+- Hilfreiche Dokus dazu findest du hier zu [Mat-Input](https://material.angular.dev/components/input/overview) und hier zum [Mat-Button](https://material.angular.dev/components/button/overview).
+
+### 4.3. Services in Angular
+
+Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze, um sie in die Tabelle der Favoriten weiterzugeben. Diese globale Weitergabe nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial](https://angular.dev/tutorials/first-app/09-services) ab.
+
+- Sieh dir den FavouriteChuckJokesSevice und seine Verwendung in ChuckJokesCardComponent und der Favourites Seite genauer an.
+- Implementiere nun auch einen FavouriteOwnJokesService. Das geht auch über den `npx ng generate service` Befehl.
+- Der Service soll auch nur über die öffentlichen add, remove und getAll Methoden verwendbar sein.
+- Füge in der OwnJokesCardComponent eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die add Methode an den Service.
+- Passe die Favoriten Seite so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden. Dazu kannst du eine neue Methode updateOwnJokesTableData erstellen.
+
+### 4.4. Echt peinlich: Unlustiger Witz
+
+Nun werden wir die Favoriten Tabelle erweitern. Du hast versehentlich einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi! In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der `deleteRow` Methode in `src/pages/favourites` leider noch nicht implementiert.
+
+- Implementiere die deleteRow Methode und greife auf die remove Methoden deiner Services FavouriteChuckJokesSevice und FavouriteOwnJokesService zu.
+- Merkst du, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf den aktualsieren Button klickst, oder auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
+
+### Ⅳ.Ⅴ. Die Macht der Signals
+
+Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass irgendjemand dem Datenobjekt `tableData` mitteilen muss, dass sich die Witze der Services geändert haben. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
+
+- Lies dir den Eintrag über Signals in der offiziellen Angular Dokumentation durch.
+- Sieh dir den bisher nicht verwendeten FavouriteChuckJokesSignalSevice an. Bemerkst du die wesentlichen Unterschiede zum FavouriteChuckJokesSevice?
+  Das private Datenobjekt `data`, ein schreibbares Signal vom Typ `WriteableSignal`, ist nun eine Funktion und auf dessen Inhalt wird mit `data()` zugegriffen.
+  Zusätzlich gibt es das neue, öffentliche Datenobjekt `$data`. Es ist nur ein unveränderbares, berechnetes (=computed) Signal vom Typ `Signal`.
+- Importiere zunächst an allen Stellen statt des bisherigen FavouriteChuckJokesSevice den bisher noch nicht verwendeten FavouriteChuckJokesSignalSevice.
+- Jetzt wird es interessant: Anstatt `tableData` im Konstruktor mit den Services zu aktualisieren, wird es sich in Zukunft als "computed" Signal von selbst berechnen.
+- Entferne den Programmcode für den constructor und die update Funktionen aus der Favoriten Seite.
+- Entferne die aktuelle `tableData` Zuweisung und erstelle Sie als computed. Hier eine Vorlage dafür:
+
+  ```
+  protected tableData = computed<FavouritesTableRow[]>(() => {
+    const data: FavouritesTableRow[] = [];
+
+    // Hier musst du nun data mit dem Signal $data aus dem FavouriteChuckJokesSignalSevice befüllen
+
+    return data;
+  }
+  ```
+
+- Da `tableData` nun ein Signal ist, musst du nun überall dort, wo es bisher verwendet wird anstelle des Zugriffs `tableData` nun mit `tableData()` benutzen.
+
+Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klick auf den Löschen Button, von selbst. Allerdings werden jetzt die eigenen Witze nicht mehr angezeigt. So gewinnst du leider keinen Wettbewerb.. 🤷‍♂️
+
+### Ⅳ.Ⅵ. Hello Signal-Service World
+
+- Erstelle nun auch einen neuen FavouriteOwnJokesSignalService. Die Methoden add, remove und getAll müssen etwas anders implementiert werden. Orientiere dich dabei einfach am FavouriteChuckJokesSignalSevice.
+- Tausche auch den vorherigen Service überall durch den neuen Signal Service aus.
+- Ergänze nun das `tableData` Signal der Favoriten Seite auch mit dem $data Signal aus deinem neuen FavouriteOwnJokesSignalService.
+
+Probiere es gleich im Browser aus. Absofort berechnet sich das `tableData` Datenobjekt, bei jeglicher Veränderung des Eigenen und des Chucks Witze Signal Services von selbst neu. Die Tabelle aktualisiert sich im Frontend damit automatisch.
+
+### Ⅳ.7. Sauberkeit ist die halbe Miete
+
+Der "Tabelle aktualisieren" Button wird jetzt nicht mehr benötigt. Es folgt den Best Practices als Entwickler, immer unbenutzen Programmcode oder veraltete Features direkt zu entfernen um das Projekt simpel und verständlich zu halten.
+
+- Entferne nun den "Tabelle aktualisieren" Button und seine Funktion. Er wird nicht mehr benötigt.
+
+Herzlichen Glückwunsch, du hast diese Challenge geschafft! Das muss gefeiert werden 🥳!
+
+Suche zum Abschluss der Challenge im Internet z.B. auf [https://witze.net/flachwitz-witze](https://witze.net/flachwitz-witze) nach den peinlichsten Flachwitzen und füge Sie als eigene Witze hinzu. Natürlich kannst du sie nun auch schnellstmöglich wieder löschen, bevor andere sie lesen.
+
+Wenn du es jetzt aber nicht mehr abwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der [Ⅴ. Challenge](#ⅴ-challenge-️---achtung-süße-katzenbilder) weiter..
+
+---
+
+# Ⅴ. Challenge 🎖️ - Achtung Süße Katzenbilder!
+
+### Ⅴ.Ⅰ. Ansehen
+
+Ansehen & Verstehen der Chuck Norris API
+
+### Ⅴ.Ⅱ.
+
+Anbinden der Katzen API
+
+### Ⅴ.Ⅲ.
+
+Favorisieren der Katzen in weiterer Tabelle auf der. Favoriten Seite.
+
+FavouriteCats Tabelle erstellen. FavouriteCats Service. Entweder URLs oder Bilder selbst speichern?
+
+---
+
+# Ⅵ. Challenge 🎖️ - Nur `Speicher`bares ist Wahres
+
+### Ⅵ.Ⅰ.
+
+Anbinden des Eigenen Firebase Projekts credentials
+
+### Ⅵ.Ⅱ.
+
+Speicherung der Tabellendaten zum Benutzer in der Firebase API. ...

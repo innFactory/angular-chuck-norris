@@ -1,14 +1,64 @@
+@use '@angular/material' as mat;
+@use '../../styles' as *;
+
 :host {
-  .container-content {
-    width: 50vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--var-spacing-8);
+
+  .logo {
+    display: flex;
+    height: calc(1.5 * var(--var-size-15));
+    img {
+      height: 100%;
+    }
   }
 
-  .container-action {
+  article {
+    position: relative;
+    width: calc(15 * var(--var-size-15));
     display: flex;
-    flex-direction: row;
-    gap: var(--var-spacing-2);
-    > button {
-      margin-top: var(--var-spacing-5);
+    flex-direction: column;
+    gap: var(--var-size-15);
+    padding: var(--var-spacing-9);
+    color: var(--mat-sys-on-secondary-container);
+    background: var(--mat-sys-secondary-container);
+    border-radius: 10px;
+    .triangle {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-60%, -50%);
+      border-top: 20px solid transparent;
+      border-right: 50px solid var(--mat-sys-secondary-container);
+      border-bottom: 20px solid transparent;
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: var(--var-spacing-5);
+    }
+
+    .about-me {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: calc(3 * var(--var-spacing-5));
+
+      .about-me-text {
+        display: flex;
+        flex-direction: column;
+        gap: var(--var-spacing-5);
+      }
+
+      > img {
+        width: calc(2 * var(--var-size-15));
+      }
     }
   }
 }

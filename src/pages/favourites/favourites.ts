@@ -1,37 +1,47 @@
-import { Component, effect, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
-import { AllowedDataTypes } from '../../models/favourite-data';
 import { FavouritesTableRow } from '../../models/favourites-table-row';
-import { FavouritesDataService } from '../../shared/services/favourites-data/favourites-data';
+import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes';
 
 @Component({
   selector: 'app-favourites',
-  imports: [MatTableModule],
+  imports: [MatTableModule, MatButtonModule, MatDividerModule, MatIconModule],
   templateUrl: './favourites.html',
   styleUrl: './favourites.scss',
 })
 export class Favourites {
-  protected displayedColumns: string[] = ['identifier', 'data', 'creator'];
+  private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
+  private snackBar = inject(MatSnackBar);
+  protected displayedColumns: string[] = ['id', 'joke', 'creator', 'action'];
   protected tableData: FavouritesTableRow[] = [];
-  private favouritesDataService = inject(FavouritesDataService);
-  protected AllowedDataTypes = AllowedDataTypes;
 
   constructor() {
-    effect(() => {
-      const favouritesData = this.favouritesDataService.$data();
+    this.updateChucksJokesTableData();
+  }
 
-      favouritesData.forEach((favourite, index) => {
-        const row: FavouritesTableRow = {
-          identifier: index + 1,
-          data: favourite,
-          creator: 'Chuck',
-        };
-        this.tableData.push(row);
-      });
+  private updateChucksJokesTableData() {
+    const favouriteChuckJokes = this.favouriteChuckJokesSevice.getAllJokes();
+
+    favouriteChuckJokes.forEach((favourite) => {
+      const row: FavouritesTableRow = {
+        id: favourite.id,
+        joke: favourite.text,
+        creator: 'Chuck',
+      };
+      this.tableData.push(row);
     });
   }
 
-  public ngOnInit() {
-    // this.tableData = ELEMENT_DATA;
+  protected deleteRow(index: number) {
+    this.snackBar.open('🚨 Löschen noch nicht implementiert', 'X', { duration: 1000, horizontalPosition: 'end' });
+  }
+
+  protected refreshTable() {
+    this.tableData = [];
+    this.updateChucksJokesTableData();
   }
 }

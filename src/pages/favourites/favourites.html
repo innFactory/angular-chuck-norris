@@ -1,31 +1,39 @@
 <table mat-table [dataSource]="tableData" class="mat-elevation-z8">
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column -->
-  <ng-container matColumnDef="identifier">
+  <!-- ID column -->
+  <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef>ID</th>
-    <td mat-cell *matCellDef="let element">{{element.identifier}}</td>
+    <td mat-cell *matCellDef="let element">{{element.id}}</td>
   </ng-container>
 
-  <!-- Data Column -->
-  <ng-container matColumnDef="data">
+  <!-- Joke column -->
+  <ng-container matColumnDef="joke">
     <th mat-header-cell *matHeaderCellDef>Inhalt</th>
     <td mat-cell *matCellDef="let element">
-      @if (element.data.type === AllowedDataTypes.Joke){
-      <p>{{element.data.data}}</p>
-      } @else if(element.data.type === AllowedDataTypes.Image){
-      <img [src]="element.data.data" />
-      }
+      <p>{{element.joke}}</p>
     </td>
   </ng-container>
 
-  <!-- Symbol Column -->
+  <!-- Creator column -->
   <ng-container matColumnDef="creator">
     <th mat-header-cell *matHeaderCellDef>Ersteller</th>
     <td mat-cell *matCellDef="let element">{{element.creator}}</td>
   </ng-container>
 
+  <!-- Action column -->
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element; let i = index">
+      <button (click)="deleteRow(i)" matMiniFab aria-label="Example icon button with a menu icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<button (click)="refreshTable()" class="button-refresh" matFab extended aria-label="Table refresh button">
+  Refresh Table
+  <mat-icon>refresh</mat-icon>
+</button>
