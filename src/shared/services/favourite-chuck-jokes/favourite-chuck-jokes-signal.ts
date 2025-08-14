@@ -9,7 +9,7 @@ import { ChucksJoke } from '../../../models/favourite-chuck-joke';
  */
 export class FavouriteChuckJokesSignalService {
   private data = signal<ChucksJoke[]>([]);
-  public dataSignal = computed(() => this.data());
+  public $data = computed(() => this.data());
   private nextId: number = 1;
 
   public add(jokeText: string) {
