@@ -204,14 +204,46 @@ Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass irg
 
 - Lies dir den Eintrag über Signals in der offiziellen Angular Dokumentation durch.
 - Sieh dir den bisher nicht verwendeten FavouriteChuckJokesSignalSevice an. Bemerkst du die wesentlichen Unterschiede zum FavouriteChuckJokesSevice?
-  Das Datenobjekt `data` ist nun eine Funktion und auf dessen Inhalt wird mit `data()` zugegriffen.
-- Verwende zunächst an allen Stellen statt des bisherigen FavouriteChuckJokesSevice den bisher noch nicht verwendeten FavouriteChuckJokesSignalSevice.
-- Erstelle nun auch einen neuen FavouriteOwnJokesSignalService. Tausche auch den vorherigen Service überall durch den neuen aus.
-- Implementiere nun das Datenobjekt `tableData` der Favouriten Seite als Signal.
-- Du musst auch die bisherigen Methoden updateChucksJokesTableData und updateOwnJokesTableData anpassen.
+  Das private Datenobjekt `data`, ein schreibbares Signal vom Typ `WriteableSignal`, ist nun eine Funktion und auf dessen Inhalt wird mit `data()` zugegriffen.
+  Zusätzlich gibt es das neue, öffentliche Datenobjekt `$data`. Es ist nur ein unveränderbares, berechnetes (=computed) Signal vom Typ `Signal`.
+- Importiere zunächst an allen Stellen statt des bisherigen FavouriteChuckJokesSevice den bisher noch nicht verwendeten FavouriteChuckJokesSignalSevice.
+- Jetzt wird es interessant: Anstatt `tableData` im Konstruktor mit den Services zu aktualisieren, wird es sich in Zukunft als "computed" Signal von selbst berechnen.
+- Entferne den Programmcode für den constructor und die update Funktionen aus der Favoriten Seite.
+- Entferne die aktuelle `tableData` Zuweisung und erstelle Sie als computed. Hier eine Vorlage dafür:
 
-Nun sollten die Daten bei Klick auf den Löschen Button, unmittelbar auch aus der Tabelle verschwinden. Herzlichen Glückwunsch, du hast diese Challenge geschafft!
-Wenn du es jetzt nicht mehr abwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der Ⅴ. Challenge weiter.
+  ```
+  protected tableData = computed<FavouritesTableRow[]>(() => {
+    const data: FavouritesTableRow[] = [];
+
+    // Hier musst du nun data mit dem Signal $data aus dem FavouriteChuckJokesSignalSevice befüllen
+
+    return data;
+  }
+  ```
+
+- Da `tableData` nun ein Signal ist, musst du nun überall dort, wo es bisher verwendet wird anstelle des Zugriffs `tableData` nun mit `tableData()` benutzen.
+
+Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klick auf den Löschen Button, von selbst. Allerdings werden jetzt die eigenen Witze nicht mehr angezeigt. So gewinnst du leider keinen Wettbewerb.. 🤷‍♂️
+
+### Ⅳ.Ⅵ. Hello Signal-Service World
+
+- Erstelle nun auch einen neuen FavouriteOwnJokesSignalService. Die Methoden add, remove und getAll müssen etwas anders implementiert werden. Orientiere dich dabei einfach am FavouriteChuckJokesSignalSevice.
+- Tausche auch den vorherigen Service überall durch den neuen Signal Service aus.
+- Ergänze nun das `tableData` Signal der Favoriten Seite auch mit dem $data Signal aus deinem neuen FavouriteOwnJokesSignalService.
+
+Probiere es gleich im Browser aus. Absofort berechnet sich das `tableData` Datenobjekt, bei jeglicher Veränderung des Eigenen und des Chucks Witze Signal Services von selbst neu. Die Tabelle aktualisiert sich im Frontend damit automatisch.
+
+### Ⅳ.7. Sauberkeit ist die halbe Miete
+
+Der "Tabelle aktualisieren" Button wird jetzt nicht mehr benötigt. Es folgt den Best Practices als Entwickler, immer unbenutzen Programmcode oder veraltete Features direkt zu entfernen um das Projekt simpel und verständlich zu halten.
+
+- Entferne nun den "Tabelle aktualisieren" Button und seine Funktion. Er wird nicht mehr benötigt.
+
+Herzlichen Glückwunsch, du hast diese Challenge geschafft! Das muss gefeiert werden 🥳!
+
+Suche zum Abschluss der Challenge im Internet z.B. auf [https://witze.net/flachwitz-witze](https://witze.net/flachwitz-witze) nach den peinlichsten Flachwitzen und füge Sie als eigene Witze hinzu. Natürlich kannst du sie nun auch schnellstmöglich wieder löschen, bevor andere sie lesen.
+
+Wenn du es jetzt aber nicht mehr abwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der [Ⅴ. Challenge](#ⅴ-challenge-️---achtung-süße-katzenbilder) weiter.
 
 ---
 
