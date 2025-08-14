@@ -4,7 +4,6 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
-import { AllowedDataTypes } from '../../models/favourite-chuck-joke';
 import { FavouritesTableRow } from '../../models/favourites-table-row';
 import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes';
 
@@ -19,7 +18,6 @@ export class Favourites {
   private snackBar = inject(MatSnackBar);
   protected displayedColumns: string[] = ['id', 'joke', 'creator', 'action'];
   protected tableData: FavouritesTableRow[] = [];
-  protected AllowedDataTypes = AllowedDataTypes;
 
   constructor() {
     this.updateChucksJokesTableData();
