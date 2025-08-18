@@ -3,41 +3,21 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AuthService } from '../authentication/authentication';
+import { AuthService } from '../../authentication/authentication';
 
 @Component({
-  selector: 'app-login-display',
+  selector: 'app-register',
   imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
-  templateUrl: './login-display.html',
-  styleUrl: './login-display.scss',
+  templateUrl: './register.html',
+  styleUrl: './register.scss',
 })
-export class LoginDisplay {
+export class Register {
   private authService = inject(AuthService);
-
-  protected loginForm = new FormGroup({
-    mail: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', Validators.required),
-  });
   protected signUpForm = new FormGroup({
     mail: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
     password_confirmation: new FormControl('', Validators.required),
   });
-
-  protected async login() {
-    const isLoginFormValid = this.loginForm.valid;
-    if (!isLoginFormValid) {
-      this.loginForm.markAllAsTouched();
-      return;
-    }
-    const mail = this.loginForm.controls.mail.value ?? '';
-    const password = this.loginForm.controls.password.value ?? '';
-    let logInSuccess = false;
-    logInSuccess = await this.authService.login(mail, password);
-    if (logInSuccess) {
-      //TODO navigate
-    }
-  }
 
   protected async signup() {
     const isSignupFormValid = this.signUpForm.valid;
@@ -59,14 +39,6 @@ export class LoginDisplay {
     signupSuccess = await this.authService.signup(mail, password, {});
     if (signupSuccess) {
       //TODO navigate
-    }
-  }
-  protected async logout() {
-    let logoutSuccess = false;
-    logoutSuccess = await this.authService.logout();
-    if (logoutSuccess) {
-      console.log('Logout success');
-    } else {
     }
   }
 }

@@ -1,0 +1,15 @@
+<div class="container-login">
+  <form [formGroup]="loginForm">
+    <mat-form-field>
+      <mat-label>E-Mail</mat-label>
+      <input matInput formControlName="mail" />
+      <mat-error> {{'Leere oder ungültigte Eingabe'}} </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Passwort</mat-label>
+      <input matInput formControlName="password" />
+      <mat-error> {{'Leere oder ungültigte Eingabe'}} </mat-error>
+    </mat-form-field>
+  </form>
+  <button (click)="login()" matButton>Login</button>
+</div>
