@@ -3,12 +3,17 @@ import { Cats } from '../pages/cats/cats';
 import { Favourites } from '../pages/favourites/favourites';
 import { Home } from '../pages/home/home';
 import { Jokes } from '../pages/jokes/jokes';
+import { LoginDisplay } from '../security/login-display/login-display';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
     redirectTo: '/home',
+  },
+  {
+    path: 'account',
+    component: LoginDisplay,
   },
   {
     path: 'home',
