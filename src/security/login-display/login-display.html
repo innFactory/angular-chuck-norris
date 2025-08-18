@@ -1,10 +1,50 @@
-<div class="page">
-  <div class="container">
-    <h3>Login</h3>
-    <button class="btn-rev" (click)="login()">login</button>
-    <h3>signUp</h3>
-    <button class="btn-rev" (click)="signUp()">signUp</button>
-    <h3>loginGoogle</h3>
-    <button class="btn-rev" (click)="loginGoogle()">loginGoogle</button>
-  </div>
+<div class="container-login">
+  <form [formGroup]="loginForm">
+    <mat-form-field>
+      <mat-label>E-Mail</mat-label>
+      <input matInput formControlName="mail" />
+      <mat-error> {{'Leere oder ungültigte Eingabe'}} </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Passwort</mat-label>
+      <input matInput formControlName="password" />
+      <mat-error> {{'Leere oder ungültigte Eingabe'}} </mat-error>
+    </mat-form-field>
+  </form>
+  <button (click)="login()" matButton>Login</button>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container-signup">
+  <form [formGroup]="signUpForm">
+    <mat-form-field>
+      <mat-label>E-Mail</mat-label>
+      <input matInput formControlName="mail" />
+      <mat-error> {{'Leere oder ungültigte Eingabe'}} </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Passwort</mat-label>
+      <input matInput formControlName="password" />
+      <mat-error> {{'Leere oder ungültigte Eingabe'}} </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Passwort Bestätigung</mat-label>
+      <input matInput formControlName="password_confirmation" />
+      <mat-error> {{'Leere oder ungültigte Eingabe'}} </mat-error>
+    </mat-form-field>
+  </form>
+  <button (click)="signup()" matButton>Registrieren</button>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+  <button (click)="logout()" matButton>Logout</button>
 </div>
