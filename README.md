@@ -251,6 +251,10 @@ Wenn du es jetzt aber nicht mehr abwarten kannst Bilder von süßen Katzen zu se
 
 ### Ⅴ.Ⅰ. Ansehen
 
+Im Folgenden wirst du eine API im Angular Chuck Norris Projekt anbinden. API steht für Application Programming Interface und ist allgemein die Bezeichnung für eine Schnittstelle, auf die mit einem Request zugegriffen wird. In Angular kannst du HTTP Requests auf verschiedene Weise handhaben.
+
+Auch die zufälligen Chuck Norris Witze werden aktuell über eine API geladen. Sieh dir dazu den JokeFetcherService und seine Verwendung in der ChuckJokesCard an.
+
 Ansehen & Verstehen der Chuck Norris API
 
 ### Ⅴ.Ⅱ.
@@ -261,7 +265,7 @@ Anbinden der Katzen API
 
 Favorisieren der Katzen in weiterer Tabelle auf der. Favoriten Seite.
 
-FavouriteCats Tabelle erstellen. FavouriteCats Service. Entweder URLs oder Bilder selbst speichern?
+FavouriteCats Tabelle erstellen. FavouriteCats Service. Bilder selbst speichern?
 
 ---
 
