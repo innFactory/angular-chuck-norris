@@ -28,6 +28,6 @@ export const routes: Routes = [
   },
   // {
   //   path: '**',
-  //     component: ... , // Add error page
+  //     component: ... , // Add not-found page
   // },
 ];
