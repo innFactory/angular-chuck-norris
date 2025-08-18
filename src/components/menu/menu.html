@@ -11,12 +11,12 @@
   </button>
   @if(!this.isAuthenticated()){
   <!-- login -->
-  <button mat-menu-item>
+  <button (click)="openModalAuthentication(AuthenticationOptions.login)" mat-menu-item>
     <mat-icon>login</mat-icon>
     <span>Anmelden</span>
   </button>
   <!-- signin -->
-  <button mat-menu-item>
+  <button (click)="openModalAuthentication(AuthenticationOptions.signin)" mat-menu-item>
     <mat-icon>person_add</mat-icon>
     <span>Registrieren</span>
   </button>
