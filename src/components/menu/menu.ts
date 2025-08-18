@@ -1,7 +1,8 @@
-import { Component, inject, Renderer2 } from '@angular/core';
+import { Component, computed, inject, Renderer2 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { AuthService } from '../../security/authentication/authentication';
 
 @Component({
   selector: 'app-menu',
@@ -11,6 +12,8 @@ import { MatMenuModule } from '@angular/material/menu';
 })
 export class Menu {
   private renderer = inject(Renderer2);
+  private authService = inject(AuthService);
+  protected isAuthenticated = computed(this.authService.isAuthenticated);
 
   protected toggleLightDarkTheme() {
     const body = document.body;
@@ -20,5 +23,9 @@ export class Menu {
     } else {
       this.renderer.addClass(body, 'activate-light-mode');
     }
+  }
+
+  protected logout() {
+    this.authService.logout();
   }
 }

@@ -9,9 +9,23 @@
     <mat-icon>brightness_5</mat-icon>
     <span>Modus</span>
   </button>
-  <!-- logout -->
+  @if(!this.isAuthenticated()){
+  <!-- login -->
   <button mat-menu-item>
+    <mat-icon>login</mat-icon>
+    <span>Anmelden</span>
+  </button>
+  <!-- signin -->
+  <button mat-menu-item>
+    <mat-icon>person_add</mat-icon>
+    <span>Registrieren</span>
+  </button>
+
+  } @else {
+  <!-- logout -->
+  <button (click)="logout()" mat-menu-item>
     <mat-icon>logout</mat-icon>
     <span>Abmelden</span>
   </button>
+  }
 </mat-menu>
