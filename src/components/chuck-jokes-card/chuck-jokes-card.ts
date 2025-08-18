@@ -15,7 +15,7 @@ import { GenerationCard } from '../generation-card/generation-card';
   styleUrl: './chuck-jokes-card.scss',
 })
 export class ChuckJokesCard {
-  private snackBar = inject(MatSnackBar);
+  private snackbarService = inject(MatSnackBar);
   private jokeFetcherService = inject(JokeFetcher);
   private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
   protected jokeResource: ResourceRef<ChuckNorrisJoke | undefined>;
@@ -41,7 +41,7 @@ export class ChuckJokesCard {
     const jokeResourceValue = this.jokeResource.value();
     if (jokeResourceValue !== undefined) {
       this.favouriteChuckJokesSevice.add(jokeResourceValue.value);
-      this.snackBar.open('⭐️ Witz hinzugefügt');
+      this.snackbarService.open('⭐️ Witz hinzugefügt');
     }
   }
 }

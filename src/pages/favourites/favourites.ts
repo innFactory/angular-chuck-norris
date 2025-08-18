@@ -15,7 +15,7 @@ import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck
 })
 export class Favourites {
   private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
-  private snackBar = inject(MatSnackBar);
+  private snackbarService = inject(MatSnackBar);
   protected displayedColumns: string[] = ['id', 'joke', 'creator', 'action'];
   protected tableData: FavouritesTableRow[] = [];
 
@@ -37,7 +37,7 @@ export class Favourites {
   }
 
   protected deleteRow(index: number) {
-    this.snackBar.open('🚨 Löschen noch nicht implementiert');
+    this.snackbarService.open('🚨 Löschen noch nicht implementiert');
   }
 
   protected refreshTable() {
