@@ -37,7 +37,7 @@ export class Favourites {
   }
 
   protected deleteRow(index: number) {
-    this.snackBar.open('🚨 Löschen noch nicht implementiert', 'X', { duration: 1000, horizontalPosition: 'end' });
+    this.snackBar.open('🚨 Löschen noch nicht implementiert');
   }
 
   protected refreshTable() {
