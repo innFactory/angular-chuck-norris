@@ -1,30 +1,54 @@
-// app/services/auth.service
-import { Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from '@angular/fire/auth';
-import { defer, Observable } from 'rxjs';
+import { inject, Injectable, signal } from '@angular/core';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private auth: Auth) {}
+  private auth = inject(Auth);
+  private snackbarService = inject(MatSnackBar);
+  public isAuthenticated = signal(false);
 
-  login(email: string, password: string): Observable<any> {
-    const res = () => signInWithEmailAndPassword(this.auth, email, password);
-    // build up a cold observable
-    return defer(res);
+  public async login(email: string, password: string): Promise<boolean> {
+    try {
+      await signInWithEmailAndPassword(this.auth, email, password);
+      this.snackbarService.open('✅  Anmeldung erfolgreich');
+      this.isAuthenticated.set(true);
+      return true;
+    } catch (error) {
+      this.snackbarService.open('❌  Anmeldung fehlgeschlagen');
+      return false;
+    }
   }
 
-  // the sign up uses createUserWithEmailAndPassword
-  signup(email: string, password: string, custom: any): Observable<any> {
-    const res = () => createUserWithEmailAndPassword(this.auth, email, password);
-    // it also accepts an extra attributes, we will handle later
-    return defer(res);
+  public async logout(): Promise<boolean> {
+    try {
+      await signOut(this.auth);
+      this.snackbarService.open('✅  Du wurdest abgemeldet');
+      this.isAuthenticated.set(false);
+      return true;
+    } catch (error) {
+      this.snackbarService.open('❌  Abmeldung fehlgeschlagen');
+      return false;
+    }
   }
 
-  loginGoogle(): Observable<any> {
-    const provider = new GoogleAuthProvider(); // from @angular/fire/auth
-    const res = () => signInWithPopup(this.auth, provider);
-    return defer(res);
+  public async signup(email: string, password: string, custom: any): Promise<boolean> {
+    try {
+      await createUserWithEmailAndPassword(this.auth, email, password);
+      this.snackbarService.open('✅  Registrierung erfolgreich');
+      return true;
+    } catch (error) {
+      this.snackbarService.open('❌  Registrierung fehlgeschlagen');
+      return false;
+    }
+  }
+
+  public checkAuthenticated(): boolean {
+    const isAuthenticated = this.auth.currentUser !== null;
+    if (!isAuthenticated) this.snackbarService.open('❌ Nicht in Firebase angemeldet');
+    this.isAuthenticated.set(isAuthenticated);
+    return isAuthenticated;
   }
 }
