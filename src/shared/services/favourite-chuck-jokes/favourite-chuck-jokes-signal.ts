@@ -24,7 +24,11 @@ export class FavouriteChuckJokesSignalService {
     this.data.update((actual) => actual.filter((joke) => joke.id !== id));
   }
 
-  public getAllJokes(): ChucksJoke[] {
+  public getAll(): ChucksJoke[] {
     return this.data();
+  }
+
+  public set(data: ChucksJoke[]) {
+    this.data.set(data);
   }
 }

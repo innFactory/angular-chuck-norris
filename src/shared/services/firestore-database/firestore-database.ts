@@ -16,11 +16,11 @@ export class FirestoreDatabaseService {
   private firestore = inject(Firestore);
   private auth = inject(Auth);
 
-  public async addJoke(joke: string): Promise<void> {
+  public async addJoke(tableID: number, joke: string): Promise<void> {
     const userId = this.auth.currentUser?.uid;
     if (!userId) throw new Error('User not logged in.');
     const jokesCollection = collection(this.firestore, `users/${userId}/jokes`);
-    const jokeData = { tableID: Math.ceil(100 * Math.random()), content: joke, creator: 'Chuck' };
+    const jokeData = { tableID: tableID, content: joke, creator: 'Chuck' };
     await addDoc(jokesCollection, jokeData);
   }
 
