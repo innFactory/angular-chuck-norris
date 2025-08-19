@@ -2,9 +2,9 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
-import { AuthService } from '../authentication/authentication';
-import { Login } from '../login/login/login';
-import { Register } from '../register/register/register';
+import { Login } from '../../login/login';
+import { Register } from '../../register/register';
+import { AuthService } from '../auth-service';
 
 export enum AuthenticationOptions {
   login = 'login',

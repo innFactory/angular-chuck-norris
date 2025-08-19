@@ -1,0 +1,13 @@
+:host {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--var-spacing-3);
+    padding-top: var(--var-spacing-1);
+    padding-bottom: var(--var-spacing-4);
+  }
+
+  button {
+    float: right;
+  }
+}

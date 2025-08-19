@@ -3,9 +3,9 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AuthenticationModalService } from '../../authentication-modal-service/authentication-modal-service';
-import { AuthenticationOptions } from '../../authentication-modal/authentication-modal';
-import { AuthService } from '../../authentication/authentication';
+import { AuthService } from '../auth/auth-service';
+import { AuthenticationModalService } from '../auth/authentication-modal-service';
+import { AuthenticationOptions } from '../auth/authentication-modal/authentication-modal';
 
 @Component({
   selector: 'app-register',

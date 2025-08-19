@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { AuthenticationModal, AuthenticationModalProps, AuthenticationOptions } from '../authentication-modal/authentication-modal';
+import { AuthenticationModal, AuthenticationModalProps, AuthenticationOptions } from './authentication-modal/authentication-modal';
 
 @Injectable({
   providedIn: 'root',

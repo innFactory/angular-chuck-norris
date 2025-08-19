@@ -3,8 +3,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AuthenticationModalService } from '../../authentication-modal-service/authentication-modal-service';
-import { AuthService } from '../../authentication/authentication';
+import { AuthService } from '../auth/auth-service';
+import { AuthenticationModalService } from '../auth/authentication-modal-service';
 
 @Component({
   selector: 'app-login',

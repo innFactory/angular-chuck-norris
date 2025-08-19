@@ -25,7 +25,7 @@ export class AuthService {
   public async logout(): Promise<boolean> {
     try {
       await signOut(this.auth);
-      this.snackbarService.open('✅  Du wurdest abgemeldet');
+      this.snackbarService.open('✅  Du bist abgemeldet');
       this.isAuthenticated.set(false);
       return true;
     } catch (error) {

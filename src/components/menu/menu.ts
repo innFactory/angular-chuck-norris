@@ -2,9 +2,9 @@ import { Component, computed, inject, Renderer2 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { AuthenticationModalService } from '../../security/authentication-modal-service/authentication-modal-service';
-import { AuthenticationOptions } from '../../security/authentication-modal/authentication-modal';
-import { AuthService } from '../../security/authentication/authentication';
+import { AuthService } from '../../security/auth/auth-service';
+import { AuthenticationModalService } from '../../security/auth/authentication-modal-service';
+import { AuthenticationOptions } from '../../security/auth/authentication-modal/authentication-modal';
 
 @Component({
   selector: 'app-menu',
