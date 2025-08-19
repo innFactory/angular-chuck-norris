@@ -269,8 +269,18 @@ FavouriteCats Tabelle erstellen. FavouriteCats Service. Entweder URLs oder Bilde
 
 ### Ⅵ.Ⅰ.
 
-Anbinden des Eigenen Firebase Projekts credentials
+Registrieren in der aktuellen Firebase. Dann Daten zum Account speichern. DarkMode? Alternative?
+
+Es muss ein Beispiel sein wie zum Ben. Daten gespeichert werden und abgerufen werden.
+
+Dazu in 6.3. dann die Witze Tabelle speichern. mit ID, Text und ersteller.
+
+Dann 6.4. Katzen Bilder speichern
 
 ### Ⅵ.Ⅱ.
+
+Anbinden des Eigenen Firebase Projekts credentials
+
+### Ⅵ.Ⅲ.
 
 Speicherung der Tabellendaten zum Benutzer in der Firebase API. ...
