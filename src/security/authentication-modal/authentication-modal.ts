@@ -1,10 +1,9 @@
-import { Component, Inject, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { AuthService } from '../authentication/authentication';
 import { Login } from '../login/login/login';
-
 import { Register } from '../register/register/register';
 
 export enum AuthenticationOptions {
@@ -23,9 +22,9 @@ export interface AuthenticationModalProps {
   styleUrl: './authentication-modal.scss',
 })
 export class AuthenticationModal {
-  @Inject(MAT_DIALOG_DATA) public data: AuthenticationModalProps | undefined;
-
   private authService = inject(AuthService);
+  protected AuthenticationOptions = AuthenticationOptions;
+  public data = inject<AuthenticationModalProps>(MAT_DIALOG_DATA);
 
   protected async logout() {
     let logoutSuccess = false;

@@ -1,9 +1,9 @@
 import { Component, computed, inject, Renderer2 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { AuthenticationModal, AuthenticationModalProps, AuthenticationOptions } from '../../security/authentication-modal/authentication-modal';
+import { AuthenticationModalService } from '../../security/authentication-modal-service/authentication-modal-service';
+import { AuthenticationOptions } from '../../security/authentication-modal/authentication-modal';
 import { AuthService } from '../../security/authentication/authentication';
 
 @Component({
@@ -17,7 +17,7 @@ export class Menu {
   private authService = inject(AuthService);
   protected isAuthenticated = computed(this.authService.isAuthenticated);
   protected AuthenticationOptions = AuthenticationOptions;
-  private readonly matDialogService = inject(MatDialog);
+  protected authenticationModalService = inject(AuthenticationModalService);
 
   protected toggleLightDarkTheme() {
     const body = document.body;
@@ -29,12 +29,13 @@ export class Menu {
     }
   }
 
-  protected openModalAuthentication(modalType: AuthenticationOptions) {
-    const dialogConfig = new MatDialogConfig<AuthenticationModalProps>();
-    dialogConfig.autoFocus = false;
-    dialogConfig.data = { options: modalType };
-    this.matDialogService.open(AuthenticationModal, dialogConfig);
-  }
+  // protected openModalAuthentication(type: AuthenticationOptions) {
+  // const dialogConfig = new MatDialogConfig<AuthenticationModalProps>();
+  // dialogConfig.autoFocus = false;
+  // dialogConfig.data = { options: modalType };
+  // this.matDialogService.open(AuthenticationModal, dialogConfig);
+  // this.authenticationModalService.openModal(type);
+  // }
 
   protected logout() {
     this.authService.logout();

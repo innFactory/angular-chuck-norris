@@ -1,24 +1,13 @@
 <mat-dialog-content>
+  @if(data.options === AuthenticationOptions.login){
   <h3>Anmeldung</h3>
   <app-login />
+  } @else if(data.options === AuthenticationOptions.signin){
+  <h3>Registrierung</h3>
+  <app-register />
+  }
 </mat-dialog-content>
 <mat-dialog-actions>
   <!-- <button class="button-cancel" mat-flat-button (click)="closeDialog()">Abbrechen</button> -->
 </mat-dialog-actions>
 <div class="overlay"></div>
-
-<!-- <br />
-<br />
-<br />
-<br /> -->
-
-<!-- <app-register /> -->
-
-<!-- <br />
-<br />
-<br />
-<br />
-
-<div class="container">
-  <button (click)="logout()" matButton>Logout</button>
-</div> -->

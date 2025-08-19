@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AuthenticationModalService } from '../../authentication-modal-service/authentication-modal-service';
 import { AuthService } from '../../authentication/authentication';
 
 @Component({
@@ -13,6 +14,7 @@ import { AuthService } from '../../authentication/authentication';
 })
 export class Login {
   private authService = inject(AuthService);
+  protected authenticationModalService = inject(AuthenticationModalService);
 
   protected loginForm = new FormGroup({
     mail: new FormControl('', [Validators.required, Validators.email]),
@@ -30,7 +32,7 @@ export class Login {
     let logInSuccess = false;
     logInSuccess = await this.authService.login(mail, password);
     if (logInSuccess) {
-      //TODO navigate
+      this.authenticationModalService.closeModal();
     }
   }
 }

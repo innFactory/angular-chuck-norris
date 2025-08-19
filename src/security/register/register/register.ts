@@ -3,6 +3,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AuthenticationModalService } from '../../authentication-modal-service/authentication-modal-service';
+import { AuthenticationOptions } from '../../authentication-modal/authentication-modal';
 import { AuthService } from '../../authentication/authentication';
 
 @Component({
@@ -12,6 +14,7 @@ import { AuthService } from '../../authentication/authentication';
   styleUrl: './register.scss',
 })
 export class Register {
+  protected authenticationModalService = inject(AuthenticationModalService);
   private authService = inject(AuthService);
   protected signUpForm = new FormGroup({
     mail: new FormControl('', [Validators.required, Validators.email]),
@@ -38,7 +41,8 @@ export class Register {
     let signupSuccess = false;
     signupSuccess = await this.authService.signup(mail, password, {});
     if (signupSuccess) {
-      //TODO navigate
+      this.authenticationModalService.closeModal();
+      this.authenticationModalService.openModal(AuthenticationOptions.login);
     }
   }
 }
