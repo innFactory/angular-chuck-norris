@@ -1,8 +1,8 @@
-import { Component, inject, signal } from '@angular/core';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Component, inject, OnDestroy } from '@angular/core';
 import { Content } from '../components/content/content';
 import { Footer } from '../components/footer/footer';
 import { Header } from '../components/header/header';
+import { AuthService } from '../security/auth/auth-service';
 
 @Component({
   selector: 'app-root',
@@ -10,15 +10,10 @@ import { Header } from '../components/header/header';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
-  events$ = signal<any[]>([]); // Signal, um die Ereignisse zu speichern
-  firestore = inject(Firestore);
+export class App implements OnDestroy {
+  private authService = inject(AuthService);
 
-  ngOnInit() {
-    const eventsCollection = collection(this.firestore, 'favourites');
-    collectionData(eventsCollection).subscribe((data) => {
-      this.events$.set(data);
-      console.log(this.events$());
-    });
+  public ngOnDestroy() {
+    this.authService.logout();
   }
 }
