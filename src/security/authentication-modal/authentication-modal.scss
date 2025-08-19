@@ -1,0 +1,21 @@
+:host {
+  mat-dialog-content {
+    .container-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--var-spacing-4);
+      padding-bottom: var(--var-spacing-8);
+
+      > img {
+        transform: scale(0.9);
+      }
+    }
+
+    .container-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: var(--var-spacing-4);
+    }
+  }
+}

@@ -1,13 +1,17 @@
 <mat-dialog-content>
-  @if(data.options === AuthenticationOptions.login){
-  <h3>Anmeldung</h3>
-  <app-login />
-  } @else if(data.options === AuthenticationOptions.signin){
-  <h3>Registrierung</h3>
-  <app-register />
-  }
+  <div class="container-top">
+    <h1>Benutzeraccount</h1>
+    <h2>Angular Chuck Norris Webapp</h2>
+    <img src="logo.png" />
+  </div>
+
+  <div class="container-bottom">
+    @if(data.options === AuthenticationOptions.login){
+    <p>Anmeldung</p>
+    <app-login />
+    } @else if(data.options === AuthenticationOptions.signin){
+    <h3>Registrierung</h3>
+    <app-register />
+    }
+  </div>
 </mat-dialog-content>
-<mat-dialog-actions>
-  <!-- <button class="button-cancel" mat-flat-button (click)="closeDialog()">Abbrechen</button> -->
-</mat-dialog-actions>
-<div class="overlay"></div>
