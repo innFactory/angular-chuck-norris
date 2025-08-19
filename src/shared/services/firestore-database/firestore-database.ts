@@ -1,7 +1,13 @@
 import { inject, Injectable } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import { addDoc, collection, deleteDoc, doc, Firestore, getDocs } from '@angular/fire/firestore';
-import { FirestoreChuckJokes } from '../favourite-chuck-jokes/favourite-chuck-jokes-firestore';
+
+export interface FirestoreChuckJokes {
+  id: string;
+  tableID: number;
+  content: string;
+  creator: string;
+}
 
 @Injectable({
   providedIn: 'root',
