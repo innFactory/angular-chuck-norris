@@ -5,6 +5,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AuthService } from '../../security/auth/auth-service';
 import { AuthenticationModalService } from '../../security/auth/authentication-modal-service';
 import { AuthenticationOptions } from '../../security/auth/authentication-modal/authentication-modal';
+import { FavouriteChuckJokesSignalService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-signal';
 
 @Component({
   selector: 'app-menu',
@@ -18,6 +19,7 @@ export class Menu {
   protected isAuthenticated = computed(this.authService.isAuthenticated);
   protected AuthenticationOptions = AuthenticationOptions;
   protected authenticationModalService = inject(AuthenticationModalService);
+  private favouriteChuckJokesSignalService = inject(FavouriteChuckJokesSignalService);
 
   protected toggleLightDarkTheme() {
     const body = document.body;
@@ -29,15 +31,10 @@ export class Menu {
     }
   }
 
-  // protected openModalAuthentication(type: AuthenticationOptions) {
-  // const dialogConfig = new MatDialogConfig<AuthenticationModalProps>();
-  // dialogConfig.autoFocus = false;
-  // dialogConfig.data = { options: modalType };
-  // this.matDialogService.open(AuthenticationModal, dialogConfig);
-  // this.authenticationModalService.openModal(type);
-  // }
-
-  protected logout() {
-    this.authService.logout();
+  protected async logout() {
+    const logoutSuccess = await this.authService.logout();
+    if (logoutSuccess) {
+      this.favouriteChuckJokesSignalService.set([]);
+    }
   }
 }

@@ -28,6 +28,7 @@ export class FavouriteChuckJokesSignalService {
     return this.data();
   }
 
+  // Ignore method until challenge Ⅵ.
   public set(data: ChucksJoke[]) {
     this.data.set(data);
   }
