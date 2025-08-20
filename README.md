@@ -251,7 +251,9 @@ Wenn du es jetzt aber nicht mehr abwarten kannst Bilder von süßen Katzen zu se
 
 ### Ⅴ.Ⅰ. Ansehen
 
-Im Folgenden wirst du eine API im Angular Chuck Norris Projekt anbinden. API steht für Application Programming Interface und ist allgemein die Bezeichnung für eine Schnittstelle, auf die mit einem Request zugegriffen wird. In Angular kannst du HTTP Requests auf verschiedene Weise handhaben.
+Eine Programmierschnittstelle auch kurz API ermöglicht in der Softwareentwicklung den einfachen Zugriff auf externen Programmcode. Mit den Chuck Norris Witzen ist i
+
+Im Folgenden wirst du eine Online-API im Angular Chuck Norris Projekt anbinden. API steht für Application Programming Interface und ist allgemein die Bezeichnung für eine Schnittstelle, auf die mit einem Request zugegriffen wird. In Angular kannst du HTTP Requests auf verschiedene Weise handhaben.
 
 Auch die zufälligen Chuck Norris Witze werden aktuell über eine API geladen. Sieh dir dazu den JokeFetcherService und seine Verwendung in der ChuckJokesCard an.
 
