@@ -12,7 +12,7 @@ export interface FirestoreChuckJokes {
 @Injectable({
   providedIn: 'root',
 })
-export class FirestoreDatabaseService {
+export class JokeDatabaseService {
   private firestore = inject(Firestore);
   private auth = inject(Auth);
 
