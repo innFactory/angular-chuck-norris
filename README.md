@@ -249,21 +249,41 @@ Wenn du es jetzt aber nicht mehr abwarten kannst Bilder von süßen Katzen zu se
 
 # Ⅴ. Challenge 🎖️ - Achtung Süße Katzenbilder!
 
-### Ⅴ.Ⅰ. Ansehen
+### Ⅴ.Ⅰ. Neue Katzen Seite
 
-Eine Programmierschnittstelle auch kurz API ermöglicht in der Softwareentwicklung den einfachen Zugriff auf externen Programmcode. Mit den Chuck Norris Witzen ist i
+Nun wird das Projekt um eine Katzen Seite erweitert. Sie wird zufällig neue Katzenbilder aus dem Web laden, die du dann auch favorisieren kannst.
 
-Im Folgenden wirst du eine Online-API im Angular Chuck Norris Projekt anbinden. API steht für Application Programming Interface und ist allgemein die Bezeichnung für eine Schnittstelle, auf die mit einem Request zugegriffen wird. In Angular kannst du HTTP Requests auf verschiedene Weise handhaben.
+- Erstelle im `pages` Ordner eine neue Komponente "cats".
+- Erweitere die Router Datei um einen neuen "cats" Pfad der auf die neue Komponente verweist. Du solltest sie im Browser öffnen können.
+- Damit die Seite auch per Header aufrufbar ist, musst du sie in der Navigation Komponente im HTML erweitern.
+- Damit ist die Seite fertig konfiguriert 🎉
 
-Auch die zufälligen Chuck Norris Witze werden aktuell über eine API geladen. Sieh dir dazu den JokeFetcherService und seine Verwendung in der ChuckJokesCard an.
+### Ⅴ.Ⅱ. Implementierung der Katzen Seite
 
-Ansehen & Verstehen der Chuck Norris API
+Die Katzenseite beinhaltet ein Bild und zwei Buttons z.B. "NEU" und "FAVORISIEREN" um die Katze später neu zu generieren und zu favoriseren. Die Funktionalität implementierst du erst später. Du kannst wie bei den Witzen die GenerationCard Komponente wiederverwenden. Verwende als Bild für jetzt das "cat-placeholder.png" unter "public/". Als Komponente verwendest du einfach ein HTML "<img/>".
 
-### Ⅴ.Ⅱ.
+- Tipp: In der Header Komponente gibt es bereits ein Bild, das du als Beispiel verwenden kannst. Ansonsten sie dir die HTML Dokumentation auf [developer.mozilla.org](developer.mozilla.org) an.
+
+### Ⅴ.Ⅲ. Ansehen der Chuck Norris Witze API
+
+Eine Programmierschnittstelle auch kurz API ermöglicht in der Softwareentwicklung den einfachen Zugriff auf externen Programmcode. Mit den Chuck Norris Witzen ist bereits eine online API implementiert.
+
+- Sieh dir den JokeApiService im Projekt an. Die URL zur API befindet sich in der `app.constants.ts` Datei.
+- Rufe die API per Link im Browser auf [https://api.chucknorris.io/jokes/random](https://api.chucknorris.io/jokes/random). Was siehst du?
+- Aktualisiere die Seite neu. Was verändert sich?
+- Der HTTP Zugriff auf die API erfolgt in Angular 20 vorzugsweise mit dem HttpClient und Rsjx Observables. Lies dir die offiziele Dokumentation zu den beiden durch.
+- Verstehst du den Zugriff auf den Service und die reaktive Resource in der ChuckJokesCard Komponente?
+
+### Ⅴ.Ⅲ.Anbindung an die Katzen API
+
+Bei Klick auf den "NEU" Button soll in Zukunft ein zufälliges Katzenbild geladen werden. Dazu kannst du die Katzen API aus dem Web benutzen. Sie liefert dir jeweils eine neue Katzenbild URL, die du dann im "src" Attribut des Bildes verwendest.
+
+- Sieh dir die JSON der Katzen API im Browser an [https://cataas.com/cat?json=true](https://cataas.com/cat?json=true).
+- Du kannst auch den Inhalt des "url" keys einmal im Browser öffnen. Du siehst jeweils eine neue zufällige Katze.
+- Erstelle nun einen CatApiService analog zum JokeApiService. Greife auf die reaktive Resource zu. Du kannst dich wieder an der ChuckJokesCard orientieren.
+- Implementiere eine neue "urlCatPicture" Methode in der Cats Seite, die jeweils die URL des CatApiService zurückgibt.
 
 Anbinden der Katzen API
-
-### Ⅴ.Ⅲ.
 
 Favorisieren der Katzen in weiterer Tabelle auf der. Favoriten Seite.
 
