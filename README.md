@@ -1,4 +1,4 @@
-![Project Logo](./docs/logo.png)
+![Project Logo](./docs/logo_readme.png)
 
 # Start 🚀
 
@@ -68,7 +68,7 @@ Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
 
 Öffne den Browser auf [http://localhost:4200](http://localhost:4200) und du solltest die WebApp sehen.
 
-### Ⅰ.7. Einstieg in die App
+### Ⅰ.Ⅶ. Einstieg in die App
 
 Jede Angular Komponente in deiner WebApp besteht aus einem Logik-, einem Struktur- und einem Stylingteil. Sehe dir exemplarisch einmal die Home-Page Komponente genauer an. Navigiere in in den Pfad `src -> pages -> home` und sehe dir die Datein an.
 
@@ -80,7 +80,7 @@ Jede Angular Komponente in deiner WebApp besteht aus einem Logik-, einem Struktu
 
 Fühle dich nicht überfordert von all den verschiedenen Sprachen und Frameworks. Du bekommst eine Schritt für Schritt Einführung in die Angular Welt.
 
-### Ⅰ.8. Kennenlernen mit Chuck Norris
+### Ⅰ.Ⅷ. Kennenlernen mit Chuck Norris
 
 Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der Markupsprache HTML verfasst.
 Sieh dir die Struktur in der Homepage [home.html](./src/pages/home/home.html) einmal genauer an. Der Text `..Ich bin Chuck Norris, ein Kampfsportler und Schauspieler..` ist in einem HTML `<p>` Paragraph Element eingeschlossen bzw. gewrapped.
@@ -181,7 +181,7 @@ Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Ei
 - Füge in die neue OwnJokesCardComponent einen Material Input und einen Material Favorisieren Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu.
 - Hilfreiche Dokus dazu findest du hier zu [Mat-Input](https://material.angular.dev/components/input/overview) und hier zum [Mat-Button](https://material.angular.dev/components/button/overview).
 
-### 4.3. Services in Angular
+### Ⅳ.Ⅲ. Services in Angular
 
 Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze, um sie in die Tabelle der Favoriten weiterzugeben. Diese globale Weitergabe nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial](https://angular.dev/tutorials/first-app/09-services) ab.
 
@@ -191,7 +191,7 @@ Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst
 - Füge in der OwnJokesCardComponent eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die add Methode an den Service.
 - Passe die Favoriten Seite so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden. Dazu kannst du eine neue Methode updateOwnJokesTableData erstellen.
 
-### 4.4. Echt peinlich: Unlustiger Witz
+### Ⅳ.Ⅳ. Echt peinlich: Unlustiger Witz
 
 Nun werden wir die Favoriten Tabelle erweitern. Du hast versehentlich einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi! In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der `deleteRow` Methode in `src/pages/favourites` leider noch nicht implementiert.
 
@@ -233,7 +233,7 @@ Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klic
 
 Probiere es gleich im Browser aus. Absofort berechnet sich das `tableData` Datenobjekt, bei jeglicher Veränderung des Eigenen und des Chucks Witze Signal Services von selbst neu. Die Tabelle aktualisiert sich im Frontend damit automatisch.
 
-### Ⅳ.7. Sauberkeit ist die halbe Miete
+### Ⅳ.Ⅶ. Sauberkeit ist die halbe Miete
 
 Der "Tabelle aktualisieren" Button wird jetzt nicht mehr benötigt. Es folgt den Best Practices als Entwickler, immer unbenutzen Programmcode oder veraltete Features direkt zu entfernen um das Projekt simpel und verständlich zu halten.
 
@@ -271,10 +271,52 @@ FavouriteCats Tabelle erstellen. FavouriteCats Service. Bilder selbst speichern?
 
 # Ⅵ. Challenge 🎖️ - Nur `Speicher`bares ist Wahres
 
-### Ⅵ.Ⅰ.
+### Ⅵ.Ⅰ. Benutzer hinzufügen
 
-Anbinden des Eigenen Firebase Projekts credentials
+In der Angular Chuck Norris Webapp ist bereits eine Datenbank in Google Firebase mit Besitzer innFactory GmbH angebunden.
 
-### Ⅵ.Ⅱ.
+Registriere dich nun mit deiner innFactory E-Mail und einem neuen Passwort und melde dich an. Das machst du über das Benutzer-Icon im Header -> Registrieren. Damit wurde ein neuer Benutzer in Firebase angelegt.
 
-Speicherung der Tabellendaten zum Benutzer in der Firebase API. ...
+### Ⅵ.Ⅱ. Datenbank Synchronisierung
+
+In dem Projekt ist bereits ein FirestoreDatabaseService Implementiert. Füge dessen `addJoke` und `removeJoke` einfach zu den `add` und `remove` Methoden des FavouriteChuckJokesSignalService an.
+
+Fertig! Bei Favorisierung wird nun der Witz in der Datenbank gespeichert. Und bei An- und Abmeldung wieder geladen.
+
+### Ⅵ.Ⅲ. Sicherung eigener Witze
+
+Damit nun auch deine eigenen Witze verewigt werden, muss..
+
+- neuer database service
+
+- verwendung
+
+- ergänzung bei login
+
+- löschung bei logout
+
+### Ⅵ.Ⅳ. Eigene Datenbank
+
+Jetzt wird es tricky.
+
+- Erstellen FirebaseProjekt
+
+- Einstellungen in environment.ts
+
+- Tabelle users hinzufügen
+
+- Testen Chuck Norris Witze & Eigene
+
+### Ⅵ.Ⅴ. Katzen-Transferaufgabe
+
+Kommen wir nun zur Letzen Challenge.
+
+- Erstellen cats tabelle in Firebase
+
+- neuer cat database service
+
+- laden bei login
+
+- löschen bei logout
+
+Glückwunsch! Du hast alle Challenges gemeistert.
