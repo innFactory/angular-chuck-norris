@@ -309,17 +309,32 @@ Du hast es vielleicht schon erraten 😄.. Im Anschluss wirst du analog zur Witz
 
 # Ⅵ. Challenge 🎖️ - Nur `Speicher`bares ist Wahres
 
+### Ⅵ.Ⅰ. Übersicht
+
+Die Angular Chuck Norris Webapp verfügt bereits über weitreichende Features! Es sind zwei externe online APIs angebunden. Auf der Startseite werden Chuck Norris selbst erfundenen Kampfkünste dargestellt 😎. Es gibt die Möglichkeit Witze und Katzen zu favorisieren und zu löschen. Sogar eigene Witze können hinzugefügt werden. Durch die reaktive Programmierung werden die Änderungen unmittelbar in den Tabellen aktualisiert und durch die Verwendung von Services auf die von überall aus zugregriffen werden kann, folgst du den Best Practices der Modularisierung.
+
+Einen großen Nachteil hat unsere App bisher noch. Klickst du den "Aktualiseren" Button im Browser, gehen alle Favorisierten Witze und Katzen verloren. Wie schön wäre es, wenn du über Wochen und Monate die Besten Witze speichern und die Lieste erweitern könntest.
+
+Für einen solchen externen Speicherort verwendet man am Besten eine online Datenbank. Im Folgenden wirst du dich erst in einer Bestehenden Datenbank anmelden. Später wirst du das Projekt mit einer selbsterstellten, kostenosen Google Firebase Datenbank verknüpfen.
+
 ### Ⅵ.Ⅰ. Benutzer hinzufügen
 
-In der Angular Chuck Norris Webapp ist bereits eine Datenbank in Google Firebase mit Besitzer innFactory GmbH angebunden.
+Im Projekt ist bereits eine externe Datenbank in Google Firebase mit Besitzer innFactory GmbH angebunden.
 
-Registriere dich nun mit deiner innFactory E-Mail und einem neuen Passwort und melde dich an. Das machst du über das Benutzer-Icon im Header -> Registrieren. Damit wurde ein neuer Benutzer in Firebase angelegt.
+Erstelle dir ganz einfach einen neuen Benutzer und melde dich damit an. Klicke auf den Benutzer Icon im Header und auf Registrieren. Verwende am Besten deine innFactory E-Mail. Im Hintergrund wird ein neuer Benutzer in Firebase angelegt.
 
 ### Ⅵ.Ⅱ. Datenbank Synchronisierung
 
-In dem Projekt ist bereits ein FirestoreDatabaseService Implementiert. Füge dessen `addJoke` und `removeJoke` einfach zu den `add` und `remove` Methoden des FavouriteChuckJokesSignalService an.
+Als nächstes werden wir die Chuck Norris Witze jeweils beim favorisieren an die Datenbank weitergeben.
 
-Fertig! Bei Favorisierung wird nun der Witz in der Datenbank gespeichert. Und bei An- und Abmeldung wieder geladen.
+- In dem Projekt ist bereits ein JokeDatabaseService implementiert. Sieh dir dessen Methoden einmal an.
+- Füge den `add` und `remove` Methoden des bestehenden FavouriteChuckJokesSignalService am Ende einfach die `addJoke` und `removeJoke` Aufrufe des
+  JokeDatabaseService hinzu. Du musst den Witz bzw. die ID natürlich weitergeben.
+- Melde dich erneut über das Benutzer Icon an.
+- Wenn du nun Chuck Norris Witze favorisierst, werden sie auch der Datenbank hinzugefügt.
+- Lade die Seite im Browser neu und melde dich erneut an. Die Witze sollten wieder erscheinen.
+
+Du hast die externe Datenbank erfolgreich angebunden.
 
 ### Ⅵ.Ⅲ. Sicherung eigener Witze
 
