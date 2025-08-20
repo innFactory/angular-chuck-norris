@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ChuckNorrisJoke } from '../../models/chuck-norris-joke';
 import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes';
-import { JokeFetcher } from '../../shared/services/joke-fetcher/joke-fetcher';
+import { JokeApiService } from '../../shared/services/joke-api-service/joke-api-service';
 import { GenerationCard } from '../generation-card/generation-card';
 
 @Component({
@@ -16,12 +16,12 @@ import { GenerationCard } from '../generation-card/generation-card';
 })
 export class ChuckJokesCard {
   private snackbarService = inject(MatSnackBar);
-  private jokeFetcherService = inject(JokeFetcher);
+  private jokeApiService = inject(JokeApiService);
   private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
   protected jokeResource: ResourceRef<ChuckNorrisJoke | undefined>;
 
   constructor() {
-    this.jokeResource = rxResource({ stream: () => this.jokeFetcherService.get() });
+    this.jokeResource = rxResource({ stream: () => this.jokeApiService.get() });
   }
 
   protected get jokeDisplayed(): string {

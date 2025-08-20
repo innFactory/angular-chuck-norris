@@ -7,7 +7,7 @@ import { ChuckNorrisJoke } from '../../../models/chuck-norris-joke';
 @Injectable({
   providedIn: 'root',
 })
-export class JokeFetcher {
+export class JokeApiService {
   private httpClientService = inject(HttpClient);
 
   public get(): Observable<ChuckNorrisJoke> {

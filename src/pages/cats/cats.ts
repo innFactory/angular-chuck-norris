@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { GenerationCard } from '../../components/generation-card/generation-card';
 import { Cat } from '../../models/cat';
-import { CatFetcher } from '../../shared/services/cat-fetcher/cat-fetcher';
+import { CatApiService } from '../../shared/services/cat-api-service/cat-api-service';
 // import { FavouritesDataService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes';
 
 @Component({
@@ -14,8 +14,8 @@ import { CatFetcher } from '../../shared/services/cat-fetcher/cat-fetcher';
   styleUrl: './cats.scss',
 })
 export class Cats {
-  private catFetcherService = inject(CatFetcher);
-  protected catResource: ResourceRef<Cat | undefined> = resource({ loader: () => this.catFetcherService.get() });
+  private catApiService = inject(CatApiService);
+  protected catResource: ResourceRef<Cat | undefined> = resource({ loader: () => this.catApiService.get() });
   // private favouritesDataService = inject(FavouritesDataService);
 
   protected get urlCatPicture(): string {

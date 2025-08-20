@@ -5,7 +5,7 @@ import { Cat } from '../../../models/cat';
 @Injectable({
   providedIn: 'root',
 })
-export class CatFetcher {
+export class CatApiService {
   public async get(): Promise<Cat> {
     return fetch(URL_CAT_API).then((res) => res.json());
   }
