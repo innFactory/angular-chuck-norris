@@ -1,13 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import { addDoc, collection, deleteDoc, doc, Firestore, getDocs } from '@angular/fire/firestore';
-
-export interface FirestoreChuckJokes {
-  id: string;
-  tableID: number;
-  content: string;
-  creator: string;
-}
+import { FirebaseJokeTableRow } from '../../../models/firebase-joke-table-row';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +10,7 @@ export class JokeDatabaseService {
   private firestore = inject(Firestore);
   private auth = inject(Auth);
 
-  public async addJoke(tableID: number, joke: string): Promise<void> {
+  public async add(tableID: number, joke: string): Promise<void> {
     const userId = this.auth.currentUser?.uid;
     if (!userId) throw new Error('User not logged in.');
     const jokesCollection = collection(this.firestore, `users/${userId}/jokes`);
@@ -24,8 +18,8 @@ export class JokeDatabaseService {
     await addDoc(jokesCollection, jokeData);
   }
 
-  public async removeJoke(tableID: number): Promise<void> {
-    const jokes = await this.getAllJokes();
+  public async remove(tableID: number): Promise<void> {
+    const jokes = await this.getAll();
     const jokeToRemove = jokes.find((joke) => joke.tableID === tableID);
     if (jokeToRemove?.id == undefined) return;
 
@@ -35,7 +29,7 @@ export class JokeDatabaseService {
     await deleteDoc(jokeDocRef);
   }
 
-  public async getAllJokes(): Promise<FirestoreChuckJokes[]> {
+  public async getAll(): Promise<FirebaseJokeTableRow[]> {
     const userId = this.auth.currentUser?.uid;
     if (!userId) throw new Error('User not logged in.');
     const jokesCollection = collection(this.firestore, `users/${userId}/jokes`);

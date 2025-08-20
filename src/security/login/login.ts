@@ -3,9 +3,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { FirebaseJokeTableRow } from '../../models/firebase-joke-table-row';
 import { JokeData } from '../../models/joke-data';
 import { FavouriteChuckJokesSignalService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-signal-service/favourite-chuck-jokes-signal-service';
-import { FirestoreChuckJokes, JokeDatabaseService } from '../../shared/services/joke-database-service/joke-database-service';
+import { JokeDatabaseService } from '../../shared/services/joke-database-service/joke-database-service';
 import { AuthService } from '../auth/auth-service';
 import { AuthenticationModalService } from '../auth/authentication-modal-service';
 
@@ -39,7 +40,7 @@ export class Login {
     if (logInSuccess) {
       this.authenticationModalService.closeModal();
 
-      const databaseJokes: FirestoreChuckJokes[] = await this.jokeDatabaseService.getAllJokes();
+      const databaseJokes: FirebaseJokeTableRow[] = await this.jokeDatabaseService.getAll();
       const tableJokes: JokeData[] = [];
       databaseJokes.forEach((data) => {
         tableJokes.push({ id: data.tableID, text: data.content });
