@@ -270,24 +270,40 @@ Eine Programmierschnittstelle auch kurz API ermöglicht in der Softwareentwicklu
 
 - Sieh dir den JokeApiService im Projekt an. Die URL zur API befindet sich in der `app.constants.ts` Datei.
 - Rufe die API per Link im Browser auf [https://api.chucknorris.io/jokes/random](https://api.chucknorris.io/jokes/random). Was siehst du?
+- Das ist die JSON Datei der API
 - Aktualisiere die Seite neu. Was verändert sich?
 - Der HTTP Zugriff auf die API erfolgt in Angular 20 vorzugsweise mit dem HttpClient und Rsjx Observables. Lies dir die offiziele Dokumentation zu den beiden durch.
 - Verstehst du den Zugriff auf den Service und die reaktive Resource in der ChuckJokesCard Komponente?
+- Da TypeScript empfiehlt alle Datenobjekte zu typisieren, ist auch die JSON Rückgabe typisiert. Das Modell siehst du in "src/models/chuck-norris-joke".
 
-### Ⅴ.Ⅲ.Anbindung an die Katzen API
+### Ⅴ.Ⅲ. Anbindung an die Katzen API
 
 Bei Klick auf den "NEU" Button soll in Zukunft ein zufälliges Katzenbild geladen werden. Dazu kannst du die Katzen API aus dem Web benutzen. Sie liefert dir jeweils eine neue Katzenbild URL, die du dann im "src" Attribut des Bildes verwendest.
 
 - Sieh dir die JSON der Katzen API im Browser an [https://cataas.com/cat?json=true](https://cataas.com/cat?json=true).
 - Du kannst auch den Inhalt des "url" keys einmal im Browser öffnen. Du siehst jeweils eine neue zufällige Katze.
 - Erstelle nun einen CatApiService analog zum JokeApiService. Greife auf die reaktive Resource zu. Du kannst dich wieder an der ChuckJokesCard orientieren.
+- Du musst die JSON Rückgabe typisieren. Dazu erstellst du eine neue Datei unter "src/models/" und exportierst den Typen z.B. einfach "CatData".
 - Implementiere eine neue "urlCatPicture" Methode in der Cats Seite, die jeweils die URL des CatApiService zurückgibt.
+- Implemenitere eine "fetchNewCat" Methode, die die Resource neu lädt. Rufe sie über den "NEU" Button auf.
+- Verwende anstelle des "cat-placeholder.png" Bildes nun die zufällige URL.
+- Auf das "src" Attribut des HTML "<img/>" greifst du mit eckigen Klammern zu. So gibst du in Angular HTML dynamische, sich verändernde Attribute an.
 
-Anbinden der Katzen API
+```
+  <img [src]="urlCatPicture" />
+```
 
-Favorisieren der Katzen in weiterer Tabelle auf der. Favoriten Seite.
+Super, du hast soeben erfolgreich eine API angebunden. Bei Klick auf den "NEU" Button sollte jeweils ein neues Katzenbild erscheinen. Wie niedlich!
 
-FavouriteCats Tabelle erstellen. FavouriteCats Service. Bilder selbst speichern?
+### Ⅴ.Ⅳ. Katzen Contest
+
+Du hast es vielleicht schon erraten 😄.. Im Anschluss wirst du analog zur Witzetabelle eine neue Katzentabelle erstellen. Dort erscheinen dann die favorisierten Katzen.
+
+- Implementiere eine neue CatsTable Komponente. Kopiere einige Teile der JokesTable Komponente. Der Syntax hierfür ist komplex. Du kannst die Tabellen Syntax auch in der Angular Material Dokumentation nachlesen.
+- Binde die CatsTable Komponente auch in die Favourites Seite ein. Sie wird nun auch auf der Seite sichtbar.
+- Durch die Signal Aufgaben kennst du dich bereits mit dem FavouriteChuckJokesSignalService aus. Erstelle nun einen neuen FavouriteCatsSignalService.
+  Er speichert anstelle von "JokeData" Daten vom Typen "CatData".
+- Nun musst du auch in der CatsTable Komponente die Tabellendaten als "computed" berechnen, damit sich die favorisierten oder gelöschten Katzen URLs reaktiv aktualisieren.
 
 ---
 
