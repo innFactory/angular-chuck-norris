@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { ChucksJoke } from '../../../../models/favourite-chuck-joke';
+import { JokeData } from '../../../../models/joke-data';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FavouriteChuckJokesSevice {
-  private data: ChucksJoke[] = [];
+  private data: JokeData[] = [];
   private nextId: number = 1;
 
   public add(jokeText: string) {
-    const joke: ChucksJoke = {
+    const joke: JokeData = {
       id: this.nextId++,
       text: jokeText,
     };
@@ -23,7 +23,7 @@ export class FavouriteChuckJokesSevice {
     }
   }
 
-  public getAllJokes(): ChucksJoke[] {
+  public getAllJokes(): JokeData[] {
     return this.data;
   }
 }

@@ -1,5 +1,5 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { ChucksJoke } from '../../../../models/favourite-chuck-joke';
+import { JokeData } from '../../../../models/joke-data';
 
 @Injectable({
   providedIn: 'root',
@@ -8,12 +8,12 @@ import { ChucksJoke } from '../../../../models/favourite-chuck-joke';
  * IMPORTANT: Only visit component, from challenge Ⅳ.Ⅴ.
  */
 export class FavouriteChuckJokesSignalService {
-  private data = signal<ChucksJoke[]>([]);
+  private data = signal<JokeData[]>([]);
   public $data = computed(() => this.data());
   private nextId: number = 1;
 
   public add(jokeText: string) {
-    const joke: ChucksJoke = {
+    const joke: JokeData = {
       id: this.nextId++,
       text: jokeText,
     };
@@ -24,12 +24,12 @@ export class FavouriteChuckJokesSignalService {
     this.data.update((actual) => actual.filter((joke) => joke.id !== id));
   }
 
-  public getAll(): ChucksJoke[] {
+  public getAll(): JokeData[] {
     return this.data();
   }
 
   // Ignore method until challenge Ⅵ.
-  public set(data: ChucksJoke[]) {
+  public set(data: JokeData[]) {
     this.data.set(data);
   }
 }
