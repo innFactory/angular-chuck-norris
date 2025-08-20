@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ChucksJoke } from '../../models/favourite-chuck-joke';
-import { FavouriteChuckJokesSignalService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-signal-service';
+import { FavouriteChuckJokesSignalService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-signal-service/favourite-chuck-jokes-signal-service';
 import { FirestoreChuckJokes, JokeDatabaseService } from '../../shared/services/joke-database-service/joke-database-service';
 import { AuthService } from '../auth/auth-service';
 import { AuthenticationModalService } from '../auth/authentication-modal-service';

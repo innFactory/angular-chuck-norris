@@ -1,5 +1,5 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { ChucksJoke } from '../../../models/favourite-chuck-joke';
+import { ChucksJoke } from '../../../../models/favourite-chuck-joke';
 
 @Injectable({
   providedIn: 'root',

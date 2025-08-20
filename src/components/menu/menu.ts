@@ -5,7 +5,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AuthService } from '../../security/auth/auth-service';
 import { AuthenticationModalService } from '../../security/auth/authentication-modal-service';
 import { AuthenticationOptions } from '../../security/auth/authentication-modal/authentication-modal';
-import { FavouriteChuckJokesSignalService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-signal-service';
+import { FavouriteChuckJokesSignalService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-signal-service/favourite-chuck-jokes-signal-service';
 
 @Component({
   selector: 'app-menu',
