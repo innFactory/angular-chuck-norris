@@ -4,7 +4,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
-import { FavouritesTableRow } from '../../models/favourites-table-row';
+import { JokeTableRow } from '../../models/joke-table-row';
 import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-service/favourite-chuck-jokes-service';
 
 @Component({
@@ -17,7 +17,7 @@ export class JokesTable {
   private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
   private snackbarService = inject(MatSnackBar);
   protected displayedColumns: string[] = ['id', 'joke', 'creator', 'action'];
-  protected tableData: FavouritesTableRow[] = [];
+  protected tableData: JokeTableRow[] = [];
 
   constructor() {
     this.updateChucksJokesTableData();
@@ -27,7 +27,7 @@ export class JokesTable {
     const favouriteChuckJokes = this.favouriteChuckJokesSevice.getAllJokes();
 
     favouriteChuckJokes.forEach((favourite) => {
-      const row: FavouritesTableRow = {
+      const row: JokeTableRow = {
         id: favourite.id,
         joke: favourite.text,
         creator: 'Chuck',
