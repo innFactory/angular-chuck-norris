@@ -3,17 +3,5 @@
   width: inherit;
   display: flex;
   flex-direction: column;
-  align-items: end;
-  gap: var(--var-spacing-6);
-
-  table {
-    img {
-      margin: var(--var-spacing-6);
-      height: calc(2 * var(--var-size-15));
-    }
-  }
-
-  .button-refresh {
-    width: calc(2 * var(--var-size-15));
-  }
+  gap: var(--var-spacing-12);
 }
