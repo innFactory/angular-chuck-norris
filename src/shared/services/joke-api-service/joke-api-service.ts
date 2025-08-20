@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { URL_CHUCK_NORRIS_API } from '../../../app/app.constants';
-import { ChuckNorrisJoke } from '../../../models/chuck-norris-joke';
+import { ApiResponseChuckJoke } from '../../../models/api-response-chuck-joke';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,7 @@ import { ChuckNorrisJoke } from '../../../models/chuck-norris-joke';
 export class JokeApiService {
   private httpClientService = inject(HttpClient);
 
-  public get(): Observable<ChuckNorrisJoke> {
-    return this.httpClientService.get<ChuckNorrisJoke>(URL_CHUCK_NORRIS_API);
+  public get(): Observable<ApiResponseChuckJoke> {
+    return this.httpClientService.get<ApiResponseChuckJoke>(URL_CHUCK_NORRIS_API);
   }
 }
