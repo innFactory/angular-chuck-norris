@@ -311,32 +311,42 @@ Du hast es vielleicht schon erraten 😄.. Im Anschluss wirst du analog zur Witz
 
 ### Ⅵ.Ⅰ. Übersicht
 
-Die Angular Chuck Norris Webapp verfügt bereits über weitreichende Features! Es sind zwei externe online APIs angebunden. Auf der Startseite werden Chuck Norris selbst erfundenen Kampfkünste dargestellt 😎. Es gibt die Möglichkeit Witze und Katzen zu favorisieren und zu löschen. Sogar eigene Witze können hinzugefügt werden. Durch die reaktive Programmierung werden die Änderungen unmittelbar in den Tabellen aktualisiert und durch die Verwendung von Services auf die von überall aus zugregriffen werden kann, folgst du den Best Practices der Modularisierung.
+Die Angular Chuck Norris Webapp verfügt bereits über weitreichende Features! Du hast bereits zwei externe online APIs angebunden. Auf der Startseite werden Chuck Norris selbst erfundenen Kampfkünste dargestellt 😎. Es gibt die Möglichkeit Witze und Katzen zu favorisieren und zu löschen. Sogar eigene Witze können nun von dir hinzugefügt werden. Durch die reaktive Programmierung werden die Änderungen unmittelbar in den Tabellen aktualisiert. Durch die Verwendung von Services auf die von überall aus zugregriffen werden kann, folgst du den Best Practices der Modularisierung!
 
-Einen großen Nachteil hat unsere App bisher noch. Klickst du den "Aktualiseren" Button im Browser, gehen alle Favorisierten Witze und Katzen verloren. Wie schön wäre es, wenn du über Wochen und Monate die Besten Witze speichern und die Lieste erweitern könntest.
+Einen großen Nachteil hat unsere App bisher noch. Klickst du den "Aktualiseren" Button im Browser, gehen alle favorisierten Witze und Katzen für den Benutzer verloren. Wie schön wäre es, wenn du über Wochen und Monate die Besten Witze speichern und die Liste damit erweitern könntest.
 
-Für einen solchen externen Speicherort verwendet man am Besten eine online Datenbank. Im Folgenden wirst du dich erst in einer Bestehenden Datenbank anmelden. Später wirst du das Projekt mit einer selbsterstellten, kostenosen Google Firebase Datenbank verknüpfen.
+Für einen solchen externen Speicherort verwendet man am Besten eine externe online Datenbank. Im Folgenden wirst du dich erst in einer bereits in der App integrierten Datenbank anmelden. Später wirst du das Projekt mit einer selbsterstellten, kostenosen Google Firebase Datenbank verknüpfen.
 
 ### Ⅵ.Ⅰ. Benutzer hinzufügen
 
-Im Projekt ist bereits eine externe Datenbank in Google Firebase mit Besitzer innFactory GmbH angebunden.
+Im Projekt ist bereits eine externe Datenbank in Google Firebase und Firestore mit Besitzer innFactory GmbH angebunden.
 
-Erstelle dir ganz einfach einen neuen Benutzer und melde dich damit an. Klicke auf den Benutzer Icon im Header und auf Registrieren. Verwende am Besten deine innFactory E-Mail. Im Hintergrund wird ein neuer Benutzer in Firebase angelegt.
+- Sieh dir die Konfiguration gerne an.
+  In der "package.json" sind die `@angular/fire` und `@firebase` angegeben.
+  In der "src/app/app.config.ts" sind die Firebase und Firestore Abhängigkeiten anwendungsweit konfiguriert.
+  In "environments/" ist die Webapp mit dem Firebaseprojekt verknüpft und autorisiert.
+  Im JokeDatabaseService erfolgt schlussendlich der Zugriff.
+- Erstelle dir ganz einfach in der App einen neuen Benutzer und melde dich damit an.
+  Klicke auf den Benutzer Icon im Header und auf Registrieren.
+  Verwende am Besten deine innFactory E-Mail. Im Hintergrund wird ein neuer Benutzer in Firebase angelegt.
+  Merke dir am Besten deine Anmeldedaten.
 
 ### Ⅵ.Ⅱ. Datenbank Synchronisierung
 
 Als nächstes werden wir die Chuck Norris Witze jeweils beim favorisieren an die Datenbank weitergeben.
 
-- In dem Projekt ist bereits ein JokeDatabaseService implementiert. Sieh dir dessen Methoden einmal an.
-- Füge den `add` und `remove` Methoden des bestehenden FavouriteChuckJokesSignalService am Ende einfach die `addJoke` und `removeJoke` Aufrufe des
-  JokeDatabaseService hinzu. Du musst den Witz bzw. die ID natürlich weitergeben.
+- Benutze dazu den JokeDatabaseService
+- Hänge die `add` und `remove` Methodenaufrufe des JokeDatabaseService ohne sie zu verändern einfach denjenigen des FavouriteChuckJokesSignalService am Ende an.
+  Den Witz bzw. die ID in den Methoden musst du natürlich weitergeben.
 - Melde dich erneut über das Benutzer Icon an.
-- Wenn du nun Chuck Norris Witze favorisierst, werden sie auch der Datenbank hinzugefügt.
-- Lade die Seite im Browser neu und melde dich erneut an. Die Witze sollten wieder erscheinen.
+- Wenn du nun Chuck Norris Witze favorisierst, werden sie nun automatisch der Datenbank hinzugefügt.
+- Melde dich nun ab und lade die Seite im Browser neu, sodass die Favoriten verschwinden. Melde dich nun erneut an. Die Witze sollten wieder erscheinen.
 
-Du hast die externe Datenbank erfolgreich angebunden.
+Nicht schlecht! Du hast die bestehende externe Datenbank erfolgreich angebunden 👨‍💻.
 
 ### Ⅵ.Ⅲ. Sicherung eigener Witze
+
+Damit nun auch deine eigenen Witze verewigt werden, kannst du ebenfalls den JokeDatabaseService verwenden. Allerdings muss dieser noch ein bisschen angepasst werden.
 
 Damit nun auch deine eigenen Witze verewigt werden, muss..
 
