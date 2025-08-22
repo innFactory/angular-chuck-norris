@@ -228,6 +228,7 @@ Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klic
 ### Ⅳ.Ⅵ. Hello Signal-Service World
 
 - Erstelle nun auch einen neuen FavouriteOwnJokesSignalService. Die Methoden add, remove und getAll müssen etwas anders implementiert werden. Orientiere dich dabei einfach am FavouriteChuckJokesSignalSevice.
+- Die Methode setFromDatabase() kannst du bis Challenge Ⅵ erstmal ignorieren.
 - Tausche auch den vorherigen Service überall durch den neuen Signal Service aus.
 - Ergänze nun das `tableData` Signal der Favoriten Seite auch mit dem $data Signal aus deinem neuen FavouriteOwnJokesSignalService.
 
@@ -346,17 +347,20 @@ Nicht schlecht! Du hast die bestehende externe Datenbank erfolgreich angebunden 
 
 ### Ⅵ.Ⅲ. Sicherung eigener Witze
 
-Damit nun auch deine eigenen Witze verewigt werden, kannst du ebenfalls den JokeDatabaseService verwenden. Allerdings muss dieser noch ein bisschen angepasst werden.
+Damit nun auch deine eigenen Witze verewigt werden, kannst du ebenfalls den JokeDatabaseService in deinem FavouriteOwnJokesSignalService verwenden. Allerdings müssen beide noch ein wenig angepasst werden.
 
-Damit nun auch deine eigenen Witze verewigt werden, muss..
+- Kopiere die Methode setFromDatabase() aus dem FavouriteChuckJokesSignalService in den eigenen. Tausche das C\_ durch O\_ aus.
+- Erweitere die JokeDatabaseService `add` und `remove` Methoden um den Ersteller (=creator). Aktuell wird immer 'Chuck' benutzt. Übergebe ihn in der Methode.
+- Jetzt kannst du den Ersteller auch jeweils richtig im FavouriteOwnJokesSignalService und FavouriteChuckJokesSignalService übergeben.
+- Fast geschafft. Aktuell werden im Projekt bei Anmeldung die Witze geladen und bei Abmeldung wieder entfernt. Das musst du nun auch anpassen.
+  1. Passe die Methode loadJokesFromDatabase() der Login Komponente "src/security/login/" an.
+     Neben der `const chuckJokeTableData: JokeData[]` brauchst du auch eine `const ownJokeTableData: JokeData[]`.
+     Diese Befüllst du dann bei dem Ersteller Namen den du in der JokesTable Komponente verwendet hast.
+     Dann fügst du der Login Komponente du deinen FavouriteOwnJokesSignalService mit `inject()` hinzu.
+     Nun musst du noch die setFromDatabase() ansprechen
+  2. Erweitere die logout() Methode der Menu Komponente und übergebe dem FavouriteOwnJokesSignalService mit `setFromDatabase([])` einen leeren Datensatz.
 
-- neuer database service
-
-- verwendung
-
-- ergänzung bei login
-
-- löschung bei logout
+Fertig! Nun werden auch deine eigenen Witze in der Datenbank gespeichert.
 
 ### Ⅵ.Ⅳ. Eigene Datenbank
 
