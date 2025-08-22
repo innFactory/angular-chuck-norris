@@ -13,9 +13,7 @@ export class JokeDatabaseService {
   private auth = inject(Auth);
 
   public async add(jokeID: string, joke: string): Promise<void> {
-    if (!this.authService.checkAuthenticated()) {
-      throw new Error('User not logged in.');
-    }
+    if (!this.authService.checkAuthenticated()) return;
     if (this.auth.currentUser === null) return;
     const userTableDocumentID = this.auth.currentUser.email;
     const jokesCollection = collection(this.firestore, `users/${userTableDocumentID}/jokes`);
@@ -25,9 +23,7 @@ export class JokeDatabaseService {
   }
 
   public async remove(jokeID: string): Promise<void> {
-    if (!this.authService.checkAuthenticated()) {
-      throw new Error('User not logged in.');
-    }
+    if (!this.authService.checkAuthenticated()) return;
     if (this.auth.currentUser === null) return;
     const userTableDocumentID = this.auth.currentUser.email;
     const jokeDocRef = doc(this.firestore, `users/${userTableDocumentID}/jokes/${jokeID}`);
@@ -35,9 +31,7 @@ export class JokeDatabaseService {
   }
 
   public async getAll(): Promise<FirebaseJokeTableRow[]> {
-    if (!this.authService.checkAuthenticated()) {
-      throw new Error('User not logged in.');
-    }
+    if (!this.authService.checkAuthenticated()) return [];
     if (this.auth.currentUser === null) return [];
     const userTableDocumentID = this.auth.currentUser.email;
     const jokesCollection = collection(this.firestore, `users/${userTableDocumentID}/jokes`);

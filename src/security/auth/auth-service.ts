@@ -47,7 +47,10 @@ export class AuthService {
 
   public checkAuthenticated(): boolean {
     const isAuthenticated = this.auth.currentUser !== null;
-    if (!isAuthenticated) this.snackbarService.open('❌ Nicht in Firebase angemeldet');
+    if (!isAuthenticated) {
+      this.snackbarService.open('❌ Nicht in Firebase angemeldet');
+      throw new Error('User not logged in.');
+    }
     this.isAuthenticated.set(isAuthenticated);
     return isAuthenticated;
   }
