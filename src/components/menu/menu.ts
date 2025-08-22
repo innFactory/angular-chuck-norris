@@ -34,7 +34,7 @@ export class Menu {
   protected async logout() {
     const logoutSuccess = await this.authService.logout();
     if (logoutSuccess) {
-      this.favouriteChuckJokesSignalService.set([]);
+      this.favouriteChuckJokesSignalService.setFromDatabase([]);
     }
   }
 }

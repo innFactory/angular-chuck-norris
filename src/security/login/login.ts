@@ -51,6 +51,6 @@ export class Login {
         chuckJokeTableData.push({ id: data.id, text: data.content });
       }
     });
-    this.favouriteChuckJokesSignalService.set(chuckJokeTableData);
+    this.favouriteChuckJokesSignalService.setFromDatabase(chuckJokeTableData);
   }
 }

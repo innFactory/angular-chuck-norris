@@ -29,8 +29,18 @@ export class FavouriteChuckJokesSignalService {
   }
 
   // Ignore method until challenge Ⅵ.
-  public set(data: JokeData[]) {
+  public setFromDatabase(data: JokeData[]) {
     this.data.set(data);
-    this.nextId = data.length + 1;
+    const setNextIDToHighest = () => {
+      let highest = 0;
+      data.forEach((row) => {
+        let newString = row.id.split('C_')[1];
+        let newNumber: number = parseInt(newString);
+        highest = newNumber > highest ? newNumber : highest;
+      });
+      this.nextId = highest + 1;
+      console.log(this.nextId);
+    };
+    setNextIDToHighest();
   }
 }
