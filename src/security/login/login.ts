@@ -39,13 +39,18 @@ export class Login {
     logInSuccess = await this.authService.login(mail, password);
     if (logInSuccess) {
       this.authenticationModalService.closeModal();
-
-      const databaseJokes: FirebaseJokeTableRow[] = await this.jokeDatabaseService.getAll();
-      const tableJokes: JokeData[] = [];
-      databaseJokes.forEach((data) => {
-        tableJokes.push({ id: data.tableID, text: data.content });
-      });
-      this.favouriteChuckJokesSignalService.set(tableJokes);
+      this.loadJokesFromDatabase();
     }
+  }
+
+  private async loadJokesFromDatabase() {
+    const databaseJokes: FirebaseJokeTableRow[] = await this.jokeDatabaseService.getAll();
+    const chuckJokeTableData: JokeData[] = [];
+    databaseJokes.forEach((data) => {
+      if (data.creator === 'Chuck') {
+        chuckJokeTableData.push({ id: data.id, text: data.content });
+      }
+    });
+    this.favouriteChuckJokesSignalService.set(chuckJokeTableData);
   }
 }
