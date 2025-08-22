@@ -1,4 +1,4 @@
 export type JokeData = {
-  id: number;
+  id: string;
   text: string;
 };

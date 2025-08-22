@@ -1,5 +1,5 @@
 export type JokeTableRow = {
-  id: number;
+  id: string;
   joke: string;
   creator: string;
 };

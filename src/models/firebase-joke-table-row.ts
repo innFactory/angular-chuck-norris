@@ -1,6 +1,6 @@
 export type FirebaseJokeTableRow = {
   id: string;
-  tableID: number;
+  tableID: string;
   content: string;
   creator: string;
 };

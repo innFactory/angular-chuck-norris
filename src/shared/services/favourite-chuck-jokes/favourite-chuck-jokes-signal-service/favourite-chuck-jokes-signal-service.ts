@@ -14,13 +14,13 @@ export class FavouriteChuckJokesSignalService {
 
   public add(jokeText: string) {
     const joke: JokeData = {
-      id: this.nextId++,
+      id: 'C_' + this.nextId++,
       text: jokeText,
     };
     this.data.update((actual) => [...actual, joke]);
   }
 
-  public remove(id: number) {
+  public remove(id: string) {
     this.data.update((actual) => actual.filter((joke) => joke.id !== id));
   }
 
