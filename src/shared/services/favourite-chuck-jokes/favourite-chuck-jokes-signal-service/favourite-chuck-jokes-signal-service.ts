@@ -31,5 +31,6 @@ export class FavouriteChuckJokesSignalService {
   // Ignore method until challenge Ⅵ.
   public set(data: JokeData[]) {
     this.data.set(data);
+    this.nextId = data.length + 1;
   }
 }
