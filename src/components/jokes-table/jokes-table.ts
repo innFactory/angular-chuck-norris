@@ -16,7 +16,7 @@ import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck
 export class JokesTable {
   private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
   private snackbarService = inject(MatSnackBar);
-  protected displayedColumns: string[] = ['id', 'joke', 'creator', 'action'];
+  protected displayedColumns: string[] = ['id', 'content', 'creator', 'action'];
   protected tableData: JokeTableRow[] = [];
 
   constructor() {
@@ -29,7 +29,7 @@ export class JokesTable {
     favouriteChuckJokes.forEach((favourite) => {
       const row: JokeTableRow = {
         id: favourite.id,
-        joke: favourite.text,
+        content: favourite.text,
         creator: 'Chuck',
       };
       this.tableData.push(row);
