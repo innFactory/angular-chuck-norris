@@ -1,4 +1,5 @@
 import { computed, Injectable, signal } from '@angular/core';
+import { CHUCK_JOKES_PREFIX } from '../../../../app/app.constants';
 import { JokeData } from '../../../../models/joke-data';
 
 @Injectable({
@@ -14,9 +15,10 @@ export class FavouriteChuckJokesSignalService {
 
   public add(jokeText: string) {
     const joke: JokeData = {
-      id: 'C_' + this.nextId++,
+      id: CHUCK_JOKES_PREFIX + this.nextId,
       text: jokeText,
     };
+    this.nextId += 1;
     this.data.update((actual) => [...actual, joke]);
   }
 
@@ -34,7 +36,7 @@ export class FavouriteChuckJokesSignalService {
     const setNextIDToHighest = () => {
       let highest = 0;
       data.forEach((row) => {
-        let newString = row.id.split('C_')[1];
+        let newString = row.id.split(CHUCK_JOKES_PREFIX)[1];
         let newNumber: number = parseInt(newString);
         highest = newNumber > highest ? newNumber : highest;
       });
