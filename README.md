@@ -349,8 +349,8 @@ Nicht schlecht! Du hast die bestehende externe Datenbank erfolgreich angebunden 
 
 Damit nun auch deine eigenen Witze verewigt werden, kannst du ebenfalls den JokeDatabaseService in deinem FavouriteOwnJokesSignalService verwenden. Allerdings müssen beide noch ein wenig angepasst werden.
 
-- Kopiere die Methode setFromDatabase() aus dem FavouriteChuckJokesSignalService in den eigenen. Tausche die Kontante `CHUCK_JOKES_PREFIX` jeweils durch `OWN_JOKES_PREFIX` aus.
-- Aktuell wird immer 'Chuck' als Ersteller benutzt. Erweitere die JokeDatabaseService Methoden `add` und `remove` um einen Parameter Ersteller (creator) und benutze diesen stattdessen.
+- Kopiere die Methode setFromDatabase() aus dem FavouriteChuckJokesSignalService in den eigenen. Tausche die Kontante `PREFIX_ID_CHUCK_JOKES` jeweils durch `PREFIX_ID_OWN_JOKES` aus.
+- Aktuell wird immer `CREATOR_CHUCK` als Ersteller benutzt. Erweitere die JokeDatabaseService Methoden `add` und `remove` um einen Parameter Ersteller (creator) und benutze diesen stattdessen.
 - Jetzt kannst du den Ersteller auch jeweils passend im FavouriteOwnJokesSignalService und FavouriteChuckJokesSignalService übergeben.
 - Fast geschafft. Aktuell werden im Projekt bei Anmeldung die Witze geladen und bei Abmeldung wieder entfernt. Das musst du nun auch anpassen.
   1. Passe die Methode loadJokesFromDatabase() der Login Komponente "src/security/login/" an.
