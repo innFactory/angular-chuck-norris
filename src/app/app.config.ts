@@ -8,7 +8,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { provideRouter } from '@angular/router';
 import { initializeApp } from 'firebase/app';
-import { environment } from '../../environments/environment';
+import { environment } from '../environments/environment';
 import { routes } from './app.routes';
 
 const googleFirebaseProviders = [provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth())];
