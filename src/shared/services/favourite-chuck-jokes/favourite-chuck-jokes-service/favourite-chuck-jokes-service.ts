@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CHUCK_JOKES_PREFIX } from '../../../../app/app.constants';
+import { PREFIX_ID_CHUCK_JOKES } from '../../../../app/app.constants';
 import { JokeData } from '../../../../models/joke-data';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class FavouriteChuckJokesSevice {
 
   public add(jokeText: string) {
     const joke: JokeData = {
-      id: CHUCK_JOKES_PREFIX + this.nextId,
+      id: PREFIX_ID_CHUCK_JOKES + this.nextId,
       text: jokeText,
     };
     this.nextId += 1;

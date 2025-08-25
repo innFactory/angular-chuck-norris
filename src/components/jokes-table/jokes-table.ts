@@ -4,6 +4,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
+import { CREATOR_CHUCK } from '../../app/app.constants';
 import { JokeTableRow } from '../../models/joke-table-row';
 import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-service/favourite-chuck-jokes-service';
 
@@ -30,7 +31,7 @@ export class JokesTable {
       const row: JokeTableRow = {
         id: favourite.id,
         content: favourite.text,
-        creator: 'Chuck',
+        creator: CREATOR_CHUCK,
       };
       this.tableData.push(row);
     });

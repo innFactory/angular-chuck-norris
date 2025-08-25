@@ -1,6 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import { collection, deleteDoc, doc, Firestore, getDocs, setDoc } from '@angular/fire/firestore';
+import { CREATOR_CHUCK } from '../../../app/app.constants';
 import { FirebaseJokeTableRow } from '../../../models/firebase-joke-table-row';
 import { AuthService } from '../../../security/auth/auth-service';
 
@@ -17,7 +18,7 @@ export class JokeDatabaseService {
     if (this.auth.currentUser === null) return;
     const userTableDocumentID = this.auth.currentUser.email;
     const jokesCollection = collection(this.firestore, `users/${userTableDocumentID}/jokes`);
-    const jokeData = { content: joke, creator: 'Chuck' };
+    const jokeData = { content: joke, creator: CREATOR_CHUCK };
     const jokeDocRef = doc(jokesCollection, jokeID);
     await setDoc(jokeDocRef, jokeData);
   }

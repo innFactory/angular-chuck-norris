@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { CREATOR_CHUCK } from '../../app/app.constants';
 import { FirebaseJokeTableRow } from '../../models/firebase-joke-table-row';
 import { JokeData } from '../../models/joke-data';
 import { FavouriteChuckJokesSignalService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-signal-service/favourite-chuck-jokes-signal-service';
@@ -47,7 +48,7 @@ export class Login {
     const databaseJokes: FirebaseJokeTableRow[] = await this.jokeDatabaseService.getAll();
     const chuckJokeTableData: JokeData[] = [];
     databaseJokes.forEach((data) => {
-      if (data.creator === 'Chuck') {
+      if (data.creator === CREATOR_CHUCK) {
         chuckJokeTableData.push({ id: data.id, text: data.content });
       }
     });
