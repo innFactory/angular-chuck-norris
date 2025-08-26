@@ -441,9 +441,11 @@ Fertig! Du hast deine eigene Datenbank mit Benutzer Authentifizierung richtig er
 
 ### Ⅵ.Ⅵ. Katzen-Transferaufgabe
 
-Kommen wir nun zur Letzen Challenge.
+In dieser letzten Challenge wirst du einen neuen Service erstellen, der für die Verwaltung einer Katzen-Datenbanktabelle verantwortlich ist. Dieser Service wird bei der Benutzeranmeldung geladen und beim Logout gelöscht. Hier sind die Details zu den erforderlichen Schritten.
 
-- Erstellen cats tabelle in Firebase
+- Erstelle einen neuen Service CatDatabaseService. Du kannst den Code des JokeDatabaseServices hierfür einfach kopieren.
+- Anstatt der jokes Tabelle verwendest du jedoch eine "cats" Tabelle. Anstatt der jokeID jeweils eine catID.
+- Tausche auch die übrigen Parameternamen so aus, dass sie zum CatDatabaseService stimmen.
 
 - neuer cat database service
 
