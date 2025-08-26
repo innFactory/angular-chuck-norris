@@ -21,8 +21,4 @@ export const routes: Routes = [
     path: 'favourites',
     component: Favourites,
   },
-  // {
-  //   path: '**',
-  //     component: ... , // Add not-found page
-  // },
 ];
