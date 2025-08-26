@@ -12,6 +12,6 @@ export class Home implements OnInit {
     Always called on component creation. All angular components have various lifecycle methods.
   */
   public ngOnInit() {
-    console.log('Willkommen aus der Konsole!');
+    console.log('Willkommen in den DevTools!');
   }
 }
