@@ -437,20 +437,20 @@ Damit nun auch die Datenbank-Speicherung funktioniert, musst du in Firebase noch
 
 - Klicke auf den "Veröffentlichen" Button
 
-Fertig! Du hast deine eigene Datenbank mit Benutzer Authentifizierung richtig erstellt und konfiguriert 🎉. Teste es direkt einmal aus. Nun solltest du eigene Witze und Chuck Norris Witze ganz einfach favorisieren können, dich ab- und anmelden und sie erscheinen erneut. Chuck Norris ist stolz auf dich .. und die innFactory auch 😎!
+Fertig! Du hast deine eigene Datenbank mit Benutzer Authentifizierung richtig erstellt und konfiguriert 🎉. Teste es direkt einmal aus. Nun solltest du eigene Witze und Chuck Norris Witze ganz einfach favorisieren können, dich ab- und anmelden und sie erscheinen erneut.
 
 ### Ⅵ.Ⅵ. Katzen-Transferaufgabe
 
 In dieser letzten Challenge wirst du einen neuen Service erstellen, der für die Verwaltung einer Katzen-Datenbanktabelle verantwortlich ist. Dieser Service wird bei der Benutzeranmeldung geladen und beim Logout gelöscht. Hier sind die Details zu den erforderlichen Schritten.
 
+- Erstelle unter [src/models/](src/models/) einen neuen Typen FirebaseCatTableRow. Er bekommt die Attribute "id" und "url" jeweils vom Typ "string".
 - Erstelle einen neuen Service CatDatabaseService. Du kannst den Code des JokeDatabaseServices hierfür einfach kopieren.
-- Anstatt der jokes Tabelle verwendest du jedoch eine "cats" Tabelle. Anstatt der jokeID jeweils eine catID.
-- Tausche auch die übrigen Parameternamen so aus, dass sie zum CatDatabaseService stimmen.
+  - Anstatt der "jokes" Tabelle verwendest du eine "cats" Tabelle, anstatt der jokeID jeweils eine catID.
+  - In der "add()" Methode benötigst du nur noch die Parameter "catID" und "url" vom Typ string. "catData" hat nur das Felde "url", das du übergibst.
+  - Verwende FirebaseCatTableRow im CatDatabaseService anstelle von FirebaseJokeTableRow. Tausche auch die übrigen Parameternamen so aus, sodass sie zum CatDatabaseService passen.
+  - Passe auch die Befüllung des "cats" Arrays in der "getAll()" Methode an.
+- Ergänze nun die "add()" und "remove()" Methoden des FavouriteCatsService um den Aufruf des CatDatabaseService. Füge eine Methode "setFromDatabase()" hinzu und verwende hier "PREFIX_ID_CATS".
+- Damit die Katzen-URLs nach der Anmeldung geladen werden, fügst du der "login()" Methode der Login Komponente eine neue Methode "loadCatsFromDatabase()" hinzu. Die du bei erfolgreicher Anmeldung aufrufst.
+- Bei Abmeldung soll die Katzentabelle gelöscht werden. Setze die Daten des FavouriteCatsSignalService in der "logout()" Methode der Menu Kommponente auf ein leerees Array.
 
-- neuer cat database service
-
-- laden bei login
-
-- löschen bei logout
-
-Glückwunsch! Du hast alle Challenges gemeistert.
+Glückwunsch! Du hast alle Challenges gemeistert. Chuck Norris ist stolz auf dich .. und die innFactory auch 😎!
