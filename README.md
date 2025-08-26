@@ -399,7 +399,7 @@ Damit nun auch die Datenbank-Speicherung funktioniert, musst du in Firebase noch
 
 - Navigiere im Firebase Hauptmenü im Reiter links nach Entwickeln -> Firestore Database und klicke auf den "Datenbank erstellen" Button. Wähle einen Standort in Europa.
 - Wähle die Option "Im Produktionsmodus starten" und bestätige mit dem "Erstellen" Button.
-- Navigiere nun im Reiter oben auf Regeln. Du siehst bereits vor eingestellte Zugriffsregeln die du entfernst. Folgende Regeln kannst du komplett kopieren und einfügen. Du musst nichts weiter anpassen.
+- Navigiere nun im Reiter oben auf Regeln. Du siehst bereits voreingestellte Zugriffsregeln die du nun entfernst. Folgende Regeln kannst du komplett kopieren und einfügen. Du musst nichts weiter anpassen.
 
   ```
   rules_version = '1';
@@ -437,9 +437,9 @@ Damit nun auch die Datenbank-Speicherung funktioniert, musst du in Firebase noch
 
 - Klicke auf den "Veröffentlichen" Button
 
-Fertig! Du hast deine eigene Datenbank mit Benutzer Authentifizierung richtig erstellt und konfiguriert 🎉. Teste es direkt einmal aus. Nun solltest du eigene Witze und Chuck Norris Witze ganz einfach favorisieren können, dich ab- und anmelden und sie erscheinen erneut. Chuck Norris ist stolz auf dich .. und die innFactory auch 😎.
+Fertig! Du hast deine eigene Datenbank mit Benutzer Authentifizierung richtig erstellt und konfiguriert 🎉. Teste es direkt einmal aus. Nun solltest du eigene Witze und Chuck Norris Witze ganz einfach favorisieren können, dich ab- und anmelden und sie erscheinen erneut. Chuck Norris ist stolz auf dich .. und die innFactory auch 😎!
 
-### Ⅵ.Ⅴ. Katzen-Transferaufgabe
+### Ⅵ.Ⅵ. Katzen-Transferaufgabe
 
 Kommen wir nun zur Letzen Challenge.
 
