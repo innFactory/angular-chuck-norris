@@ -212,8 +212,8 @@ Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass irg
 - Entferne die aktuelle `tableData` Zuweisung und erstelle Sie als computed. Hier eine Vorlage dafür:
 
   ```
-  protected tableData = computed<FavouritesTableRow[]>(() => {
-    const data: FavouritesTableRow[] = [];
+  protected tableData = computed<JokeTableRow[]>(() => {
+    const data: JokeTableRow[] = [];
 
     // Hier musst du nun data mit dem Signal $data aus dem FavouriteChuckJokesSignalSevice befüllen
 
@@ -349,30 +349,95 @@ Nicht schlecht! Du hast die bestehende externe Datenbank erfolgreich angebunden 
 
 Damit nun auch deine eigenen Witze verewigt werden, kannst du ebenfalls den JokeDatabaseService in deinem FavouriteOwnJokesSignalService verwenden. Allerdings müssen beide noch ein wenig angepasst werden.
 
-- Kopiere die Methode setFromDatabase() aus dem FavouriteChuckJokesSignalService in den eigenen. Tausche die Kontante `PREFIX_ID_CHUCK_JOKES` jeweils durch `PREFIX_ID_OWN_JOKES` aus.
-- Aktuell wird immer `CREATOR_CHUCK` als Ersteller benutzt. Erweitere die JokeDatabaseService Methoden `add` und `remove` um einen Parameter Ersteller (creator) und benutze diesen stattdessen.
+- Hänge die `add` und `remove` Methodenaufrufe des JokeDatabaseService auch an diejenigen des FavouriteOwnJokesSignalService
+- Aktuell wird immer `CREATOR_CHUCK` als Ersteller benutzt. Erweitere die JokeDatabaseService Methode `add` um einen Parameter Ersteller (creator) und benutze diesen stattdessen.
 - Jetzt kannst du den Ersteller auch jeweils passend im FavouriteOwnJokesSignalService und FavouriteChuckJokesSignalService übergeben.
-- Fast geschafft. Aktuell werden im Projekt bei Anmeldung die Witze geladen und bei Abmeldung wieder entfernt. Das musst du nun auch anpassen.
-  1. Passe die Methode loadJokesFromDatabase() der Login Komponente "src/security/login/" an.
+- Fast geschafft. Aktuell werden im Projekt bei Anmeldung die Witze geladen und bei Abmeldung wieder entfernt. Das musst du nun für die eigenen Witze auch anpassen.
+  1. Kopiere die Methode setFromDatabase() aus dem FavouriteChuckJokesSignalService in den eigenen. Tausche die Kontante `PREFIX_ID_CHUCK_JOKES` jeweils durch `PREFIX_ID_OWN_JOKES` aus.
+  2. Passe die Methode loadJokesFromDatabase() der Login Komponente "src/security/login/" an.
      Neben der `const chuckJokeTableData: JokeData[]` brauchst du auch eine `const ownJokeTableData: JokeData[]`.
-     Diese Befüllst du dann bei dem Ersteller Namen den du in der JokesTable Komponente verwendet hast.
-     Dann fügst du der Login Komponente du deinen FavouriteOwnJokesSignalService mit `inject()` hinzu.
-     Nun musst du noch die setFromDatabase() ansprechen
-  2. Erweitere die logout() Methode der Menu Komponente und übergebe dem FavouriteOwnJokesSignalService mit `setFromDatabase([])` einen leeren Datensatz.
+     Diese Befüllst du dann beim Ersteller `CREATOR_OWN`.
+     Im Anschluss fügst du der Login Komponente du deinen FavouriteOwnJokesSignalService mit `inject()` hinzu.
+     Nun musst du noch dessen setFromDatabase() ansprechen und die `ownJokeTableData` übergeben.
+  3. Erweitere die `logout` Methode der Menu Komponente und setze bei erfolgreichem Lgout die Witze des FavouriteOwnJokesSignalService mit `setFromDatabase([])` auf einen leeren Datensatz.
 
-Fertig! Nun werden auch deine eigenen Witze in der Datenbank gespeichert.
+Fertig! Nun werden auch deine eigenen Witze in der Datenbank gespeichert. Teste es gleich einmal aus. Melde dich wieder ab und lade die Seite im Browser neu, sodass die Favoriten verschwinden. Melde dich nun erneut an. Deine eigenen Witze sollten nun auch wieder erscheinen. Auch das Löschen sollte funktionieren.
 
 ### Ⅵ.Ⅳ. Eigene Datenbank
 
-Jetzt wird es tricky.
+Bisher bist du nur mit der _Frontend_ Entwicklung in Berührung gekommen und dem anbinden einer externen API. Im Folgenden wirst du ein eigenes Google Firebase Backend Projekt erstellen und an die Angular Chuck Norris Webapp anbinden.
 
-- Erstellen FirebaseProjekt
+- Melde dich auf [https://console.firebase.google.com/](https://console.firebase.google.com/) mit einem bestehenden Google Konto an, oder erstelle ein neues Google Konto mit deiner innFactory E-Mail.
+- Klicke auf "Neues Firebase-Projekt erstellen" und gib z.B. "angular-chuck-norris" als Projektnamen ein. Du musst weder Gemini noch das Entwicklerprogramm oder Google Analytics aktivieren.
+- Navigiere nach Projektübersicht -> Projekteinstellungen -> Allgemein. Unter Meine Apps klickst du auf das "</>" Symbol für Web um Firebase zu einer Webapp hinzuzufügen.
+- Benutze als Alias auch den Projektnamen "angular-chuck-norris" und klicke auf App registrieren.
+- Du erhälst eine Übersicht zum Setup. Das wurde aber schon fertig eingestellt. Kopiere dir nur den Inhalt mit folgendem Schema heraus:
+  ```
+    apiKey: '...',
+    authDomain: 'angular-chuck-norris.firebaseapp.com',
+    projectId: 'angular-chuck-norris',
+    storageBucket: 'angular-chuck-norris.firebasestorage.app',
+    messagingSenderId: '...',
+    appId: '...',
+  ```
+  - Füge diesen Inhalt nun in die "src/environments/environment.development.ts" Datei in das `firebase` Attribut ein.
+- Stoppe den laufenden Angular Client im Terminal mit "Cmd + C" oder durch eingabe von "q" + Enter für quit.
+- Starte den Client neu mit `npm start`
+- In der Browser Konsole sollten keine Fehler wie z.B. 'auth/invalid-api-key' erscheinen.
 
-- Einstellungen in environment.ts
+Nun ist die App erfolgreich mit Firebase verbunden. Beim Registrieren oder Anmelden erhältst du aber noch einen "❌ ... fehlgeschlagen" Hinweis.
 
-- Tabelle users hinzufügen
+### Ⅵ.Ⅴ. Datenbank Konfiguration
 
-- Testen Chuck Norris Witze & Eigene
+Die Authentifizierung per E-Mail und Passwort muss im Firebase Projekt aktiviert werden.
+
+- Navigiere im Firebase Hauptmenü im Reiter links nach Entwickeln -> Authentication und klicke auf den "Los gehts" Button.
+- Bei Anmeldemethode aktivierst du E-Mail-Adresse/Passwort. "E-Mail-Link" kannst du deaktiviert lassen. Bestätige die Konfiguration mit Speichern.
+- Jetzt sollte die Registrierung und Anmeldung unmittelbar funktionieren. Unter Authentication -> Nutzer kannst du den neu erstellten Benutzer sehen.
+
+Damit nun auch die Datenbank-Speicherung funktioniert, musst du in Firebase noch Firestore Datenbanken aktivieren.
+
+- Navigiere im Firebase Hauptmenü im Reiter links nach Entwickeln -> Firestore Database und klicke auf den "Datenbank erstellen" Button. Wähle einen Standort in Europa.
+- Wähle die Option "Im Produktionsmodus starten" und bestätige mit dem "Erstellen" Button.
+- Navigiere nun im Reiter oben auf Regeln. Du siehst bereits vor eingestellte Zugriffsregeln die du entfernst. Folgende Regeln kannst du komplett kopieren und einfügen. Du musst nichts weiter anpassen.
+
+  ```
+  rules_version = '1';
+
+  service cloud.firestore {
+    match /databases/{database}/documents {
+
+      // Only read, create for signed in users
+      match /users/{userID} {
+        allow delete: if false;
+        allow read, create: if isSignedIn() && isAllowedToChangeTable(userID);
+
+        // Only read, create, delete in table with userID equals email
+        match /jokes/{jokeID} {
+          allow delete, create, read, update: if isSignedIn() && isAllowedToChangeTable(userID);
+        }
+
+        // Only read, create, delete in table with userID equals email
+        match /cats/{catID} {
+          allow delete, create, read, update: if isSignedIn() && isAllowedToChangeTable(userID);
+        }
+      }
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAllowedToChangeTable(userID) {
+      return request.auth.token.email == userID;
+    }
+
+  }
+  ```
+
+- Klicke auf den "Veröffentlichen" Button
+
+Fertig! Du hast deine eigene Datenbank mit Benutzer Authentifizierung richtig erstellt und konfiguriert 🎉. Teste es direkt einmal aus. Nun solltest du eigene Witze und Chuck Norris Witze ganz einfach favorisieren können, dich ab- und anmelden und sie erscheinen erneut. Chuck Norris ist stolz auf dich .. und die innFactory auch 😎.
 
 ### Ⅵ.Ⅴ. Katzen-Transferaufgabe
 
