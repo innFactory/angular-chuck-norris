@@ -121,53 +121,57 @@ CSS und SCSS Guide
 
 Geschafft! Das war aber eine Menge Input. Jetzt wird programmiert! Mache mit der [Ⅲ. Challenge](#ⅲ-challenge-️) weiter.
 
+Sonstige Tipps
+
+Alles speichern
+
+Client neu starten
+
+Globale Suche
+
+VSCode Voreinstellungen
+
 ---
 
 # Ⅲ. Challenge 🎖️ - Los geht's!
 
 ### Ⅲ.Ⅰ. Chuck Norris macht keine Fehler
 
-Im Gegensatz zu Chuck Norris, dürfen wir Entwickler auch mal Fehler machen. Versuche im Browser eine Seite zu öffnen die es in unserer Webapp noch nicht gibt z.B. [http://localhost:4200/diese-seite-gibts-ganz-bestimmt](http://localhost:4200/diese-seite-gibts-ganz-bestimmt). Was siehst du? Eine leere Seite nur mit Header und Footer? Wie langweilig! In unserem `src/pages/` Ordner fehlt noch eine Not-Found Seite.
+Im Gegensatz zu Chuck Norris, machen wir Entwickler manchmal Fehler..
 
-- Sieh dir einmal bekannte Not-Found Seiten aus dem Internet an:
-  - https://www.innfactory.de/jkajejsd
-  - https://www.youtube.com/awefawe
-  - https://www.amazon.com/ajsdsfl/jfasldk
-  - https://www.chess.com/kfajes
+- Versuche im Browser eine Seite zu öffnen die es in unserer Webapp noch nicht gibt z.B. [http://localhost:4200/diese-seite-gibts-ganz-bestimmt](http://localhost:4200/diese-seite-gibts-ganz-bestimmt).
+- Was siehst du? Eine leere Seite nur mit Header und Footer? Wie langweilig! In unserem [src/pages/](src/pages/) Ordner fehlt noch eine Not-Found Seite.
 - In Angular erstellst du neue Komponenten am Besten aus der Kommandozeile.
-- Öffne die Konsole und führe nun den Befehl `npx ng generate component ../pages/not-found` aus. Im src/pages Ordner sollte nun eine neue Angular Komponente NotFoundComponent erscheinen.
-- Angular kommt standardmäßig mit einem WebApp Pfadaufbau. Dieser kann in der Datei [app.routes.ts](./src/app/app.routes.ts) angepasst werden.
-
-  Füge nun in in der Kommentierten Stelle die Not-Found Komponente hinzu. Vergesse nicht sie wie die anderen Seiten zu importieren.
-
-  ```bash
-    // {
-    //   path: '**',
-    //     component: ... , // Add error page
-    // },
-  ```
+- Öffne die Konsole und führe nun den Befehl `npx ng generate component ../pages/not-found-page` aus. Im [src/pages/](src/pages/) Ordner sollte nun eine neue Angular Komponente "NotFoundPage" erscheinen.
+- Angular kommt standardmäßig mit einer Routing Bibliothek. Diese ist in der Datei [app.routes.ts](src/app/app.routes.ts) konfiguriert.
+- Füge als neuen Pfad die neue "NotFoundPage" Komponente hinzu. Beim Pfad verwendest du \*\*. Das steht beim Angular Routing für alle nicht-angegebenen Pfade.
+- Teste alles erneut aus
 
 ### Ⅲ.Ⅱ. Schönheit ist nicht alles - aber auch wichtig
 
 > "Es gibt keinen Schönheitswettbewerb mit Chuck Norris, denn alle wissen, dass er der einzige Gewinner wäre."
 
-Passe nun die Not Found Komponente an und gestalte Sie mit HTML und CSS. Besuche nochmal die Seite. Sei gern kreativ und lasse dir etwas mit Bildern, Text oder sogar CSS Keyframe Animationen einfallen.
+- Sieh dir einmal andere Not-Found Seiten aus dem Internet an z.B.
+  - https://www.innfactory.de/jkajejsd
+  - https://www.youtube.com/awefawe
+  - https://www.amazon.com/ajsdsfl/jfasldk
+  - https://www.chess.com/kfajes
+- Passe nun die "NotFoundPage" an und gestalte Sie mit HTML und CSS aus. Hier sind deiner Kreativität keine Grenzen gefragt. Lasse dir gerne mit Verwendung von Bildern, Text oder sogar Animationen etwas einfallen.
 
-Glückwunsch! Du hast soeben deine erste nützliche Komponente in Angular entwickelt. Kannst du Chuck Norris aber auch im Witze-Duell schlagen?
+Glückwunsch! Du hast soeben dein erste Angular Komponente entwickelt. Kannst du Chuck Norris aber auch im Witze-Duell schlagen❔
 
 ---
 
 # Ⅳ. Challenge 🎖️ - Lieblingswitz
 
-### Ⅳ.Ⅰ. Ansehen
+### Ⅳ.Ⅰ. Übersicht
 
-In der Folgenden Challenge wirst du das Konzept der Angular Services am Beispiel des bereits implementierten FavouriteChuckJokesSevice kennenlernen. Im Anschluss erstellst du eine Komponente, mit der du neue, eigene Witze eingeben kannst. Dabei kommst du auch mit der Angular Komponenten Bibliothek "Angular Material" in Berührung. Später wirst du auch den Verwendungszweck von Angular Signals verstehen, indem du wieder Witze aus der Tabelle löschst.
+In der Folgenden Challenge lernst du das Konzept der Angular Services am Beispiel des bereits bestehenden "FavouriteChuckJokesSevice" kennen. Im Anschluss erstellst du eine Komponente, mit der du eigene Witze eingeben kannst. Dabei kommst du auch mit der Bibliothek "Angular Material" in Berührung. Später wirst du auch über den Verwendungszweck der reaktiven Angular Signals lernen.
 
-- Sieh dir nun die Chuck Norris Witze Favorisieren Funktion einmal an. Gibst du einen Witz ein und klickst auf "FAVORISIEREN", erscheint er in der Favoriten Seite.
+- Sieh dir die Witze Seite einmal an. Gibst du einen Witz ein und klickst auf den "FAVORISIEREN" Button, erscheint er in der Favoriten Seite.
 - Das macht das Global State Management über sogenannte Services in Angular möglich.
-- Sieh dir den Programmcode zur ChuckJokesCard Komponente, zum FavouriteChuckJokesSevice Service und die updateChucksJokeTableData Methode der Favoriten Seite einmal genauer an und versuche ihn zu verstehen.
-
-Die Methode lädt die in FavouriteChuckJokesSevice Service gespeicherten Witze jedes mal bei Öffnen der Favouritesseite in die Tabelle. Probiere es gerne selbst aus und generiere und sammle so viele Chuck Norris Witze wie du willst!
+- Sieh dir den Code zur "ChuckJokesCard" Komponente, zum "FavouriteChuckJokesSevice" Service und die "updateChucksJokeTableData()" Methode der Favoriten Seite genauer an und versuche ihn zu verstehen.
+- Die Methode lädt die in "FavouriteChuckJokesSevice" Service gespeicherten Witze jedes mal bei Öffnen der Favouritesseite in die Tabelle. Probiere es gerne selbst aus indem du neue Chuck Norris Witze lädst und favorisierst.
 
 ### Ⅳ.Ⅱ. Witze-Wettbewerb
 
@@ -225,9 +229,9 @@ Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass irg
 
 Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klick auf den Löschen Button, von selbst. Allerdings werden jetzt die eigenen Witze nicht mehr angezeigt. So gewinnst du leider keinen Wettbewerb.. 🤷‍♂️
 
-### Ⅳ.Ⅵ. Hello Signal-Service World
+### Ⅳ.Ⅵ. Hello World Signal-Service
 
-- Erstelle nun auch einen neuen FavouriteOwnJokesSignalService. Die Methoden add, remove und getAll müssen etwas anders implementiert werden. Orientiere dich dabei einfach am FavouriteChuckJokesSignalSevice.
+- Erstelle einen neuen FavouriteOwnJokesSignalService. Die Methoden "add()", "remove()" und "getAll()" müssen angepasst werden. Orientiere dich dabei am "FavouriteChuckJokesSignalSevice".
 - Die Methode setFromDatabase() kannst du bis Challenge Ⅵ erstmal ignorieren.
 - Tausche auch den vorherigen Service überall durch den neuen Signal Service aus.
 - Ergänze nun das `tableData` Signal der Favoriten Seite auch mit dem $data Signal aus deinem neuen FavouriteOwnJokesSignalService.
