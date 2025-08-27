@@ -84,9 +84,6 @@ Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
   press h + enter to show help
   ```
 
-- Manchmal wirst du beim Entwickeln Syntaxfehler bekommen, die dann live in dieser Konsole angezeigt werden. Normalerweise sollten diese bei Behebung und Speichern
-  auch in der Konsole behoben sein. Es kann jedoch auch helfen den Client mit `q` oder `Ctrl + C` zu beenden und dann neu zu starten.
-
 ### Ⅰ.Ⅶ. Einstieg in die App
 
 Jede Angular Komponente in deiner Webapp besteht aus einem Logik-, einem Struktur- und einem Stylingteil. Fühle dich nicht überfordert von all den verschiedenen Sprachen und Frameworks. Du bekommst eine Schritt für Schritt Einführung in die Angular Welt.
@@ -99,7 +96,7 @@ Jede Angular Komponente in deiner Webapp besteht aus einem Logik-, einem Struktu
   | home.html | Strukturteil in HTML    |
   | home.scss | Stylingteil in SCSS     |
 
-- Schließe das [Angular Einstiegs Tutorial][angular-basic-tutorial] ab. Nimm dir hierfür gerne etwas Zeit ⌛️.
+- Schließe das interaktive [Angular Einstiegs Tutorial][angular-basic-tutorial] im Browser ab. Nimm dir hierfür gerne etwas Zeit ⌛️.
 
 ### Ⅰ.Ⅷ. Kennenlernen mit Chuck Norris
 
@@ -116,43 +113,68 @@ Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der M
 
 ### Ⅱ.Ⅰ. Offiziell ist am Besten - Angular Doku
 
-Für jedes Framework und jede Sprache gibt es eine offiziele Dokumentation, so auch für Angular.
+Für jedes Framework und jede Sprache gibt es eine offiziele Dokumentation. Als Entwickler ist es meist am hilfreichsten, dich in der Doku deiner Sprache auszukennen. Alle Neuerungen und Updates stehen hier immer zuerst.
 
-Bei Angular gibt es sogar ein interaktives Mini-Browser Tutorial. Schließe dieses [Tutorial](https://next.angular.dev/tutorials/learn-angular) ab.
+- Überfliege die offizelle [Angular Doku][angular-overview] und bekomme einen ersten Überblick.
+- Lese zum Einstieg außderdem folgende Angular-Artikel:
+  - [Komponenten][angular-components]
+  - [Dynamischer Text][angular-dynamic-text]
+  - [Benutzerinteraktion][angular-user-input]
+  - [HTML Kontrollfluss][angular-control-flow]
 
-Lese dir zum Einstieg außderdem folgende Angular-Artikel durch.
+### Ⅱ.Ⅱ. Komponenten Bibliothek - Angular Material
 
-- Aufbau der Angular Komponenten: https://next.angular.dev/essentials/components
-- Services
-- Signals
+Angular hat eine eigene UI-Komponenten Bibliothek, die du optional verwenden kannst. Sie ermöglicht dir eine Auswahl an erweiterten Button, Input, Tabellen Komponenten die du einfach einbinden kannst. Angular Material ist im Projekt bereits hinzugefügt und du kannst es einfach verwenden.
 
-### Ⅱ.Ⅱ. Schön muss es sein - Angular Material
+- Sieh dir die verfügbaren [Angular Material Komponenten][angular-material-components] an.
+- Um Angular Material Komponenten zu verwenden sind 3 Schritte wichtig. Hier das [Beispiel der Dokumentation][angular-material-display-a-component].
+  - Der Import über "imports { ... } from 'angular/material/...";
+  - Die Angabe bei "imports: []" im Dekorator.
+  - Die Verwendung im HTML
 
-Angular Material Guide
+### Ⅱ.Ⅲ. Typensicher unterwegs - TypeScript
 
-### Ⅱ.Ⅲ. TypeScript
+TypeScript ist eine von Microsoft entwickelte Programmiersprache, die JavaScript erweitert und statische Typisierung bietet. Angular Anwendungen werden in TypeScript geschrieben. Hier sind einige Vorteil von TypeScript gegenüber JavaScript.
 
-TypeScript Guide
+- Statische Typisierung: Erkenne Fehler zur Entwicklungszeit und definiere Typen für Variablen und Funktionen.
+- Modularität: Teile deinen Code in Module für bessere Struktur und Wartbarkeit.
+- Erweiterte Funktionen: Nutze Interfaces und Enums, um komplexe Datenstrukturen zu modellieren.
+- Überfliege die TypeScript Dokumentation zu den [wichtigsten Datentypen][typescript-everyday-types].
 
-### Ⅱ.Ⅳ. HTML
+### Ⅱ.Ⅳ. Bausteine des Internets - HTML
 
-HTML Guide
+HTML wird verwendet, um die Struktur und den Inhalt von Webseiten zu definieren. Als Markupsprache beschreibt HTML grob zusammengefasst die Eigenschaften und den Aufbau jeder Website.
 
-### Ⅱ.Ⅴ. CSS und SCSS
+- Elemente werden durch Tags definiert. Z.B. ein Button mit dem `<button></button>`-Tag.
+- Attribute: HTML-Elemente können Attribute enthalten. Z.B. ein `<a></a>` Link-Tag mit dem href-Attribut.
+  ```HTML
+    <a href="https://beispiel.de/">Besuche meine Webseite</a>
+  ```
+- Semantische HTML-Elemente wie `<header></header>`, `<footer></footer>`, `<article></article>` und `<section></section>` um Struktur des Inhalts klarer zu machen.
+- Weitere Ressourcen: Du kannst mehr über HTML lernen, indem du die [offizielle MDN-Webdokumentation][mdn-docs-getting-started] besuchst, die detaillierte Informationen und Beispiele bietet.
 
-CSS und SCSS Guide
+### Ⅱ.Ⅴ. Schön soll es auch sein - SCSS
 
-Geschafft! Das war aber eine Menge Input. Jetzt wird programmiert! Mache mit der [Ⅲ. Challenge](#ⅲ-challenge-️) weiter.
+Da TypeScript das Programmverhalten und HTML den Website Aufbau übernimmt, benötigst du in der Webentwicklung noch eine weitere Technik, damit die Seiten auch wirklich schön aussehen. Farben, Schriftarten, Abstände uvm. werden über CSS definiert. Damit CSS eine noch bessere Wiederverwendbarkeit bekommt gibt es die CSS Erweiterung SCSS.
 
-Sonstige Tipps
+- Sieh dir an wie dieses [HTML Beispiel][css-starting-with-html] etwas weiter unten im Artikel mit Hilfe einer CSS Datei [stilisert wird][css-using-common-selectors]
+- In diesem [SCSS Guide][scss-nesting] siehst du wie CSS in SCSS Form geschrieben wird
 
-Alles speichern
+### Ⅱ.Ⅵ. Hilfreiche Tipps für diese Challenge
 
-Client neu starten
+Hier findest du noch eine Auflistung an Tipps die Besonders für Einsteiger hilfreich sind und dich vor ewigem Rätseln bewahren sollen, wenn du mal nicht weiterkommst.
 
-Globale Suche
+- Hast du \*_Alle_ Datein gespeichert? Wenn du vergisst eine Datei mit `Ctrl + S` zu speichern merkst du es nicht direkt.
+  Wenn du auf Fehler trittst, ist es hilfreich das gesamte Projekt über `File -> Save All` zu speichern.
 
-VSCode Voreinstellungen
+- Manchmal wirst du beim Entwickeln Syntaxfehler bekommen, die dann live in dieser Konsole angezeigt werden. Normalerweise sollten sich die Konsole beim Speichern einer Datei
+  automatisch verändern. Es kann jedoch auch helfen den Client mit `q` oder `Ctrl + C` zu beenden und dann neu zu starten.
+
+- In der Challenge wirst du oftmals aufgefordert Angular Komponenten / Datein anzupassen. VS Code stellt mehrere Tools zur Verfügung. Über die Suchleiste oben, kannst du nach Datein suchen. Gib dort z.B. einmal "home-page" ein. In VS Code kannst du außerdem über `Edit -> Find in Files` global nach Programmcode suchen. Suche z.B. einmal nach "HomePage".
+
+### Ⅱ.Ⅵ. Fertig! 😮‍💨
+
+Das war aber eine Menge Input. Jetzt wird programmiert! Mache mit der [Ⅲ. Challenge](#ⅲ-challenge-️---los-gehts) weiter.
 
 ---
 
@@ -160,15 +182,15 @@ VSCode Voreinstellungen
 
 ### Ⅲ.Ⅰ. Chuck Norris macht keine Fehler
 
-Im Gegensatz zu Chuck Norris, machen wir Entwickler manchmal Fehler..
+Im Gegensatz zu Chuck Norris, machen wir Entwickler Fehler das gehört zum Lernprozess dazu 🧐.
 
 - Versuche im Browser eine Seite zu öffnen die es in unserer Webapp noch nicht gibt z.B. [http://localhost:4200/diese-seite-gibts-ganz-bestimmt](http://localhost:4200/diese-seite-gibts-ganz-bestimmt).
-- Was siehst du? Eine leere Seite nur mit Header und Footer? Wie langweilig! In unserem [src/pages/](src/pages/) Ordner fehlt noch eine Not-Found Seite.
+- Was siehst du? Eine leere Seite nur mit Header und Footer? Wie langweilig! In unserem [src/pages/](src/pages/) Ordner fehlt noch eine "NotFoundPage".
 - In Angular erstellst du neue Komponenten am Besten aus der Kommandozeile.
 - Öffne die Konsole und führe nun den Befehl `npx ng generate component ../pages/not-found-page` aus. Im [src/pages/](src/pages/) Ordner sollte nun eine neue Angular Komponente "NotFoundPage" erscheinen.
 - Angular kommt standardmäßig mit einer Routing Bibliothek. Diese ist in der Datei [app.routes.ts](src/app/app.routes.ts) konfiguriert.
 - Füge als neuen Pfad die neue "NotFoundPage" Komponente hinzu. Beim Pfad verwendest du \*\*. Das steht beim Angular Routing für alle nicht-angegebenen Pfade.
-- Teste alles erneut aus
+- Teste alles erneut aus. Du solltest den Text 'welcome to not-found-page' sehen.
 
 ### Ⅲ.Ⅱ. Schönheit ist nicht alles - aber auch wichtig
 
@@ -193,41 +215,40 @@ In der Folgenden Challenge lernst du das Konzept der Angular Services am Beispie
 
 - Sieh dir die Witze Seite einmal an. Gibst du einen Witz ein und klickst auf den "FAVORISIEREN" Button, erscheint er in der Favoriten Seite.
 - Das macht das Global State Management über sogenannte Services in Angular möglich.
-- Sieh dir den Code zur "ChuckJokesCard" Komponente, zum "FavouriteChuckJokesSevice" Service und die "updateChucksJokeTableData()" Methode der Favoriten Seite genauer an und versuche ihn zu verstehen.
-- Die Methode lädt die in "FavouriteChuckJokesSevice" Service gespeicherten Witze jedes mal bei Öffnen der Favouritesseite in die Tabelle. Probiere es gerne selbst aus indem du neue Chuck Norris Witze lädst und favorisierst.
+- Sieh dir den Code zur "ChuckJokesCard" Komponente, zum "FavouriteChuckJokesSevice" Service und die "updateChucksJokeTableData()" Methode der "JokesTable" Komponente genauer an und versuche ihn zu verstehen.
+- Die Methode lädt die in "FavouriteChuckJokesSevice" Service gespeicherten Witze jedes mal bei Aufruf der Komponente in die Tabelle. Probiere es gerne selbst aus indem du neue Chuck Norris Witze lädst und favorisierst.
 
 ### Ⅳ.Ⅱ. Witze-Wettbewerb
 
-Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Eigene-Witze Funktion mit Inputfeld implementiern.
+Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Eigene-Witze Funktion mit Eingabefeld implementieren.
 
-- Erstelle passend zur Komponente ChuckJokesCardComponent eine neue OwnJokesCardComponent.
-- Füge die Komponente dem HTML der Jokes Seite hinzu.
-- Kannst du analog zur ChuckJokesCardComponent die GenerationCardComponent im HTML der OwnJokesCardComponent wiederverwenden?
-  Diese Wiederverwenung ist die Angular Content Projection. Dessen Syntax ist bereits etwas komplexer und du musst sie noch nicht ganz verstehen.
-  Hier die offiziele Dokumentation [Tutorial Content Projection](https://angular.dev/guide/components/content-projection).
-- Füge in die neue OwnJokesCardComponent einen Material Input und einen Material Favorisieren Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu.
-- Hilfreiche Dokus dazu findest du hier zu [Mat-Input](https://material.angular.dev/components/input/overview) und hier zum [Mat-Button](https://material.angular.dev/components/button/overview).
+- Generiere passend zur Komponente "ChuckJokesCard" über die Konsole eine neue "OwnJokesCard".
+- Füge die Komponente im HTML der "JokesPage" hinzu.
+- Kannst du analog zur "ChuckJokesCard" die "GenerationCard" im HTML der "OwnJokesCard" wiederverwenden?
+  Diese Wiederverwenung ist die [Angular Content Projection][angular-tutorial-content-projection]. Diese Syntax ist bereits etwas komplexer und du musst sie noch nicht ganz verstehen.
+- Füge in die neue "OwnJokesCard" einen Input und einen Favorisieren Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu.
+- Hilfreiche Dokus dazu findest du hier zum [Input][angular-material-input] und hier zum [Button][angular-material-button].
 
 ### Ⅳ.Ⅲ. Services in Angular
 
-Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze, um sie in die Tabelle der Favoriten weiterzugeben. Diese globale Weitergabe nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial](https://angular.dev/tutorials/first-app/09-services) ab.
+Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze, um sie in die Tabelle der "JokesTable" Komponente weiterzugeben. Diese globale Weitergabe von Daten nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial][angular-services] ab.
 
-- Sieh dir den FavouriteChuckJokesSevice und seine Verwendung in ChuckJokesCardComponent und der Favourites Seite genauer an.
-- Implementiere nun auch einen FavouriteOwnJokesService. Das geht auch über den `npx ng generate service` Befehl.
-- Der Service soll auch nur über die öffentlichen add, remove und getAll Methoden verwendbar sein.
-- Füge in der OwnJokesCardComponent eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die add Methode an den Service.
-- Passe die Favoriten Seite so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden. Dazu kannst du eine neue Methode updateOwnJokesTableData erstellen.
+- Sieh dir den "FavouriteChuckJokesSevice" und seine Verwendung in "ChuckJokesCard" und der "JokesTable" genauer an.
+- Implementiere nun auch einen "FavouriteOwnJokesService". Das geht auch über den `npx ng generate service ../shared/services/(name)` Befehl.
+- Der Service soll auch nur über die "add()", "remove()" und "getAll()" Methoden verwendbar sein.
+- Füge in der "OwnJokesCard" eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die add Methode an den Service.
+- Passe die "JokesTable" so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden. Dazu kannst du eine neue Methode "updateOwnJokesTableData()" erstellen.
 
 ### Ⅳ.Ⅳ. Echt peinlich: Unlustiger Witz
 
-Nun werden wir die Favoriten Tabelle erweitern. Du hast versehentlich einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi oder Tobi! In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der `deleteRow` Methode in `src/pages/favourites` leider noch nicht implementiert.
+Nun werden wir die "JokesTable" erweitern. Du hast versehentlich einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi und Tobi! In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der "deleteRow()" Methode in leider noch nicht implementiert.
 
-- Implementiere die deleteRow Methode und greife auf die remove Methoden deiner Services FavouriteChuckJokesSevice und FavouriteOwnJokesService zu.
-- Merkst du, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf den aktualsieren Button klickst, oder auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
+- Implementiere die "deleteRow()" Methode und greife auf die "remove()" Methoden deiner Services "FavouriteChuckJokesSevice" und "FavouriteOwnJokesService" zu.
+- Merkst du, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf den "AKTUALISIEREN" Button klickst, oder auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
 
 ### Ⅳ.Ⅴ. Die Macht der Signals
 
-Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass irgendjemand dem Datenobjekt `tableData` mitteilen muss, dass sich die Witze der Services geändert haben. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
+Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass irgendjemand dem Datenobjekt "tableData" mitteilen muss, dass sich die Witze der Services geändert haben. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
 
 - Lies dir den Eintrag über Signals in der offiziellen Angular Dokumentation durch.
 - Sieh dir den bisher nicht verwendeten FavouriteChuckJokesSignalSevice an. Bemerkst du die wesentlichen Unterschiede zum FavouriteChuckJokesSevice?
@@ -502,17 +523,34 @@ Glückwunsch! Du hast alle Challenges gemeistert. Chuck Norris ist stolz auf dic
 Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer Stelle geupdated werden.
 
 [angular-components]: https://next.angular.dev/essentials/components
+[angular-overview]: https://angular.dev/overview
+[angular-dynamic-text]: https://next.angular.dev/essentials/templates#showing-dynamic-text
+[angular-user-input]: https://next.angular.dev/essentials/templates#handling-user-interaction
+[angular-control-flow]: https://next.angular.dev/essentials/templates#control-flow-with-if-and-for
 [angular-services]: https://angular.dev/tutorials/first-app/09-services
 [angular-signals]: https://angular.dev/guide/signals
 [angular-basic-tutorial]: https://next.angular.dev/tutorials/learn-angular
 [angular-tutorial-content-projection]: https://angular.dev/guide/components/content-projection
+[angular-material-components]: https://material.angular.dev/components/categories
+[angular-material-display-a-component]: https://material.angular.dev/guide/getting-started#display-a-component
+[angular-material-input]: https://material.angular.dev/components/input/overview
+[angular-material-button]: https://material.angular.dev/components/button/overview
+[css-starting-with-html]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#starting_with_some_html
+[css-using-common-selectors]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#using_common_selectors
 [chuck-norris-wiki]: https://de.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge
 [cataas-api-link]: https://cataas.com/cat?json=true
 [github-home]: https://github.com
 [html-paragraph-doku]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+[mdn-docs-getting-started]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content
 [mdn-docs-element-p]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p
 [nodejs-download]: https://nodejs.org/en/download/
 [npmjs-docs]: https://docs.npmjs.com/about-npm
+[scss-nesting]: https://sass-lang.com/guide/#nesting
+[typescript-everyday-types]: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
 [visual-studio-code]: https://code.visualstudio.com/
 [vscode-getting-started]: https://code.visualstudio.com/docs/getstarted/getting-started
 [wikipedia-chuck-norris]: https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge†
+
+```
+
+```
