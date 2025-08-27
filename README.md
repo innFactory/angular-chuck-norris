@@ -213,14 +213,14 @@ Glückwunsch! Du hast soeben dein erste Angular Komponente entwickelt. Kannst du
 
 In der Folgenden Challenge lernst du das Konzept der Angular Services am Beispiel des bereits bestehenden "FavouriteChuckJokesSevice" kennen. Im Anschluss erstellst du eine Komponente, mit der du eigene Witze eingeben kannst. Dabei kommst du auch mit der Bibliothek "Angular Material" in Berührung. Später wirst du auch über den Verwendungszweck der reaktiven Angular Signals lernen.
 
-- Sieh dir die Witze Seite einmal an. Gibst du einen Witz ein und klickst auf den "FAVORISIEREN" Button, erscheint er in der Favoriten Seite.
+- Sieh dir die "JokesPage" einmal an. Gibst du einen Witz ein und klickst auf den "FAVORISIEREN" Button, erscheint er in der "FavouritesPage" bzw. der "JokeTable".
 - Das macht das Global State Management über sogenannte Services in Angular möglich.
-- Sieh dir den Code zur "ChuckJokesCard" Komponente, zum "FavouriteChuckJokesSevice" Service und die "updateChucksJokeTableData()" Methode der "JokesTable" Komponente genauer an und versuche ihn zu verstehen.
-- Die Methode lädt die in "FavouriteChuckJokesSevice" Service gespeicherten Witze jedes mal bei Aufruf der Komponente in die Tabelle. Probiere es gerne selbst aus indem du neue Chuck Norris Witze lädst und favorisierst.
+- Sieh dir den Code zur "ChuckJokesCard" Komponente, zum "FavouriteChuckJokesSevice" Service und die "updateChucksJokeTableData()" Methode in "JokesTable" genauer an.
+- Die Methode lädt die im "FavouriteChuckJokesSevice" gespeicherten Witze jedes mal, bei Aufruf der in die Tabelle. Probiere es gerne selbst aus indem du neue Chuck Norris Witze lädst und favorisierst.
 
 ### Ⅳ.Ⅱ. Witze-Wettbewerb
 
-Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Eigene-Witze Funktion mit Eingabefeld implementieren.
+Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Eigene-Witze Eingabefeld implementieren.
 
 - Generiere passend zur Komponente "ChuckJokesCard" über die Konsole eine neue "OwnJokesCard".
 - Füge die Komponente im HTML der "JokesPage" hinzu.
@@ -231,71 +231,68 @@ Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Ei
 
 ### Ⅳ.Ⅲ. Services in Angular
 
-Nun hast du ein Frontend mit Eingabefeld und Button. Im Folgenden implementierst du die Favorisieren Funktion auch für eigene Witze, um sie in die Tabelle der "JokesTable" Komponente weiterzugeben. Diese globale Weitergabe von Daten nennt sich Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services. Sieh dir gerne dazu hier weiter die offzielle Dokumentation an oder schließe das [Angular Services Tutorial][angular-services] ab.
+Nun hast du ein Frontend mit Eingabefeld und Button. Die Eingabe musst du nun an die Tabelle der "JokesTable" weitergeben. Diese globale Verknüpfung von Daten heißt Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services.
 
+- Sieh dir dazu die offzielle Dokumentation an und schließe das [Angular Services Tutorial][angular-services] ab.
 - Sieh dir den "FavouriteChuckJokesSevice" und seine Verwendung in "ChuckJokesCard" und der "JokesTable" genauer an.
 - Implementiere nun auch einen "FavouriteOwnJokesService". Das geht auch über den `npx ng generate service ../shared/services/(name)` Befehl.
 - Der Service soll auch nur über die "add()", "remove()" und "getAll()" Methoden verwendbar sein.
-- Füge in der "OwnJokesCard" eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die add Methode an den Service.
+- Füge in der "OwnJokesCard" eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die "add()" Methode an den Service.
 - Passe die "JokesTable" so an, dass im Konstruktor nun auch deine Eigenen Witze mitgeladen werden. Dazu kannst du eine neue Methode "updateOwnJokesTableData()" erstellen.
 
 ### Ⅳ.Ⅳ. Echt peinlich: Unlustiger Witz
 
-Nun werden wir die "JokesTable" erweitern. Du hast versehentlich einen peinlichen Witz hinzugefügt? Hoffentlich sehen das nicht Toni, Maxi und Tobi! In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist in der "deleteRow()" Methode in leider noch nicht implementiert.
+Im Anschluss wirst du die "JokesTable" erweitern. Du hast versehentlich einen peinlichen Witz favorisert? Hoffentlich sehen das nicht Toni, Maxi und Tobi! 😅 In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist leider noch nicht implementiert.
 
 - Implementiere die "deleteRow()" Methode und greife auf die "remove()" Methoden deiner Services "FavouriteChuckJokesSevice" und "FavouriteOwnJokesService" zu.
-- Merkst du, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf den "AKTUALISIEREN" Button klickst, oder auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
+- Fällt dir auf, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf den "AKTUALISIEREN" Button klickst, oder auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
 
 ### Ⅳ.Ⅴ. Die Macht der Signals
 
-Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass irgendjemand dem Datenobjekt "tableData" mitteilen muss, dass sich die Witze der Services geändert haben. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
+Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass jemand dem Datenobjekt "tableData" mitteilen muss, dass sich die Witze der Services geändert haben. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
 
-- Lies dir den Eintrag über Signals in der offiziellen Angular Dokumentation durch.
-- Sieh dir den bisher nicht verwendeten FavouriteChuckJokesSignalSevice an. Bemerkst du die wesentlichen Unterschiede zum FavouriteChuckJokesSevice?
-  Das private Datenobjekt `data`, ein schreibbares Signal vom Typ `WriteableSignal`, ist nun eine Funktion und auf dessen Inhalt wird mit `data()` zugegriffen.
-  Zusätzlich gibt es das neue, öffentliche Datenobjekt `$data`. Es ist nur ein unveränderbares, berechnetes (=computed) Signal vom Typ `Signal`.
-- Importiere zunächst an allen Stellen statt des bisherigen FavouriteChuckJokesSevice den bisher noch nicht verwendeten FavouriteChuckJokesSignalSevice.
-- Jetzt wird es interessant: Anstatt `tableData` im Konstruktor mit den Services zu aktualisieren, wird es sich in Zukunft als "computed" Signal von selbst berechnen.
-- Entferne den Programmcode für den constructor und die update Funktionen aus der Favoriten Seite.
-- Entferne die aktuelle `tableData` Zuweisung und erstelle Sie als computed. Hier eine Vorlage dafür:
+- Lies dir den [Eintrag über Signals][angular-signals] in der offiziellen Angular Dokumentation durch.
+- Sieh dir den "FavouriteChuckJokesSignalSevice" an. Als Hilfestellung ist er im Projekt bereits implementiert. Bemerkst du die wesentlichen Unterschiede zum "FavouriteChuckJokesSevice"?
+  - Das private Datenobjekt "data", ein schreibbares Signal vom Typ "WriteableSignal", ist hier eine Funktion und auf dessen Inhalt wird mit "data()" zugegriffen.
+    Zusätzlich gibt es das neue, öffentliche Datenobjekt "$data. Es ist ein read-only, berechnetes (=computed) Signal vom Typ "Signal".
+- Importiere zunächst an allen Stellen statt des bisherigen "FavouriteChuckJokesSevice" den bisher noch nicht verwendeten "FavouriteChuckJokesSignalSevice".
+- Jetzt wird es interessant: Anstatt "tableData" im Konstruktor mit den Services zu aktualisieren, wird es sich in Zukunft als "computed" Signal von selbst berechnen.
+- Entferne den Programmcode für constructor und die update Funktionen aus der "JokesTable".
+- Entferne die aktuelle "tableData" Zuweisung und erstelle sie mit computed. Hier eine Vorlage dafür:
 
-```
+  ```
+  protected tableData = computed<JokeTableRow[]>(() => {
+  const data: JokeTableRow[] = [];
 
-protected tableData = computed<JokeTableRow[]>(() => {
-const data: JokeTableRow[] = [];
+      // Hier musst du nun data mit dem Signal $data aus dem FavouriteChuckJokesSignalSevice befüllen
 
-    // Hier musst du nun data mit dem Signal $data aus dem FavouriteChuckJokesSignalSevice befüllen
+      return data;
 
-    return data;
+  }
+  ```
 
-}
+- Da "tableData" nun ein Signal ist, musst du nun überall dort, wo es bisher verwendet wird anstelle des Zugriffs "tableData" nun mit "tableData()" benutzen.
 
-```
-
-- Da `tableData` nun ein Signal ist, musst du nun überall dort, wo es bisher verwendet wird anstelle des Zugriffs `tableData` nun mit `tableData()` benutzen.
-
-Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klick auf den Löschen Button, von selbst. Allerdings werden jetzt die eigenen Witze nicht mehr angezeigt. So gewinnst du leider keinen Wettbewerb.. 🤷‍♂️
+Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klick auf den Löschen Button von selbst 🤯. Allerdings werden jetzt die eigenen Witze nicht mehr angezeigt. So gewinnst du leider keinen Wettbewerb.. 🤷‍♂️
 
 ### Ⅳ.Ⅵ. Hello World Signal-Service
 
-- Erstelle einen neuen FavouriteOwnJokesSignalService. Die Methoden "add()", "remove()" und "getAll()" müssen angepasst werden. Orientiere dich dabei am "FavouriteChuckJokesSignalSevice".
-- Die Methode setFromDatabase() kannst du bis Challenge Ⅵ erstmal ignorieren.
+- Erstelle einen neuen "FavouriteOwnJokesSignalService". Die Methoden "add()", "remove()" und "getAll()" müssen angepasst werden. Orientiere dich dabei am "FavouriteChuckJokesSignalSevice".
+- Die Methode "setFromDatabase()" kannst du bis Challenge Ⅵ erstmal ignorieren.
 - Tausche auch den vorherigen Service überall durch den neuen Signal Service aus.
-- Ergänze nun das `tableData` Signal der Favoriten Seite auch mit dem $data Signal aus deinem neuen FavouriteOwnJokesSignalService.
+- Ergänze nun das "tableData" Signal der "JokesTable" Komponente auch mit dem "$data" Signal aus deinem neuen "FavouriteOwnJokesSignalService".
 
-Probiere es gleich im Browser aus. Absofort berechnet sich das `tableData` Datenobjekt, bei jeglicher Veränderung des Eigenen und des Chucks Witze Signal Services von selbst neu. Die Tabelle aktualisiert sich im Frontend damit automatisch.
+Probiere es gleich im Browser aus. Absofort berechnet sich das "tableData" Datenobjekt, bei jeglicher Veränderung des Eigenen und des Chucks Witze Signal Services von selbst neu. Die Tabelle aktualisiert sich im Frontend damit automatisch bzw. reaktiv.
 
 ### Ⅳ.Ⅶ. Sauberkeit ist die halbe Miete
 
-Der "Tabelle aktualisieren" Button wird jetzt nicht mehr benötigt. Es folgt den Best Practices als Entwickler, immer unbenutzen Programmcode oder veraltete Features direkt zu entfernen um das Projekt simpel und verständlich zu halten.
+Der "AKTUALISIEREN" Button wird jetzt nicht mehr benötigt. Es folgt den Best Practices als Entwickler, unbenutzen Programmcode oder veraltete Features immer direkt zu entfernen um das Projekt simpel und verständlich zu halten.
 
-- Entferne nun den "Tabelle aktualisieren" Button und seine Funktion. Er wird nicht mehr benötigt.
-
-Herzlichen Glückwunsch, du hast diese Challenge geschafft! Das muss gefeiert werden 🥳!
-
-Suche zum Abschluss der Challenge im Internet z.B. auf [https://witze.net/flachwitz-witze](https://witze.net/flachwitz-witze) nach den peinlichsten Flachwitzen und füge Sie als eigene Witze hinzu. Natürlich kannst du sie nun auch schnellstmöglich wieder löschen, bevor andere sie lesen.
-
-Wenn du es jetzt aber nicht mehr abwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der [Ⅴ. Challenge](#ⅴ-challenge-️---achtung-süße-katzenbilder) weiter..
+- Entferne nun den "AKTUALISIEREN" Button und seine Funktion. Er wird nicht mehr benötigt.
+  Herzlichen Glückwunsch, du hast diese Challenge geschafft! Das muss gefeiert werden 🥳!
+- Suche zum Abschluss der Challenge im Internet z.B. auf [https://witze.net/flachwitz-witze](https://witze.net/flachwitz-witze) nach den peinlichsten Flachwitzen und füge Sie als eigene Witze hinzu.
+- Natürlich kannst du sie nun auch schnellstmöglich wieder löschen, bevor andere sie lesen.
+- Wenn du es jetzt aber nicht mehr abwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der [Ⅴ. Challenge](#ⅴ-challenge-️---achtung-süße-katzenbilder) weiter..
 
 ---
 
@@ -522,6 +519,8 @@ Glückwunsch! Du hast alle Challenges gemeistert. Chuck Norris ist stolz auf dic
 
 Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer Stelle geupdated werden.
 
+(Links unsichtbar in der Vorschau)
+
 [angular-components]: https://next.angular.dev/essentials/components
 [angular-overview]: https://angular.dev/overview
 [angular-dynamic-text]: https://next.angular.dev/essentials/templates#showing-dynamic-text
@@ -550,7 +549,3 @@ Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer
 [visual-studio-code]: https://code.visualstudio.com/
 [vscode-getting-started]: https://code.visualstudio.com/docs/getstarted/getting-started
 [wikipedia-chuck-norris]: https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge†
-
-```
-
-```
