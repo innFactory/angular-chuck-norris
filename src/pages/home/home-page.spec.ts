@@ -1,10 +1,10 @@
 import { createComponentFactory, Spectator } from '@ngneat/spectator';
-import { Home } from './home';
+import { HomePage } from './home-page';
 
-describe('Home Component', () => {
-  let spectator: Spectator<Home>;
+describe('HomePage Component', () => {
+  let spectator: Spectator<HomePage>;
   const createComponent = createComponentFactory({
-    component: Home,
+    component: HomePage,
   });
 
   beforeEach(() => {

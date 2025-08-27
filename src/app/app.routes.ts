@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { Favourites } from '../pages/favourites/favourites';
-import { Home } from '../pages/home/home';
+import { HomePage } from '../pages/home/home-page';
 import { Jokes } from '../pages/jokes/jokes';
 
 export const routes: Routes = [
@@ -11,7 +11,7 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    component: Home,
+    component: HomePage,
   },
   {
     path: 'jokes',
