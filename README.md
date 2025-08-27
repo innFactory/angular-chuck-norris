@@ -35,24 +35,23 @@ VS Code kommt standardmäßig mit einer Anbidung für GitHub, dem "Source Contro
 
 Die meisten Webapp Projekte haben Abhängigkeiten an andere Bibliotheken in Form von Paketen. Diese können mit dem Node Package Manager von Nodejs unkompliziert installiert werden. Installiere dir hierfür nun Nodejs und führe Node und NPM zum Test im Terminal in VS Code aus.
 
-- Installiere die Nodejs über den Installer [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+- Installiere die Nodejs über den Installer [Nodejs Download][nodejs-download].
 - Prüfe ob die Befehle `node`und `npm` in deinem System global funktionieren.
-
-  - Öffne dazu in VS Code das Terminal über die obere Leiste `View -> Terminal`.
-  - Gebe im Terminal die folgenden Befehle ein. Nacheinander solltest du die aktuell installierte Version sehen.
+- Öffne dazu in VS Code das Terminal über die obere Leiste `View -> Terminal`.
+- Gebe im Terminal die folgenden Befehle ein. Nacheinander solltest du die aktuell installierte Version sehen.
 
   ```bash
-   node --version
-   # Ausgabe z.B. "v22.18.0".
+    node --version
+    # Ausgabe z.B. "v22.18.0".
 
-   npm --version
-   # Ausgabe z.B. "10.9.3".
+    npm --version
+    # Ausgabe z.B. "10.9.3".
 
-   npx --version
-   # Ausgabe z.B. "10.9.3".
+    npx --version
+    # Ausgabe z.B. "10.9.3".
   ```
 
-- Mache dich über die weiteren Funktionen von NPM vertraut [https://docs.npmjs.com/about-npm](https://docs.npmjs.com/about-npm).
+- Mache dich über die weiteren Funktionen von NPM vertraut [https://docs.npmjs.com/about-npm][npmjs-docs].
 
 ### Ⅰ.Ⅴ. Abhängigkeiten installieren
 
@@ -61,7 +60,7 @@ Nun musst du dir die Abhängigkeiten bzw. Dependencies nur noch installieren. Ke
 - Gebe in die Konsole `npm install` ein und und warte bis alle erfolgreich heruntergeladen sind.
 - Ein neuer Ordner [node_modules/](node_modules/) mit allen externen Bibliotheken, wird nun im Projekt automatisch erstellt.
 
-### Ⅰ.Ⅵ. WebApp starten
+### Ⅰ.Ⅵ. Webapp starten
 
 Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
 
@@ -100,14 +99,16 @@ Jede Angular Komponente in deiner Webapp besteht aus einem Logik-, einem Struktu
   | home.html | Strukturteil in HTML    |
   | home.scss | Stylingteil in SCSS     |
 
+- Schließe das [Angular Einstiegs Tutorial][angular-basic-tutorial] ab. Nimm dir hierfür gerne etwas Zeit ⌛️.
+
 ### Ⅰ.Ⅷ. Kennenlernen mit Chuck Norris
 
-Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der Markupsprache HTML verfasst. Im Folgenden erweiterst du die bestehende HTML Seite.
+Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der Markupsprache HTML verfasst. Im Folgenden erweiterst du diese bestehende HTML Seite.
 
-- Sieh dir die Struktur in der Homepage [home.html](/src/pages/home/home-page.html) einmal genauer an.
+- Sieh dir die Struktur in der "HomePage" Komponente unter [src/pages/home/](src/pages/home/) einmal genauer an.
 - Der Text "..Ich bin Chuck Norris, ein Kampfsportler und Schauspieler.." ist in einem HTML `<p>` Paragraphen Element eingeschlossen bzw. gewrapped. So verfässt man Text in HTML.
-- Lese hier über das Paragraphen Element auf der offiziellen Dokumentation
-- Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste](https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge) und füge in der `home.html` Datei weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
+- Lese hier über das Paragraphen Element auf der offiziellen HTML Dokumentation [MDN Webdocs P Element][mdn-docs-element-p]
+- Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste][wikipedia-chuck-norris] und füge in der "HomePage" weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
 
 ---
 
@@ -503,13 +504,15 @@ Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer
 [angular-components]: https://next.angular.dev/essentials/components
 [angular-services]: https://angular.dev/tutorials/first-app/09-services
 [angular-signals]: https://angular.dev/guide/signals
-[angular-tutorial]: https://next.angular.dev/tutorials/learn-angular
+[angular-basic-tutorial]: https://next.angular.dev/tutorials/learn-angular
 [angular-tutorial-content-projection]: https://angular.dev/guide/components/content-projection
 [chuck-norris-wiki]: https://de.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge
 [cataas-api-link]: https://cataas.com/cat?json=true
 [github-home]: https://github.com
+[html-paragraph-doku]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+[mdn-docs-element-p]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p
 [nodejs-download]: https://nodejs.org/en/download/
 [npmjs-docs]: https://docs.npmjs.com/about-npm
-[html-paragraph-doku]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
 [visual-studio-code]: https://code.visualstudio.com/
 [vscode-getting-started]: https://code.visualstudio.com/docs/getstarted/getting-started
+[wikipedia-chuck-norris]: https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge†
