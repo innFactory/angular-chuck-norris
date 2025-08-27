@@ -6,9 +6,9 @@ import { MatInputModule } from '@angular/material/input';
 import { ChuckJokesCard } from '../../components/chuck-jokes-card/chuck-jokes-card';
 
 @Component({
-  selector: 'app-jokes',
+  selector: 'app-jokes-page',
   imports: [MatButtonModule, MatIconModule, ChuckJokesCard, MatFormFieldModule, MatInputModule],
-  templateUrl: './jokes.html',
-  styleUrl: './jokes.scss',
+  templateUrl: './jokes-page.html',
+  styleUrl: './jokes-page.scss',
 })
-export class Jokes {}
+export class JokesPage {}
