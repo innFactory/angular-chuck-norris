@@ -11,25 +11,23 @@ Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webap
 ### Ⅰ.Ⅰ. GitHub Account
 
 Jeder geschriebene Programmcode muss auch gespeichert und weitergegeben werden können. GitHub ist eine übergreifende Entwicklerplattform die das ermöglicht und auch dieses Projekt speichert.
-
-Erstelle dir, falls du noch keinen hast, zunächst einen eigenen GitHub Account auf [https://github.com/](https://github.com/). Dieser wird dich bei der innFacotory und in deinem späteren Entwickler-Leben noch lange begleiten 🤩.
-
 Du wirst später nicht nur deinen Programmcode mit Anderen Kollegen in Projekten teilen (=publish), sondern in sogennanten Code-Reviews gegenseitig den Code überprüfen und verbessern. Dies musst du beim Angular Chuck Norris Projekt aber nicht machen.
+
+- Erstelle dir, falls du noch keinen hast, zunächst einen eigenen [Github Account][github-home] . Dieser wird dich bei der innFacotory und im späteren Entwickler-Leben noch oft begleiten 🤩.
 
 ### Ⅰ.Ⅱ. Entwickeln aus der Entwicklungsumgebung
 
-Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können.
+Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können. Dieser Ort ist die sogennante Entwicklungsumgebung, auf englisch Integrated Development Environment, abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am Besten VS Code.
 
-Dieser Ort ist die sogennante Entwicklungsumgebung, auf englisch Integrated Development Environment, abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am Besten VS Code.
-
-1. Installiere dir [Visual Studio Code](https://code.visualstudio.com/).
-2. Öffne VS Code. Wenn du Lust hast, mache dich mit diesem [Tutorial](https://code.visualstudio.com/docs/getstarted/getting-started) in VS Code etwas vertraut.
+- Installiere dir [Visual Studio Code][visual-studio-code].
+- Öffne VS Code. Mache dich mit diesem [Tutorial][vscode-getting-started] in VS Code etwas vertraut.
 
 ### Ⅰ.Ⅲ. Webapp kopieren
 
-In GitHub online gespeicherte Software muss zum Bearbeiten erst lokal auf deinem PC kopiert (=clone) werden. Das geht ganz einfach mit VS Code.
+In GitHub online gespeicherte Software muss zum Bearbeiten erst lokal auf deinem PC kopiert werden (=to clone). Das geht ebenfalls ganz einfach mit VS Code.
+VS Code kommt standardmäßig mit einer Anbidung für GitHub, dem "Source Control Management".
 
-VS Code kommt standardmäßig mit einer Anbidung für GitHub, dem "Source Control Management". Öffne den Tab des Source Control und wähle "Clone Repository". Gebe nun die URL des Repositories `https://github.com/innFactory/angular-chuck-norris` ein und wähle einen beliebigen Speicherort auf deinem PC.
+- Öffne den Tab des Source Control und wähle "Clone Repository". Gebe nun die URL des Repositories `https://github.com/innFactory/angular-chuck-norris` ein und wähle einen beliebigen Speicherort auf deinem PC.
 
 ![Source Control View](./docs/firstrun-source-control.png)
 
@@ -37,55 +35,79 @@ VS Code kommt standardmäßig mit einer Anbidung für GitHub, dem "Source Contro
 
 Die meisten Webapp Projekte haben Abhängigkeiten an andere Bibliotheken in Form von Paketen. Diese können mit dem Node Package Manager von Nodejs unkompliziert installiert werden. Installiere dir hierfür nun Nodejs und führe Node und NPM zum Test im Terminal in VS Code aus.
 
-1. Installiere die Nodejs über den Installer [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
-2. Prüfe ob die Befehle `node`und `npm` in deinem System global funktionieren.
+- Installiere die Nodejs über den Installer [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+- Prüfe ob die Befehle `node`und `npm` in deinem System global funktionieren.
 
-   - Öffne dazu in VS Code das Terminal über die obere Leiste `View -> Terminal`.
-   - Gebe im Terminal die folgenden Befehle ein. Nacheinander solltest du die aktuell installierte Version sehen.
+  - Öffne dazu in VS Code das Terminal über die obere Leiste `View -> Terminal`.
+  - Gebe im Terminal die folgenden Befehle ein. Nacheinander solltest du die aktuell installierte Version sehen.
 
-   ```bash
-    node --version
-    # Ausgabe z.B. "v22.18.0".
+  ```bash
+   node --version
+   # Ausgabe z.B. "v22.18.0".
 
-    npm --version
-    # Ausgabe z.B. "10.9.3".
+   npm --version
+   # Ausgabe z.B. "10.9.3".
 
-    npx --version
-    # Ausgabe z.B. "10.9.3".
-   ```
+   npx --version
+   # Ausgabe z.B. "10.9.3".
+  ```
 
-3. Mache dich über die weiteren Funktionen von NPM vertraut [https://docs.npmjs.com/about-npm](https://docs.npmjs.com/about-npm).
+- Mache dich über die weiteren Funktionen von NPM vertraut [https://docs.npmjs.com/about-npm](https://docs.npmjs.com/about-npm).
 
 ### Ⅰ.Ⅴ. Abhängigkeiten installieren
 
-Nun musst du dir die Abhängigkeiten bzw. Dependencies nur noch installieren. Keine Sorge, die sind in der Datei `package.json` bereits vollständig aufgelistet und können ohne weiteres über einen Konsolenbefehl installiert werden.
+Nun musst du dir die Abhängigkeiten bzw. Dependencies nur noch installieren. Keine Sorge, die sind in der Datei [package.json](package.json) bereits vollständig aufgelistet und können ohne weiteres über einen Konsolenbefehl installiert werden.
 
-Gebe in die Konsole `npm install` ein und und warte bis alle erfolgreich heruntergeladen sind. Ein neuer Ordner `node_modules`, wird nun im Projekt automatisch erstellt.
+- Gebe in die Konsole `npm install` ein und und warte bis alle erfolgreich heruntergeladen sind.
+- Ein neuer Ordner [node_modules/](node_modules/) mit allen externen Bibliotheken, wird nun im Projekt automatisch erstellt.
 
 ### Ⅰ.Ⅵ. WebApp starten
 
 Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
 
-Öffne den Browser auf [http://localhost:4200](http://localhost:4200) und du solltest die WebApp sehen.
+- Öffne den Browser auf [http://localhost:4200](http://localhost:4200) und du solltest die Webapp sehen.
+- In der Konsole kannst du den laufenen, lokalen Client sehen.
+
+  ```
+  ~/code/intern/angular-chuck-norris
+  npm start
+  > angular-chuck-norris@1.0.0 start
+  > ng serve
+  Initial chunk files | Names Raw size
+  main.js main 116.17 kB
+  styles.css I styles 10.13 kB
+  | Initial total | 126.30 kB
+  Application bundle generation complete. [2.387 seconds]
+  Watch mode enabled. Watching for file changes...
+  NOTE: Raw file sizes do not reflect development server per-request transformations.
+  10:03:05 AM [vitel (client) Re-optimizing dependencies because vite config has changed
+  Local: http://localhost: 4200/
+  press h + enter to show help
+  ```
+
+- Manchmal wirst du beim Entwickeln Syntaxfehler bekommen, die dann live in dieser Konsole angezeigt werden. Normalerweise sollten diese bei Behebung und Speichern
+  auch in der Konsole behoben sein. Es kann jedoch auch helfen den Client mit `q` oder `Ctrl + C` zu beenden und dann neu zu starten.
 
 ### Ⅰ.Ⅶ. Einstieg in die App
 
-Jede Angular Komponente in deiner WebApp besteht aus einem Logik-, einem Struktur- und einem Stylingteil. Sehe dir exemplarisch einmal die Home-Page Komponente genauer an. Navigiere in in den Pfad `src -> pages -> home` und sehe dir die Datein an.
+Jede Angular Komponente in deiner Webapp besteht aus einem Logik-, einem Struktur- und einem Stylingteil. Fühle dich nicht überfordert von all den verschiedenen Sprachen und Frameworks. Du bekommst eine Schritt für Schritt Einführung in die Angular Welt.
 
-| Datei     | Function                |
-| --------- | ----------------------- |
-| home.ts   | Logikteil in TypeScript |
-| home.html | Strukturteil in HTML    |
-| home.scss | Stylingteil in SCSS     |
+- Sehe dir exemplarisch einmal die Home-Page Komponente genauer an. Navigiere in in den Pfad `src -> pages -> home` und sehe dir die Datein an.
 
-Fühle dich nicht überfordert von all den verschiedenen Sprachen und Frameworks. Du bekommst eine Schritt für Schritt Einführung in die Angular Welt.
+  | Datei     | Function                |
+  | --------- | ----------------------- |
+  | home.ts   | Logikteil in TypeScript |
+  | home.html | Strukturteil in HTML    |
+  | home.scss | Stylingteil in SCSS     |
 
 ### Ⅰ.Ⅷ. Kennenlernen mit Chuck Norris
 
-Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der Markupsprache HTML verfasst.
-Sieh dir die Struktur in der Homepage [home.html](./src/pages/home/home.html) einmal genauer an. Der Text `..Ich bin Chuck Norris, ein Kampfsportler und Schauspieler..` ist in einem HTML `<p>` Paragraph Element eingeschlossen bzw. gewrapped.
+Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der Markupsprache HTML verfasst. Im Folgenden erweiterst du die bestehende HTML Seite.
 
-Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste](https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge) und füge in der `home.html` Datei weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
+- Sieh dir die Struktur in der Homepage [home.html](/src/pages/home/home-page.html) einmal genauer an.
+- Der Text "..Ich bin Chuck Norris, ein Kampfsportler und Schauspieler.." ist in einem HTML `<p>` Paragraphen Element eingeschlossen bzw. gewrapped. So verfässt man Text in HTML.
+- Lese hier über das Paragraphen Element auf der offiziellen Dokumentation
+- Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste](https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge) und füge in der `home.html` Datei weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
 
 ---
 
@@ -215,15 +237,18 @@ Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass irg
 - Entferne den Programmcode für den constructor und die update Funktionen aus der Favoriten Seite.
 - Entferne die aktuelle `tableData` Zuweisung und erstelle Sie als computed. Hier eine Vorlage dafür:
 
-  ```
-  protected tableData = computed<JokeTableRow[]>(() => {
-    const data: JokeTableRow[] = [];
+```
+
+protected tableData = computed<JokeTableRow[]>(() => {
+const data: JokeTableRow[] = [];
 
     // Hier musst du nun data mit dem Signal $data aus dem FavouriteChuckJokesSignalSevice befüllen
 
     return data;
-  }
-  ```
+
+}
+
+```
 
 - Da `tableData` nun ein Signal ist, musst du nun überall dort, wo es bisher verwendet wird anstelle des Zugriffs `tableData` nun mit `tableData()` benutzen.
 
@@ -295,7 +320,9 @@ Bei Klick auf den "NEU" Button soll in Zukunft ein zufälliges Katzenbild gelade
 - Auf das "src" Attribut des HTML "<img/>" greifst du mit eckigen Klammern zu. So gibst du in Angular HTML dynamische, sich verändernde Attribute an.
 
 ```
-  <img [src]="urlCatPicture" />
+
+<img [src]="urlCatPicture" />
+
 ```
 
 Super, du hast soeben erfolgreich eine API angebunden. Bei Klick auf den "NEU" Button sollte jeweils ein neues Katzenbild erscheinen. Wie niedlich!
@@ -376,15 +403,19 @@ Bisher bist du nur mit der _Frontend_ Entwicklung in Berührung gekommen und dem
 - Navigiere nach Projektübersicht -> Projekteinstellungen -> Allgemein. Unter Meine Apps klickst du auf das "</>" Symbol für Web um Firebase zu einer Webapp hinzuzufügen.
 - Benutze als Alias auch den Projektnamen "angular-chuck-norris" und klicke auf App registrieren.
 - Du erhälst eine Übersicht zum Setup. Das wurde aber schon fertig eingestellt. Kopiere dir nur den Inhalt mit folgendem Schema heraus:
-  ```
+
+```
+
     apiKey: '...',
     authDomain: 'angular-chuck-norris.firebaseapp.com',
     projectId: 'angular-chuck-norris',
     storageBucket: 'angular-chuck-norris.firebasestorage.app',
     messagingSenderId: '...',
     appId: '...',
-  ```
-  - Füge diesen Inhalt nun in die "src/environments/environment.development.ts" Datei in das `firebase` Attribut ein.
+
+```
+
+- Füge diesen Inhalt nun in die "src/environments/environment.development.ts" Datei in das `firebase` Attribut ein.
 - Stoppe den laufenden Angular Client im Terminal mit "Cmd + C" oder durch eingabe von "q" + Enter für quit.
 - Starte den Client neu mit `npm start`
 - In der Browser Konsole sollten keine Fehler wie z.B. 'auth/invalid-api-key' erscheinen.
@@ -405,11 +436,12 @@ Damit nun auch die Datenbank-Speicherung funktioniert, musst du in Firebase noch
 - Wähle die Option "Im Produktionsmodus starten" und bestätige mit dem "Erstellen" Button.
 - Navigiere nun im Reiter oben auf Regeln. Du siehst bereits voreingestellte Zugriffsregeln die du nun entfernst. Folgende Regeln kannst du komplett kopieren und einfügen. Du musst nichts weiter anpassen.
 
-  ```
-  rules_version = '1';
+```
 
-  service cloud.firestore {
-    match /databases/{database}/documents {
+rules_version = '1';
+
+service cloud.firestore {
+match /databases/{database}/documents {
 
       // Only read, create for signed in users
       match /users/{userID} {
@@ -436,8 +468,9 @@ Damit nun auch die Datenbank-Speicherung funktioniert, musst du in Firebase noch
       return request.auth.token.email == userID;
     }
 
-  }
-  ```
+}
+
+```
 
 - Klicke auf den "Veröffentlichen" Button
 
@@ -449,12 +482,34 @@ In dieser letzten Challenge wirst du einen neuen Service erstellen, der für die
 
 - Erstelle unter [src/models/](src/models/) einen neuen Typen FirebaseCatTableRow. Er bekommt die Attribute "id" und "url" jeweils vom Typ "string".
 - Erstelle einen neuen Service CatDatabaseService. Du kannst den Code des JokeDatabaseServices hierfür einfach kopieren.
-  - Anstatt der "jokes" Tabelle verwendest du eine "cats" Tabelle, anstatt der jokeID jeweils eine catID.
-  - In der "add()" Methode benötigst du nur noch die Parameter "catID" und "url" vom Typ string. "catData" hat nur das Felde "url", das du übergibst.
-  - Verwende FirebaseCatTableRow im CatDatabaseService anstelle von FirebaseJokeTableRow. Tausche auch die übrigen Parameternamen so aus, sodass sie zum CatDatabaseService passen.
-  - Passe auch die Befüllung des "cats" Arrays in der "getAll()" Methode an.
+- Anstatt der "jokes" Tabelle verwendest du eine "cats" Tabelle, anstatt der jokeID jeweils eine catID.
+- In der "add()" Methode benötigst du nur noch die Parameter "catID" und "url" vom Typ string. "catData" hat nur das Felde "url", das du übergibst.
+- Verwende FirebaseCatTableRow im CatDatabaseService anstelle von FirebaseJokeTableRow. Tausche auch die übrigen Parameternamen so aus, sodass sie zum CatDatabaseService passen.
+- Passe auch die Befüllung des "cats" Arrays in der "getAll()" Methode an.
 - Ergänze nun die "add()" und "remove()" Methoden des FavouriteCatsService um den Aufruf des CatDatabaseService. Füge eine Methode "setFromDatabase()" hinzu und verwende hier "PREFIX_ID_CATS".
 - Damit die Katzen-URLs nach der Anmeldung geladen werden, fügst du der "login()" Methode der Login Komponente eine neue Methode "loadCatsFromDatabase()" hinzu. Die du bei erfolgreicher Anmeldung aufrufst.
 - Bei Abmeldung soll die Katzentabelle gelöscht werden. Setze die Daten des FavouriteCatsSignalService in der "logout()" Methode der Menu Kommponente auf ein leerees Array.
 
 Glückwunsch! Du hast alle Challenges gemeistert. Chuck Norris ist stolz auf dich .. und die innFactory auch 😎!
+
+```
+
+```
+
+### Links
+
+Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer Stelle geupdated werden.
+
+[angular-components]: https://next.angular.dev/essentials/components
+[angular-services]: https://angular.dev/tutorials/first-app/09-services
+[angular-signals]: https://angular.dev/guide/signals
+[angular-tutorial]: https://next.angular.dev/tutorials/learn-angular
+[angular-tutorial-content-projection]: https://angular.dev/guide/components/content-projection
+[chuck-norris-wiki]: https://de.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge
+[cataas-api-link]: https://cataas.com/cat?json=true
+[github-home]: https://github.com
+[nodejs-download]: https://nodejs.org/en/download/
+[npmjs-docs]: https://docs.npmjs.com/about-npm
+[html-paragraph-doku]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+[visual-studio-code]: https://code.visualstudio.com/
+[vscode-getting-started]: https://code.visualstudio.com/docs/getstarted/getting-started
