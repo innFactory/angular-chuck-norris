@@ -56,8 +56,15 @@
         gap: var(--var-spacing-5);
       }
 
-      > img {
-        width: calc(2 * var(--var-size-15));
+      figure {
+        img {
+          width: calc(2 * var(--var-size-15));
+          border-radius: 10px;
+        }
+
+        figcaption {
+          font-size: small;
+        }
       }
     }
   }
