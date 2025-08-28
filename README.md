@@ -2,7 +2,7 @@
 
 # Start 🚀
 
-Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris stolz auf dich ist! Im Rahmen des Projekts wirst du das Frontend einer 404 Not-Found Seite gestalten, mehr über das Global-State-Management und reaktive Programmierung in Angular erfahren, selbst eine Katzenbild-API anbinden und als Bonus Aufgabe deine Daten in einer selbst aufgesetzen, externen Datenbank speichern.
+Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris .. und die innFactory stolz auf dich sind! Im Rahmen des Projekts wirst du das Frontend einer 404 Not-Found Seite gestalten, mehr über das Global State Management und die reaktive Programmierung in Angular erfahren, selbst eine Katzenbild-API anbinden und als Bonus Aufgabe deine Daten in einer selbst aufgesetzten, externen Datenbank speichern.
 
 ---
 
@@ -11,13 +11,13 @@ Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webap
 ### Ⅰ.Ⅰ. GitHub Account
 
 Jeder geschriebene Programmcode muss auch gespeichert und weitergegeben werden können. GitHub ist eine übergreifende Entwicklerplattform die das ermöglicht und auch dieses Projekt speichert.
-Du wirst später nicht nur deinen Programmcode mit anderen Kollegen in Projekten teilen (=to publish), sondern in sogennanten Code-Reviews gegenseitig den Code überprüfen und verbessern. Code-Reviews wirst du beim Angular Chuck Norris Projekts noch nicht machen.
+Du wirst später nicht nur deinen Programmcode mit anderen Kollegen in Projekten teilen (=to publish), sondern in sogenannten Code-Reviews gegenseitig den Code überprüfen und verbessern. Code-Reviews wirst du beim Angular Chuck Norris Projekts noch nicht machen.
 
-- Erstelle dir, falls du noch keinen hast, zunächst einen eigenen [Github Account][github-home] . Dieser wird dich bei der innFacotory und im späteren Entwickler-Leben noch oft begleiten 🤩.
+- Erstelle dir, falls du noch keinen hast, zunächst einen eigenen [Github Account][github-home] . Dieser wird dich bei der innFactory und im späteren Entwickler-Leben noch oft begleiten 🤩.
 
 ### Ⅰ.Ⅱ. Entwickeln aus der Entwicklungsumgebung
 
-Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können. Dieser Ort ist die sogennante Entwicklungsumgebung, auf englisch "Integrated Development Environment", abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am Besten VS Code.
+Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können. Dieser Ort ist die sogenannte Entwicklungsumgebung, auf englisch "Integrated Development Environment", abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am Besten VS Code.
 
 - Installiere dir [Visual Studio Code][visual-studio-code].
 - Öffne VS Code. Mache dich mit diesem [Tutorial][vscode-getting-started] in VS Code etwas vertraut.
@@ -25,7 +25,7 @@ Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, sch
 ### Ⅰ.Ⅲ. Webapp kopieren
 
 In GitHub online gespeicherte Software muss zum Bearbeiten erst lokal auf deinem PC kopiert werden (=to clone). Das geht ebenfalls ganz einfach mit VS Code.
-VS Code kommt standardmäßig mit einer Anbidung für GitHub, dem "Source Control Management".
+VS Code kommt standardmäßig mit einer Anbindung für GitHub, dem "Source Control Management".
 
 - Öffne den Tab des Source Control und wähle "Clone Repository". Gebe nun die URL des Repositories `https://github.com/innFactory/angular-chuck-norris` ein und wähle einen beliebigen Speicherort auf deinem PC.
 
@@ -65,7 +65,7 @@ Nun musst du dir die Abhängigkeiten bzw. Dependencies nur noch installieren. Ke
 Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
 
 - Öffne den Browser auf [http://localhost:4200](http://localhost:4200) und du solltest die Webapp sehen.
-- In der Konsole kannst du den laufenen, lokalen Client sehen.
+- In der Konsole kannst du den laufenden, lokalen Client sehen.
 
   ```
   ~/code/intern/angular-chuck-norris
@@ -103,7 +103,7 @@ Jede Angular Komponente in deiner Webapp besteht aus einem Logik-, einem Struktu
 Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der Markupsprache HTML verfasst. Im Folgenden erweiterst du diese bestehende HTML Seite.
 
 - Sieh dir die Struktur in der "HomePage" Komponente unter [src/pages/home/](src/pages/home/) einmal genauer an.
-- Der Text "..Ich bin Chuck Norris, ein Kampfsportler und Schauspieler.." ist in einem HTML `<p>` Paragraphen Element eingeschlossen bzw. gewrapped. So verfässt man Text in HTML.
+- Der Text "..Ich bin Chuck Norris, ein Kampfsportler und Schauspieler.." ist in einem HTML `<p>` Paragraphen Element eingeschlossen bzw. gewrapped. So verfasst man Text in HTML.
 - Lese hier über das Paragraphen Element auf der offiziellen HTML Dokumentation [MDN Webdocs P Element][mdn-docs-element-p]
 - Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste][wikipedia-chuck-norris] und füge in der "HomePage" weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
 
@@ -113,10 +113,10 @@ Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der M
 
 ### Ⅱ.Ⅰ. Offiziell ist am Besten - Angular Doku
 
-Für jedes Framework und jede Sprache gibt es eine offiziele Dokumentation. Als Entwickler ist es meist am hilfreichsten, dich in der Doku deiner Sprache zurechtzufinden. Alle Neuerungen und Updates stehen hier immer zuerst.
+Für jedes Framework und jede Sprache gibt es eine offizielle Dokumentation. Als Entwickler ist es am Besten, dich in der Doku deiner Sprache zurechtzufinden. Alle Neuerungen und Updates stehen hier immer zuerst.
 
-- Überfliege die offizelle [Angular Doku][angular-overview] und bekomme einen ersten Überblick.
-- Lese zum Einstieg außderdem folgende Angular-Artikel:
+- Überfliege die offizielle [Angular Doku][angular-overview] und bekomme einen ersten Überblick.
+- Lese zum Einstieg außerdem folgende Angular-Artikel:
   - [Komponenten][angular-components]
   - [Dynamischer Text][angular-dynamic-text]
   - [Benutzerinteraktion][angular-user-input]
@@ -158,7 +158,7 @@ HTML wird verwendet, um die Struktur und den Inhalt von Webseiten zu definieren.
 
 Da TypeScript das Programmverhalten und HTML den Website Aufbau übernimmt, benötigst du in der Webentwicklung noch eine weitere Technik, damit die Seiten auch wirklich schön aussehen. Farben, Schriftarten, Abstände uvm. werden über CSS definiert. Damit CSS eine noch bessere Wiederverwendbarkeit bekommt gibt es die CSS Erweiterung SCSS.
 
-- Sieh dir an wie dieses [HTML Beispiel][css-starting-with-html] etwas weiter unten im Artikel mit Hilfe einer CSS Datei [stilisert wird][css-using-common-selectors]
+- Sieh dir an wie dieses [HTML Beispiel][css-starting-with-html] etwas weiter unten im Artikel mit Hilfe einer CSS Datei [stilisiert wird][css-using-common-selectors]
 - In diesem [SCSS Guide][scss-nesting] siehst du wie CSS in SCSS Form geschrieben wird
 
 ### Ⅱ.Ⅵ. Hilfreiche Tipps für diese Challenge
@@ -173,7 +173,7 @@ Hier findest du noch eine Auflistung an Tipps die Besonders für Einsteiger hilf
 
 - In der Challenge wirst du oftmals aufgefordert Angular Komponenten / Dateien anzupassen. VS Code stellt mehrere Tools zur Verfügung. Über die Suchleiste oben, kannst du nach Dateien suchen. Gib dort z.B. einmal "home-page" ein. In VS Code kannst du außerdem über `Edit -> Find in Files` global nach Programmcode suchen. Suche z.B. einmal nach "HomePage".
 
-- Oftmals wirst du auf Komponenten oder extersne Bibliotheken zugreifen. Hast du sie nicht importiert werden sie in VS Code rot unterringelt.
+- Oftmals wirst du auf Komponenten oder externe Bibliotheken zugreifen. Hast du sie nicht importiert werden sie in VS Code rot unterringelt.
   Hovere mit der Maus darüber. Klicke auf `Quick Fix ...` und dann auf den richtigen Importpfad der Bibliothek. Verwendest du hier den falschen, funktioniert die Logik ggf. nicht richtig.
 
   ![VS Code Quick Fix](docs/vscode-quick-fix.png)
@@ -217,12 +217,12 @@ Glückwunsch! Du hast soeben dein erste Angular Komponente entwickelt. Kannst du
 
 ### Ⅳ.Ⅰ. Übersicht
 
-In der Folgenden Challenge lernst du das Konzept der Angular Services am Beispiel des bereits bestehenden "FavouriteChuckJokesSevice" kennen. Im Anschluss erstellst du eine Komponente, mit der du eigene Witze eingeben kannst. Dabei kommst du auch mit der Bibliothek "Angular Material" in Berührung. Später wirst du auch über den Verwendungszweck der reaktiven Angular Signals lernen.
+In der Folgenden Challenge lernst du das Konzept der Angular Services am Beispiel des bereits bestehenden "FavouriteChuckJokesService" kennen. Im Anschluss erstellst du eine Komponente, mit der du eigene Witze eingeben kannst. Dabei kommst du auch mit der Bibliothek "Angular Material" in Berührung. Später wirst du auch über den Verwendungszweck der reaktiven Angular Signals lernen.
 
 - Sieh dir die "JokesPage" einmal an. Gibst du einen Witz ein und klickst auf den "FAVORISIEREN" Button, erscheint er in der "FavouritesPage" bzw. der "JokeTable".
 - Das macht das Global State Management über sogenannte Services in Angular möglich.
-- Sieh dir den Code zur "ChuckJokesCard" Komponente, zum "FavouriteChuckJokesSevice" Service und die "updateChucksJokeTableData()" Methode in "JokesTable" genauer an.
-- Die Methode lädt die im "FavouriteChuckJokesSevice" gespeicherten Witze jedes mal, bei Aufruf der in die Tabelle. Probiere es gerne selbst aus indem du neue Chuck Norris Witze lädst und favorisierst.
+- Sieh dir den Code zur "ChuckJokesCard" Komponente, zum "FavouriteChuckJokesService" Service und die "updateChucksJokeTableData()" Methode in "JokesTable" genauer an.
+- Die Methode lädt die im "FavouriteChuckJokesService" gespeicherten Witze jedes mal, bei Aufruf der in die Tabelle. Probiere es gerne selbst aus indem du neue Chuck Norris Witze lädst und favorisierst.
 
 ### Ⅳ.Ⅱ. Witze-Wettbewerb
 
@@ -239,8 +239,8 @@ Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Ei
 
 Nun hast du ein Frontend mit Eingabefeld und Button. Die Eingabe musst du nun an die Tabelle der "JokesTable" weitergeben. Diese globale Verknüpfung von Daten heißt auch "Global State Management" und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services.
 
-- Sieh dir dazu die offzielle Dokumentation an und schließe das [Angular Services Tutorial][angular-services] ab.
-- Sieh dir den "FavouriteChuckJokesSevice" und seine Verwendung in "ChuckJokesCard" und der "JokesTable" genauer an.
+- Sieh dir dazu die offizielle Dokumentation an und schließe das [Angular Services Tutorial][angular-services] ab.
+- Sieh dir den "FavouriteChuckJokesService" und seine Verwendung in "ChuckJokesCard" und der "JokesTable" genauer an.
 - Implementiere nun auch einen "FavouriteOwnJokesService". Das geht auch über den `npx ng generate service ../shared/services/(name)` Befehl.
 - Der Service soll auch nur über die "add()", "remove()" und "getAll()" Methoden verwendbar sein.
 - Füge in der "OwnJokesCard" eine neue Methode für das favorisieren hinzu. Gebe den neuen, eigenen Witz über die "add()" Methode an den Service.
@@ -250,7 +250,7 @@ Nun hast du ein Frontend mit Eingabefeld und Button. Die Eingabe musst du nun an
 
 Im Anschluss wirst du die "JokesTable" erweitern. Du hast versehentlich einen peinlichen Witz favorisert? Hoffentlich sehen das nicht Toni, Maxi und Tobi! 😅 In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist leider noch nicht implementiert.
 
-- Implementiere die "deleteRow()" Methode und greife auf die "remove()" Methoden deiner Services "FavouriteChuckJokesSevice" und "FavouriteOwnJokesService" zu.
+- Implementiere die "deleteRow()" Methode und greife auf die "remove()" Methoden deiner Services "FavouriteChuckJokesService" und "FavouriteOwnJokesService" zu.
 - Fällt dir auf, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf den "AKTUALISIEREN" Button klickst, oder auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
 
 ### Ⅳ.Ⅴ. Die Macht der Signals
@@ -258,10 +258,10 @@ Im Anschluss wirst du die "JokesTable" erweitern. Du hast versehentlich einen pe
 Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass jemand dem Datenobjekt "tableData" mitteilen muss, dass sich die Witze der Services geändert haben. Um dies eleganter zu gestalten, gibt es in Angular die Verwendung des reaktiven Programmierstils. Das geht mit sogenannten Signals.
 
 - Lies dir den [Eintrag über Signals][angular-signals] in der offiziellen Angular Dokumentation durch.
-- Sieh dir den "FavouriteChuckJokesSignalSevice" an. Als Hilfestellung ist er im Projekt bereits implementiert. Bemerkst du die wesentlichen Unterschiede zum "FavouriteChuckJokesSevice"?
+- Sieh dir den "FavouriteChuckJokesSignalService" an. Als Hilfestellung ist er im Projekt bereits implementiert. Bemerkst du die wesentlichen Unterschiede zum "FavouriteChuckJokesService"?
   - Das private Datenobjekt "data", ein schreibbares Signal vom Typ "WriteableSignal", ist hier eine Funktion und auf dessen Inhalt wird mit "data()" zugegriffen.
     Zusätzlich gibt es das neue, öffentliche Datenobjekt "$data". Es ist ein "read-only", berechnetes (=computed) Signal ebenfalls vom Typen "Signal".
-- Importiere zunächst an allen Stellen statt des bisherigen "FavouriteChuckJokesSevice" den bisher noch nicht verwendeten "FavouriteChuckJokesSignalSevice".
+- Importiere zunächst an allen Stellen statt des bisherigen "FavouriteChuckJokesService" den bisher noch nicht verwendeten "FavouriteChuckJokesSignalService".
 - Jetzt wird es interessant: Anstatt "tableData" im Konstruktor mit den Services zu aktualisieren, wird es sich in Zukunft als "computed" Signal von selbst berechnen.
 - Entferne den Programmcode für den "constructor()" und die update Funktionen aus der "JokesTable".
 - Entferne die aktuelle "tableData" Zuweisung und erstelle sie stattdessen als computed Datenobjekt. Hier eine Vorlage dafür:
@@ -270,7 +270,7 @@ Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass jem
   protected tableData = computed<JokeTableRow[]>(() => {
   const data: JokeTableRow[] = [];
 
-      // Hier musst du nun data mit dem Signal $data aus dem FavouriteChuckJokesSignalSevice befüllen
+      // Hier musst du nun data mit dem Signal $data aus dem "FavouriteChuckJokesSignalService" befüllen
 
       return data;
 
@@ -283,7 +283,7 @@ Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klic
 
 ### Ⅳ.Ⅵ. Hello World Signal-Service
 
-- Erstelle einen neuen "FavouriteOwnJokesSignalService". Die Methoden "add()", "remove()" und "getAll()" müssen angepasst werden. Orientiere dich dabei am "FavouriteChuckJokesSignalSevice".
+- Erstelle einen neuen "FavouriteOwnJokesSignalService". Die Methoden "add()", "remove()" und "getAll()" müssen angepasst werden. Orientiere dich dabei am "FavouriteChuckJokesSignalService".
 - Die Methode "setFromDatabase()" kannst du bis Challenge Ⅵ erstmal ignorieren.
 - Tausche auch den vorherigen Service überall durch den neuen Signal Service aus.
 - Ergänze nun das "tableData" Signal der "JokesTable" Komponente auch mit dem "$data" Signal aus deinem neuen "FavouriteOwnJokesSignalService".
