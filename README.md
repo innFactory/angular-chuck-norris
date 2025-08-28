@@ -248,7 +248,7 @@ Nun hast du ein Frontend mit Eingabefeld und Button. Die Eingabe musst du nun an
 
 ### Ⅳ.Ⅳ. Echt peinlich: Unlustiger Witz
 
-Im Anschluss wirst du die "JokesTable" erweitern. Du hast versehentlich einen peinlichen Witz favorisert? Hoffentlich sehen das nicht Toni, Maxi und Tobi! 😅 In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist leider noch nicht implementiert.
+Im Anschluss wirst du die "JokesTable" erweitern. Du hast versehentlich einen peinlichen Witz favorisiert? Hoffentlich sehen das nicht Toni, Maxi und Tobi! 😅 In der Tabelle gibt es bereits einen Löschen Button. Aber dessen Funktion ist leider noch nicht implementiert.
 
 - Implementiere die "deleteRow()" Methode und greife auf die "remove()" Methoden deiner Services "FavouriteChuckJokesService" und "FavouriteOwnJokesService" zu.
 - Fällt dir auf, dass die Löschung in der Tabelle erst aktualisiert wird, wenn du auf den "AKTUALISIEREN" Button klickst, oder auf eine andere Seite z.B. "Start" und wieder zurückwechselst?
@@ -259,7 +259,7 @@ Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass jem
 
 - Lies dir den [Eintrag über Signals][angular-signals] in der offiziellen Angular Dokumentation durch.
 - Sieh dir den "FavouriteChuckJokesSignalService" an. Als Hilfestellung ist er im Projekt bereits implementiert. Bemerkst du die wesentlichen Unterschiede zum "FavouriteChuckJokesService"?
-  - Das private Datenobjekt "data", ein schreibbares Signal vom Typ "WriteableSignal", ist hier eine Funktion und auf dessen Inhalt wird mit "data()" zugegriffen.
+  - Das private Datenobjekt "data", ein veränderbares Signal vom Typ "WriteableSignal", ist hier eine Funktion und auf dessen Inhalt wird mit "data()" zugegriffen.
     Zusätzlich gibt es das neue, öffentliche Datenobjekt "$data". Es ist ein "read-only", berechnetes (=computed) Signal ebenfalls vom Typen "Signal".
 - Importiere zunächst an allen Stellen statt des bisherigen "FavouriteChuckJokesService" den bisher noch nicht verwendeten "FavouriteChuckJokesSignalService".
 - Jetzt wird es interessant: Anstatt "tableData" im Konstruktor mit den Services zu aktualisieren, wird es sich in Zukunft als "computed" Signal von selbst berechnen.
@@ -284,15 +284,15 @@ Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klic
 ### Ⅳ.Ⅵ. Hello World Signal-Service
 
 - Erstelle einen neuen "FavouriteOwnJokesSignalService". Die Methoden "add()", "remove()" und "getAll()" müssen angepasst werden. Orientiere dich dabei am "FavouriteChuckJokesSignalService".
-- Die Methode "setFromDatabase()" kannst du bis Challenge Ⅵ erstmal ignorieren.
+- Die Methode "setFromDatabase()" kannst du bis Challenge Ⅵ ersteinmal ignorieren.
 - Tausche auch den vorherigen Service überall durch den neuen Signal Service aus.
 - Ergänze nun das "tableData" Signal der "JokesTable" Komponente auch mit dem "$data" Signal aus deinem neuen "FavouriteOwnJokesSignalService".
 
-Probiere es gleich im Browser aus. Absofort berechnet sich das "tableData" Datenobjekt, bei jeglicher Veränderung des Eigenen und des Chucks Witze Signal Services von selbst neu. Die Tabelle aktualisiert sich im Frontend damit automatisch bzw. reaktiv.
+Probiere es gleich im Browser aus. Ab sofort berechnet sich das "tableData" Datenobjekt, bei jeglicher Veränderung des Eigenen und des Chucks Witze Signal Services von selbst neu. Die Tabelle aktualisiert sich im Frontend damit automatisch bzw. reaktiv.
 
 ### Ⅳ.Ⅶ. Sauberkeit ist die halbe Miete
 
-Der "AKTUALISIEREN" Button wird jetzt nicht mehr benötigt. Es folgt den Best Practices als Entwickler, unbenutzen Programmcode oder veraltete Features immer direkt zu entfernen um das Projekt simpel und verständlich zu halten.
+Der "AKTUALISIEREN" Button wird jetzt nicht mehr benötigt. Es folgt den Best Practices als Entwickler, unbenutzten Programmcode oder veraltete Features immer direkt zu entfernen um das Projekt simpel und verständlich zu halten.
 
 - Entferne nun den "AKTUALISIEREN" Button und seine Funktion. Er wird nicht mehr benötigt.
   Herzlichen Glückwunsch, du hast diese Challenge geschafft! Das muss gefeiert werden 🥳!
@@ -315,7 +315,7 @@ Nun wird das Projekt um eine Katzen Seite erweitert. Sie wird zufällig neue Kat
 
 ### Ⅴ.Ⅱ. Implementierung der Katzen Seite
 
-Die Katzenseite soll ein Bild und zwei Buttons z.B. "NEU" und "FAVORISIEREN" beinhalten, um die Katze später neu zu generieren und zu favoriseren. Konzentriere dich erst einmal auf das HTML und CSS. Du kannst wie bei den Witzen die GenerationCard Komponente wiederverwenden.
+Die Katzenseite soll ein Bild und zwei Buttons z.B. "NEU" und "FAVORISIEREN" beinhalten, um die Katze später neu zu generieren und zu favorisieren. Konzentriere dich erst einmal auf das HTML und CSS. Du kannst wie bei den Witzen die GenerationCard Komponente wiederverwenden.
 
 - Tipp: Sieh dir für das Image Element wieder die [offizielle Dokumentation][mdn-docs-element-img] an.
 - Verwende für das Bild erst einmal das [public/cat-placeholder.png](public/cat-placeholder.png).
@@ -328,7 +328,7 @@ Eine Programmierschnittstelle auch kurz API ermöglicht in der Softwareentwicklu
 - Rufe die API per Link im Browser auf [https://api.chucknorris.io/jokes/random](https://api.chucknorris.io/jokes/random). Was siehst du?
 - Du siehst die JSON Antwort der API.
 - Aktualisiere die Seite neu. Was verändert sich?
-- Der HTTP Zugriff auf die API erfolgt in Angular 20 vorzugsweise mit dem [HttpClient][angular-httpclient] und [RxJS][rxjs-overview] Observables. Sieh dir die offiziele Dokumentation zu den beiden an.
+- Der HTTP Zugriff auf die API erfolgt in Angular 20 vorzugsweise mit dem [HttpClient][angular-httpclient] und [RxJS][rxjs-overview] Observables. Sieh dir die offizielle Dokumentation zu den beiden an.
 - Verstehst du den Zugriff auf den Service und die reaktive Resource in der ChuckJokesCard Komponente?
 - Da TypeScript empfiehlt alle Datenobjekte zu typisieren, ist im Projekt auch die JSON Rückgabe typisiert. Das Modell siehst du in [src/models/api-response-chuck-joke.ts](src/models/api-response-chuck-joke.ts).
 
@@ -342,7 +342,7 @@ Bei Klick auf den "NEU" Button soll in Zukunft ein zufälliges Katzenbild gelade
 - Typisiere die JSON Rückgabe. Dazu erstellst du eine neue Datei unter [src/models/](src/models/) und markierst den Typen z.B. "CatData" mit "export type" als im Projekt global benutzbar.
 - Implementiere eine neue "urlCatPicture()" Methode in der "CatsPage", die jeweils die URL des "CatApiService" zurückgibt.
 - Orientiere dich dabei einfach an der Methode "jokeDisplayed()" der "ChuckJokesCard".
-- Implemenitere eine "fetchNewCat()" Methode, die die Resource neu lädt. Rufe sie über den "NEU" Button auf.
+- Implementiere eine "fetchNewCat()" Methode, die die Resource neu lädt. Rufe sie über den "NEU" Button auf.
 - Verwende anstelle des "cat-placeholder.png" Bildes nun die zufällige URL.
 - Auf das "src" Attribut des Image greifst du von nun an mit eckigen Klammern zu. So markierst du in Angular HTML dynamische, sich verändernde Attribute.
   ```
@@ -367,7 +367,7 @@ Du hast es vielleicht schon erraten 😄.. Im Anschluss wirst du analog zur Witz
 
 ### Ⅵ.Ⅰ. Übersicht
 
-Die Angular Chuck Norris Webapp verfügt bereits über weitreichende Features! Du hast bereits eine weitere online API angebunden, auf der Startseite wird über Chuck Norris selbst erfundenen Kampfkünste berichtet 😎. Es gibt die Möglichkeit Witze und Katzen Favoriten hinzuzufügen und zu löschen. Sogar eigene Witze können mit denen von Chuck Norris in Konkurrenz treten. Durch die reaktive Programmierung werden die Änderungen unmittelbar in den Tabellen aktualisiert. Mit der Verwendung von Services auf die von überall aus zugregriffen werden kann, folgst du den Best Practices der Modularisierung!
+Die Angular Chuck Norris Webapp verfügt bereits über weitreichende Features! Du hast bereits eine weitere online API angebunden, auf der Startseite wird über Chuck Norris selbst erfundenen Kampfkünste berichtet 😎. Es gibt die Möglichkeit Witze und Katzen Favoriten hinzuzufügen und zu löschen. Sogar eigene Witze können mit denen von Chuck Norris in Konkurrenz treten. Durch die reaktive Programmierung werden die Änderungen unmittelbar in den Tabellen aktualisiert. Mit der Verwendung von Services auf die von überall aus zugegriffen werden kann, folgst du den Best Practices der Modularisierung!
 
 Einen Nachteil hat unsere App bisher noch. Klickst du den Refresh Button im Browser, gehen alle favorisierten Witze und Katzen für den Benutzer verloren. Wie schön wäre es, wenn du über Wochen und Monate die Besten Witze speichern und die Liste damit erweitern könntest 🤩.
 
@@ -412,7 +412,7 @@ Damit nun auch deine eigenen Witze verewigt werden, kannst du ebenfalls den "Jok
      - Diese Befüllst du dann beim Ersteller "CREATOR_OWN".
      - Im Anschluss fügst in "Login" den Zugriff auf deinen Service "FavouriteOwnJokesSignalService" mit `inject()` hinzu.
      - Nun musst du noch dessen "setFromDatabase()" ansprechen und die "ownJokeTableData" übergeben.
-  3. Erweitere die "logout()" Methode der Menu Komponente und setze bei erfolgreichem Lgout die Witze des FavouriteOwnJokesSignalService mit `setFromDatabase([])` auf einen leeren Datensatz.
+  3. Erweitere die "logout()" Methode der Menu Komponente und setze bei erfolgreichem Abmelden die Witze des FavouriteOwnJokesSignalService mit `setFromDatabase([])` auf einen leeren Datensatz.
 
 Fertig! Nun werden auch deine eigenen Witze in der Datenbank gespeichert. Teste es gleich einmal aus. Melde dich wieder ab und lade die Seite im Browser neu, sodass die Favoriten verschwinden. Melde dich nun erneut an. Deine eigenen Witze sollten nun auch wieder erscheinen. Auch das Löschen sollte funktionieren.
 
@@ -424,7 +424,7 @@ Bisher bist du vor allem mit der **Frontend Entwicklung** in Berührung gekommen
 - Klicke auf "Neues Firebase-Projekt erstellen" und gib z.B. "angular-chuck-norris" als Projektnamen ein. Du musst weder Gemini noch das Entwicklerprogramm oder Google Analytics aktivieren.
 - Navigiere nach `Projektübersicht -> Projekteinstellungen -> Allgemein`. Unter `Meine Apps` klickst du auf das `</>` Symbol für Web um Firebase zu einer Webapp hinzuzufügen.
 - Benutze als Alias auch den Projektnamen "angular-chuck-norris" und klicke auf App registrieren.
-- Du erhälst eine Übersicht zum Setup. Das wurde aber schon fertig eingestellt. Kopiere dir nur den Inhalt mit folgendem Schema heraus:
+- Du erhältst eine Übersicht zum Setup. Das wurde aber schon fertig eingestellt. Kopiere dir nur den Inhalt mit folgendem Schema heraus:
   ```
     apiKey: '...',
     authDomain: 'angular-chuck-norris.firebaseapp.com',
@@ -444,7 +444,7 @@ Nun ist die App erfolgreich mit Firebase verbunden. Beim Registrieren oder Anmel
 
 Die Authentifizierung per E-Mail und Passwort muss im Firebase Projekt aktiviert werden.
 
-- Navigiere im Firebase Hauptmenü im Reiter links nach `Entwickeln -> Authentication` und klicke auf den `Los gehts` Button.
+- Navigiere im Firebase Hauptmenü im Reiter links nach `Entwickeln -> Authentication` und klicke auf den `Los geht's` Button.
 - Bei Anmeldemethode aktivierst du E-Mail-Adresse/Passwort. `E-Mail-Link` kannst du deaktiviert lassen. Bestätige die Konfiguration mit `Speichern`.
 - Jetzt sollte die Registrierung und Anmeldung unmittelbar funktionieren. Unter `Authentication -> Nutzer` kannst du den neu erstellten Benutzer sehen.
 - Damit nun auch die Datenbank-Speicherung funktioniert, musst du in Firebase noch Firestore Datenbanken aktivieren.
@@ -502,7 +502,7 @@ In der letzten Challenge wirst du einen neuen Service erstellen, der für die Ve
 - Passe auch die Befüllung des "cats" Arrays in der "getAll()" Methode an.
 - Ergänze nun die "add()" und "remove()" Methoden des "FavouriteCatsService" um den Aufruf des neuen "CatDatabaseService". Füge eine Methode "setFromDatabase()" hinzu und verwende hier "PREFIX_ID_CATS".
 - Damit die Katzen-URLs nach der Anmeldung geladen werden, fügst du der "login()" Methode der Login Komponente eine neue Methode "loadCatsFromDatabase()" hinzu. Die du bei erfolgreicher Anmeldung aufrufst.
-- Bei Abmeldung soll die Katzentabelle gelöscht werden. Setze die Daten des "FavouriteCatsSignalService" in der "logout()" Methode der Menu Kommponente auf ein leerees Array.
+- Bei Abmeldung soll die Katzentabelle gelöscht werden. Setze die Daten des "FavouriteCatsSignalService" in der "logout()" Methode der Menu Komponente auf ein leeres Array.
 
 Glückwunsch, du hast alle Challenges gemeistert. Chuck Norris und die innFactory sind stolz auf deine Webdevelopment Künste 🤩.
 
