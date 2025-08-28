@@ -510,7 +510,7 @@ Glückwunsch, du hast alle Challenges gemeistert. Chuck Norris und die innFactor
 
 ![Chuck Norris Laughing](docs/chuck-norris-laughing.jpg)
 
-[Bild](https://commons.wikimedia.org/wiki/File:NorrisCrop.jpg) von Craig Michaud, lizenziert unter CC BY 3.0.
+[Foto](https://commons.wikimedia.org/wiki/File:NorrisCrop.jpg) von Craig Michaud, lizenziert unter CC BY 3.0.
 
 ---
 
