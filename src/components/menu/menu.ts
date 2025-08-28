@@ -23,11 +23,11 @@ export class Menu {
 
   protected toggleLightDarkTheme() {
     const body = document.body;
-    const isLightMode = body.classList.contains('activate-light-mode');
+    const isLightMode = body.classList.contains('activate-dark-mode');
     if (isLightMode) {
-      this.renderer.removeClass(body, 'activate-light-mode');
+      this.renderer.removeClass(body, 'activate-dark-mode');
     } else {
-      this.renderer.addClass(body, 'activate-light-mode');
+      this.renderer.addClass(body, 'activate-dark-mode');
     }
   }
 

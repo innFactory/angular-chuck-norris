@@ -1,7 +1,7 @@
 @use '@angular/material' as mat;
 
-@mixin light-mode {
-  color-scheme: light;
+@mixin dark-mode {
+  color-scheme: dark;
 }
 
 /* Theme Setup */
@@ -26,12 +26,12 @@ html {
 
 /* Global body theme application */
 body {
-  background: var(--mat-sys-surface-container);
+  background: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
-  color-scheme: dark;
+  color-scheme: light;
 
-  &.activate-light-mode {
-    @include light-mode;
+  &.activate-dark-mode {
+    @include dark-mode;
   }
 }
