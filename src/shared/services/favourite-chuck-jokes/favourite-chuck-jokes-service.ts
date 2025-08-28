@@ -5,7 +5,7 @@ import { JokeData } from '../../../models/joke-data';
 @Injectable({
   providedIn: 'root',
 })
-export class FavouriteChuckJokesSevice {
+export class FavouriteChuckJokesService {
   private data: JokeData[] = [];
   private nextId: number = 1;
 

@@ -6,7 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { CREATOR_CHUCK } from '../../app/app.constants';
 import { JokeTableRow } from '../../models/joke-table-row';
-import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-service';
+import { FavouriteChuckJokesService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-service';
 
 @Component({
   selector: 'app-jokes-table',
@@ -15,7 +15,7 @@ import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck
   styleUrl: './jokes-table.scss',
 })
 export class JokesTable {
-  private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
+  private favouriteChuckJokesService = inject(FavouriteChuckJokesService);
   private snackbarService = inject(MatSnackBar);
   protected displayedColumns: string[] = ['id', 'content', 'creator', 'action'];
   protected tableData: JokeTableRow[] = [];
@@ -25,7 +25,7 @@ export class JokesTable {
   }
 
   private updateChucksJokesTableData() {
-    const favouriteChuckJokes = this.favouriteChuckJokesSevice.getAllJokes();
+    const favouriteChuckJokes = this.favouriteChuckJokesService.getAllJokes();
 
     favouriteChuckJokes.forEach((favourite) => {
       const row: JokeTableRow = {

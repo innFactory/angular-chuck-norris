@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiResponseChuckJoke } from '../../models/api-response-chuck-joke';
-import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-service';
+import { FavouriteChuckJokesService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-service';
 import { JokeApiService } from '../../shared/services/joke-api-service/joke-api-service';
 import { GenerationCard } from '../generation-card/generation-card';
 
@@ -17,7 +17,7 @@ import { GenerationCard } from '../generation-card/generation-card';
 export class ChuckJokesCard {
   private snackbarService = inject(MatSnackBar);
   private jokeApiService = inject(JokeApiService);
-  private favouriteChuckJokesSevice = inject(FavouriteChuckJokesSevice);
+  private favouriteChuckJokesService = inject(FavouriteChuckJokesService);
   protected jokeResource: ResourceRef<ApiResponseChuckJoke | undefined>;
 
   constructor() {
@@ -40,7 +40,7 @@ export class ChuckJokesCard {
   protected favouriseChucksJoke() {
     const jokeResourceValue = this.jokeResource.value();
     if (jokeResourceValue !== undefined) {
-      this.favouriteChuckJokesSevice.add(jokeResourceValue.value);
+      this.favouriteChuckJokesService.add(jokeResourceValue.value);
       this.snackbarService.open('⭐️ Witz hinzugefügt');
     }
   }
