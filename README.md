@@ -506,6 +506,12 @@ In der letzten Challenge wirst du einen neuen Service erstellen, der für die Ve
 
 Glückwunsch, du hast alle Challenges gemeistert. Chuck Norris und die innFactory sind stolz auf deine Webdevelopment Künste 🤩.
 
+![transparent-spacing](docs/transparent-spacing.png)
+
+![Chuck Norris Laughing](docs/chuck-norris-laughing.jpg)
+
+[Bild](https://commons.wikimedia.org/wiki/File:NorrisCrop.jpg) von Craig Michaud, lizenziert unter CC BY 3.0.
+
 ---
 
 ### VII. Links 🔗
