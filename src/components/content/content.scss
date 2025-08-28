@@ -1,7 +1,9 @@
 :host {
+  position: relative;
   height: inherit;
   width: inherit;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
   align-items: center;
   padding: var(--var-spacing-11);
