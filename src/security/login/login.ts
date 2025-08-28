@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { CREATOR_CHUCK } from '../../app/app.constants';
 import { FirebaseJokeTableRow } from '../../models/firebase-joke-table-row';
 import { JokeData } from '../../models/joke-data';
-import { FavouriteChuckJokesSignalService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-signal-service/favourite-chuck-jokes-signal-service';
+import { FavouriteChuckJokesSignalService } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-signal-service';
 import { JokeDatabaseService } from '../../shared/services/joke-database-service/joke-database-service';
 import { AuthService } from '../auth/auth-service';
 import { AuthenticationModalService } from '../auth/authentication-modal-service';

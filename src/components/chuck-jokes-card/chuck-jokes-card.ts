@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiResponseChuckJoke } from '../../models/api-response-chuck-joke';
-import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-service/favourite-chuck-jokes-service';
+import { FavouriteChuckJokesSevice } from '../../shared/services/favourite-chuck-jokes/favourite-chuck-jokes-service';
 import { JokeApiService } from '../../shared/services/joke-api-service/joke-api-service';
 import { GenerationCard } from '../generation-card/generation-card';
 

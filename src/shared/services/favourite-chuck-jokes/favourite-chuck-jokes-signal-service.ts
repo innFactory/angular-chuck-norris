@@ -1,6 +1,6 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { PREFIX_ID_CHUCK_JOKES } from '../../../../app/app.constants';
-import { JokeData } from '../../../../models/joke-data';
+import { PREFIX_ID_CHUCK_JOKES } from '../../../app/app.constants';
+import { JokeData } from '../../../models/joke-data';
 
 @Injectable({
   providedIn: 'root',
