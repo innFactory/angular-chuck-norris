@@ -552,5 +552,5 @@ Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer
 [typescript-everyday-types]: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
 [visual-studio-code]: https://code.visualstudio.com/
 [vscode-getting-started]: https://code.visualstudio.com/docs/getstarted/getting-started
-[wikipedia-chuck-norris]: https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge†
 [witzenet-flachwitze]: https://witze.net/flachwitz-witze
+[wikipedia-chuck-norris]: https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge†
