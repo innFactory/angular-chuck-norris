@@ -11,13 +11,13 @@ Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webap
 ### Ⅰ.Ⅰ. GitHub Account
 
 Jeder geschriebene Programmcode muss auch gespeichert und weitergegeben werden können. GitHub ist eine übergreifende Entwicklerplattform die das ermöglicht und auch dieses Projekt speichert.
-Du wirst später nicht nur deinen Programmcode mit Anderen Kollegen in Projekten teilen (=publish), sondern in sogennanten Code-Reviews gegenseitig den Code überprüfen und verbessern. Dies musst du beim Angular Chuck Norris Projekt aber nicht machen.
+Du wirst später nicht nur deinen Programmcode mit anderen Kollegen in Projekten teilen (=to publish), sondern in sogennanten Code-Reviews gegenseitig den Code überprüfen und verbessern. Code-Reviews wirst du beim Angular Chuck Norris Projekts noch nicht machen.
 
 - Erstelle dir, falls du noch keinen hast, zunächst einen eigenen [Github Account][github-home] . Dieser wird dich bei der innFacotory und im späteren Entwickler-Leben noch oft begleiten 🤩.
 
 ### Ⅰ.Ⅱ. Entwickeln aus der Entwicklungsumgebung
 
-Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können. Dieser Ort ist die sogennante Entwicklungsumgebung, auf englisch Integrated Development Environment, abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am Besten VS Code.
+Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können. Dieser Ort ist die sogennante Entwicklungsumgebung, auf englisch "Integrated Development Environment", abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am Besten VS Code.
 
 - Installiere dir [Visual Studio Code][visual-studio-code].
 - Öffne VS Code. Mache dich mit diesem [Tutorial][vscode-getting-started] in VS Code etwas vertraut.
@@ -88,7 +88,7 @@ Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
 
 Jede Angular Komponente in deiner Webapp besteht aus einem Logik-, einem Struktur- und einem Stylingteil. Fühle dich nicht überfordert von all den verschiedenen Sprachen und Frameworks. Du bekommst eine Schritt für Schritt Einführung in die Angular Welt.
 
-- Sehe dir exemplarisch einmal die Home-Page Komponente genauer an. Navigiere in in den Pfad `src -> pages -> home` und sehe dir die Datein an.
+- Sehe dir exemplarisch einmal die Home-Page Komponente genauer an. Navigiere in in den Pfad `src -> pages -> home` und sehe dir die Dateien an.
 
   | Datei     | Function                |
   | --------- | ----------------------- |
@@ -113,7 +113,7 @@ Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der M
 
 ### Ⅱ.Ⅰ. Offiziell ist am Besten - Angular Doku
 
-Für jedes Framework und jede Sprache gibt es eine offiziele Dokumentation. Als Entwickler ist es meist am hilfreichsten, dich in der Doku deiner Sprache auszukennen. Alle Neuerungen und Updates stehen hier immer zuerst.
+Für jedes Framework und jede Sprache gibt es eine offiziele Dokumentation. Als Entwickler ist es meist am hilfreichsten, dich in der Doku deiner Sprache zurechtzufinden. Alle Neuerungen und Updates stehen hier immer zuerst.
 
 - Überfliege die offizelle [Angular Doku][angular-overview] und bekomme einen ersten Überblick.
 - Lese zum Einstieg außderdem folgende Angular-Artikel:
@@ -124,7 +124,7 @@ Für jedes Framework und jede Sprache gibt es eine offiziele Dokumentation. Als 
 
 ### Ⅱ.Ⅱ. Komponenten Bibliothek - Angular Material
 
-Angular hat eine eigene UI-Komponenten Bibliothek, die du optional verwenden kannst. Sie ermöglicht dir eine Auswahl an erweiterten Button, Input, Tabellen Komponenten die du einfach einbinden kannst. Angular Material ist im Projekt bereits hinzugefügt und du kannst es einfach verwenden.
+Angular hat eine eigene UI-Komponenten Bibliothek, die du optional verwenden kannst. Sie ermöglicht dir eine Auswahl an erweiterten Button, Input, Tabellen-Komponenten uvm. die du einfach einbinden kannst. Angular Material ist im Projekt bereits hinzugefügt und du kannst es einfach verwenden.
 
 - Sieh dir die verfügbaren [Angular Material Komponenten][angular-material-components] an.
 - Um Angular Material Komponenten zu verwenden sind 3 Schritte wichtig. Hier das [Beispiel der Dokumentation][angular-material-display-a-component].
@@ -140,6 +140,7 @@ TypeScript ist eine von Microsoft entwickelte Programmiersprache, die JavaScript
 - Modularität: Teile deinen Code in Module für bessere Struktur und Wartbarkeit.
 - Erweiterte Funktionen: Nutze Interfaces und Enums, um komplexe Datenstrukturen zu modellieren.
 - Überfliege die TypeScript Dokumentation zu den [wichtigsten Datentypen][typescript-everyday-types].
+- Sieh dir die innFactory [Best Practices zu TypeScript][innfactory-best-practice-typescript] an.
 
 ### Ⅱ.Ⅳ. Bausteine des Internets - HTML
 
@@ -164,13 +165,18 @@ Da TypeScript das Programmverhalten und HTML den Website Aufbau übernimmt, ben�
 
 Hier findest du noch eine Auflistung an Tipps die Besonders für Einsteiger hilfreich sind und dich vor ewigem Rätseln bewahren sollen, wenn du mal nicht weiterkommst.
 
-- Hast du \*_Alle_ Datein gespeichert? Wenn du vergisst eine Datei mit `Ctrl + S` zu speichern merkst du es nicht direkt.
-  Wenn du auf Fehler trittst, ist es hilfreich das gesamte Projekt über `File -> Save All` zu speichern.
+- Hast du **Alle** Dateien gespeichert? Wenn du vergisst eine Datei mit `Ctrl + S` zu speichern merkst du es meist nicht direkt.
+  Wenn du auf sonderbare Fehler triffst, ist es hilfreich das gesamte Projekt über `File -> Save All` zu speichern.
 
 - Manchmal wirst du beim Entwickeln Syntaxfehler bekommen, die dann live in dieser Konsole angezeigt werden. Normalerweise sollten sich die Konsole beim Speichern einer Datei
-  automatisch verändern. Es kann jedoch auch helfen den Client mit `q` oder `Ctrl + C` zu beenden und dann neu zu starten.
+  automatisch verändern. Es kann jedoch auch helfen den Client mit `q` oder `Ctrl + C` zu beenden und dann neu zu starten. Das kannst du beliebig oft machen und hat keine Auswirkungen.
 
-- In der Challenge wirst du oftmals aufgefordert Angular Komponenten / Datein anzupassen. VS Code stellt mehrere Tools zur Verfügung. Über die Suchleiste oben, kannst du nach Datein suchen. Gib dort z.B. einmal "home-page" ein. In VS Code kannst du außerdem über `Edit -> Find in Files` global nach Programmcode suchen. Suche z.B. einmal nach "HomePage".
+- In der Challenge wirst du oftmals aufgefordert Angular Komponenten / Dateien anzupassen. VS Code stellt mehrere Tools zur Verfügung. Über die Suchleiste oben, kannst du nach Dateien suchen. Gib dort z.B. einmal "home-page" ein. In VS Code kannst du außerdem über `Edit -> Find in Files` global nach Programmcode suchen. Suche z.B. einmal nach "HomePage".
+
+- Oftmals wirst du auf Komponenten oder extersne Bibliotheken zugreifen. Hast du sie nicht importiert werden sie in VS Code rot unterringelt.
+  Hovere mit der Maus darüber. Klicke auf `Quick Fix ...` und dann auf den richtigen Importpfad der Bibliothek. Verwendest du hier den falschen, funktioniert die Logik ggf. nicht richtig.
+
+  ![VS Code Quick Fix](docs/vscode-quick-fix.png)
 
 ### Ⅱ.Ⅵ. Fertig! 😮‍💨
 
@@ -225,13 +231,13 @@ Damit du mit Chuck Norris in Konkurrenz treten kannst, wirst du nun auch eine Ei
 - Generiere passend zur Komponente "ChuckJokesCard" über die Konsole eine neue "OwnJokesCard".
 - Füge die Komponente im HTML der "JokesPage" hinzu.
 - Kannst du analog zur "ChuckJokesCard" die "GenerationCard" im HTML der "OwnJokesCard" wiederverwenden?
-  Diese Wiederverwenung ist die [Angular Content Projection][angular-tutorial-content-projection]. Diese Syntax ist bereits etwas komplexer und du musst sie noch nicht ganz verstehen.
+  Diese Wiederverwendung ist die [Angular Content Projection][angular-tutorial-content-projection]. Diese Syntax ist bereits etwas komplexer und du musst sie noch nicht ganz verstehen.
 - Füge in die neue "OwnJokesCard" einen Input und einen Favorisieren Button auf der Witze Seite unterhalb der Chuck's Witze Komponente hinzu.
 - Hilfreiche Dokus dazu findest du hier zum [Input][angular-material-input] und hier zum [Button][angular-material-button].
 
 ### Ⅳ.Ⅲ. Services in Angular
 
-Nun hast du ein Frontend mit Eingabefeld und Button. Die Eingabe musst du nun an die Tabelle der "JokesTable" weitergeben. Diese globale Verknüpfung von Daten heißt Global State Management und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services.
+Nun hast du ein Frontend mit Eingabefeld und Button. Die Eingabe musst du nun an die Tabelle der "JokesTable" weitergeben. Diese globale Verknüpfung von Daten heißt auch "Global State Management" und ist in verschiedenen Frameworks unterschiedlich aufgebaut. In Angular geht dies über Services.
 
 - Sieh dir dazu die offzielle Dokumentation an und schließe das [Angular Services Tutorial][angular-services] ab.
 - Sieh dir den "FavouriteChuckJokesSevice" und seine Verwendung in "ChuckJokesCard" und der "JokesTable" genauer an.
@@ -254,11 +260,11 @@ Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass jem
 - Lies dir den [Eintrag über Signals][angular-signals] in der offiziellen Angular Dokumentation durch.
 - Sieh dir den "FavouriteChuckJokesSignalSevice" an. Als Hilfestellung ist er im Projekt bereits implementiert. Bemerkst du die wesentlichen Unterschiede zum "FavouriteChuckJokesSevice"?
   - Das private Datenobjekt "data", ein schreibbares Signal vom Typ "WriteableSignal", ist hier eine Funktion und auf dessen Inhalt wird mit "data()" zugegriffen.
-    Zusätzlich gibt es das neue, öffentliche Datenobjekt "$data. Es ist ein read-only, berechnetes (=computed) Signal vom Typ "Signal".
+    Zusätzlich gibt es das neue, öffentliche Datenobjekt "$data". Es ist ein "read-only", berechnetes (=computed) Signal ebenfalls vom Typen "Signal".
 - Importiere zunächst an allen Stellen statt des bisherigen "FavouriteChuckJokesSevice" den bisher noch nicht verwendeten "FavouriteChuckJokesSignalSevice".
 - Jetzt wird es interessant: Anstatt "tableData" im Konstruktor mit den Services zu aktualisieren, wird es sich in Zukunft als "computed" Signal von selbst berechnen.
-- Entferne den Programmcode für constructor und die update Funktionen aus der "JokesTable".
-- Entferne die aktuelle "tableData" Zuweisung und erstelle sie mit computed. Hier eine Vorlage dafür:
+- Entferne den Programmcode für den "constructor()" und die update Funktionen aus der "JokesTable".
+- Entferne die aktuelle "tableData" Zuweisung und erstelle sie stattdessen als computed Datenobjekt. Hier eine Vorlage dafür:
 
   ```
   protected tableData = computed<JokeTableRow[]>(() => {
@@ -271,9 +277,9 @@ Die Tabellendaten aktualisieren sich nur manuell. Der Grund dafür ist, dass jem
   }
   ```
 
-- Da "tableData" nun ein Signal ist, musst du nun überall dort, wo es bisher verwendet wird anstelle des Zugriffs "tableData" nun mit "tableData()" benutzen.
+- Da "tableData" nun ein Signal ist, musst du überall dort, wo es bisher verwendet wird anstelle von "tableData" mit "tableData()" darauf zugreifen.
 
-Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klick auf den Löschen Button von selbst 🤯. Allerdings werden jetzt die eigenen Witze nicht mehr angezeigt. So gewinnst du leider keinen Wettbewerb.. 🤷‍♂️
+Wenn alles implementiert ist, aktualisieren sich die Tabellendaten nun, bei Klick auf den Löschen Button von selbst 🤯. Allerdings werden jetzt die eigenen Witze nicht mehr angezeigt. So gewinnst du leider keinen Wettbewerb gegen Chuck Norris.. 🤷‍♂️
 
 ### Ⅳ.Ⅵ. Hello World Signal-Service
 
@@ -290,7 +296,7 @@ Der "AKTUALISIEREN" Button wird jetzt nicht mehr benötigt. Es folgt den Best Pr
 
 - Entferne nun den "AKTUALISIEREN" Button und seine Funktion. Er wird nicht mehr benötigt.
   Herzlichen Glückwunsch, du hast diese Challenge geschafft! Das muss gefeiert werden 🥳!
-- Suche zum Abschluss der Challenge im Internet z.B. auf [https://witze.net/flachwitz-witze](https://witze.net/flachwitz-witze) nach den peinlichsten Flachwitzen und füge Sie als eigene Witze hinzu.
+- Suche zum Abschluss der Challenge im Internet z.B. auf [Witze.net Flachwitze][witzenet-flachwitze] nach den peinlichsten Flachwitzen und füge Sie als eigene Witze hinzu.
 - Natürlich kannst du sie nun auch schnellstmöglich wieder löschen, bevor andere sie lesen.
 - Wenn du es jetzt aber nicht mehr abwarten kannst Bilder von süßen Katzen zu sehen, dann mache direkt mit der [Ⅴ. Challenge](#ⅴ-challenge-️---achtung-süße-katzenbilder) weiter..
 
@@ -302,28 +308,29 @@ Der "AKTUALISIEREN" Button wird jetzt nicht mehr benötigt. Es folgt den Best Pr
 
 Nun wird das Projekt um eine Katzen Seite erweitert. Sie wird zufällig neue Katzenbilder aus dem Web laden, die du dann auch favorisieren kannst.
 
-- Erstelle im `pages` Ordner eine neue Komponente "cats".
-- Erweitere die Router Datei um einen neuen "cats" Pfad der auf die neue Komponente verweist. Du solltest sie im Browser öffnen können.
+- Erstelle im [src/pages/](src/pages/) Ordner eine neue Komponente "CatsPage". Nutze dafür ebenfalls die Generierung aus der Konsole.
+- Erweitere die Routes Datei um einen neuen "cats" Pfad der auf die neue Komponente verweist. Du solltest sie jetzt im Browser öffnen können.
 - Damit die Seite auch per Header aufrufbar ist, musst du sie in der Navigation Komponente im HTML erweitern.
-- Damit ist die Seite fertig konfiguriert 🎉
+- Damit ist die Seite fertig konfiguriert 🎉.
 
 ### Ⅴ.Ⅱ. Implementierung der Katzen Seite
 
-Die Katzenseite beinhaltet ein Bild und zwei Buttons z.B. "NEU" und "FAVORISIEREN" um die Katze später neu zu generieren und zu favoriseren. Die Funktionalität implementierst du erst später. Du kannst wie bei den Witzen die GenerationCard Komponente wiederverwenden. Verwende als Bild für jetzt das "cat-placeholder.png" unter "public/". Als Komponente verwendest du einfach ein HTML "<img/>".
+Die Katzenseite soll ein Bild und zwei Buttons z.B. "NEU" und "FAVORISIEREN" beinhalten, um die Katze später neu zu generieren und zu favoriseren. Konzentriere dich erst einmal auf das HTML und CSS. Du kannst wie bei den Witzen die GenerationCard Komponente wiederverwenden.
 
-- Tipp: In der Header Komponente gibt es bereits ein Bild, das du als Beispiel verwenden kannst. Ansonsten sie dir die HTML Dokumentation auf [developer.mozilla.org](developer.mozilla.org) an.
+- Tipp: Sieh dir für das Image Element wieder die [offizielle Dokumentation][mdn-docs-element-img] an.
+- Verwende für das Bild erst einmal das [public/cat-placeholder.png](public/cat-placeholder.png).
 
 ### Ⅴ.Ⅲ. Ansehen der Chuck Norris Witze API
 
 Eine Programmierschnittstelle auch kurz API ermöglicht in der Softwareentwicklung den einfachen Zugriff auf externen Programmcode. Mit den Chuck Norris Witzen ist bereits eine online API implementiert.
 
-- Sieh dir den JokeApiService im Projekt an. Die URL zur API befindet sich in der `app.constants.ts` Datei.
+- Sieh dir den JokeApiService im Projekt an. Die URL zur API befindet sich in der [src/app/app.constants.ts](src/app/app.constants.ts) Datei.
 - Rufe die API per Link im Browser auf [https://api.chucknorris.io/jokes/random](https://api.chucknorris.io/jokes/random). Was siehst du?
-- Das ist die JSON Datei der API
+- Du siehst die JSON Antwort der API.
 - Aktualisiere die Seite neu. Was verändert sich?
-- Der HTTP Zugriff auf die API erfolgt in Angular 20 vorzugsweise mit dem HttpClient und Rsjx Observables. Lies dir die offiziele Dokumentation zu den beiden durch.
+- Der HTTP Zugriff auf die API erfolgt in Angular 20 vorzugsweise mit dem [HttpClient][angular-httpclient] und [RxJS][rxjs-overview] Observables. Sieh dir die offiziele Dokumentation zu den beiden an.
 - Verstehst du den Zugriff auf den Service und die reaktive Resource in der ChuckJokesCard Komponente?
-- Da TypeScript empfiehlt alle Datenobjekte zu typisieren, ist auch die JSON Rückgabe typisiert. Das Modell siehst du in "src/models/chuck-norris-joke".
+- Da TypeScript empfiehlt alle Datenobjekte zu typisieren, ist im Projekt auch die JSON Rückgabe typisiert. Das Modell siehst du in [src/models/api-response-chuck-joke.ts](src/models/api-response-chuck-joke.ts).
 
 ### Ⅴ.Ⅲ. Anbindung an die Katzen API
 
@@ -331,18 +338,16 @@ Bei Klick auf den "NEU" Button soll in Zukunft ein zufälliges Katzenbild gelade
 
 - Sieh dir die JSON der Katzen API im Browser an [https://cataas.com/cat?json=true](https://cataas.com/cat?json=true).
 - Du kannst auch den Inhalt des "url" keys einmal im Browser öffnen. Du siehst jeweils eine neue zufällige Katze.
-- Erstelle nun einen CatApiService analog zum JokeApiService. Greife auf die reaktive Resource zu. Du kannst dich wieder an der ChuckJokesCard orientieren.
-- Du musst die JSON Rückgabe typisieren. Dazu erstellst du eine neue Datei unter "src/models/" und exportierst den Typen z.B. einfach "CatData".
-- Implementiere eine neue "urlCatPicture" Methode in der Cats Seite, die jeweils die URL des CatApiService zurückgibt.
-- Implemenitere eine "fetchNewCat" Methode, die die Resource neu lädt. Rufe sie über den "NEU" Button auf.
+- Erstelle nun einen "CatApiService" passend zum "JokeApiService". Greife dann auf die reaktive Resource zu. Du kannst dich wieder an der "ChuckJokesCard" orientieren.
+- Typisiere die JSON Rückgabe. Dazu erstellst du eine neue Datei unter [src/models/](src/models/) und markierst den Typen z.B. "CatData" mit "export type" als im Projekt global benutzbar.
+- Implementiere eine neue "urlCatPicture()" Methode in der "CatsPage", die jeweils die URL des "CatApiService" zurückgibt.
+- Orientiere dich dabei einfach an der Methode "jokeDisplayed()" der "ChuckJokesCard".
+- Implemenitere eine "fetchNewCat()" Methode, die die Resource neu lädt. Rufe sie über den "NEU" Button auf.
 - Verwende anstelle des "cat-placeholder.png" Bildes nun die zufällige URL.
-- Auf das "src" Attribut des HTML "<img/>" greifst du mit eckigen Klammern zu. So gibst du in Angular HTML dynamische, sich verändernde Attribute an.
-
-```
-
-<img [src]="urlCatPicture" />
-
-```
+- Auf das "src" Attribut des Image greifst du von nun an mit eckigen Klammern zu. So markierst du in Angular HTML dynamische, sich verändernde Attribute.
+  ```
+  <img [src]="urlCatPicture" />
+  ```
 
 Super, du hast soeben erfolgreich eine API angebunden. Bei Klick auf den "NEU" Button sollte jeweils ein neues Katzenbild erscheinen. Wie niedlich!
 
@@ -350,11 +355,11 @@ Super, du hast soeben erfolgreich eine API angebunden. Bei Klick auf den "NEU" B
 
 Du hast es vielleicht schon erraten 😄.. Im Anschluss wirst du analog zur Witzetabelle eine neue Katzentabelle erstellen. Dort erscheinen dann die favorisierten Katzen.
 
-- Implementiere eine neue CatsTable Komponente. Kopiere einige Teile der JokesTable Komponente. Der Syntax hierfür ist komplex. Du kannst die Tabellen Syntax auch in der Angular Material Dokumentation nachlesen.
-- Binde die CatsTable Komponente auch in die Favourites Seite ein. Sie wird nun auch auf der Seite sichtbar.
-- Durch die Signal Aufgaben kennst du dich bereits mit dem FavouriteChuckJokesSignalService aus. Erstelle nun einen neuen FavouriteCatsSignalService.
-  Er speichert anstelle von "JokeData" Daten vom Typen "CatData".
-- Nun musst du auch in der CatsTable Komponente die Tabellendaten als "computed" berechnen, damit sich die favorisierten oder gelöschten Katzen URLs reaktiv aktualisieren.
+- Erstelle eine neue "CatsTable" Komponente. Kopiere einige Teile der "JokesTable". Der Syntax hierfür ist komplex, du kannst die sie auch in der [Angular Material Dokumentation][angular-material-components] nachschlagen.
+- Binde die "CatsTable" Komponente auch in die "FavouritesPage" ein. Sie wird nun auch auf der Seite sichtbar.
+- Aus der Signal Challenge kennst du bereits den "FavouriteChuckJokesSignalService". Erstelle einen neuen "FavouriteCatsSignalService".
+- Er speichert anstelle von "JokeData" Daten vom Typen "CatData".
+- Nun musst du auch in der "CatsTable" Komponente die Tabellendaten als "computed" berechnen, damit sich die favorisierten oder gelöschten Katzen URLs reaktiv aktualisieren.
 
 ---
 
@@ -362,32 +367,30 @@ Du hast es vielleicht schon erraten 😄.. Im Anschluss wirst du analog zur Witz
 
 ### Ⅵ.Ⅰ. Übersicht
 
-Die Angular Chuck Norris Webapp verfügt bereits über weitreichende Features! Du hast bereits zwei externe online APIs angebunden. Auf der Startseite werden Chuck Norris selbst erfundenen Kampfkünste dargestellt 😎. Es gibt die Möglichkeit Witze und Katzen zu favorisieren und zu löschen. Sogar eigene Witze können nun von dir hinzugefügt werden. Durch die reaktive Programmierung werden die Änderungen unmittelbar in den Tabellen aktualisiert. Durch die Verwendung von Services auf die von überall aus zugregriffen werden kann, folgst du den Best Practices der Modularisierung!
+Die Angular Chuck Norris Webapp verfügt bereits über weitreichende Features! Du hast bereits eine weitere online API angebunden, auf der Startseite wird über Chuck Norris selbst erfundenen Kampfkünste berichtet 😎. Es gibt die Möglichkeit Witze und Katzen Favoriten hinzuzufügen und zu löschen. Sogar eigene Witze können mit denen von Chuck Norris in Konkurrenz treten. Durch die reaktive Programmierung werden die Änderungen unmittelbar in den Tabellen aktualisiert. Mit der Verwendung von Services auf die von überall aus zugregriffen werden kann, folgst du den Best Practices der Modularisierung!
 
-Einen großen Nachteil hat unsere App bisher noch. Klickst du den "Aktualiseren" Button im Browser, gehen alle favorisierten Witze und Katzen für den Benutzer verloren. Wie schön wäre es, wenn du über Wochen und Monate die Besten Witze speichern und die Liste damit erweitern könntest.
+Einen Nachteil hat unsere App bisher noch. Klickst du den Refresh Button im Browser, gehen alle favorisierten Witze und Katzen für den Benutzer verloren. Wie schön wäre es, wenn du über Wochen und Monate die Besten Witze speichern und die Liste damit erweitern könntest 🤩.
 
-Für einen solchen externen Speicherort verwendet man am Besten eine externe online Datenbank. Im Folgenden wirst du dich erst in einer bereits in der App integrierten Datenbank anmelden. Später wirst du das Projekt mit einer selbsterstellten, kostenosen Google Firebase Datenbank verknüpfen.
+Eine solche zuverlässige Option, um Daten zu speichern und darauf jederzeit und von überall aus zugreifen zu können, ist die Verwendung einer "Cloud Datenbank". Im Folgenden wirst in einem bereits im Projekt integrierten Cloud Service anmelden. Später wirst du das Projekt mit einer selbsterstellten, kostenlosen Google Firebase Datenbank verknüpfen.
 
 ### Ⅵ.Ⅰ. Benutzer hinzufügen
 
-Im Projekt ist bereits eine externe Datenbank in Google Firebase und Firestore mit Besitzer innFactory GmbH angebunden.
+Im Projekt ist bereits eine externe Datenbank in Google Firebase mit Firestore und dem Account der innFactory GmbH verknüpft.
 
-- Sieh dir die Konfiguration gerne an.
-  In der "package.json" sind die `@angular/fire` und `@firebase` angegeben.
-  In der "src/app/app.config.ts" sind die Firebase und Firestore Abhängigkeiten anwendungsweit konfiguriert.
-  In "environments/" ist die Webapp mit dem Firebaseprojekt verknüpft und autorisiert.
-  Im JokeDatabaseService erfolgt schlussendlich der Zugriff.
-- Erstelle dir ganz einfach in der App einen neuen Benutzer und melde dich damit an.
-  Klicke auf den Benutzer Icon im Header und auf Registrieren.
-  Verwende am Besten deine innFactory E-Mail. Im Hintergrund wird ein neuer Benutzer in Firebase angelegt.
-  Merke dir am Besten deine Anmeldedaten.
+- Sieh dir die Konfiguration einmal an.
+  - Unter [package.json](package.json) sind die "@angular/fire" und "@firebase" Bibliotheken als Abhängigkeiten angegeben.
+  - Unter [src/app/app.config.ts](src/app/app.config.ts) sind Firebase und Firestore Services anwendungsweit zur Verfügung gestellt.
+  - Unter [src/environments/environment.development.ts](src/environments/environment.development.ts) sind die Anmeldedaten für den innFactory Firebase Account hinterlegt.
+  - Im "JokeDatabaseService" erfolgt schlussendlich der Zugriff auf die Datenbank.
+- Erstelle dir in der Oberfläche der App einen neuen Benutzer und melde dich damit an.
+  - Klicke auf den Benutzer Icon im Header der Webapp und dann auf Registrieren.
+  - Verwende am Besten deine innFactory E-Mail. Im Hintergrund wird ein neuer Benutzer im innFactory Firebase angelegt.
 
 ### Ⅵ.Ⅱ. Datenbank Synchronisierung
 
-Als nächstes werden wir die Chuck Norris Witze jeweils beim favorisieren an die Datenbank weitergeben.
+Als nächstes werden wir die Chuck Norris Witze beim favorisieren nicht nur wie bisher an den Service, sondern auch an die Datenbank weitergeben.
 
-- Benutze dazu den JokeDatabaseService
-- Hänge die `add` und `remove` Methodenaufrufe des JokeDatabaseService ohne sie zu verändern einfach denjenigen des FavouriteChuckJokesSignalService am Ende an.
+- Hänge die "add()" und "remove()" Methodenaufrufe des "JokeDatabaseService" einfach denjenigen des "FavouriteChuckJokesSignalService" am Ende an.
   Den Witz bzw. die ID in den Methoden musst du natürlich weitergeben.
 - Melde dich erneut über das Benutzer Icon an.
 - Wenn du nun Chuck Norris Witze favorisierst, werden sie nun automatisch der Datenbank hinzugefügt.
@@ -397,138 +400,129 @@ Nicht schlecht! Du hast die bestehende externe Datenbank erfolgreich angebunden 
 
 ### Ⅵ.Ⅲ. Sicherung eigener Witze
 
-Damit nun auch deine eigenen Witze verewigt werden, kannst du ebenfalls den JokeDatabaseService in deinem FavouriteOwnJokesSignalService verwenden. Allerdings müssen beide noch ein wenig angepasst werden.
+Damit nun auch deine eigenen Witze verewigt werden, kannst du ebenfalls den "JokeDatabaseService" in deinem "FavouriteOwnJokesSignalService" verwenden. Allerdings müssen beide noch ein wenig angepasst werden.
 
-- Hänge die `add` und `remove` Methodenaufrufe des JokeDatabaseService auch an diejenigen des FavouriteOwnJokesSignalService
-- Aktuell wird immer `CREATOR_CHUCK` als Ersteller benutzt. Erweitere die JokeDatabaseService Methode `add` um einen Parameter Ersteller (creator) und benutze diesen stattdessen.
-- Jetzt kannst du den Ersteller auch jeweils passend im FavouriteOwnJokesSignalService und FavouriteChuckJokesSignalService übergeben.
-- Fast geschafft. Aktuell werden im Projekt bei Anmeldung die Witze geladen und bei Abmeldung wieder entfernt. Das musst du nun für die eigenen Witze auch anpassen.
-  1. Kopiere die Methode setFromDatabase() aus dem FavouriteChuckJokesSignalService in den eigenen. Tausche die Kontante `PREFIX_ID_CHUCK_JOKES` jeweils durch `PREFIX_ID_OWN_JOKES` aus.
-  2. Passe die Methode loadJokesFromDatabase() der Login Komponente "src/security/login/" an.
-     Neben der `const chuckJokeTableData: JokeData[]` brauchst du auch eine `const ownJokeTableData: JokeData[]`.
-     Diese Befüllst du dann beim Ersteller `CREATOR_OWN`.
-     Im Anschluss fügst du der Login Komponente du deinen FavouriteOwnJokesSignalService mit `inject()` hinzu.
-     Nun musst du noch dessen setFromDatabase() ansprechen und die `ownJokeTableData` übergeben.
-  3. Erweitere die `logout` Methode der Menu Komponente und setze bei erfolgreichem Lgout die Witze des FavouriteOwnJokesSignalService mit `setFromDatabase([])` auf einen leeren Datensatz.
+- Hänge die "add()" und "remove()" des Datenbank Service an diejenigen des Services für eigene Witze.
+- Aktuell wird immer "CREATOR_CHUCK" als Ersteller verwendet. Erweitere die "JokeDatabaseService" "add()" Methode um einen Parameter für den Ersteller "creator" und benutze diesen statt dem Festtext.
+- Jetzt kannst du den Ersteller auch jeweils passend im "FavouriteOwnJokesSignalService" und "FavouriteChuckJokesSignalService" weiterreichen.
+- Fast geschafft. Aktuell werden im Projekt bei Anmeldung die Witze geladen und bei Abmeldung wieder entfernt. Das musst du nun für die eigenen Witze auch ergänzen.
+  1. Kopiere die Methode "setFromDatabase()" aus dem "FavouriteChuckJokesSignalService" in den eigenen. Tausche die Konstante "PREFIX_ID_CHUCK_JOKES" jeweils durch "PREFIX_ID_OWN_JOKES" aus.
+  2. Passe die Methode "loadJokesFromDatabase()" der "Login" Komponente [src/security/login/](src/security/login/) an.
+     - Neben der "chuckJokeTableData: JokeData[]" Konstante fügst du am Besten auch eine "ownJokeTableData: JokeData[]" hinzu.
+     - Diese Befüllst du dann beim Ersteller "CREATOR_OWN".
+     - Im Anschluss fügst in "Login" den Zugriff auf deinen Service "FavouriteOwnJokesSignalService" mit `inject()` hinzu.
+     - Nun musst du noch dessen "setFromDatabase()" ansprechen und die "ownJokeTableData" übergeben.
+  3. Erweitere die "logout()" Methode der Menu Komponente und setze bei erfolgreichem Lgout die Witze des FavouriteOwnJokesSignalService mit `setFromDatabase([])` auf einen leeren Datensatz.
 
 Fertig! Nun werden auch deine eigenen Witze in der Datenbank gespeichert. Teste es gleich einmal aus. Melde dich wieder ab und lade die Seite im Browser neu, sodass die Favoriten verschwinden. Melde dich nun erneut an. Deine eigenen Witze sollten nun auch wieder erscheinen. Auch das Löschen sollte funktionieren.
 
 ### Ⅵ.Ⅳ. Eigene Datenbank
 
-Bisher bist du nur mit der _Frontend_ Entwicklung in Berührung gekommen und dem anbinden einer externen API. Im Folgenden wirst du ein eigenes Google Firebase Backend Projekt erstellen und an die Angular Chuck Norris Webapp anbinden.
+Bisher bist du vor allem mit der **Frontend Entwicklung** in Berührung gekommen. Im Folgenden wirst du einen eigenen Google Firebase Account Projekt erstellen und an die Angular Chuck Norris Webapp daran anbinden.
 
-- Melde dich auf [https://console.firebase.google.com/](https://console.firebase.google.com/) mit einem bestehenden Google Konto an, oder erstelle ein neues Google Konto mit deiner innFactory E-Mail.
+- Melde dich auf der [Google Firebase Console][google-firebase-console] mit einem bestehenden Google Konto an, oder erstelle ein neues Google Konto mit deiner innFactory E-Mail.
 - Klicke auf "Neues Firebase-Projekt erstellen" und gib z.B. "angular-chuck-norris" als Projektnamen ein. Du musst weder Gemini noch das Entwicklerprogramm oder Google Analytics aktivieren.
-- Navigiere nach Projektübersicht -> Projekteinstellungen -> Allgemein. Unter Meine Apps klickst du auf das "</>" Symbol für Web um Firebase zu einer Webapp hinzuzufügen.
+- Navigiere nach `Projektübersicht -> Projekteinstellungen -> Allgemein`. Unter `Meine Apps` klickst du auf das `</>` Symbol für Web um Firebase zu einer Webapp hinzuzufügen.
 - Benutze als Alias auch den Projektnamen "angular-chuck-norris" und klicke auf App registrieren.
 - Du erhälst eine Übersicht zum Setup. Das wurde aber schon fertig eingestellt. Kopiere dir nur den Inhalt mit folgendem Schema heraus:
-
-```
-
+  ```
     apiKey: '...',
     authDomain: 'angular-chuck-norris.firebaseapp.com',
     projectId: 'angular-chuck-norris',
     storageBucket: 'angular-chuck-norris.firebasestorage.app',
     messagingSenderId: '...',
     appId: '...',
-
-```
-
-- Füge diesen Inhalt nun in die "src/environments/environment.development.ts" Datei in das `firebase` Attribut ein.
-- Stoppe den laufenden Angular Client im Terminal mit "Cmd + C" oder durch eingabe von "q" + Enter für quit.
+  ```
+- Füge diesen Inhalt nun in die [src/environments/environment.development.ts](src/environments/environment.development.ts) Datei in das "firebase" Attribut ein.
+- Stoppe den laufenden Angular Client im Terminal mit `Cmd + C` oder durch Eingabe von `q + Enter` für "quit".
 - Starte den Client neu mit `npm start`
-- In der Browser Konsole sollten keine Fehler wie z.B. 'auth/invalid-api-key' erscheinen.
+- In der Browser Konsole sollten keine Fehler wie z.B. "auth/invalid-api-key" erscheinen.
 
-Nun ist die App erfolgreich mit Firebase verbunden. Beim Registrieren oder Anmelden erhältst du aber noch einen "❌ ... fehlgeschlagen" Hinweis.
+Nun ist die App erfolgreich mit Firebase verbunden. Beim Registrieren oder Anmelden erhältst du noch richtigerweise einen "❌ ... fehlgeschlagen" Hinweis.
 
 ### Ⅵ.Ⅴ. Datenbank Konfiguration
 
 Die Authentifizierung per E-Mail und Passwort muss im Firebase Projekt aktiviert werden.
 
-- Navigiere im Firebase Hauptmenü im Reiter links nach Entwickeln -> Authentication und klicke auf den "Los gehts" Button.
-- Bei Anmeldemethode aktivierst du E-Mail-Adresse/Passwort. "E-Mail-Link" kannst du deaktiviert lassen. Bestätige die Konfiguration mit Speichern.
-- Jetzt sollte die Registrierung und Anmeldung unmittelbar funktionieren. Unter Authentication -> Nutzer kannst du den neu erstellten Benutzer sehen.
-
-Damit nun auch die Datenbank-Speicherung funktioniert, musst du in Firebase noch Firestore Datenbanken aktivieren.
-
-- Navigiere im Firebase Hauptmenü im Reiter links nach Entwickeln -> Firestore Database und klicke auf den "Datenbank erstellen" Button. Wähle einen Standort in Europa.
-- Wähle die Option "Im Produktionsmodus starten" und bestätige mit dem "Erstellen" Button.
+- Navigiere im Firebase Hauptmenü im Reiter links nach `Entwickeln -> Authentication` und klicke auf den `Los gehts` Button.
+- Bei Anmeldemethode aktivierst du E-Mail-Adresse/Passwort. `E-Mail-Link` kannst du deaktiviert lassen. Bestätige die Konfiguration mit `Speichern`.
+- Jetzt sollte die Registrierung und Anmeldung unmittelbar funktionieren. Unter `Authentication -> Nutzer` kannst du den neu erstellten Benutzer sehen.
+- Damit nun auch die Datenbank-Speicherung funktioniert, musst du in Firebase noch Firestore Datenbanken aktivieren.
+- Navigiere im Firebase Hauptmenü im Reiter links nach `Entwickeln -> Firestore Database` und klicke auf den `Datenbank erstellen` Button. Wähle einen Standort in Europa.
+- Wähle die Option `Im Produktionsmodus starten` und bestätige mit dem `Erstellen` Button.
 - Navigiere nun im Reiter oben auf Regeln. Du siehst bereits voreingestellte Zugriffsregeln die du nun entfernst. Folgende Regeln kannst du komplett kopieren und einfügen. Du musst nichts weiter anpassen.
 
-```
+  ```
+  rules_version = '1';
 
-rules_version = '1';
+  service cloud.firestore {
+  match /databases/{database}/documents {
 
-service cloud.firestore {
-match /databases/{database}/documents {
+        // Only read, create for signed in users
+        match /users/{userID} {
+          allow delete: if false;
+          allow read, create: if isSignedIn() && isAllowedToChangeTable(userID);
 
-      // Only read, create for signed in users
-      match /users/{userID} {
-        allow delete: if false;
-        allow read, create: if isSignedIn() && isAllowedToChangeTable(userID);
+          // Only read, create, delete in table with userID equals email
+          match /jokes/{jokeID} {
+            allow delete, create, read, update: if isSignedIn() && isAllowedToChangeTable(userID);
+          }
 
-        // Only read, create, delete in table with userID equals email
-        match /jokes/{jokeID} {
-          allow delete, create, read, update: if isSignedIn() && isAllowedToChangeTable(userID);
-        }
-
-        // Only read, create, delete in table with userID equals email
-        match /cats/{catID} {
-          allow delete, create, read, update: if isSignedIn() && isAllowedToChangeTable(userID);
+          // Only read, create, delete in table with userID equals email
+          match /cats/{catID} {
+            allow delete, create, read, update: if isSignedIn() && isAllowedToChangeTable(userID);
+          }
         }
       }
-    }
 
-    function isSignedIn() {
-      return request.auth != null;
-    }
+      function isSignedIn() {
+        return request.auth != null;
+      }
 
-    function isAllowedToChangeTable(userID) {
-      return request.auth.token.email == userID;
-    }
+      function isAllowedToChangeTable(userID) {
+        return request.auth.token.email == userID;
+      }
 
-}
+  }
+  ```
 
-```
+- Klicke auf den `Veröffentlichen` Button
 
-- Klicke auf den "Veröffentlichen" Button
+Fertig! Du hast deine eigene Datenbank mit Benutzer Authentifizierung richtig erstellt und konfiguriert 🥳. Teste es direkt einmal aus. Nun solltest du eigene Witze und Chuck Norris Witze ganz einfach favorisieren können, dich ab- und anmelden und sie erscheinen erneut.
 
-Fertig! Du hast deine eigene Datenbank mit Benutzer Authentifizierung richtig erstellt und konfiguriert 🎉. Teste es direkt einmal aus. Nun solltest du eigene Witze und Chuck Norris Witze ganz einfach favorisieren können, dich ab- und anmelden und sie erscheinen erneut.
+### Ⅵ.Ⅵ. Katzen-Transferaufgabe 🐱
 
-### Ⅵ.Ⅵ. Katzen-Transferaufgabe
+In der letzten Challenge wirst du einen neuen Service erstellen, der für die Verwaltung einer Katzen-Datenbanktabelle verantwortlich ist. Dieser Service wird bei der Benutzeranmeldung geladen und beim Logout gelöscht. Hier sind die Details zu den erforderlichen Schritten.
 
-In dieser letzten Challenge wirst du einen neuen Service erstellen, der für die Verwaltung einer Katzen-Datenbanktabelle verantwortlich ist. Dieser Service wird bei der Benutzeranmeldung geladen und beim Logout gelöscht. Hier sind die Details zu den erforderlichen Schritten.
-
-- Erstelle unter [src/models/](src/models/) einen neuen Typen FirebaseCatTableRow. Er bekommt die Attribute "id" und "url" jeweils vom Typ "string".
-- Erstelle einen neuen Service CatDatabaseService. Du kannst den Code des JokeDatabaseServices hierfür einfach kopieren.
-- Anstatt der "jokes" Tabelle verwendest du eine "cats" Tabelle, anstatt der jokeID jeweils eine catID.
-- In der "add()" Methode benötigst du nur noch die Parameter "catID" und "url" vom Typ string. "catData" hat nur das Felde "url", das du übergibst.
-- Verwende FirebaseCatTableRow im CatDatabaseService anstelle von FirebaseJokeTableRow. Tausche auch die übrigen Parameternamen so aus, sodass sie zum CatDatabaseService passen.
+- Erstelle unter [src/models/](src/models/) einen neuen Typen "FirebaseCatTableRow". Er bekommt die Attribute "id" und "url" jeweils vom Typ "string".
+- Erstelle einen neuen "CatDatabaseService". Du kannst den Code des "JokeDatabaseServices" hierfür einfach kopieren.
+- Als "FIREBASE_TABLE_NAME" verwendest du die "cats" Tabelle, anstatt der jokeID jeweils eine catID.
+- In der "add()" Methode benötigst du nur noch die Parameter "catID" und "url" vom Typ string. "catData" hat nur das Feld "url", das du übergibst.
+- Verwende "FirebaseCatTableRow" im "CatDatabaseService" anstelle von "FirebaseJokeTableRow". Tausche auch die übrigen Parameternamen so aus, sodass sie zum "CatDatabaseService" passen.
 - Passe auch die Befüllung des "cats" Arrays in der "getAll()" Methode an.
-- Ergänze nun die "add()" und "remove()" Methoden des FavouriteCatsService um den Aufruf des CatDatabaseService. Füge eine Methode "setFromDatabase()" hinzu und verwende hier "PREFIX_ID_CATS".
+- Ergänze nun die "add()" und "remove()" Methoden des "FavouriteCatsService" um den Aufruf des neuen "CatDatabaseService". Füge eine Methode "setFromDatabase()" hinzu und verwende hier "PREFIX_ID_CATS".
 - Damit die Katzen-URLs nach der Anmeldung geladen werden, fügst du der "login()" Methode der Login Komponente eine neue Methode "loadCatsFromDatabase()" hinzu. Die du bei erfolgreicher Anmeldung aufrufst.
-- Bei Abmeldung soll die Katzentabelle gelöscht werden. Setze die Daten des FavouriteCatsSignalService in der "logout()" Methode der Menu Kommponente auf ein leerees Array.
+- Bei Abmeldung soll die Katzentabelle gelöscht werden. Setze die Daten des "FavouriteCatsSignalService" in der "logout()" Methode der Menu Kommponente auf ein leerees Array.
 
-Glückwunsch! Du hast alle Challenges gemeistert. Chuck Norris ist stolz auf dich .. und die innFactory auch 😎!
+Glückwunsch, du hast alle Challenges gemeistert. Chuck Norris und die innFactory sind stolz auf deine Webdevelopment Künste 🤩.
 
-```
+---
 
-```
-
-### Links
+### VII. Links 🔗
 
 Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer Stelle geupdated werden.
 
 (Links unsichtbar in der Vorschau)
 
+[angular-basic-tutorial]: https://next.angular.dev/tutorials/learn-angular
 [angular-components]: https://next.angular.dev/essentials/components
-[angular-overview]: https://angular.dev/overview
-[angular-dynamic-text]: https://next.angular.dev/essentials/templates#showing-dynamic-text
-[angular-user-input]: https://next.angular.dev/essentials/templates#handling-user-interaction
 [angular-control-flow]: https://next.angular.dev/essentials/templates#control-flow-with-if-and-for
+[angular-dynamic-text]: https://next.angular.dev/essentials/templates#showing-dynamic-text
+[angular-httpclient]: https://angular.dev/api/common/http/HttpClient
+[angular-overview]: https://angular.dev/overview
 [angular-services]: https://angular.dev/tutorials/first-app/09-services
 [angular-signals]: https://angular.dev/guide/signals
-[angular-basic-tutorial]: https://next.angular.dev/tutorials/learn-angular
+[angular-user-input]: https://next.angular.dev/essentials/templates#handling-user-interaction
 [angular-tutorial-content-projection]: https://angular.dev/guide/components/content-projection
 [angular-material-components]: https://material.angular.dev/components/categories
 [angular-material-display-a-component]: https://material.angular.dev/guide/getting-started#display-a-component
@@ -539,13 +533,18 @@ Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer
 [chuck-norris-wiki]: https://de.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge
 [cataas-api-link]: https://cataas.com/cat?json=true
 [github-home]: https://github.com
+[google-firebase-console]: https://console.firebase.google.com/
+[innfactory-best-practice-typescript]: https://wiki.innfactory.cloud/de/Entwicklung/WebApps#typescript
 [html-paragraph-doku]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
 [mdn-docs-getting-started]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content
 [mdn-docs-element-p]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p
+[mdn-docs-element-img]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img
 [nodejs-download]: https://nodejs.org/en/download/
 [npmjs-docs]: https://docs.npmjs.com/about-npm
+[rxjs-overview]: https://rxjs.dev/guide/overview
 [scss-nesting]: https://sass-lang.com/guide/#nesting
 [typescript-everyday-types]: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
 [visual-studio-code]: https://code.visualstudio.com/
 [vscode-getting-started]: https://code.visualstudio.com/docs/getstarted/getting-started
 [wikipedia-chuck-norris]: https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge†
+[witzenet-flachwitze]: https://witze.net/flachwitz-witze
