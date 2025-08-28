@@ -1,6 +1,15 @@
 {
+  // eslint
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "typescript", "html", "typescriptreact"],
+  "eslint.lintTask.enable": true,
+  "eslint.format.enable": true,
+
+  //vscode
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": { "source.organizeImports": "always" },
+
+  //typescript
   "typescript.preferences.importModuleSpecifier": "relative"
 }
