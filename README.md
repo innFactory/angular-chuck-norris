@@ -196,7 +196,7 @@ Im Gegensatz zu Chuck Norris, machen wir Entwickler Fehler das gehört zum Lernp
 - Öffne die Konsole und führe nun den Befehl `npx ng generate component ../pages/not-found-page` aus. Im [src/pages/](src/pages/) Ordner sollte nun eine neue Angular Komponente "NotFoundPage" erscheinen.
 - Angular kommt standardmäßig mit einer Routing Bibliothek. Diese ist in der Datei [app.routes.ts](src/app/app.routes.ts) konfiguriert.
 - Füge als neuen Pfad die neue "NotFoundPage" Komponente hinzu. Beim Pfad verwendest du \*\*. Das steht beim Angular Routing für alle nicht-angegebenen Pfade.
-- Teste alles erneut aus. Du solltest den Text 'welcome to not-found-page' sehen.
+- Teste alles erneut aus. Du solltest den Text "not-found-page works!" sehen.
 
 ### Ⅲ.Ⅱ. Schönheit ist nicht alles - aber auch wichtig
 

@@ -3,14 +3,23 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 200px;
+    gap: calc(3 * var(--var-spacing-11));
     text-align: center;
     align-items: center;
     a {
       text-decoration: none;
       h1 {
-        color: var(--mat-sys-on-primary-container);
+        // color: color-mix(in rgba, var(--mat-sys-on-primary-container), rgba(255, 255, 255, 1));
+        color: var(--mat-sys-on-secondary-container);
         font-size: var(--var-size-4);
+      }
+
+      h1:hover {
+        color: var(--mat-sys-primary);
+      }
+
+      &.current-page h1 {
+        color: var(--mat-sys-primary);
       }
     }
   }

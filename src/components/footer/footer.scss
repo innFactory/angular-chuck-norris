@@ -1,12 +1,30 @@
 :host {
   width: inherit;
+  // height: 120px;
   display: flex;
-  justify-content: space-around;
-  padding: var(--var-spacing-3);
-  background: var(--mat-sys-secondary);
+  justify-content: space-between;
+  padding: var(--var-spacing-3) var(--var-spacing-9);
+  // background: #d7e3ff99; //var(--mat-sys-primary-container);
+  box-shadow: 0 -0.5px var(--box-shadow-light);
+  // box-shadow: 0 -0.5px var(--box-shadow-light);
+  align-items: center;
 
-  p {
-    color: var(--mat-sys-on-secondary);
-    font-weight: 400;
+  .container-left {
+    .headline {
+      // font-size: var(--var-size-3);
+      font-weight: 600;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    p {
+      color: var(--mat-sys-on-secondary-container);
+      font-size: var(--var-size-2);
+      font-weight: 300;
+    }
+    p:hover {
+      color: var(--mat-sys-secondary);
+    }
   }
 }

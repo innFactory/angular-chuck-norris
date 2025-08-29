@@ -1,3 +1,7 @@
-button[matIconButton] {
-  transform: scale(1.5);
+body {
+  button[matIconButton] {
+    transform: scale(1.7);
+  }
+
+  --mat-sys-tertiary: #0869ff;
 }

@@ -1,5 +1,6 @@
 // External links
 export const URL_GITHUB_REPO = 'https://github.com/innFactory/angular-chuck-norris';
+export const URL_INNFACTRORY = 'https://innfactory.de/';
 
 // API URLs
 export const URL_CHUCK_NORRIS_API = 'https://api.chucknorris.io/jokes/random';

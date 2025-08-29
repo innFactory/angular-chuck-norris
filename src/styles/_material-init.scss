@@ -9,12 +9,12 @@ html {
   @include mat.theme(
     (
       color: (
-        primary: mat.$rose-palette,
-        tertiary: mat.$red-palette,
+        primary: mat.$azure-palette,
+        tertiary: mat.$azure-palette,
       ),
       typography: (
-        plain-family: Roboto,
-        brand-family: Open Sans,
+        plain-family: Arial,
+        brand-family: sans-serif,
         bold-weight: 900,
         medium-weight: 500,
         regular-weight: 300,

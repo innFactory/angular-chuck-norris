@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { URL_GITHUB_REPO } from '../../app/app.constants';
+import { URL_GITHUB_REPO, URL_INNFACTRORY } from '../../app/app.constants';
 
 @Component({
   selector: 'app-footer',
@@ -9,4 +9,5 @@ import { URL_GITHUB_REPO } from '../../app/app.constants';
 })
 export class Footer {
   protected githubRepoLink = URL_GITHUB_REPO;
+  protected innFactoryLink = URL_INNFACTRORY;
 }

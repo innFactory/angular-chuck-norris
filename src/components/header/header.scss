@@ -3,22 +3,34 @@
 :host {
   width: inherit;
   min-height: var(--var-size-14);
-  overflow: hidden;
+  // overflow: hidden;
 
   header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid black;
-    padding: var(--var-spacing-2) 0 var(--var-spacing-4) var(--var-spacing-4);
-    background: var(--mat-sys-primary-container);
+    padding: 0 var(--var-spacing-4);
+    min-height: var(--var-size-14);
+    background: var(--mat-sys-surface-bright);
+    box-shadow: 0 1px var(--box-shadow-light);
 
     > .logo {
+      position: relative;
       display: flex;
-      height: var(--var-size-12);
+      height: var(--var-size-11);
       img {
         height: 100%;
+      }
+
+      app-chat-bubble {
+        display: none;
+      }
+
+      &:hover {
+        app-chat-bubble {
+          display: flex;
+        }
       }
     }
 
