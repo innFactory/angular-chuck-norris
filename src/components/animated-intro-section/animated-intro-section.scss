@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   padding: 0 var(--var-spacing-10) calc(100% / 4) var(--var-spacing-10);
-  gap: calc(2 * var(--var-spacing-9));
+  // gap: calc(0.5 * var(--var-spacing-9));
 
   .container-text,
   .container-image {
@@ -15,13 +15,14 @@
   }
   .container-text {
     align-items: end;
-    .right-align {
+    .right-align-wrapper {
       width: calc(6 * var(--var-size-15));
       overflow: hidden;
       display: flex;
       flex-direction: column;
       word-break: break-word;
       gap: var(--var-spacing-6);
+      padding-bottom: var(--var-spacing-2);
       button {
         width: fit-content;
       }
@@ -32,13 +33,13 @@
   }
   .container-image {
     align-items: center;
-
     figure {
       width: calc(4 * var(--var-size-15));
       border-radius: var(--mat-sys-corner-large);
       img {
         width: inherit;
-        border-radius: 10px;
+        border-radius: var(--mat-sys-corner-large);
+        box-shadow: 0 var(--shadow-size-medium) var(--box-shadow-medium);
       }
       figcaption {
         padding: var(--var-spacing-2) var(--var-spacing-7);
@@ -52,7 +53,7 @@
     }
   }
 
-  .animate {
+  .animate-text {
     > p,
     h1 {
       opacity: 0;

@@ -22,15 +22,13 @@ export class AnimatedIntroSection {
     ]);
   }
 
-  async nextStep(tagClasses: TextAnimation[]) {
+  protected async nextStep(tagClasses: TextAnimation[]) {
     this.introStep.update((num) => (num += 1));
     if (this.introStep() > 2) {
       this.introStep.set(0);
     }
-
     await this.delay(50);
     this.hideTexts(tagClasses);
-
     await this.animateText(tagClasses);
   }
 
@@ -38,9 +36,8 @@ export class AnimatedIntroSection {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  public animateText(tagClasses: TextAnimation[]) {
+  private animateText(tagClasses: TextAnimation[]) {
     if (!tagClasses.length) return;
-
     const startAnimation = (tagClass: string) => {
       const textWrapper: HTMLElement | null = document.querySelector(`.${tagClass}`);
       if (!textWrapper || !textWrapper.textContent) return;
