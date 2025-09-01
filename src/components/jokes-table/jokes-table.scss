@@ -6,14 +6,19 @@
   gap: var(--var-spacing-6);
   padding-bottom: var(--var-spacing-6);
 
-  table {
-    img {
-      margin: var(--var-spacing-6);
-      height: calc(2 * var(--var-size-15));
+  .table-background {
+    width: inherit;
+    padding: var(--var-spacing-4);
+    border-radius: var(--mat-sys-corner-large);
+    box-shadow: 0 var(--shadow-size-light) var(--box-shadow-medium);
+    table {
+      img {
+        margin: var(--var-spacing-6);
+        height: calc(2 * var(--var-size-15));
+      }
+      .button-delete-row {
+        margin: var(--var-spacing-3) 0;
+      }
     }
-  }
-
-  .button-refresh {
-    width: calc(3 * var(--var-size-15));
   }
 }
