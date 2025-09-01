@@ -1,0 +1,39 @@
+<div class="container-text">
+  <div class="right-align">
+    @switch (introStep()) { @case (0) {
+    <!-- Welcome text -->
+    <h1 class="animate-intro-1">Heyy 👋</h1>
+    <p class="animate-intro-2">Herzlich willkommen in der innFactory! Ich bin Chuck Norris..</p>
+    <button (click)="nextStep([{name: 'animate-presentation-1', delay: 500}, {name: 'animate-presentation-2', delay: 2000}])" matButton>
+      <p>WEITER</p>
+    </button>
+    } @case (1) {
+    <h1 class="animate-presentation-1">Erledige alle Challenges</h1>
+    <p class="animate-presentation-2">
+      Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris stolz auf dich ist 🫡 .
+    </p>
+    <button (click)="nextStep([{name: 'animate-lets-go-1', delay: 500}, {name: 'animate-lets-go-2', delay: 2000}, {name: 'animate-lets-go-3', delay: 5000},])" matButton>
+      <p>WEITER</p>
+    </button>
+    } @case (2) {
+    <h1 class="animate-lets-go-1">Let's go!</h1>
+    <p class="animate-lets-go-2">Starte zunächst mit der Ⅰ. Challenge.</p>
+    <p class="animate-lets-go-3">Ab Challenge Ⅰ.Ⅷ. darfst du meine About Section anpassen 😎.</p>
+    <a href="/home#aboutme"
+      ><button matButton>
+        <p>ÜBER MICH</p>
+      </button></a
+    >
+    } }
+  </div>
+</div>
+
+<!-- Chuck image -->
+<div class="container-image">
+  <figure>
+    <img src="chuck-norris-presentation.png" />
+    <figcaption>
+      <a href="https://commons.wikimedia.org/wiki/File:Chuck_Norris,_The_Delta_Force_1986.jpg"><p>Foto</p></a> von "Yoni S.Hamenahem", lizenziert unter CC BY-SA 3.0.
+    </figcaption>
+  </figure>
+</div>
