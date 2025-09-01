@@ -2,7 +2,7 @@
   width: inherit;
   display: flex;
   flex-direction: row;
-  padding: 0 var(--var-spacing-10) calc(100% / 5) var(--var-spacing-10);
+  padding: 0 var(--var-spacing-10) calc(100% / 4) var(--var-spacing-10);
   gap: calc(2 * var(--var-spacing-9));
 
   .container-text,
@@ -26,7 +26,6 @@
         width: fit-content;
       }
       h1 {
-        // color: red;
         padding-top: 5px;
       }
     }
