@@ -1,11 +1,13 @@
 :host {
   app-generation-card {
     .container-content {
-      width: 50vw;
+      display: flex;
+      width: 100%;
     }
     .container-action {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       gap: var(--var-spacing-2);
       > button {
         margin-top: var(--var-spacing-5);
