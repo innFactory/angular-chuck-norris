@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { AboutSection } from '../../components/about-section/about-section';
+import { AnimatedIntroSection } from '../../components/animated-intro-section/animated-intro-section';
 
 @Component({
   selector: 'app-home-page',
-  imports: [],
+  imports: [AnimatedIntroSection, AboutSection],
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss',
 })
