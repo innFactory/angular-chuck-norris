@@ -3,7 +3,7 @@
 :host {
   width: inherit;
   min-height: var(--var-size-14);
-  // overflow: hidden;
+  user-select: none;
 
   header {
     display: flex;
