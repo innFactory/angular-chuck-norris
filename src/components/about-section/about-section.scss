@@ -12,8 +12,8 @@
     gap: var(--var-spacing-8);
     padding: var(--var-spacing-8);
     background: var(--mat-sys-surface-container-lowest);
-    border-radius: 15px;
-    box-shadow: 0 2px var(--box-shadow-medium);
+    border-radius: var(--mat-sys-corner-large);
+    box-shadow: 0 var(--shadow-size-medium) var(--box-shadow-medium);
 
     article {
       display: flex;
