@@ -3,5 +3,12 @@ body {
     transform: scale(1.7);
   }
 
+  button[matButton] {
+    border-radius: var(--mat-sys-corner-large);
+    p {
+      font-size: var(--var-size-2);
+    }
+  }
+
   --mat-sys-tertiary: #0869ff;
 }
