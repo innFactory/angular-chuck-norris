@@ -57,13 +57,18 @@
       }
 
       figure {
+        width: calc(2 * var(--var-size-15));
         img {
-          width: calc(2 * var(--var-size-15));
+          width: inherit;
           border-radius: 10px;
         }
-
         figcaption {
           font-size: small;
+          text-align: center;
+          p {
+            color: var(--mat-sys-primary);
+            text-decoration: underline;
+          }
         }
       }
     }
