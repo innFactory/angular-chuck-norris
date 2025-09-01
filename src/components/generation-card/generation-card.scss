@@ -1,5 +1,8 @@
 :host {
   > mat-card {
+    cursor: pointer;
+    box-shadow: 0 var(--shadow-size-light) var(--box-shadow-medium);
+    border: none;
     background: var(--mat-sys-secondary-container);
 
     mat-card-title h2 {
