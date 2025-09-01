@@ -54,3 +54,16 @@ h2 {
   font-size: var(--var-size-6);
   font-weight: 400;
 }
+
+a {
+  text-decoration: none;
+  > p {
+    color: var(--mat-sys-on-secondary-container);
+    display: inline;
+    font-size: var(--var-size-1);
+    font-weight: 300;
+    &:hover {
+      color: var(--mat-sys-primary);
+    }
+  }
+}
