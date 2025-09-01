@@ -35,6 +35,7 @@ export class ChuckJokesCard {
 
   protected fetchNewJoke() {
     this.jokeResource.reload();
+    this.snackbarService.open('✅ Neuer Witz');
   }
 
   protected favouriseChucksJoke() {
@@ -42,6 +43,7 @@ export class ChuckJokesCard {
     if (jokeResourceValue !== undefined) {
       this.favouriteChuckJokesService.add(jokeResourceValue.value);
       this.snackbarService.open('⭐️ Witz hinzugefügt');
+      this.fetchNewJoke();
     }
   }
 }

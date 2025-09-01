@@ -44,5 +44,6 @@ export class JokesTable {
   protected refreshTable() {
     this.tableData = [];
     this.updateChucksJokesTableData();
+    this.snackbarService.open('✅ Tabelle aktualisiert');
   }
 }
