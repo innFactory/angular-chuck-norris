@@ -1,17 +1,18 @@
 import { Component, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { URL_WIKIMEDIA_CHUCK_PICTURE_1 } from '../../app/app.constants';
 
 const ANIMATION_TAG_CLASSES: string[][] = [
   ['animate-intro-headline', 'animate-intro-1'],
-  ['animate-presentation-headline', 'animate-presentation-1'],
+  ['animate-presentation-headline-1', 'animate-presentation-headline-2', 'animate-presentation-1'],
   ['animate-lets-go-headline', 'animate-lets-go-1', 'animate-lets-go-2'],
 ];
 const LETTER_ANIMATION_SPEED = 80;
 
 @Component({
   selector: 'app-animated-intro-section',
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, MatIconModule],
   templateUrl: './animated-intro-section.html',
   styleUrl: './animated-intro-section.scss',
 })

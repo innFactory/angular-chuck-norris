@@ -1,45 +1,52 @@
 <!-- Animated text -->
-<div class="container-left">
-  <div class="container-right-alignment">
-    @switch (introCounter()) { @case (0) {
-    <div class="section-top">
-      <h1 class="animate-intro-headline">Heyy 👋</h1>
-      <p class="animate-intro-1">Herzlich willkommen in der innFactory 😄! Ich bin Chuck Norris..</p>
-    </div>
-    <button (click)="nextIntroAnimation(refHTMLAnimationTagClasses[1])" matButton>
-      <p>WEITER</p>
-    </button>
-    } @case (1) {
-    <div class="section-top">
-      <h1 class="animate-presentation-headline">Erledige alle Challenges 🚀</h1>
-      <p class="animate-presentation-1">
-        Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris stolz auf dich ist 🫡.
-      </p>
-    </div>
-    <button (click)="nextIntroAnimation(refHTMLAnimationTagClasses[2])" matButton>
-      <p>WEITER</p>
-    </button>
-    } @case (2) {
-    <div class="section-top">
-      <h1 class="animate-lets-go-headline">Let's go!</h1>
-      <p class="animate-lets-go-1">Starte zunächst mit der Ⅰ. Challenge.</p>
-      <p class="animate-lets-go-2">Ab Challenge Ⅰ.Ⅷ. darfst du den Abschnitt über mich erweitern 😎.</p>
-    </div>
-    <a href="/home#aboutme">
-      <button matButton>
-        <p>ÜBER MICH</p>
+<div class="container-layout">
+  <div class="container-left">
+    <div class="container-right-alignment">
+      @switch (introCounter()) { @case (0) {
+      <div class="section-top">
+        <h1 class="animate-intro-headline">Heyy 👋</h1>
+        <p class="animate-intro-1">Herzlich willkommen in der innFactory 😄! Ich bin Chuck Norris.</p>
+      </div>
+      <button (click)="nextIntroAnimation(refHTMLAnimationTagClasses[1])" matButton>
+        <p>WEITER</p>
+        <mat-icon iconPositionEnd>arrow_forward</mat-icon>
       </button>
-    </a>
-    } }
+      } @case (1) {
+      <div class="section-top">
+        <h1 class="animate-presentation-headline-1">Erledige alle&nbsp;</h1>
+        <h1 class="animate-presentation-headline-2">Challenges 🚀</h1>
+        <p class="animate-presentation-1">
+          Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris stolz auf dich ist 🫡.
+        </p>
+      </div>
+      <button (click)="nextIntroAnimation(refHTMLAnimationTagClasses[2])" matButton>
+        <p>WEITER</p>
+        <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+      </button>
+      } @case (2) {
+      <div class="section-top">
+        <h1 class="animate-lets-go-headline">Let's go!</h1>
+        <p class="animate-lets-go-1">Starte zunächst mit der Ⅰ. Challenge.</p>
+        <p class="animate-lets-go-2">Ab Challenge Ⅰ.Ⅷ. darfst du den Abschnitt über mich erweitern 😎.</p>
+      </div>
+      <a href="/home#aboutme">
+        <button matButton>
+          <p>ÜBER MICH</p>
+          <mat-icon iconPositionEnd>arrow_downward</mat-icon>
+        </button>
+      </a>
+      } }
+    </div>
   </div>
-</div>
 
-<!-- Chuck image -->
-<div class="container-right">
-  <figure>
-    <img src="chuck-norris-presentation.png" />
-    <figcaption>
-      <a [href]="URL_WIKIMEDIA_CHUCK_PICTURE_1"><p>Foto</p></a> von "Yoni S.Hamenahem", lizenziert unter CC BY-SA 3.0.
-    </figcaption>
-  </figure>
+  <!-- Chuck image -->
+  <div class="container-right">
+    <figure>
+      <img src="chuck-norris-presentation.png" />
+      <figcaption>
+        <a [href]="URL_WIKIMEDIA_CHUCK_PICTURE_1"><p>Foto</p></a>
+        <p>&nbsp;von "Yoni S.Hamenahem", lizenziert unter CC BY-SA 3.0.</p>
+      </figcaption>
+    </figure>
+  </div>
 </div>
