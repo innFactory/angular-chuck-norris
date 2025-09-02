@@ -88,24 +88,24 @@ Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
 
 Jede Angular Komponente in deiner Webapp besteht aus einem Logik-, einem Struktur- und einem Stylingteil. Fühle dich nicht überfordert von all den verschiedenen Sprachen und Frameworks. Du bekommst eine Schritt für Schritt Einführung in die Angular Welt.
 
-- Sehe dir exemplarisch einmal die Home-Page Komponente genauer an. Navigiere in in den Pfad `src -> pages -> home` und sehe dir die Dateien an.
+- Sehe dir exemplarisch einmal die "AboutSection" Komponente genauer an. Navigiere in in den Pfad [src/components/about-section/](src/components/about-section/) und sehe dir die Dateien an.
 
-  | Datei     | Function                |
-  | --------- | ----------------------- |
-  | home.ts   | Logikteil in TypeScript |
-  | home.html | Strukturteil in HTML    |
-  | home.scss | Stylingteil in SCSS     |
+  | Datei              | Function                |
+  | ------------------ | ----------------------- |
+  | about-section.ts   | Logikteil in TypeScript |
+  | about-section.html | Strukturteil in HTML    |
+  | about-section.scss | Stylingteil in SCSS     |
 
 - Schließe das interaktive [Angular Einstiegs Tutorial][angular-basic-tutorial] im Browser ab. Nimm dir hierfür gerne etwas Zeit ⌛️.
 
 ### Ⅰ.Ⅷ. Kennenlernen mit Chuck Norris
 
-Im Browser siehst du die Vorstellung von Chuck Norris. Die Struktur ist in der Markupsprache HTML verfasst. Im Folgenden erweiterst du diese bestehende HTML Seite.
+Im Browser siehst du die Vorstellung von Chuck Norris. Weiter unten siehst du die "AboutSection". Dessen Struktur ist in der Markupsprache HTML verfasst. Im Folgenden erweiterst du diese bestehende Angular Komponente.
 
-- Sieh dir die Struktur in der "HomePage" Komponente unter [src/pages/home/](src/pages/home/) einmal genauer an.
-- Der Text "..Ich bin Chuck Norris, ein Kampfsportler und Schauspieler.." ist in einem HTML `<p>` Paragraphen Element eingeschlossen bzw. gewrapped. So verfasst man Text in HTML.
+- Sieh dir die Struktur der "HomePage" [src/pages/home/](src/pages/home/) und der darin eingebundenen "AboutSection" [src/components/about-section/](src/components/about-section/) einmal genauer an.
+- Der Text "Ich bin Chuck Norris, ein Kampfsportler und Schauspieler.." ist in einem HTML `<p>` Paragraphen Element eingeschlossen bzw. gewrapped. So verfasst man Text in HTML.
 - Lese hier über das Paragraphen Element auf der offiziellen HTML Dokumentation [MDN Webdocs P Element][mdn-docs-element-p]
-- Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste][wikipedia-chuck-norris] und füge in der "HomePage" weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
+- Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste][wikipedia-chuck-norris] und füge in der "AboutSection" weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
 
 ---
 
@@ -171,7 +171,7 @@ Hier findest du noch eine Auflistung an Tipps die Besonders für Einsteiger hilf
 - Manchmal wirst du beim Entwickeln Syntaxfehler bekommen, die dann live in dieser Konsole angezeigt werden. Normalerweise sollten sich die Konsole beim Speichern einer Datei
   automatisch verändern. Es kann jedoch auch helfen den Client mit `q` oder `Ctrl + C` zu beenden und dann neu zu starten. Das kannst du beliebig oft machen und hat keine Auswirkungen.
 
-- In der Challenge wirst du oftmals aufgefordert Angular Komponenten / Dateien anzupassen. VS Code stellt mehrere Tools zur Verfügung. Über die Suchleiste oben, kannst du nach Dateien suchen. Gib dort z.B. einmal "home-page" ein. In VS Code kannst du außerdem über `Edit -> Find in Files` global nach Programmcode suchen. Suche z.B. einmal nach "HomePage".
+- In der Challenge wirst du oftmals aufgefordert Angular Komponenten / Dateien anzupassen. VS Code stellt mehrere Tools zur Verfügung. Über die Suchleiste oben, kannst du nach Dateien suchen. Gib dort z.B. einmal "home-page" ein. In VS Code kannst du außerdem über `Edit -> Find in Files` global nach Programmcode suchen. Suche z.B. einmal nach "console.log('Willkommen in den DevTools!');".
 
 - Oftmals wirst du auf Komponenten oder externe Bibliotheken zugreifen. Hast du sie nicht importiert werden sie in VS Code rot unterringelt.
   Hovere mit der Maus darüber. Klicke auf `Quick Fix ...` und dann auf den richtigen Importpfad der Bibliothek. Verwendest du hier den falschen, funktioniert die Logik ggf. nicht richtig.
