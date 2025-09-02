@@ -1,39 +1,44 @@
-<div class="container-text">
-  <div class="right-align-wrapper animate-text">
-    @switch (introStep()) { @case (0) {
-    <!-- Welcome text -->
-    <h1 class="animate-intro-1">Heyy 👋</h1>
-    <p class="animate-intro-2">Herzlich willkommen in der innFactory! Ich bin Chuck Norris..</p>
-    <button (click)="nextStep([{name: 'animate-presentation-1', delay: 500}, {name: 'animate-presentation-2', delay: 2000}])" matButton>
-      <p>WEITER</p>
+<div class="container-left">
+  <div class="container-right-alignment">
+    @switch (introCounter()) { @case (0) {
+    <div class="section-top">
+      <h1 class="animate-intro-headline">Heyy 👋</h1>
+      <p class="animate-intro-1">Herzlich willkommen in der innFactory 😄! Ich bin Chuck Norris..</p>
+    </div>
+    <button (click)="nextIntroAnimation(refHTMLIntroAnimation[1])" matButton>
+      <p>weiter</p>
     </button>
     } @case (1) {
-    <h1 class="animate-presentation-1">Erledige alle Challenges</h1>
-    <p class="animate-presentation-2">
-      Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris stolz auf dich ist 🫡 .
-    </p>
-    <button (click)="nextStep([{name: 'animate-lets-go-1', delay: 500}, {name: 'animate-lets-go-2', delay: 2000}, {name: 'animate-lets-go-3', delay: 5000},])" matButton>
-      <p>WEITER</p>
+    <div class="section-top">
+      <h1 class="animate-presentation-headline">Erledige alle Challenges 🚀</h1>
+      <p class="animate-presentation-1">
+        Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris stolz auf dich ist 🫡.
+      </p>
+    </div>
+    <button (click)="nextIntroAnimation(refHTMLIntroAnimation[2])" matButton>
+      <p>weiter</p>
     </button>
     } @case (2) {
-    <h1 class="animate-lets-go-1">Let's go!</h1>
-    <p class="animate-lets-go-2">Starte zunächst mit der Ⅰ. Challenge.</p>
-    <p class="animate-lets-go-3">Ab Challenge Ⅰ.Ⅷ. darfst du den Abschnitt über mich erweitern 😎.</p>
-    <a href="/home#aboutme"
-      ><button matButton>
-        <p>ÜBER MICH</p>
-      </button></a
-    >
+    <div class="section-top">
+      <h1 class="animate-lets-go-headline">Let's go!</h1>
+      <p class="animate-lets-go-1">Starte zunächst mit der Ⅰ. Challenge.</p>
+      <p class="animate-lets-go-2">Ab Challenge Ⅰ.Ⅷ. darfst du den Abschnitt über mich erweitern 😎.</p>
+    </div>
+    <a href="/home#aboutme">
+      <button matButton>
+        <p>über mich</p>
+      </button>
+    </a>
     } }
   </div>
 </div>
 
 <!-- Chuck image -->
-<div class="container-image">
+<div class="container-right">
   <figure>
     <img src="chuck-norris-presentation.png" />
     <figcaption>
-      <a href="https://commons.wikimedia.org/wiki/File:Chuck_Norris,_The_Delta_Force_1986.jpg"><p>Foto</p></a> von "Yoni S.Hamenahem", lizenziert unter CC BY-SA 3.0.
+      <a [href]="URL_WIKIMEDIA_CHUCK_PICTURE_1"><p>Foto</p></a> von "Yoni S.Hamenahem", lizenziert unter CC BY-SA 3.0.
     </figcaption>
   </figure>
 </div>

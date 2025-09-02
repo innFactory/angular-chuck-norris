@@ -1,10 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { URL_WIKIMEDIA_CHUCK_PICTURE_1 } from '../../app/app.constants';
 
-type TextAnimation = {
-  name: string;
-  delay?: number;
-};
+const INTRO_ANIMATIONS: string[][] = [
+  ['animate-intro-headline', 'animate-intro-1'],
+  ['animate-presentation-headline', 'animate-presentation-1'],
+  ['animate-lets-go-headline', 'animate-lets-go-1', 'animate-lets-go-2'],
+];
 
 @Component({
   selector: 'app-animated-intro-section',
@@ -13,65 +15,62 @@ type TextAnimation = {
   styleUrl: './animated-intro-section.scss',
 })
 export class AnimatedIntroSection {
-  protected introStep = signal(-1);
+  protected introCounter = signal<number | undefined>(undefined);
+  protected refHTMLIntroAnimation = INTRO_ANIMATIONS;
+  protected URL_WIKIMEDIA_CHUCK_PICTURE_1 = URL_WIKIMEDIA_CHUCK_PICTURE_1;
 
-  public ngAfterViewInit() {
-    this.nextStep([
-      { name: 'animate-intro-1', delay: 1000 },
-      { name: 'animate-intro-2', delay: 2000 },
-    ]);
+  public async ngAfterViewInit() {
+    this.nextIntroAnimation(INTRO_ANIMATIONS[0]);
   }
 
-  protected async nextStep(tagClasses: TextAnimation[]) {
-    this.introStep.update((num) => (num += 1));
-    if (this.introStep() > 2) {
-      this.introStep.set(0);
-    }
-    await this.delay(50);
-    this.hideTexts(tagClasses);
-    await this.animateText(tagClasses);
-  }
-
-  private delay(ms: number): Promise<void> {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  private animateText(tagClasses: TextAnimation[]) {
-    if (!tagClasses.length) return;
-    const startAnimation = (tagClass: string) => {
-      const textWrapper: HTMLElement | null = document.querySelector(`.${tagClass}`);
-      if (!textWrapper || !textWrapper.textContent) return;
-      textWrapper.style.opacity = '1';
-      textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-      const letters: NodeListOf<HTMLElement> = textWrapper.querySelectorAll('.letter');
-      letters.forEach((letter, index) => {
-        letter.style.opacity = '0';
-        letter.style.transform = 'translateY(20px)';
-        const transitionDuration = '0.1s';
-        const transitionTimingFunction = 'ease-in-out';
-        const delay = index * 50;
-        letter.style.transition = `opacity ${transitionDuration} ${transitionTimingFunction} ${delay}ms, transform ${transitionDuration} ${transitionTimingFunction} ${delay}ms`;
-        setTimeout(() => {
-          letter.style.opacity = '1';
-          letter.style.transform = 'translateY(0)';
-        }, 0);
-      });
-    };
-
-    tagClasses.forEach((tag, index) => {
-      const tagDelay = tag.delay ?? 1000;
-      setTimeout(() => {
-        startAnimation(tag.name);
-      }, tagDelay);
-    });
-  }
-
-  private hideTexts(tagClasses: TextAnimation[]) {
-    tagClasses.forEach((tag) => {
-      const textWrapper: HTMLElement | null = document.querySelector(`.${tag.name}`);
-      if (textWrapper) {
-        textWrapper.style.opacity = '0';
+  protected async nextIntroAnimation(sectionClasses: string[]) {
+    if (!sectionClasses.length) return;
+    this.introCounter.update((num) => {
+      if (num === undefined || num === 2) {
+        return 0;
+      } else {
+        return num + 1;
       }
     });
+    await this.waitABit(100);
+    const animateLetters = () => {
+      const getLettersForSection = (tagClass: string) => {
+        const textWrapper: HTMLElement | null = document.querySelector(`.${tagClass}`);
+        if (!textWrapper || !textWrapper.textContent) return;
+        textWrapper.style.opacity = '1';
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+        const letters: NodeListOf<HTMLElement> = textWrapper.querySelectorAll('.letter');
+        return letters;
+      };
+      const startAnimation = (letters: NodeListOf<HTMLElement>) => {
+        letters.forEach((letter, index) => {
+          letter.style.opacity = '0';
+          letter.style.transform = 'translateY(20px)';
+          const transitionDuration = '0.1s';
+          const transitionTimingFunction = 'ease-in-out';
+          const delay = index * 25;
+          letter.style.transition = `opacity ${transitionDuration} ${transitionTimingFunction} ${delay}ms, transform ${transitionDuration} ${transitionTimingFunction} ${delay}ms`;
+          setTimeout(() => {
+            letter.style.opacity = '1';
+            letter.style.transform = 'translateY(0)';
+          }, delay);
+        });
+      };
+      const animateSectionBySection = async () => {
+        for (const section of sectionClasses) {
+          const letters = getLettersForSection(section);
+          if (!letters || !(letters instanceof NodeList)) return;
+          startAnimation(letters);
+          const calculatedDelayFromLetters = letters.length * 80 + 500;
+          await this.waitABit(calculatedDelayFromLetters ?? 0);
+        }
+      };
+      animateSectionBySection();
+    };
+    animateLetters();
+  }
+
+  private async waitABit(milliseconds: number) {
+    await new Promise((resolve) => setTimeout(resolve, milliseconds));
   }
 }
