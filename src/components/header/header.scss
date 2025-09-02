@@ -2,16 +2,15 @@
 
 :host {
   width: inherit;
-  min-height: var(--var-size-14);
   user-select: none;
 
   header {
+    min-height: var(--var-header-height);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0 var(--var-spacing-4);
-    min-height: var(--var-size-14);
     background: var(--mat-sys-surface-bright);
     box-shadow: 0 1px var(--box-shadow-light);
 

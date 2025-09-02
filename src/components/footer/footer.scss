@@ -1,6 +1,6 @@
 :host {
   width: inherit;
-  height: calc(2 * var(--var-size-13));
+  height: var(--var-footer-height);
   display: flex;
   justify-content: space-evenly;
   padding: var(--var-spacing-3) var(--var-spacing-9);
