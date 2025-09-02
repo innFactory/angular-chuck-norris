@@ -1,4 +1,5 @@
 :root {
+  /* Spacing */
   --var-spacing-1: 4px;
   --var-spacing-2: 8px;
   --var-spacing-3: 12px;
@@ -12,6 +13,7 @@
   --var-spacing-11: 80px;
   --var-spacing-12: 96px;
 
+  /* Sizes */
   --var-size-1: 12px;
   --var-size-2: 14px;
   --var-size-3: 16px;
@@ -28,9 +30,14 @@
   --var-size-14: 72px;
   --var-size-15: 80px;
 
+  /* Shadows */
   --box-shadow-light: 4px rgba(0, 0, 0, 0.1);
   --box-shadow-medium: 5px rgba(0, 0, 0, 0.2);
-
   --shadow-size-light: 1.5px;
   --shadow-size-medium: 3px;
+
+  /* Reusable heights */
+  --var-header-height: var(--var-size-14);
+  --var-footer-height: calc(2 * var(--var-size-13));
+  --var-page-padding: calc(2 * var(--var-spacing-12));
 }
