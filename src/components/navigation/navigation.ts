@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { AfterViewInit, Component, inject, OnDestroy } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { Router, RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -10,11 +10,11 @@ import { TextHover } from '../text-hover/text-hover';
   templateUrl: './navigation.html',
   styleUrl: './navigation.scss',
 })
-export class Navigation {
+export class Navigation implements AfterViewInit, OnDestroy {
   private router = inject(Router);
   private currentPathSubscription: Subscription | undefined;
 
-  public ngOnInit() {
+  public ngAfterViewInit() {
     this.currentPathSubscription = this.router.events.subscribe(() => {
       let path = this.router.url.split('/')[1];
       path = path === '' ? 'home' : path;
