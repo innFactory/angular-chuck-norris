@@ -42,8 +42,8 @@ export class ChuckJokesCard {
     const jokeResourceValue = this.jokeResource.value();
     if (jokeResourceValue !== undefined) {
       this.favouriteChuckJokesService.add(jokeResourceValue.value);
-      this.snackbarService.open('⭐️ Witz hinzugefügt');
       this.fetchNewJoke();
+      this.snackbarService.open('⭐️ Witz hinzugefügt');
     }
   }
 }

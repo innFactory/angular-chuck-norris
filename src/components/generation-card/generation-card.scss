@@ -3,14 +3,13 @@
     cursor: pointer;
     box-shadow: 0 var(--shadow-size-light) var(--box-shadow-medium);
     border: none;
-    background: var(--mat-sys-secondary-container);
+    background: var(--mat-sys-surface-container-lowest);
+    padding: var(--var-spacing-6);
+    overflow-x: auto;
 
-    mat-card-title h2 {
+    mat-card-title h1 {
       color: var(--mat-sys-on-secondary-container);
-    }
-
-    mat-card-content {
-      padding: var(--var-spacing-5) var(--var-spacing-5);
+      margin-bottom: var(--var-spacing-10);
     }
   }
 }

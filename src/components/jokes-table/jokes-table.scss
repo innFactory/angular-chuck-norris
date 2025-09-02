@@ -11,7 +11,12 @@
     padding: var(--var-spacing-4);
     border-radius: var(--mat-sys-corner-large);
     box-shadow: 0 var(--shadow-size-light) var(--box-shadow-medium);
+    background: var(--mat-sys-surface-container-lowest);
+    overflow-x: auto;
+
     table {
+      background: var(--mat-sys-surface-container-lowest);
+
       img {
         margin: var(--var-spacing-6);
         height: calc(2 * var(--var-size-15));

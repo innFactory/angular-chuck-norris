@@ -38,7 +38,7 @@ export class JokesTable {
   }
 
   protected deleteRow(index: number) {
-    this.snackbarService.open('🚨 Löschen noch nicht implementiert');
+    this.snackbarService.open('🚨 Du musst Löschen erst einbauen');
   }
 
   protected refreshTable() {
