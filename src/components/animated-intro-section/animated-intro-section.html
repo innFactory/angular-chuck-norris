@@ -1,3 +1,4 @@
+<!-- Animated text -->
 <div class="container-left">
   <div class="container-right-alignment">
     @switch (introCounter()) { @case (0) {
@@ -5,7 +6,7 @@
       <h1 class="animate-intro-headline">Heyy 👋</h1>
       <p class="animate-intro-1">Herzlich willkommen in der innFactory 😄! Ich bin Chuck Norris..</p>
     </div>
-    <button (click)="nextIntroAnimation(refHTMLIntroAnimation[1])" matButton>
+    <button (click)="nextIntroAnimation(refHTMLAnimationTagClasses[1])" matButton>
       <p>WEITER</p>
     </button>
     } @case (1) {
@@ -15,7 +16,7 @@
         Die Angular Chuck Norris Challenge ist dein erster Einstieg in die Angular Webapp Entwicklung. Erledige alle Challenges, damit Chuck Norris stolz auf dich ist 🫡.
       </p>
     </div>
-    <button (click)="nextIntroAnimation(refHTMLIntroAnimation[2])" matButton>
+    <button (click)="nextIntroAnimation(refHTMLAnimationTagClasses[2])" matButton>
       <p>WEITER</p>
     </button>
     } @case (2) {

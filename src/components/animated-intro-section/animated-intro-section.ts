@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { URL_WIKIMEDIA_CHUCK_PICTURE_1 } from '../../app/app.constants';
 
-const INTRO_ANIMATIONS: string[][] = [
+const ANIMATION_TAG_CLASSES: string[][] = [
   ['animate-intro-headline', 'animate-intro-1'],
   ['animate-presentation-headline', 'animate-presentation-1'],
   ['animate-lets-go-headline', 'animate-lets-go-1', 'animate-lets-go-2'],
 ];
+const LETTER_ANIMATION_SPEED = 80;
 
 @Component({
   selector: 'app-animated-intro-section',
@@ -16,11 +17,11 @@ const INTRO_ANIMATIONS: string[][] = [
 })
 export class AnimatedIntroSection {
   protected introCounter = signal<number | undefined>(undefined);
-  protected refHTMLIntroAnimation = INTRO_ANIMATIONS;
+  protected refHTMLAnimationTagClasses = ANIMATION_TAG_CLASSES;
   protected URL_WIKIMEDIA_CHUCK_PICTURE_1 = URL_WIKIMEDIA_CHUCK_PICTURE_1;
 
   public async ngAfterViewInit() {
-    this.nextIntroAnimation(INTRO_ANIMATIONS[0]);
+    this.nextIntroAnimation(ANIMATION_TAG_CLASSES[0]);
   }
 
   protected async nextIntroAnimation(sectionClasses: string[]) {
@@ -61,7 +62,7 @@ export class AnimatedIntroSection {
           const letters = getLettersForSection(section);
           if (!letters || !(letters instanceof NodeList)) return;
           startAnimation(letters);
-          const calculatedDelayFromLetters = letters.length * 80 + 500;
+          const calculatedDelayFromLetters = letters.length * LETTER_ANIMATION_SPEED + 500;
           await this.waitABit(calculatedDelayFromLetters ?? 0);
         }
       };
