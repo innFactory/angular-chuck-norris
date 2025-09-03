@@ -103,9 +103,9 @@ Jede Angular Komponente in deiner Webapp besteht aus einem Logik-, einem Struktu
 Im Browser siehst du die Vorstellung von Chuck Norris. Weiter unten siehst du die "AboutSection". Dessen Struktur ist in der Markupsprache HTML verfasst. Im Folgenden erweiterst du diese bestehende Angular Komponente.
 
 - Sieh dir die Struktur der "HomePage" [src/pages/home/](src/pages/home/) und der darin eingebundenen "AboutSection" [src/components/about-section/](src/components/about-section/) einmal genauer an.
-- Der Text "Ich bin Chuck Norris, ein Kampfsportler und Schauspieler.." ist in einem HTML `<p>` Paragraphen Element eingeschlossen bzw. gewrapped. So verfasst man Text in HTML.
+- Der Text "Ich bin Chuck Norris, ein Schauspieler und Kampfsportler.." ist in einem HTML `<p>` Paragraphen Element eingeschlossen bzw. gewrapped. So verfasst man Text in HTML.
 - Lese hier über das Paragraphen Element auf der offiziellen HTML Dokumentation [MDN Webdocs P Element][mdn-docs-element-p]
-- Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst-erfundenen Kampfkünste][wikipedia-chuck-norris] und füge in der "AboutSection" weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
+- Recherchiere auf diesem Wikipedia Eintrag über [Chuck Norris selbst erfundene Kampfkünste][wikipedia-chuck-norris] und füge in der "AboutSection" weitere Fakten über Chuck Norris hinzu. Die Änderungen erscheinen beim Speichern automatisch im Browser.
 
 ---
 
@@ -142,28 +142,28 @@ TypeScript ist eine von Microsoft entwickelte Programmiersprache, die JavaScript
 - Überfliege die TypeScript Dokumentation zu den [wichtigsten Datentypen][typescript-everyday-types].
 - Sieh dir die innFactory [Best Practices zu TypeScript][innfactory-best-practice-typescript] an.
 
-### Ⅱ.Ⅳ. Bausteine des Internets - HTML
+### Ⅱ.Ⅳ. Der Baustein des Internets - HTML
 
-HTML wird verwendet, um die Struktur und den Inhalt von Webseiten zu definieren. Als Markupsprache beschreibt HTML grob zusammengefasst die Eigenschaften und den Aufbau jeder Website.
+HTML wird verwendet, um die Struktur und den Inhalt von Webseiten zu definieren. Als Markupsprache beschreibt es grob zusammengefasst die Eigenschaften und den Aufbau jeder Website.
 
 - Elemente werden durch Tags definiert. Z.B. ein Button mit dem `<button></button>`-Tag.
 - Attribute: HTML-Elemente können Attribute enthalten. Z.B. ein `<a></a>` Link-Tag mit dem href-Attribut.
   ```HTML
-    <a href="https://beispiel.de/">Besuche meine Webseite</a>
+    <a href="https://beispiel.de/">Besuche meine Website</a>
   ```
 - Semantische HTML-Elemente wie `<header></header>`, `<footer></footer>`, `<article></article>` und `<section></section>` um Struktur des Inhalts klarer zu machen.
 - Weitere Ressourcen: Du kannst mehr über HTML lernen, indem du die [offizielle MDN-Webdokumentation][mdn-docs-getting-started] besuchst, die detaillierte Informationen und Beispiele bietet.
 
 ### Ⅱ.Ⅴ. Schön soll es auch sein - SCSS
 
-Da TypeScript das Programmverhalten und HTML den Website Aufbau übernimmt, benötigst du in der Webentwicklung noch eine weitere Technik, damit die Seiten auch wirklich schön aussehen. Farben, Schriftarten, Abstände uvm. werden über CSS definiert. Damit CSS eine noch bessere Wiederverwendbarkeit bekommt gibt es die CSS Erweiterung SCSS.
+Da TypeScript das Programmverhalten und HTML den Website Aufbau übernimmt, benötigst du in der Webentwicklung noch eine weitere Technik, damit die Seiten auch wirklich schön werden. Farben, Schriftarten, Abstände uvm. werden über CSS definiert. Damit CSS eine noch bessere Wiederverwendbarkeit bekommt gibt es die CSS Erweiterung SCSS.
 
-- Sieh dir an wie dieses [HTML Beispiel][css-starting-with-html] etwas weiter unten im Artikel mit Hilfe einer CSS Datei [stilisiert wird][css-using-common-selectors]
-- In diesem [SCSS Guide][scss-nesting] siehst du wie CSS in SCSS Form geschrieben wird
+- Sieh dir an wie dieses [HTML Beispiel][css-starting-with-html] etwas weiter unten im Artikel mit Hilfe einer CSS Datei [stilisiert wird].[css-using-common-selectors]
+- In diesem [SCSS Guide][scss-nesting] siehst du wie CSS in SCSS Form geschrieben wird.
 
 ### Ⅱ.Ⅵ. Hilfreiche Tipps für diese Challenge
 
-Hier findest du noch eine Auflistung an Tipps die Besonders für Einsteiger hilfreich sind und dich vor ewigem Rätseln bewahren sollen, wenn du mal nicht weiterkommst.
+Hier findest du noch eine Auflistung an Tipps die Besonders für Einsteiger hilfreich sind und dich vor ewigem Rätseln und Fehlersuchen bewahren sollen, wenn du mal nicht weiterkommst.
 
 - Hast du **Alle** Dateien gespeichert? Wenn du vergisst eine Datei mit `Ctrl + S` zu speichern merkst du es meist nicht direkt.
   Wenn du auf sonderbare Fehler triffst, ist es hilfreich das gesamte Projekt über `File -> Save All` zu speichern.
@@ -171,10 +171,9 @@ Hier findest du noch eine Auflistung an Tipps die Besonders für Einsteiger hilf
 - Manchmal wirst du beim Entwickeln Syntaxfehler bekommen, die dann live in dieser Konsole angezeigt werden. Normalerweise sollten sich die Konsole beim Speichern einer Datei
   automatisch verändern. Es kann jedoch auch helfen den Client mit `q` oder `Ctrl + C` zu beenden und dann neu zu starten. Das kannst du beliebig oft machen und hat keine Auswirkungen.
 
-- In der Challenge wirst du oftmals aufgefordert Angular Komponenten / Dateien anzupassen. VS Code stellt mehrere Tools zur Verfügung. Über die Suchleiste oben, kannst du nach Dateien suchen. Gib dort z.B. einmal "home-page" ein. In VS Code kannst du außerdem über `Edit -> Find in Files` global nach Programmcode suchen. Suche z.B. einmal nach "console.log('Willkommen in den DevTools!');".
+- In der Challenge wirst du oftmals aufgefordert Angular Komponenten / Dateien anzupassen. VS Code stellt mehrere Tools zur Verfügung, damit du diese im Projekt findest. Über die Suchleiste oben, kannst du nach Dateien suchen. Gib dort z.B. einmal "home-page" ein. In VS Code kannst du außerdem über `Edit -> Find in Files` global nach Programmcode suchen. Suche z.B. einmal nach "console.log('Willkommen in den DevTools!');".
 
-- Oftmals wirst du auf Komponenten oder externe Bibliotheken zugreifen. Hast du sie nicht importiert werden sie in VS Code rot unterringelt.
-  Hovere mit der Maus darüber. Klicke auf `Quick Fix ...` und dann auf den richtigen Importpfad der Bibliothek. Verwendest du hier den falschen, funktioniert die Logik ggf. nicht richtig.
+- Oftmals wirst du auf Komponenten oder externe Bibliotheken zugreifen. Hast du sie nicht importiert, werden sie in VS Code rot unterringelt (= Linting). Hovere mit der Maus darüber. Klicke auf `Quick Fix ...` und dann auf den richtigen Importpfad der Bibliothek. Verwendest du hier den falschen Import, funktioniert die Logik ggf. nicht richtig.
 
   ![VS Code Quick Fix](docs/vscode-quick-fix.png)
 
@@ -188,14 +187,14 @@ Das war aber eine Menge Input. Jetzt wird programmiert! Mache mit der [Ⅲ. Chal
 
 ### Ⅲ.Ⅰ. Chuck Norris macht keine Fehler
 
-Im Gegensatz zu Chuck Norris, machen wir Entwickler Fehler das gehört zum Lernprozess dazu 🧐.
+Im Gegensatz zu Chuck Norris, machen wir Entwickler Fehler. Das gehört einfach zum Lernprozess dazu 🧐.
 
 - Versuche im Browser eine Seite zu öffnen die es in unserer Webapp noch nicht gibt z.B. [http://localhost:4200/diese-seite-gibts-ganz-bestimmt](http://localhost:4200/diese-seite-gibts-ganz-bestimmt).
 - Was siehst du? Eine leere Seite nur mit Header und Footer? Wie langweilig! In unserem [src/pages/](src/pages/) Ordner fehlt noch eine "NotFoundPage".
 - In Angular erstellst du neue Komponenten am Besten aus der Kommandozeile.
 - Öffne die Konsole und führe nun den Befehl `npx ng generate component ../pages/not-found-page` aus. Im [src/pages/](src/pages/) Ordner sollte nun eine neue Angular Komponente "NotFoundPage" erscheinen.
 - Angular kommt standardmäßig mit einer Routing Bibliothek. Diese ist in der Datei [app.routes.ts](src/app/app.routes.ts) konfiguriert.
-- Füge als neuen Pfad die neue "NotFoundPage" Komponente hinzu. Beim Pfad verwendest du \*\*. Das steht beim Angular Routing für alle nicht-angegebenen Pfade.
+- Füge als neuen Pfad die neue "NotFoundPage" Komponente hinzu. Beim Pfad verwendest du `**`. Das steht beim Angular Routing für alle nicht-angegebenen Pfade.
 - Teste alles erneut aus. Du solltest den Text "not-found-page works!" sehen.
 
 ### Ⅲ.Ⅱ. Schönheit ist nicht alles - aber auch wichtig
@@ -207,7 +206,7 @@ Im Gegensatz zu Chuck Norris, machen wir Entwickler Fehler das gehört zum Lernp
   - https://www.youtube.com/awefawe
   - https://www.amazon.com/ajsdsfl/jfasldk
   - https://www.chess.com/kfajes
-- Passe nun die "NotFoundPage" an und gestalte Sie mit HTML und CSS aus. Hier sind deiner Kreativität keine Grenzen gefragt. Lasse dir gerne mit Verwendung von Bildern, Text oder sogar Animationen etwas einfallen.
+- Passe nun die "NotFoundPage" an und gestalte Sie mit HTML und CSS aus. Hier sind deiner Kreativität keine Grenzen gesetzt! Lasse dir gerne mit Verwendung von Bildern, Text oder sogar CSS-Animationen etwas einfallen.
 
 Glückwunsch! Du hast soeben dein erste Angular Komponente entwickelt. Kannst du Chuck Norris aber auch im Witze-Duell schlagen❔
 
@@ -217,7 +216,7 @@ Glückwunsch! Du hast soeben dein erste Angular Komponente entwickelt. Kannst du
 
 ### Ⅳ.Ⅰ. Übersicht
 
-In der Folgenden Challenge lernst du das Konzept der Angular Services am Beispiel des bereits bestehenden "FavouriteChuckJokesService" kennen. Im Anschluss erstellst du eine Komponente, mit der du eigene Witze eingeben kannst. Dabei kommst du auch mit der Bibliothek "Angular Material" in Berührung. Später wirst du auch über den Verwendungszweck der reaktiven Angular Signals lernen.
+In der Folgenden Challenge lernst du das Konzept der Angular Services am Beispiel des bereits bestehenden "FavouriteChuckJokesService" kennen. Im Anschluss erstellst du eine Komponente, mit der du eigene Witze eingeben kannst. Dabei kommst du auch mit der Bibliothek "Angular Material" in Berührung. Später wirst du auch etwas über den Verwendungszweck der reaktiven Angular Signals lernen.
 
 - Sieh dir die "JokesPage" einmal an. Gibst du einen Witz ein und klickst auf den "FAVORISIEREN" Button, erscheint er in der "FavouritesPage" bzw. der "JokeTable".
 - Das macht das Global State Management über sogenannte Services in Angular möglich.
@@ -510,7 +509,9 @@ Glückwunsch, du hast alle Challenges gemeistert. Chuck Norris und die innFactor
 
 ![Chuck Norris Laughing](docs/chuck-norris-laughing.jpg)
 
-[Foto](https://commons.wikimedia.org/wiki/File:NorrisCrop.jpg) von Craig Michaud, lizenziert unter CC BY 3.0.
+[Foto][wikimedia-chuck-norris-picture] von Craig Michaud, lizenziert unter CC BY 3.0.
+
+[Angular Icon][angular-press-kit] in Favicon und Readme Intro von Angular, lizenziert unter CC BY 4.0. Das Icon wurde editiert.
 
 ---
 
@@ -534,6 +535,7 @@ Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer
 [angular-material-display-a-component]: https://material.angular.dev/guide/getting-started#display-a-component
 [angular-material-input]: https://material.angular.dev/components/input/overview
 [angular-material-button]: https://material.angular.dev/components/button/overview
+[angular-press-kit]: https://angular.dev/press-kit
 [css-starting-with-html]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#starting_with_some_html
 [css-using-common-selectors]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#using_common_selectors
 [chuck-norris-wiki]: https://de.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge
@@ -554,3 +556,4 @@ Dieser Abschnitt enthält alle externen Links. So können sie schnell & an einer
 [vscode-getting-started]: https://code.visualstudio.com/docs/getstarted/getting-started
 [witzenet-flachwitze]: https://witze.net/flachwitz-witze
 [wikipedia-chuck-norris]: https://en.wikipedia.org/wiki/Chuck_Norris#Martial_arts_knowledge†
+[wikimedia-chuck-norris-picture]: https://commons.wikimedia.org/wiki/File:NorrisCrop.jpg

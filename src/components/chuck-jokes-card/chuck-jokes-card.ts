@@ -15,9 +15,9 @@ import { GenerationCard } from '../generation-card/generation-card';
   styleUrl: './chuck-jokes-card.scss',
 })
 export class ChuckJokesCard {
-  private snackbarService = inject(MatSnackBar);
-  private jokeApiService = inject(JokeApiService);
   private favouriteChuckJokesService = inject(FavouriteChuckJokesService);
+  private jokeApiService = inject(JokeApiService);
+  private snackbarService = inject(MatSnackBar);
   protected jokeResource: ResourceRef<ApiResponseChuckJoke | undefined>;
 
   constructor() {

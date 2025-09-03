@@ -1,10 +1,12 @@
-<!-- Section chuck's jokes -->
 <app-generation-card cardTitle="Chuck's Witze 💬">
   <ng-container generation-card-content>
+    <!-- Card content -->
     <div class="container-content">
       <p>{{jokeDisplayed}}</p>
     </div>
   </ng-container>
+
+  <!-- Card buttons -->
   <ng-container generation-card-action>
     <div class="container-action">
       <button (click)="fetchNewJoke();" matButton>
