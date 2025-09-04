@@ -10,6 +10,17 @@ export class AuthService {
   private snackbarService = inject(MatSnackBar);
   public isAuthenticated = signal(false);
 
+  constructor() {
+    this.removeCachedLoginSessions();
+  }
+
+  private async removeCachedLoginSessions() {
+    try {
+      await signOut(this.auth);
+      this.isAuthenticated.set(false);
+    } catch {}
+  }
+
   public async login(email: string, password: string): Promise<boolean> {
     try {
       await signInWithEmailAndPassword(this.auth, email, password);
