@@ -17,7 +17,7 @@ Du wirst später nicht nur deinen Programmcode mit anderen Kollegen in Projekten
 
 ### Ⅰ.Ⅱ. Entwickeln aus der Entwicklungsumgebung
 
-Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können. Dieser Ort ist die sogenannte Entwicklungsumgebung, auf englisch "Integrated Development Environment", abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am Besten VS Code.
+Softwareentwickler benötigen einen Ort an dem sie den Programmcode ansehen, schreiben und verändern können. Dieser Ort ist die sogenannte Entwicklungsumgebung, auf englisch "Integrated Development Environment", abgekürzt IDE. Für die Angular Chuck Norris App benutzen du als IDE am besten VS Code.
 
 - Installiere dir [Visual Studio Code][visual-studio-code].
 - Öffne VS Code. Mache dich mit diesem [Tutorial][vscode-getting-started] in VS Code etwas vertraut.
@@ -57,7 +57,7 @@ Die meisten Webapp Projekte haben Abhängigkeiten an andere Bibliotheken in Form
 
 Nun musst du dir die Abhängigkeiten bzw. Dependencies nur noch installieren. Keine Sorge, die sind in der Datei [package.json](package.json) bereits vollständig aufgelistet und können ohne weiteres über einen Konsolenbefehl installiert werden.
 
-- Gebe in die Konsole `npm install` ein und und warte bis alle erfolgreich heruntergeladen sind.
+- Gebe in die Konsole `npm install` ein und warte bis alle erfolgreich heruntergeladen sind.
 - Ein neuer Ordner [node_modules/](node_modules/) mit allen externen Bibliotheken, wird nun im Projekt automatisch erstellt.
 
 ### Ⅰ.Ⅵ. Webapp starten
@@ -80,7 +80,7 @@ Nun kannst du das Webprojekt aus der Konsole starten mit `npm start`.
   Watch mode enabled. Watching for file changes...
   NOTE: Raw file sizes do not reflect development server per-request transformations.
   10:03:05 AM [vitel (client) Re-optimizing dependencies because vite config has changed
-  Local: http://localhost: 4200/
+  Local: http://localhost:4200/
   press h + enter to show help
   ```
 
@@ -111,9 +111,9 @@ Im Browser siehst du die Vorstellung von Chuck Norris. Weiter unten siehst du di
 
 # Ⅱ. Challenge 🎖️ - Leseratte
 
-### Ⅱ.Ⅰ. Offiziell ist am Besten - Angular Doku
+### Ⅱ.Ⅰ. Offiziell ist am besten - Angular Doku
 
-Für jedes Framework und jede Sprache gibt es eine offizielle Dokumentation. Als Entwickler ist es am Besten, dich in der Doku deiner Sprache zurechtzufinden. Alle Neuerungen und Updates stehen hier immer zuerst.
+Für jedes Framework und jede Sprache gibt es eine offizielle Dokumentation. Als Entwickler ist es am besten, dich in der Doku deiner Sprache zurechtzufinden. Alle Neuerungen und Updates stehen hier immer zuerst.
 
 - Überfliege die offizielle [Angular Doku][angular-overview] und bekomme einen ersten Überblick.
 - Lese zum Einstieg außerdem folgende Angular-Artikel:
@@ -191,7 +191,7 @@ Im Gegensatz zu Chuck Norris, machen wir Entwickler Fehler. Das gehört einfach 
 
 - Versuche im Browser eine Seite zu öffnen die es in unserer Webapp noch nicht gibt z.B. [http://localhost:4200/diese-seite-gibts-ganz-bestimmt](http://localhost:4200/diese-seite-gibts-ganz-bestimmt).
 - Was siehst du? Eine leere Seite nur mit Header und Footer? Wie langweilig! In unserem [src/pages/](src/pages/) Ordner fehlt noch eine "NotFoundPage".
-- In Angular erstellst du neue Komponenten am Besten aus der Kommandozeile.
+- In Angular erstellst du neue Komponenten am besten aus der Kommandozeile.
 - Öffne die Konsole und führe nun den Befehl `npx ng generate component ../pages/not-found-page` aus. Im [src/pages/](src/pages/) Ordner sollte nun eine neue Angular Komponente "NotFoundPage" erscheinen.
 - Angular kommt standardmäßig mit einer Routing Bibliothek. Diese ist in der Datei [app.routes.ts](src/app/app.routes.ts) konfiguriert.
 - Füge als neuen Pfad die neue "NotFoundPage" Komponente hinzu. Beim Pfad verwendest du `**`. Das steht beim Angular Routing für alle nicht-angegebenen Pfade.
@@ -216,7 +216,7 @@ Glückwunsch! Du hast soeben dein erste Angular Komponente entwickelt. Kannst du
 
 ### Ⅳ.Ⅰ. Übersicht
 
-In der Folgenden Challenge lernst du das Konzept der Angular Services am Beispiel des bereits bestehenden "FavouriteChuckJokesService" kennen. Im Anschluss erstellst du eine Komponente, mit der du eigene Witze eingeben kannst. Dabei kommst du auch mit der Bibliothek "Angular Material" in Berührung. Später wirst du auch etwas über den Verwendungszweck der reaktiven Angular Signals lernen.
+In der folgenden Challenge lernst du das Konzept der Angular Services am Beispiel des bereits bestehenden "FavouriteChuckJokesService" kennen. Im Anschluss erstellst du eine Komponente, mit der du eigene Witze eingeben kannst. Dabei kommst du auch mit der Bibliothek "Angular Material" in Berührung. Später wirst du auch etwas über den Verwendungszweck der reaktiven Angular Signals lernen.
 
 - Sieh dir die "JokesPage" einmal an. Gibst du einen Witz ein und klickst auf den "FAVORISIEREN" Button, erscheint er in der "FavouritesPage" bzw. der "JokeTable".
 - Das macht das Global State Management über sogenannte Services in Angular möglich.
@@ -301,7 +301,7 @@ Der "AKTUALISIEREN" Button wird jetzt nicht mehr benötigt. Es folgt den Best Pr
 
 ---
 
-# Ⅴ. Challenge 🎖️ - Achtung Süße Katzenbilder!
+# Ⅴ. Challenge 🎖️ - Achtung süße Katzenbilder!
 
 ### Ⅴ.Ⅰ. Neue Katzen Seite
 
@@ -383,7 +383,7 @@ Im Projekt ist bereits eine externe Datenbank in Google Firebase mit Firestore u
   - Im "JokeDatabaseService" erfolgt schlussendlich der Zugriff auf die Datenbank.
 - Erstelle dir in der Oberfläche der App einen neuen Benutzer und melde dich damit an.
   - Klicke auf den Benutzer Icon im Header der Webapp und dann auf Registrieren.
-  - Verwende am Besten deine innFactory E-Mail. Im Hintergrund wird ein neuer Benutzer im innFactory Firebase angelegt.
+  - Verwende am besten deine innFactory E-Mail. Im Hintergrund wird ein neuer Benutzer im innFactory Firebase angelegt.
 
 ### Ⅵ.Ⅱ. Datenbank Synchronisierung
 
@@ -407,7 +407,7 @@ Damit nun auch deine eigenen Witze verewigt werden, kannst du ebenfalls den "Jok
 - Fast geschafft. Aktuell werden im Projekt bei Anmeldung die Witze geladen und bei Abmeldung wieder entfernt. Das musst du nun für die eigenen Witze auch ergänzen.
   1. Kopiere die Methode "setFromDatabase()" aus dem "FavouriteChuckJokesSignalService" in den eigenen. Tausche die Konstante "PREFIX_ID_CHUCK_JOKES" jeweils durch "PREFIX_ID_OWN_JOKES" aus.
   2. Passe die Methode "loadJokesFromDatabase()" der "Login" Komponente [src/security/login/](src/security/login/) an.
-     - Neben der "chuckJokeTableData: JokeData[]" Konstante fügst du am Besten auch eine "ownJokeTableData: JokeData[]" hinzu.
+     - Neben der "chuckJokeTableData: JokeData[]" Konstante fügst du am besten auch eine "ownJokeTableData: JokeData[]" hinzu.
      - Diese Befüllst du dann beim Ersteller "CREATOR_OWN".
      - Im Anschluss fügst in "Login" den Zugriff auf deinen Service "FavouriteOwnJokesSignalService" mit `inject()` hinzu.
      - Nun musst du noch dessen "setFromDatabase()" ansprechen und die "ownJokeTableData" übergeben.
